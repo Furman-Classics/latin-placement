@@ -1,0 +1,944 @@
+[
+  {
+    "id": "p2-s-001",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 3,
+    "prompt": "In the sentence <em>Puella librum magistrō dat</em>, what is the syntactic function of [underline: magistrō]?",
+    "options": [
+      "direct object",
+      "indirect object",
+      "ablative of means",
+      "subject"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-002",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 3,
+    "prompt": "In the sentence <em>Rōmānī gladiīs pugnāvērunt</em>, what is the syntactic function of [underline: gladiīs]?",
+    "options": [
+      "indirect object",
+      "ablative of accompaniment",
+      "ablative of means",
+      "ablative of manner"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-003",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 4,
+    "prompt": "In the sentence <em>Mīlitēs in urbem currunt</em>, what is the syntactic function of [underline: in urbem]?",
+    "options": [
+      "place where",
+      "place to which",
+      "place from which",
+      "time when"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-004",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 5,
+    "prompt": "In the sentence <em>Fīlia pulchra amīcum videt</em>, what is the syntactic function of [underline: pulchra]?",
+    "options": [
+      "predicate adjective",
+      "adverbial modifier",
+      "attributive adjective",
+      "substantive adjective"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-005",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 6,
+    "prompt": "In <em>Est mihi liber</em>, what construction is present?",
+    "options": [
+      "genitive of possession",
+      "dative of possession",
+      "ablative of accompaniment",
+      "objective genitive"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-006",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 3,
+    "prompt": "Identify the use of the genitive in: <em>Amor patriae mīlitēs incendit.</em>",
+    "options": [
+      "genitive of the whole (partitive)",
+      "objective genitive",
+      "subjective genitive",
+      "explanatory genitive"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-007",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 5,
+    "prompt": "What sentence “type” does <em>Caesar dux est</em> exemplify?",
+    "options": [
+      "transitive",
+      "intransitive",
+      "linking",
+      "factitive"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-c-001",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 8,
+    "passage": "Rōmānī bonī virī patriam amant et prō patriā pugnant. Mīlitēs in agrīs manent et hostēs vincunt. Fāma Rōmānōrum magna est.",
+    "prompt": "According to the passage, where do the soldiers stay?",
+    "options": [
+      "in the city",
+      "in the fields",
+      "in the temple",
+      "on the sea"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-002",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 8,
+    "passage": "Rōmānī bonī virī patriam amant et prō patriā pugnant. Mīlitēs in agrīs manent et hostēs vincunt. Fāma Rōmānōrum magna est.",
+    "prompt": "What is described as <em>magna</em> (great) in the passage?",
+    "options": [
+      "the soldiers",
+      "the fields",
+      "the fame of the Romans",
+      "the fatherland"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-008",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 8,
+    "prompt": "In <em>Puella, fīlia rēgis, in silvā ambulat</em>, what is the syntactic function of [underline: fīlia rēgis]?",
+    "options": [
+      "relative clause",
+      "appositive",
+      "ablative absolute",
+      "participial phrase"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-009",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 13,
+    "prompt": "In <em>Mīlitēs quī fortiter pugnāvērunt laudātī sunt</em>, what is the construction of [underline: quī fortiter pugnāvērunt]?",
+    "options": [
+      "ablative absolute",
+      "indirect statement",
+      "relative clause",
+      "purpose clause"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-010",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 15,
+    "prompt": "In <em>Urbs ab hostibus capta est</em>, what is the syntactic function of [underline: ab hostibus]?",
+    "options": [
+      "ablative of means",
+      "ablative of agent",
+      "ablative of accompaniment",
+      "ablative absolute"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-011",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 17,
+    "prompt": "Identify the construction in: <em>Mīlitēs hostibus victīs domum redīērunt.</em>",
+    "options": [
+      "indirect statement",
+      "ablative absolute",
+      "cum-clause",
+      "result clause"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-012",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 17,
+    "prompt": "In <em>Dux mīlitibus laudātīs abiit</em>, the phrase [underline: mīlitibus laudātīs] is best described as:",
+    "options": [
+      "indirect object",
+      "ablative absolute",
+      "ablative of means",
+      "dative of reference"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-013",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 17,
+    "prompt": "Identify the use of the participle in: <em>Virum intrantem vīdimus.</em>",
+    "options": [
+      "ablative absolute",
+      "attributive participle modifying the object",
+      "present active participle used as a predicate",
+      "future active participle expressing purpose"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-014",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 19,
+    "prompt": "Identify the Latin construction in: <em>Caesar dīcit mīlitēs fortēs esse.</em>",
+    "options": [
+      "purpose clause",
+      "indirect command",
+      "indirect statement",
+      "ablative absolute"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-015",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 19,
+    "prompt": "In <em>Crēdō tē errāre</em>, what is the syntactic function of [underline: tē]?",
+    "options": [
+      "subject of the main verb",
+      "accusative subject",
+      "direct object of <em>crēdō</em>",
+      "dative of reference"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-003",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 19,
+    "passage": "Cicerō, cōnsul optimus, coniūrātiōnem Catilīnae dētēxit. Senātōrēs, perīculō cognitō, Cicerōnī grātiās ēgērunt. Catilīna autem, urbe expulsus, ad exercitum suum contendit. Mīlitēs Rōmānī, ducibus fortibus ūsī, hostēs tandem vicērunt.",
+    "prompt": "According to the passage, what did Cicero do?",
+    "options": [
+      "He led the Roman army against Catiline",
+      "He uncovered Catiline’s conspiracy",
+      "He expelled the senators from the city",
+      "He gave thanks to the senate"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-004",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 19,
+    "passage": "Cicerō, cōnsul optimus, coniūrātiōnem Catilīnae dētēxit. Senātōrēs, perīculō cognitō, Cicerōnī grātiās ēgērunt. Catilīna autem, urbe expulsus, ad exercitum suum contendit. Mīlitēs Rōmānī, ducibus fortibus ūsī, hostēs tandem vicērunt.",
+    "prompt": "What Latin construction is [underline: perīculō cognitō] in the second sentence?",
+    "options": [
+      "indirect statement",
+      "ablative absolute",
+      "dative of purpose",
+      "cum-clause"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-016",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 19,
+    "prompt": "Identify the construction in: <em>Scīmus Rōmam conditam esse ā Rōmulō.</em>",
+    "options": [
+      "purpose clause",
+      "indirect statement",
+      "indirect question",
+      "result clause"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-017",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 25,
+    "prompt": "Identify the construction in: <em>Imperātor iussit ut mīlitēs castra pōnerent.</em>",
+    "options": [
+      "indirect statement",
+      "indirect command",
+      "purpose clause",
+      "fear clause"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-018",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 25,
+    "prompt": "Identify the construction in: <em>Rōmānī ad Galliam iter fēcērunt ut hostēs vincerent.</em>",
+    "options": [
+      "result clause",
+      "purpose clause",
+      "cum-clause",
+      "relative clause of characteristic"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-019",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 25,
+    "prompt": "Identify the construction in: <em>Tam fortiter pugnāvērunt ut hostēs fugerent.</em>",
+    "options": [
+      "purpose clause",
+      "result clause",
+      "cum-clause",
+      "indirect command"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-020",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 26,
+    "prompt": "Identify the construction in: <em>Cum Caesar in Galliam vēnisset, Helvētiī iter facere coeperant.</em>",
+    "options": [
+      "temporal cum-clause",
+      "causal cum-clause",
+      "concessive cum-clause",
+      "conditional clause"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-021",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 26,
+    "prompt": "Identify the construction in: <em>Cum Rōmānī fortes essent, tamen vincī potuērunt.</em>",
+    "options": [
+      "circumstantial cum-clause",
+      "causal cum-clause",
+      "concessive cum-clause",
+      "temporal cum-clause"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-022",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 26,
+    "prompt": "In <em>Mīlitēs, cum hostēs vidissent, fūgērunt</em>, the clause [underline: cum hostēs vidissent] expresses:",
+    "options": [
+      "concession",
+      "time",
+      "purpose",
+      "result"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-023",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 28,
+    "prompt": "Identify the construction in: <em>Verēmur nē hostēs urbem capiant.</em>",
+    "options": [
+      "result clause",
+      "purpose clause",
+      "fear clause",
+      "indirect command"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-024",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 28,
+    "prompt": "Identify the construction in: <em>Rogāvit quō modō Rōmānī hostēs vīcissent.</em>",
+    "options": [
+      "indirect statement",
+      "indirect question",
+      "purpose clause",
+      "relative clause"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-025",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 27,
+    "prompt": "Identify the type of condition in: <em>Sī Rōmam īs, multa vidēbis.</em>",
+    "options": [
+      "simple (future more vivid) condition",
+      "contrary-to-fact (present) condition",
+      "contrary-to-fact (past) condition",
+      "general condition"
+    ],
+    "correct": 0
+  },
+  {
+    "id": "p2-s-026",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 27,
+    "prompt": "Identify the type of condition in: <em>Sī Rōmam īrēs, multa vidērēs.</em>",
+    "options": [
+      "simple (future more vivid) condition",
+      "contrary-to-fact (present) condition",
+      "contrary-to-fact (past) condition",
+      "general condition"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-005",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 26,
+    "passage": "Caesar, cum in Galliam pervenīsset, cōnsilia hostium cognōvit. Lēgātōs suōs mīsit ut cum prīncipibus Gallōrum colloquium habērent. Gallī autem, cum Rōmānōs timērent, pacem petīvērunt. Caesar eīs pepercit et exercitum suum in hīberna dēdūxit.",
+    "prompt": "Why did the Gauls seek peace, according to the passage?",
+    "options": [
+      "Because Caesar’s legates had defeated them",
+      "Because they feared the Romans",
+      "Because Caesar had learned their plans",
+      "Because Caesar had sent his army into winter quarters"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-006",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 26,
+    "passage": "Caesar, cum in Galliam pervenīsset, cōnsilia hostium cognōvit. Lēgātōs suōs mīsit ut cum prīncipibus Gallōrum colloquium habērent. Gallī autem, cum Rōmānōs timērent, pacem petīvērunt. Caesar eīs pepercit et exercitum suum in hīberna dēdūxit.",
+    "prompt": "What is the construction of [underline: ut cum prīncipibus Gallōrum colloquium habērent]?",
+    "options": [
+      "result clause",
+      "indirect command",
+      "purpose clause",
+      "relative clause"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-027",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 29,
+    "prompt": "Identify the construction in: <em>Rōmānī ad pugnandum parātī erant.</em>",
+    "options": [
+      "purpose clause",
+      "gerund expressing purpose",
+      "ablative absolute",
+      "passive periphrastic"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-028",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 29,
+    "prompt": "Identify the construction in: <em>Urbs dēfendenda est nōbīs.</em>",
+    "options": [
+      "ablative absolute",
+      "passive periphrastic",
+      "purpose clause",
+      "indirect statement"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-029",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 27,
+    "prompt": "In <em>Sī id fēcissēs, errāvissēs</em>, this is a contrary-to-fact condition referring to:",
+    "options": [
+      "present time",
+      "past time",
+      "future time",
+      "general time"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-007",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 29,
+    "passage": "Senātus Rōmānus cēnsuit bellum Carthāginiēnsibus esse īnferendum. Cōnsul igitur exercitum parāvit et cum multīs mīlitibus in Āfricam nāvigāvit. Carthāginiēnsēs, quamquam fortiter pugnāvērunt, tandem victī sunt. Ita Rōmānī imperium suum auxērunt.",
+    "prompt": "According to the passage, what did the senate decide?",
+    "options": [
+      "That Rome should defend itself from Carthage",
+      "That war should be brought upon the Carthaginians",
+      "That the consul should build a fleet",
+      "That soldiers should be sent to Africa immediately"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-008",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 29,
+    "passage": "Senātus Rōmānus cēnsuit bellum Carthāginiēnsibus esse īnferendum. Cōnsul igitur exercitum parāvit et cum multīs mīlitibus in Āfricam nāvigāvit. Carthāginiēnsēs, quamquam fortiter pugnāvērunt, tandem victī sunt. Ita Rōmānī imperium suum auxērunt.",
+    "prompt": "What construction is [underline: quamquam fortiter pugnāvērunt] in the third sentence?",
+    "options": [
+      "causal clause",
+      "temporal clause",
+      "concessive clause",
+      "conditional clause"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-030",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 28,
+    "prompt": "Identify the construction in: <em>Spērō mē crās ventūrum esse.</em>",
+    "options": [
+      "indirect command",
+      "indirect statement",
+      "purpose clause",
+      "indirect question"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-031",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 12,
+    "prompt": "In <em>Rōmānī trēs hōrās pugnāvērunt</em>, what is the syntactic function of [underline: trēs hōrās]?",
+    "options": [
+      "time when",
+      "accusative of extent of time",
+      "ablative of specification",
+      "direct object"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-032",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 14,
+    "prompt": "Identify the construction in: <em>Cōnsulem laudātum esse ā senātū audīvimus.</em>",
+    "options": [
+      "purpose clause",
+      "indirect statement",
+      "ablative absolute",
+      "indirect command"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-033",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 11,
+    "prompt": "Identify the construction in: <em>Sextō annō Caesar in Britanniam nāvigāvit.</em>",
+    "options": [
+      "ablative of means",
+      "ablative of time when",
+      "ablative of manner",
+      "ablative absolute"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-034",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 19,
+    "prompt": "In <em>Putō eum bonum esse</em>, what is the tense relationship of the infinitive <em>esse</em> to <em>putō</em>?",
+    "options": [
+      "the infinitive indicates action prior to the main verb",
+      "the infinitive indicates action at the same time as the main verb",
+      "the infinitive indicates action after the main verb",
+      "there is no tense relationship; the infinitive is timeless"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-035",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 30,
+    "prompt": "Identify the construction in: <em>Nihil est quod mē dēlectet.</em>",
+    "options": [
+      "indirect question",
+      "relative clause of characteristic",
+      "result clause",
+      "purpose clause"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-009",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 7,
+    "passage": "In oppidō parvō habitābant rēx et rēgīna. Rēx erat vir fortis et clārus. Fīliī rēgis in scholā cotīdiē litterās discēbant. Rēgīna autem, dum mīlitēs rēgis in bellum īrent, in rēgnō manēbat.",
+    "prompt": "What were the king’s sons doing each day?",
+    "options": [
+      "Fighting in the war",
+      "Learning their letters at school",
+      "Remaining in the kingdom",
+      "Traveling with the queen"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-036",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 13,
+    "prompt": "In <em>Mīles cuius pater rēx erat fortiter pugnāvit</em>, the clause [underline: cuius pater rēx erat] is a:",
+    "options": [
+      "purpose clause",
+      "result clause",
+      "relative clause",
+      "indirect question"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-037",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 21,
+    "prompt": "Identify the construction in: <em>Mīlitēs iubēbantur castra pōnere.</em>",
+    "options": [
+      "indirect command",
+      "indirect statement",
+      "complementary infinitive with accusative subject",
+      "purpose clause"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-c-010",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 15,
+    "passage": "Aenēās, ā Troiā expulsus, multa et dīra passus est. Sociī eius per maria vexābantur et in multīs terrīs manēbant. Tandem in Italiam pervenērunt. Ibi Aenēās urbem novam condidit quae ab eō Lāvīnium appellāta est.",
+    "prompt": "What happened to Aeneas and his companions after leaving Troy?",
+    "options": [
+      "They immediately arrived in Italy",
+      "They were tossed about on the seas and stayed in many lands",
+      "They were welcomed by the Romans",
+      "They built a new city in Greece"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-039",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 26,
+    "prompt": "Identify the construction in: <em>Dum Rōmānī aderant, Gallī in silvīs manēbant.</em>",
+    "options": [
+      "purpose clause",
+      "temporal clause",
+      "result clause",
+      "indirect command"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-040",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 28,
+    "prompt": "Identify the construction in: <em>Timēbat nē cōnsul eum caperet.</em>",
+    "options": [
+      "indirect command",
+      "result clause",
+      "fear clause",
+      "purpose clause"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-041",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 28,
+    "prompt": "Identify the construction in: <em>Nescīvit ubi cōnsul esset.</em>",
+    "options": [
+      "indirect statement",
+      "purpose clause",
+      "indirect question",
+      "relative clause of characteristic"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-043",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 25,
+    "prompt": "Identify the construction in: <em>Dux mīlitēs hortātus est ut fortiter pugnarent.</em>",
+    "options": [
+      "purpose clause",
+      "indirect command",
+      "result clause",
+      "fear clause"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-011",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 28,
+    "passage": "Senātus verēbātur nē Catilīna coniūrātiōnem in patriam faceret. Cicerō igitur cōnsul iussit ut Catilīna ex urbe discēderet. Catilīna, ōrātiōnibus Cicerōnis audītīs, in Etrūriam cōntendit. Ibi exercitum comparāvit ut bellum contrā Rōmam gereret.",
+    "prompt": "Why did Catiline gather an army in Etruria?",
+    "options": [
+      "Because the senate ordered him to",
+      "In order to wage war against Rome",
+      "Because he feared Cicero",
+      "Because he had been expelled from the city"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-012",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 28,
+    "passage": "Senātus verēbātur nē Catilīna coniūrātiōnem in patriam faceret. Cicerō igitur cōnsul iussit ut Catilīna ex urbe discēderet. Catilīna, ōrātiōnibus Cicerōnis audītīs, in Etrūriam cōntendit. Ibi exercitum comparāvit ut bellum contrā Rōmam gereret.",
+    "prompt": "What construction is [underline: nē Catilīna coniūrātiōnem in patriam faceret]?",
+    "options": [
+      "indirect statement",
+      "purpose clause",
+      "fear clause",
+      "result clause"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-c-013",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 26,
+    "passage": "Hannibal, dux Carthāginiēnsium clārissimus, exercitum māximum per Alpēs dūxit. Cum in Italiam pervenīsset, Rōmānōs multīs proeliīs vīcit. Rōmānī, quī victōriam spērāverant, nunc timōre movēbantur. Tandem tamen Hannibal, copiīs dēminūtīs, in Āfricam redīre coāctus est.",
+    "prompt": "What did Hannibal accomplish after reaching Italy?",
+    "options": [
+      "He was immediately defeated by the Romans",
+      "He negotiated a peace treaty with Rome",
+      "He defeated the Romans in many battles",
+      "He captured the city of Rome"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-c-014",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 26,
+    "passage": "Hannibal, dux Carthāginiēnsium clārissimus, exercitum māximum per Alpēs dūxit. Cum in Italiam pervenīsset, Rōmānōs multīs proeliīs vīcit. Rōmānī, quī victōriam spērāverant, nunc timōre movēbantur. Tandem tamen Hannibal, copiīs dēminūtīs, in Āfricam redīre coāctus est.",
+    "prompt": "Identify the construction [underline: cum in Italiam pervenīsset].",
+    "options": [
+      "temporal cum-clause",
+      "circumstantial cum-clause",
+      "concessive cum-clause",
+      "conditional clause"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-015",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 28,
+    "passage": "Agrippīna, māter Nerōnis imperātōris, potentissima erat et in cōnsiliīs imperii multum valebat. Senātōrēs verēbantur nē ea scelus contrā rem pūblicam faceret. Tandem Nero, cum mātris potestātem timēret, coniūrātiōnem contrā eam fēcit. Nūntiātum est Agrippīnam interfectam esse.",
+    "prompt": "According to the passage, why did the senators fear Agrippina?",
+    "options": [
+      "Because Nero had ordered her arrest",
+      "Because they feared she might commit a crime against the state",
+      "Because she commanded soldiers against them",
+      "Because she had expelled them from the senate"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-016",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 28,
+    "passage": "Agrippīna, māter Nerōnis imperātōris, potentissima erat et in cōnsiliīs imperii multum valebat. Senātōrēs verēbantur nē ea scelus contrā rem pūblicam faceret. Tandem Nero, cum mātris potestātem timēret, coniūrātiōnem contrā eam fēcit. Nūntiātum est Agrippīnam interfectam esse.",
+    "prompt": "What construction is [underline: nē ea scelus contrā rem pūblicam faceret]?",
+    "options": [
+      "indirect command",
+      "purpose clause",
+      "fear clause",
+      "result clause"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-c-017",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 29,
+    "passage": "Perpetua, fēmina Christiāna et nōbilis, in carcere tenēbātur. Mīlitēs eī nūntiāvērunt eam in arēnam esse dūcendam. Perpetua tamen nōn timuit, nam prō fidē suā patī voluit. Scrīpsit dē vīsiōnibus quās in carcere habuerat ut aliīs Christiānīs praesidium daret.",
+    "prompt": "Why was Perpetua unafraid?",
+    "options": [
+      "Because soldiers promised she would be freed",
+      "Because she wanted to suffer for her faith",
+      "Because her visions promised her safety",
+      "Because she had escaped from prison"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-c-018",
+    "part": 2,
+    "type": "comprehension",
+    "chapter": 29,
+    "passage": "Perpetua, fēmina Christiāna et nōbilis, in carcere tenēbātur. Mīlitēs eī nūntiāvērunt eam in arēnam esse dūcendam. Perpetua tamen nōn timuit, nam prō fidē suā patī voluit. Scrīpsit dē vīsiōnibus quās in carcere habuerat ut aliīs Christiānīs praesidium daret.",
+    "prompt": "What construction is [underline: eam in arēnam esse dūcendam]?",
+    "options": [
+      "ablative absolute",
+      "passive periphrastic",
+      "purpose clause",
+      "fear clause"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-045",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 25,
+    "prompt": "Identify the construction in: <em>Tanta erat virtūs mīlitum ut hostēs fugerent.</em>",
+    "options": [
+      "purpose clause",
+      "result clause",
+      "indirect command",
+      "cum-clause"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-046",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 28,
+    "prompt": "Identify the construction in: <em>Cōnsul nesciēbat num hostēs iam discessissent.</em>",
+    "options": [
+      "fear clause",
+      "indirect statement",
+      "indirect question",
+      "result clause"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-047",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 13,
+    "prompt": "In <em>Omnēs puellae quibus amōrem nostrum dedimus pauperēs sunt</em>, what is the case and function of [underline: quibus]?",
+    "options": [
+      "nominative plural (subject of relative clause)",
+      "genitive plural (possession)",
+      "dative plural (indirect object within relative clause)",
+      "ablative plural (accompaniment)"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-048",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 9,
+    "prompt": "In <em>Paucī in oppidō manēre poterunt</em>, what is the syntactic function of [underline: manēre]?",
+    "options": [
+      "indirect statement",
+      "complementary infinitive",
+      "purpose clause",
+      "subject of the sentence"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-049",
+    "part": 2,
+    "type": "syntax-id",
+    "chapter": 12,
+    "prompt": "Which of the following is NOT a use of the ablative case?",
+    "options": [
+      "ablative of means",
+      "ablative of manner",
+      "extent of time or space",
+      "ablative of accompaniment"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p2-s-050",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 17,
+    "prompt": "In <em>Caesare audiente, nūntius tamen nihil dīcēbat</em>, the best translation of [underline: Caesare audiente] is:",
+    "options": [
+      "after Caesar was listening",
+      "although Caesar was listening",
+      "while Caesar was listening",
+      "with Caesar having been heard"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p2-s-051",
+    "part": 2,
+    "type": "syntax-function",
+    "chapter": 15,
+    "prompt": "In <em>Cicerō multās epistulās in quibus sē laudāvit scrīpsit</em>, what is the case of [underline: sē]?",
+    "options": [
+      "nominative (subject of laudāvit)",
+      "accusative (object of laudāvit)",
+      "dative (indirect object)",
+      "ablative (means)"
+    ],
+    "correct": 1
+  }
+]

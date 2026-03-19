@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Question Review — Latin Placement</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== REVIEW-SPECIFIC STYLES ===== */
+    #screen-auth .card { max-width: 420px; }
+    #screen-auth h2 {
+      font-family: var(--serif);
+      font-weight: var(--serif-weight);
+      font-size: 1.38rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    /* Toolbar */
+    .toolbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: .6rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      align-items: center;
+      position: sticky;
+      top: 52px; /* below test-header */
+      z-index: 9;
+    }
+    .toolbar select, .toolbar input[type="text"] {
+      padding: .4rem .65rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: .88rem;
+      font-family: var(--sans);
+      background: var(--input-bg);
+      color: var(--text);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .toolbar select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236b6760' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .6rem center;
+      padding-right: 1.8rem;
+    }
+    .toolbar input[type="text"] { min-width: 160px; }
+    .toolbar-count {
+      font-size: .85rem;
+      color: var(--muted);
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    /* Question review cards */
+    .review-list {
+      padding: .75rem 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .rq-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+      box-shadow: var(--shadow);
+    }
+    .rq-card.has-note { border-color: var(--selected-border); }
+    .rq-card.tag-delete { border-left: 4px solid #c0392b; }
+    .rq-card.tag-rewrite { border-left: 4px solid #d68910; }
+    .rq-card.tag-fix-answer { border-left: 4px solid #1a6eb5; }
+    .rq-card.tag-add-option { border-left: 4px solid #2e7d4f; }
+    .rq-card.tag-unclear { border-left: 4px solid #7b4ea6; }
+
+    .rq-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      margin-bottom: .6rem;
+      align-items: center;
+    }
+    .rq-id {
+      font-size: .75rem;
+      font-family: monospace;
+      color: var(--muted);
+    }
+    .rq-badge {
+      font-size: .72rem;
+      padding: .15rem .5rem;
+      border-radius: 20px;
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+    .badge-part1 { background: #e8e4f7; color: var(--accent); }
+    .badge-part2 { background: #fde9c8; color: #7a4500; }
+    .badge-type { background: var(--bg); color: var(--muted); border: 1px solid var(--border); }
+    .badge-ch { background: var(--bg); color: var(--muted); border: 1px solid var(--border); }
+
+    .rq-passage {
+      font-family: var(--serif);
+      font-weight: var(--serif-weight);
+      font-size: 1rem;
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      padding: .5rem .75rem;
+      border-radius: 4px;
+      margin-bottom: .75rem;
+      line-height: 1.45;
+    }
+
+    .rq-prompt {
+      font-family: var(--serif);
+      font-weight: var(--serif-weight);
+      font-size: 1.1rem;
+      line-height: 1.4;
+      margin-bottom: .75rem;
+    }
+    .rq-prompt em { font-style: italic; }
+    .rq-prompt u { text-decoration: underline; }
+
+    .rq-options {
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+      margin-bottom: .9rem;
+    }
+    .rq-option {
+      padding: .5rem .75rem;
+      border-radius: 6px;
+      font-family: var(--serif);
+      font-weight: var(--serif-weight);
+      font-size: 1rem;
+      border: 1.5px solid var(--border);
+      background: var(--input-bg);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .rq-option.correct {
+      background: #eaf5ee;
+      border-color: var(--success);
+      font-weight: 700;
+      color: #1a5c37;
+    }
+    .rq-option em { font-style: italic; }
+    .rq-option u { text-decoration: underline; }
+    .correct-mark {
+      font-size: .8rem;
+      color: var(--success);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .opt-letter {
+      font-size: .8rem;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-weight: 600;
+      min-width: 1.1em;
+    }
+
+    /* Annotation area */
+    .rq-annotation {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .rq-annotation-row {
+      display: flex;
+      gap: .5rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .tag-select {
+      padding: .4rem .65rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: .85rem;
+      font-family: var(--sans);
+      background: var(--input-bg);
+      color: var(--text);
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236b6760' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .6rem center;
+      padding-right: 1.8rem;
+      min-width: 140px;
+    }
+    .note-textarea {
+      flex: 1;
+      min-width: 200px;
+      padding: .4rem .65rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: .88rem;
+      font-family: var(--sans);
+      background: var(--input-bg);
+      color: var(--text);
+      resize: vertical;
+      min-height: 60px;
+      line-height: 1.4;
+    }
+    .note-textarea:focus, .tag-select:focus {
+      outline: none;
+      border-color: var(--selected-border);
+      box-shadow: 0 0 0 2px rgba(32,21,71,.12);
+    }
+
+    /* Export bar */
+    .export-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--accent);
+      color: #fff;
+      padding: .75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      z-index: 20;
+      box-shadow: 0 -2px 12px rgba(0,0,0,.15);
+    }
+    .export-bar-label {
+      font-size: .9rem;
+      opacity: .85;
+    }
+    .export-bar-count {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .export-bar .btn-export {
+      margin-left: auto;
+      background: #fff;
+      color: var(--accent);
+      border: none;
+      padding: .55rem 1.1rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: .9rem;
+      cursor: pointer;
+      font-family: var(--sans);
+    }
+    .export-bar .btn-export:hover { background: var(--accent-light); }
+    .export-bar .btn-clear-all {
+      background: transparent;
+      color: rgba(255,255,255,.7);
+      border: 1px solid rgba(255,255,255,.35);
+      padding: .5rem .9rem;
+      border-radius: 6px;
+      font-size: .82rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--sans);
+    }
+    .export-bar .btn-clear-all:hover { background: rgba(255,255,255,.1); color: #fff; }
+
+    /* Spacer so content clears fixed export bar */
+    .review-list { padding-bottom: 5rem; }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .toolbar { top: 48px; }
+      .rq-annotation-row { flex-wrap: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- AUTH SCREEN -->
+  <div id="screen-auth" class="screen">
+    <header class="page-header">
+      <h1>Question Review</h1>
+    </header>
+    <main class="card" style="margin-top:2rem;">
+      <h2>Enter access key</h2>
+      <div class="field">
+        <label for="key-input">Results key</label>
+        <input type="password" id="key-input" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+      <div id="auth-error" class="error-msg"></div>
+      <button class="btn-primary" id="auth-btn" style="width:100%">Load Questions →</button>
+    </main>
+  </div>
+
+  <!-- REVIEW SCREEN -->
+  <div id="screen-review" class="screen" hidden>
+    <header class="test-header">
+      <div class="test-header-inner">
+        <span class="part-label" style="font-style:normal;">Question Review</span>
+        <span class="progress-label" id="review-progress"></span>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <select id="filter-part">
+        <option value="">All Parts</option>
+        <option value="1">Part 1</option>
+        <option value="2">Part 2</option>
+      </select>
+      <select id="filter-type">
+        <option value="">All Types</option>
+      </select>
+      <select id="filter-chapter">
+        <option value="">All Chapters</option>
+      </select>
+      <select id="filter-tag">
+        <option value="">All Tags</option>
+        <option value="rewrite">Rewrite</option>
+        <option value="fix-answer">Fix Answer</option>
+        <option value="delete">Delete</option>
+        <option value="add-option">Add Option</option>
+        <option value="unclear">Unclear</option>
+        <option value="annotated">Any Annotation</option>
+      </select>
+      <input type="text" id="filter-search" placeholder="Search…" />
+      <span class="toolbar-count" id="visible-count"></span>
+    </div>
+
+    <div class="review-list" id="review-list"></div>
+  </div>
+
+  <!-- EXPORT BAR (always visible on review screen) -->
+  <div class="export-bar" id="export-bar" hidden>
+    <span class="export-bar-label">Annotated:</span>
+    <span class="export-bar-count" id="annotated-count">0</span>
+    <button class="btn-clear-all" id="btn-clear-all">Clear All</button>
+    <button class="btn-export" id="btn-export">Copy Summary</button>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'latin-review-notes';
+
+    // ── State ──────────────────────────────────────────────
+    let allQuestions = [];
+    let notes = {};   // { [id]: { tag: string, note: string } }
+    let activeKey = '';
+
+    // ── Persist ────────────────────────────────────────────
+    function loadNotes() {
+      try { notes = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch { notes = {}; }
+    }
+    function saveNotes() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(notes));
+      updateExportBar();
+    }
+
+    // ── Auth ───────────────────────────────────────────────
+    document.getElementById('auth-btn').addEventListener('click', authenticate);
+    document.getElementById('key-input').addEventListener('keydown', e => { if (e.key === 'Enter') authenticate(); });
+
+    async function authenticate() {
+      const key = document.getElementById('key-input').value.trim();
+      if (!key) { showAuthError('Please enter a key.'); return; }
+      document.getElementById('auth-btn').disabled = true;
+      document.getElementById('auth-btn').textContent = 'Loading…';
+      try {
+        const res = await fetch(`/api/review?key=${encodeURIComponent(key)}`);
+        if (!res.ok) { throw new Error('Invalid key'); }
+        const data = await res.json();
+        activeKey = key;
+        allQuestions = data.questions;
+        loadNotes();
+        initReview();
+      } catch (e) {
+        showAuthError(e.message === 'Invalid key' ? 'Incorrect key.' : 'Could not load questions.');
+        document.getElementById('auth-btn').disabled = false;
+        document.getElementById('auth-btn').textContent = 'Load Questions →';
+      }
+    }
+    function showAuthError(msg) {
+      document.getElementById('auth-error').textContent = msg;
+    }
+
+    // ── Init review ────────────────────────────────────────
+    function initReview() {
+      document.getElementById('screen-auth').hidden = true;
+      document.getElementById('screen-review').hidden = false;
+      document.getElementById('export-bar').hidden = false;
+
+      // Populate type filter
+      const types = [...new Set(allQuestions.map(q => q.type))].sort();
+      const typeSelect = document.getElementById('filter-type');
+      types.forEach(t => {
+        const o = document.createElement('option');
+        o.value = t; o.textContent = formatType(t);
+        typeSelect.appendChild(o);
+      });
+
+      // Populate chapter filter
+      const chapters = [...new Set(allQuestions.map(q => q.chapter))].sort((a,b)=>a-b);
+      const chSelect = document.getElementById('filter-chapter');
+      chapters.forEach(c => {
+        const o = document.createElement('option');
+        o.value = c; o.textContent = `Ch. ${c}`;
+        chSelect.appendChild(o);
+      });
+
+      // Filters
+      ['filter-part','filter-type','filter-chapter','filter-tag','filter-search'].forEach(id => {
+        document.getElementById(id).addEventListener('input', renderList);
+      });
+
+      updateExportBar();
+      renderList();
+    }
+
+    function formatType(t) {
+      return {
+        'vocab-la-en': 'Vocab: Latin → English',
+        'vocab-en-la': 'Vocab: English → Latin',
+        'form-noun':   'Forms: Noun',
+        'form-verb':   'Forms: Verb',
+        'form-pronoun':'Forms: Pronoun',
+        'form-participle':'Forms: Participle',
+        'form-infinitive':'Forms: Infinitive',
+        'syntax-id':   'Syntax: Identify',
+        'syntax-function':'Syntax: Function',
+        'comprehension':'Comprehension',
+      }[t] || t;
+    }
+
+    // ── Render list ────────────────────────────────────────
+    function renderList() {
+      const part    = document.getElementById('filter-part').value;
+      const type    = document.getElementById('filter-type').value;
+      const chapter = document.getElementById('filter-chapter').value;
+      const tagF    = document.getElementById('filter-tag').value;
+      const search  = document.getElementById('filter-search').value.toLowerCase().trim();
+
+      const filtered = allQuestions.filter(q => {
+        if (part    && String(q.part)    !== part)    return false;
+        if (type    && q.type            !== type)    return false;
+        if (chapter && String(q.chapter) !== chapter) return false;
+        const n = notes[q.id];
+        if (tagF === 'annotated') {
+          if (!n || (!n.tag && !n.note.trim())) return false;
+        } else if (tagF) {
+          if (!n || n.tag !== tagF) return false;
+        }
+        if (search) {
+          const blob = [q.id, q.prompt, ...(q.options||[]), q.passage||''].join(' ').toLowerCase();
+          if (!blob.includes(search)) return false;
+        }
+        return true;
+      });
+
+      document.getElementById('visible-count').textContent = `${filtered.length} question${filtered.length===1?'':'s'}`;
+
+      // Update progress
+      const annotated = allQuestions.filter(q => {
+        const n = notes[q.id];
+        return n && (n.tag || n.note.trim());
+      }).length;
+      document.getElementById('review-progress').textContent =
+        `${annotated} / ${allQuestions.length} annotated`;
+
+      const list = document.getElementById('review-list');
+      list.innerHTML = '';
+
+      if (filtered.length === 0) {
+        list.innerHTML = '<div class="empty-state">No questions match your filters.</div>';
+        return;
+      }
+
+      filtered.forEach(q => list.appendChild(buildCard(q)));
+    }
+
+    // ── Render a single card ───────────────────────────────
+    function buildCard(q) {
+      const n = notes[q.id] || { tag: '', note: '' };
+
+      const card = document.createElement('div');
+      card.className = 'rq-card' + (n.note.trim() || n.tag ? ' has-note' : '') + (n.tag ? ` tag-${n.tag}` : '');
+      card.dataset.id = q.id;
+
+      // Meta row
+      const meta = document.createElement('div');
+      meta.className = 'rq-meta';
+      meta.innerHTML =
+        `<span class="rq-id">${q.id}</span>` +
+        `<span class="rq-badge ${q.part===1?'badge-part1':'badge-part2'}">Part ${q.part}</span>` +
+        `<span class="rq-badge badge-type">${formatType(q.type)}</span>` +
+        `<span class="rq-badge badge-ch">Ch. ${q.chapter}</span>`;
+      card.appendChild(meta);
+
+      // Passage (if any)
+      if (q.passage) {
+        const pass = document.createElement('div');
+        pass.className = 'rq-passage';
+        pass.innerHTML = renderInline(q.passage);
+        card.appendChild(pass);
+      }
+
+      // Prompt
+      const prompt = document.createElement('div');
+      prompt.className = 'rq-prompt';
+      prompt.innerHTML = renderInline(q.prompt);
+      card.appendChild(prompt);
+
+      // Options
+      const optList = document.createElement('div');
+      optList.className = 'rq-options';
+      const letters = ['A','B','C','D','E'];
+      q.options.forEach((opt, i) => {
+        const div = document.createElement('div');
+        div.className = 'rq-option' + (i === q.correct ? ' correct' : '');
+        div.innerHTML =
+          `<span class="opt-letter">${letters[i]}</span>` +
+          `<span>${renderInline(opt)}</span>` +
+          (i === q.correct ? `<span class="correct-mark">✓ correct</span>` : '');
+        optList.appendChild(div);
+      });
+      card.appendChild(optList);
+
+      // Annotation area
+      const ann = document.createElement('div');
+      ann.className = 'rq-annotation';
+      const row = document.createElement('div');
+      row.className = 'rq-annotation-row';
+
+      const tagSel = document.createElement('select');
+      tagSel.className = 'tag-select';
+      tagSel.innerHTML =
+        `<option value="">— tag —</option>` +
+        `<option value="rewrite">Rewrite</option>` +
+        `<option value="fix-answer">Fix Answer</option>` +
+        `<option value="delete">Delete</option>` +
+        `<option value="add-option">Add Option</option>` +
+        `<option value="unclear">Unclear</option>`;
+      tagSel.value = n.tag || '';
+
+      const textarea = document.createElement('textarea');
+      textarea.className = 'note-textarea';
+      textarea.placeholder = 'Add your note or revision instructions…';
+      textarea.value = n.note || '';
+
+      tagSel.addEventListener('change', () => updateNote(q.id, tagSel.value, textarea.value, card));
+      textarea.addEventListener('input',  () => updateNote(q.id, tagSel.value, textarea.value, card));
+
+      row.appendChild(tagSel);
+      row.appendChild(textarea);
+      ann.appendChild(row);
+      card.appendChild(ann);
+
+      return card;
+    }
+
+    function updateNote(id, tag, note, card) {
+      if (!tag && !note.trim()) {
+        delete notes[id];
+      } else {
+        notes[id] = { tag, note };
+      }
+      saveNotes();
+
+      // Update card classes without re-rendering
+      card.className = 'rq-card' +
+        (tag || note.trim() ? ' has-note' : '') +
+        (tag ? ` tag-${tag}` : '');
+
+      // Update progress label
+      const annotated = allQuestions.filter(q => {
+        const n = notes[q.id];
+        return n && (n.tag || n.note.trim());
+      }).length;
+      document.getElementById('review-progress').textContent =
+        `${annotated} / ${allQuestions.length} annotated`;
+    }
+
+    // ── Inline formatting ──────────────────────────────────
+    // Handles <em>, <u>, <strong>, and [underline: text]
+    function renderInline(html) {
+      if (!html) return '';
+      return html.replace(/\[underline:\s*([^\]]+)\]/g, '<span class="hl">$1</span>');
+    }
+
+    // ── Export bar ─────────────────────────────────────────
+    function updateExportBar() {
+      const count = Object.keys(notes).filter(id => {
+        const n = notes[id];
+        return n && (n.tag || n.note.trim());
+      }).length;
+      document.getElementById('annotated-count').textContent = count;
+    }
+
+    document.getElementById('btn-export').addEventListener('click', exportSummary);
+    document.getElementById('btn-clear-all').addEventListener('click', () => {
+      if (!confirm('Clear all annotations? This cannot be undone.')) return;
+      notes = {};
+      saveNotes();
+      renderList();
+    });
+
+    function exportSummary() {
+      const annotated = allQuestions.filter(q => {
+        const n = notes[q.id];
+        return n && (n.tag || n.note.trim());
+      });
+
+      if (annotated.length === 0) {
+        alert('No annotations yet.');
+        return;
+      }
+
+      const lines = [];
+      lines.push(`# Question Review — ${annotated.length} item${annotated.length===1?'':'s'}`);
+      lines.push('');
+
+      annotated.forEach(q => {
+        const n = notes[q.id];
+        const tagLabel = n.tag
+          ? { rewrite:'REWRITE', 'fix-answer':'FIX ANSWER', delete:'DELETE', 'add-option':'ADD OPTION', unclear:'UNCLEAR' }[n.tag] || n.tag.toUpperCase()
+          : '';
+        lines.push(`---`);
+        lines.push(`**${q.id}** | Part ${q.part} | ${formatType(q.type)} | Ch. ${q.chapter}${tagLabel ? ` | [${tagLabel}]` : ''}`);
+        lines.push('');
+
+        // Prompt (strip HTML for readability)
+        const plainPrompt = stripHtml(renderInline(q.prompt));
+        lines.push(`Prompt: ${plainPrompt}`);
+
+        const letters = ['A','B','C','D','E'];
+        q.options.forEach((opt, i) => {
+          const mark = i === q.correct ? ' ✓' : '';
+          lines.push(`  ${letters[i]}) ${stripHtml(opt)}${mark}`);
+        });
+
+        if (n.note.trim()) {
+          lines.push('');
+          lines.push(`Note: ${n.note.trim()}`);
+        }
+        lines.push('');
+      });
+
+      const text = lines.join('\n');
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('btn-export');
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy Summary', 2000);
+      }).catch(() => {
+        // Fallback: show in a textarea modal
+        prompt('Copy the summary below:', text);
+      });
+    }
+
+    function stripHtml(html) {
+      const div = document.createElement('div');
+      div.innerHTML = html;
+      return div.textContent || div.innerText || '';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "placent",
+  "version": "1.0.0",
+  "description": "Latin placement test",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "dotenv": "^16.0.0"
+  }
+}

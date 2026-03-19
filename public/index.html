@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latin Placement Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== SCREEN: INFO (Part 0) ===== -->
+  <div id="screen-info" class="screen">
+    <header class="page-header">
+      <h1>LATIN PLACEMENT TEST</h1>
+    </header>
+    <main class="card">
+      <ul class="intro-notice">
+        <li>Please complete the form below before beginning the test.</li>
+        <li>The test has two parts and a <strong>45-minute time limit</strong> once you begin.</li>
+        <li>Your answers are saved automatically. If you lose your connection, reload the page to continue where you left off.</li></ul>
+      </ul>
+
+      <form id="info-form" novalidate>
+        <fieldset>
+          <legend>Student Information</legend>
+
+          <div class="field">
+            <label for="firstName">First Name <span class="req">*</span></label>
+            <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
+          </div>
+          <div class="field">
+            <label for="lastName">Last Name <span class="req">*</span></label>
+            <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
+          </div>
+          <div class="field">
+            <label for="studentId">Student ID <span class="req">*</span></label>
+            <input type="text" id="studentId" name="studentId" inputmode="numeric" required />
+          </div>
+          <div class="field">
+            <label for="termsTaken">Terms of Latin taken <span class="req">*</span></label>
+            <select id="termsTaken" name="termsTaken" required>
+              <option value="">— select —</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8+">8 or more</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Which textbook(s) have you used?</legend>
+          <p class="fieldset-note">Select all that apply.</p>
+          <div class="check-group" id="textbooks-group">
+            <label class="check-label"><input type="checkbox" name="textbook" value="Wheelock's Latin" /> Wheelock's Latin</label>
+            <label class="check-label"><input type="checkbox" name="textbook" value="Shelmerdine's Introduction to Latin" /> Shelmerdine's Introduction to Latin</label>
+            <label class="check-label"><input type="checkbox" name="textbook" value="Lingua Latina per se Illustrata (Ørberg)" /> Lingua Latina per se Illustrata (Ørberg)</label>
+            <label class="check-label"><input type="checkbox" name="textbook" value="Cambridge Latin Course" /> Cambridge Latin Course</label>
+            <label class="check-label"><input type="checkbox" name="textbook" value="Oxford Latin Course" /> Oxford Latin Course</label>
+            <label class="check-label"><input type="checkbox" name="textbook" value="Latin for Americans" /> Latin for Americans</label>
+            <label class="check-label"><input type="checkbox" name="textbook" value="Latin for a New Millennium" /> Latin for a New Millennium</label>
+            <label class="check-label"><input type="checkbox" name="textbook" value="Ecce Romani" /> Ecce Romani</label>
+            <label class="check-label"><input type="checkbox" name="textbook" value="Henle Latin" /> Henle Latin</label>
+            <label class="check-label"><input type="checkbox" name="textbook" value="Latin via Ovid" /> Latin via Ovid</label>
+            <label class="check-label"><input type="checkbox" name="textbook" value="__other_textbook__" id="textbook-other-check" /> Other:
+              <input type="text" id="textbook-other-text" class="other-text" placeholder="specify" aria-label="Other textbook" disabled />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Which Latin author(s) have you read?</legend>
+          <p class="fieldset-note">Select all that apply.</p>
+          <div class="check-group" id="authors-group">
+            <label class="check-label"><input type="checkbox" name="author" value="Caesar" /> Caesar</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Cicero" /> Cicero</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Virgil" /> Virgil</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Ovid" /> Ovid</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Livy" /> Livy</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Catullus" /> Catullus</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Horace" /> Horace</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Pliny the Younger" /> Pliny the Younger</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Tacitus" /> Tacitus</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Sallust" /> Sallust</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Martial" /> Martial</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Seneca" /> Seneca</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Plautus/Terence" /> Plautus / Terence</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Nepos" /> Nepos</label>
+            <label class="check-label"><input type="checkbox" name="author" value="Juvenal" /> Juvenal</label>
+            <label class="check-label"><input type="checkbox" name="author" value="None" id="author-none-check" /> None</label>
+            <label class="check-label"><input type="checkbox" name="author" value="__other_author__" id="author-other-check" /> Other:
+              <input type="text" id="author-other-text" class="other-text" placeholder="specify" aria-label="Other author" disabled />
+            </label>
+          </div>
+        </fieldset>
+
+        <div id="info-error" class="error-msg" role="alert" aria-live="polite"></div>
+        <button type="submit" class="btn-primary">Begin Test →</button>
+      </form>
+    </main>
+  </div>
+
+  <!-- ===== SCREEN: PART 1 ===== -->
+  <div id="screen-part1" class="screen" hidden>
+    <header class="test-header">
+      <div class="test-header-inner">
+        <span class="part-label">Part 1 — Vocabulary &amp; Forms</span>
+        <span class="progress-label" id="p1-progress">Answered: 0 / 35</span>
+      </div>
+    </header>
+    <main class="card question-card">
+      <div id="p1-restore-notice" class="restore-notice" hidden>Your answers have been restored.</div>
+      <div class="question-counter" id="p1-counter">Question 1 of 35</div>
+      <div class="question-prompt" id="p1-prompt"></div>
+      <div class="options-list" id="p1-options" role="radiogroup" aria-labelledby="p1-prompt"></div>
+      <div class="nav-row">
+        <button class="btn-secondary" id="p1-prev" disabled>← Previous</button>
+        <button class="btn-primary" id="p1-next">Next →</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- ===== SCREEN: PART 2 ===== -->
+  <div id="screen-part2" class="screen" hidden>
+    <header class="test-header">
+      <div class="test-header-inner">
+        <span class="part-label">Part 2 — Syntax &amp; Comprehension</span>
+        <span class="progress-label" id="p2-progress">Answered: 0 / 25</span>
+      </div>
+    </header>
+    <main class="card question-card">
+      <div class="question-counter" id="p2-counter">Question 1 of 25</div>
+      <div class="passage-block" id="p2-passage" hidden></div>
+      <div class="question-prompt" id="p2-prompt"></div>
+      <div class="options-list" id="p2-options" role="radiogroup" aria-labelledby="p2-prompt"></div>
+      <div class="nav-row">
+        <button class="btn-secondary" id="p2-prev" disabled>← Previous</button>
+        <button class="btn-primary" id="p2-next">Next →</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- ===== SCREEN: DONE ===== -->
+  <div id="screen-done" class="screen" hidden>
+    <header class="page-header">
+      <h1>LATIN PLACEMENT TEST</h1>
+    </header>
+    <main class="card done-card">
+      <svg class="done-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <polyline points="7,12 10.5,15.5 17,8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p class="done-message">Your placement test has been submitted.</p>
+      <p class="done-message">Data from this test will be used to determine the appropriate placement level in the Latin sequence for you, and this will appear later among your Workday information.
+      </p>
+    </main>
+  </div>
+
+  <!-- ===== MODAL: confirm submit ===== -->
+  <div id="modal-overlay" class="modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <h2 id="modal-title">Submit Test?</h2>
+      <p id="modal-body"></p>
+      <div class="modal-actions">
+        <button class="btn-secondary" id="modal-cancel">Go back</button>
+        <button class="btn-primary" id="modal-confirm">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

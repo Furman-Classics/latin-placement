@@ -1,0 +1,5422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Latin Placement 2</text>
+    </category>
+    <info format="moodle_auto_format">
+      <text>Vocab for Latin Placement</text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 172  -->
+  <question type="multichoice">
+    <name>
+      <text>________ agricola in agris laborat.</text>
+    </name>
+    <questiontext format="html">
+      <text>________ agricola in agris laborat.</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Bona</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Bonus</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Bonum</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Boni</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 191  -->
+  <question type="multichoice">
+    <name>
+      <text>-que</text>
+    </name>
+    <questiontext format="html">
+      <text>-que</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>but</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>and</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>or</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>each</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 134  -->
+  <question type="multichoice">
+    <name>
+      <text>accipere</text>
+    </name>
+    <questiontext format="html">
+      <text>accipere</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>approach</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>kill</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>receive</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>summon</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 164  -->
+  <question type="multichoice">
+    <name>
+      <text>ad</text>
+    </name>
+    <questiontext format="html">
+      <text>ad</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>toward</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>away</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>above</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>from</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 173  -->
+  <question type="multichoice">
+    <name>
+      <text>aliquis</text>
+    </name>
+    <questiontext format="html">
+      <text>aliquis</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>someone</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>whoever</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>nurse</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>each one</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 224  -->
+  <question type="multichoice">
+    <name>
+      <text>alius</text>
+    </name>
+    <questiontext format="html">
+      <text>alius</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>the other (of two)</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>elsewhere</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>another</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>winged</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 219  -->
+  <question type="multichoice">
+    <name>
+      <text>All of the following are uses of the ablative case EXCEPT</text>
+    </name>
+    <questiontext format="html">
+      <text>All of the following are uses of the ablative case EXCEPT</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>place where from</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>place where</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>respect</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>extent</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 181  -->
+  <question type="multichoice">
+    <name>
+      <text>All the following terms refer to Latin cases EXCEPT</text>
+    </name>
+    <questiontext format="html">
+      <text>All the following terms refer to Latin cases EXCEPT</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Ablative</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Indicative</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Vocative</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Genitive</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 202  -->
+  <question type="multichoice">
+    <name>
+      <text>All the following writers were poets EXCEPT</text>
+    </name>
+    <questiontext format="html">
+      <text>All the following writers were poets EXCEPT</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Vergil</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Livy</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Catullus</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Horace</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 168  -->
+  <question type="multichoice">
+    <name>
+      <text>animus</text>
+    </name>
+    <questiontext format="html">
+      <text>animus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>mind</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>animal</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>drawing</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>year</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 177  -->
+  <question type="multichoice">
+    <name>
+      <text>Arma virumque canō Trōiae quī prīmus ab ōris...</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Arma virumque canō Trōiae quī prīmus ab ōris...<br />
+     In this line of hexamter, the caesura fals between]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Arma AND virumque</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Virumque AND canō </text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>canō AND Trōiae</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Trōiae AND quī</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 198  -->
+  <question type="multichoice">
+    <name>
+      <text>at</text>
+    </name>
+    <questiontext format="html">
+      <text>at</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>at</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>near</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>from</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>but</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 192  -->
+  <question type="multichoice">
+    <name>
+      <text>aurum</text>
+    </name>
+    <questiontext format="html">
+      <text>aurum</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>ear</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>gold</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>hall</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>altar</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 232  -->
+  <question type="multichoice">
+    <name>
+      <text>caelum</text>
+    </name>
+    <questiontext format="html">
+      <text>caelum</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>sky</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>carve</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>corpse</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>seal</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 221  -->
+  <question type="multichoice">
+    <name>
+      <text>Caesar EADEM dixit.</text>
+    </name>
+    <questiontext format="html">
+      <text>Caesar EADEM dixit.</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>feminine accusative singular</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>neuter accusative plural</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>feminine genitive plural</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>masculine accusative singular</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 158  -->
+  <question type="multichoice">
+    <name>
+      <text>CAESARE AUDIENTE, nuntius tmaen nihil dicebat.</text>
+    </name>
+    <questiontext format="html">
+      <text>CAESARE AUDIENTE, nuntius tmaen nihil dicebat.</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Although Caesar was listening,</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>After Caesar was listening,</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>While Caesar was listening,</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>With Caesar having been heard,</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 160  -->
+  <question type="multichoice">
+    <name>
+      <text>causa</text>
+    </name>
+    <questiontext format="html">
+      <text>causa</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>hut</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>tail</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>disaster</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>reason</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 156  -->
+  <question type="multichoice">
+    <name>
+      <text>Cicero multas epistulas in quibus SE laudavit scripsit.</text>
+    </name>
+    <questiontext format="html">
+      <text>Cicero multas epistulas in quibus SE laudavit scripsit.</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>accusative singular</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>ablative singular</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>nominative singular</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>accusative plural</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 203  -->
+  <question type="multichoice">
+    <name>
+      <text>coepisse</text>
+    </name>
+    <questiontext format="html">
+      <text>coepisse</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>began</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>division of a legion</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>collected</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>kinsman</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 201  -->
+  <question type="multichoice">
+    <name>
+      <text>consilium</text>
+    </name>
+    <questiontext format="html">
+      <text>consilium</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>comfort</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>plan</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>consulship</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>place of honor</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 149  -->
+  <question type="multichoice">
+    <name>
+      <text>Crās tē vīcturūm, crās dicis, Postume, semper.</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Crās tē vīcturūm, crās dicis, Postume, semper.<br />
+In this line of dactylic hexameter, the fourth foot is a(n)]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>iamb</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>trochee</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>dactyl</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>spondee</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 184  -->
+  <question type="multichoice">
+    <name>
+      <text>cunctus</text>
+    </name>
+    <questiontext format="html">
+      <text>cunctus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>delay</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>broken</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>all together</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>underground passage</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 204  -->
+  <question type="multichoice">
+    <name>
+      <text>cura</text>
+    </name>
+    <questiontext format="html">
+      <text>cura</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>care</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>cure</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>wax</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>senate house</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 162  -->
+  <question type="multichoice">
+    <name>
+      <text>DATA SUNT is the __________ of DO</text>
+    </name>
+    <questiontext format="html">
+      <text>DATA SUNT is the __________ of DO</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>third person plural perfect indicative passive</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>third person plural perfect indicative active</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>third person plural perfect subjunctive passive</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>third person plural pluperfect indicative passive</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 145  -->
+  <question type="multichoice">
+    <name>
+      <text>deinde</text>
+    </name>
+    <questiontext format="html">
+      <text>deinde</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>down from there</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>next</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>however</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>because</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 139  -->
+  <question type="multichoice">
+    <name>
+      <text>dicere</text>
+    </name>
+    <questiontext format="html">
+      <text>dicere</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>teach</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>lead</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>ask</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>ask</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 183  -->
+  <question type="multichoice">
+    <name>
+      <text>dum</text>
+    </name>
+    <questiontext format="html">
+      <text>dum</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>then</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>for a long time</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>while</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>next</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 208  -->
+  <question type="multichoice">
+    <name>
+      <text>e</text>
+    </name>
+    <questiontext format="html">
+      <text>e</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>she</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>go</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>down</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>out</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 193  -->
+  <question type="multichoice">
+    <name>
+      <text>ergo</text>
+    </name>
+    <questiontext format="html">
+      <text>ergo</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>therefore</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>against</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>toward</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>effort</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 161  -->
+  <question type="multichoice">
+    <name>
+      <text>facere</text>
+    </name>
+    <questiontext format="html">
+      <text>facere</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>crime</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>fact</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>easy</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>make</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 174  -->
+  <question type="multichoice">
+    <name>
+      <text>finis</text>
+    </name>
+    <questiontext format="html">
+      <text>finis</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>neighbor</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>trust</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>boundary</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>delicate</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 144  -->
+  <question type="multichoice">
+    <name>
+      <text>fortis</text>
+    </name>
+    <questiontext format="html">
+      <text>fortis</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>brave</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>maybe</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>military camp</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>by chance</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 229  -->
+  <question type="multichoice">
+    <name>
+      <text>fratrem tuum, A QUO saepe iuvabar, cras in foro videbo.</text>
+    </name>
+    <questiontext format="html">
+      <text>fratrem tuum, A QUO saepe iuvabar, cras in foro videbo.</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>by whom</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>from whom</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>than whom</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>for whom</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 157  -->
+  <question type="multichoice">
+    <name>
+      <text>gerere</text>
+    </name>
+    <questiontext format="html">
+      <text>gerere</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>age</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>family</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>kind</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>wear</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 175  -->
+  <question type="multichoice">
+    <name>
+      <text>gravis</text>
+    </name>
+    <questiontext format="html">
+      <text>gravis</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>tomb</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>important</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>carved</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>deadly</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 180  -->
+  <question type="multichoice">
+    <name>
+      <text>hic</text>
+    </name>
+    <questiontext format="html">
+      <text>hic</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>there</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>his</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>that</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>this</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 194  -->
+  <question type="multichoice">
+    <name>
+      <text>Id oculis meis vidi.</text>
+    </name>
+    <questiontext format="html">
+      <text>Id oculis meis vidi.</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>I saw it with my own eyes.</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It saw me with its eyes.</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It saw my eyes.</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>I saw my own eyes with it.</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 199  -->
+  <question type="multichoice">
+    <name>
+      <text>Issa est passere nequior Catulli;</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Issa est passere nequior Catulli;<br />
+Issa est purior osculo columbae;<br />
+Issa est blandior omnibus puellis;<br />
+Issa est carior Indicis lapillis;<br />
+Issa est deliciae catella Publi.<br />
+<br />
+This passage demonstrates what rhetorical figure?]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>zeugma</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>anaphora</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>anastrophe</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>polysyndeton</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 196  -->
+  <question type="multichoice">
+    <name>
+      <text>iuvenis</text>
+    </name>
+    <questiontext format="html">
+      <text>iuvenis</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>cattle</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>young</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>court</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>ridge</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 147  -->
+  <question type="multichoice">
+    <name>
+      <text>laus</text>
+    </name>
+    <questiontext format="html">
+      <text>laus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>happiness</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>law</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>praise</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>flea</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 207  -->
+  <question type="multichoice">
+    <name>
+      <text>malus</text>
+    </name>
+    <questiontext format="html">
+      <text>malus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>apple</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>bad</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>prefer</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>hammer</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 153  -->
+  <question type="multichoice">
+    <name>
+      <text>manus</text>
+    </name>
+    <questiontext format="html">
+      <text>manus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>hand</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>hut</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>ghost</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>morning</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 211  -->
+  <question type="multichoice">
+    <name>
+      <text>melior</text>
+    </name>
+    <questiontext format="html">
+      <text>melior</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>bigger</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>better</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>woman</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>honey</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 143  -->
+  <question type="multichoice">
+    <name>
+      <text>miles</text>
+    </name>
+    <questiontext format="html">
+      <text>miles</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>soldier</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text> mile(stone)</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>military</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>battle</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 223  -->
+  <question type="multichoice">
+    <name>
+      <text>Multam gloriam HABEBUNT.</text>
+    </name>
+    <questiontext format="html">
+      <text>Multam gloriam HABEBUNT.</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>they have</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>they have had</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>they used to have</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>they will have</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 179  -->
+  <question type="multichoice">
+    <name>
+      <text>ne</text>
+    </name>
+    <questiontext format="html">
+      <text>ne</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>neither</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>not</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>never</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>nor</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 197  -->
+  <question type="multichoice">
+    <name>
+      <text>noscere</text>
+    </name>
+    <questiontext format="html">
+      <text>noscere</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>learn</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>not know</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>harm</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>call by name</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 182  -->
+  <question type="multichoice">
+    <name>
+      <text>Omnes puellae ____ amorem nostram dedimus pauperes sunt.</text>
+    </name>
+    <questiontext format="html">
+      <text>Omnes puellae ____ amorem nostram dedimus pauperes sunt.</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>quae</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>quas</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>quibus</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>quem</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 222  -->
+  <question type="multichoice">
+    <name>
+      <text>opus</text>
+    </name>
+    <questiontext format="html">
+      <text>opus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>work</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>music</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>town</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>burden</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 167  -->
+  <question type="multichoice">
+    <name>
+      <text>parare</text>
+    </name>
+    <questiontext format="html">
+      <text>parare</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>make level</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>make ready</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>give birth</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>obey</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 152  -->
+  <question type="multichoice">
+    <name>
+      <text>Pauci in oppido MANERE poterunt.</text>
+    </name>
+    <questiontext format="html">
+      <text>Pauci in oppido MANERE poterunt.</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>infinitive in indirect statement</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>subjective infinitive</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>objective infinitive</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>complementary infinitive</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 188  -->
+  <question type="multichoice">
+    <name>
+      <text>Pecuniam dabant huic puero ______</text>
+    </name>
+    <questiontext format="html">
+      <text>Pecuniam dabant huic puero ______</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>soli</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>solo</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>solum</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>solus</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 171  -->
+  <question type="multichoice">
+    <name>
+      <text>quia</text>
+    </name>
+    <questiontext format="html">
+      <text>quia</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>who</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>because</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>which (things)</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>of such a kind</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 176  -->
+  <question type="multichoice">
+    <name>
+      <text>quidam</text>
+    </name>
+    <questiontext format="html">
+      <text>quidam</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>indeed</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>therefore</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>any</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>a certain</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 228  -->
+  <question type="multichoice">
+    <name>
+      <text>redire</text>
+    </name>
+    <questiontext format="html">
+      <text>redire</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>blush</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>say again</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>give back</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>go back</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 185  -->
+  <question type="multichoice">
+    <name>
+      <text>relinquere</text>
+    </name>
+    <questiontext format="html">
+      <text>relinquere</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>abandonment</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>resist</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>open</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>leave behind</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 220  -->
+  <question type="multichoice">
+    <name>
+      <text>res</text>
+    </name>
+    <questiontext format="html">
+      <text>res</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>witness</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>testify</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>affair</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>laugh</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 216  -->
+  <question type="multichoice">
+    <name>
+      <text>saepe</text>
+    </name>
+    <questiontext format="html">
+      <text>saepe</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>always</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>division</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>often</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>almost</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 138  -->
+  <question type="multichoice">
+    <name>
+      <text>sequi</text>
+    </name>
+    <questiontext format="html">
+      <text>sequi</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>second</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>follow</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>sparkle</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>after</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 178  -->
+  <question type="multichoice">
+    <name>
+      <text>seu</text>
+    </name>
+    <questiontext format="html">
+      <text>seu</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>alas</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>for</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>just as</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>or if</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 141  -->
+  <question type="multichoice">
+    <name>
+      <text>si</text>
+    </name>
+    <questiontext format="html">
+      <text>si</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>thus</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>or</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>if</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>yes</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 215  -->
+  <question type="multichoice">
+    <name>
+      <text>simul</text>
+    </name>
+    <questiontext format="html">
+      <text>simul</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>pretend</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>once</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>like</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>at the same time</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 227  -->
+  <question type="multichoice">
+    <name>
+      <text>sodalis</text>
+    </name>
+    <questiontext format="html">
+      <text>sodalis</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>companion</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>sunny</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>comfortable</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>thirsty</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 169  -->
+  <question type="multichoice">
+    <name>
+      <text>solere</text>
+    </name>
+    <questiontext format="html">
+      <text>solere</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>be alone</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>be in the habit of</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>shine</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>lie still</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 148  -->
+  <question type="multichoice">
+    <name>
+      <text>solus</text>
+    </name>
+    <questiontext format="html">
+      <text>solus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>alone</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>safe</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>loose</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>ground</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 189  -->
+  <question type="multichoice">
+    <name>
+      <text>stare</text>
+    </name>
+    <questiontext format="html">
+      <text>stare</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>stand</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>stare</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>at night</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>strike</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 140  -->
+  <question type="multichoice">
+    <name>
+      <text>studium</text>
+    </name>
+    <questiontext format="html">
+      <text>studium</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>studious</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>eagerness</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>foolishness</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>astonishment</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 210  -->
+  <question type="multichoice">
+    <name>
+      <text>stultus</text>
+    </name>
+    <questiontext format="html">
+      <text>stultus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>debauched</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>eager</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>noisy</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>silly</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 200  -->
+  <question type="multichoice">
+    <name>
+      <text>sub</text>
+    </name>
+    <questiontext format="html">
+      <text>sub</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>over</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>under</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>behind</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>in front</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 151  -->
+  <question type="multichoice">
+    <name>
+      <text>summus</text>
+    </name>
+    <questiontext format="html">
+      <text>summus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>total</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>mountain</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>we are</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>highest</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 206  -->
+  <question type="multichoice">
+    <name>
+      <text>talis</text>
+    </name>
+    <questiontext format="html">
+      <text>talis</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>so large</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>of such a kind</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>so many</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>at such a time</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 155  -->
+  <question type="multichoice">
+    <name>
+      <text>tamen</text>
+    </name>
+    <questiontext format="html">
+      <text>tamen</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>finally</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>whereas</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>whichever</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>nevertheless</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 230  -->
+  <question type="multichoice">
+    <name>
+      <text>The ablative singular of the word VIRTUS is</text>
+    </name>
+    <questiontext format="html">
+      <text>The ablative singular of the word VIRTUS is</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>virto</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>virtute</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>viro</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>virtuti</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 137  -->
+  <question type="multichoice">
+    <name>
+      <text>The present infinitive active of the verb SUM is</text>
+    </name>
+    <questiontext format="html">
+      <text>The present infinitive active of the verb SUM is</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>futurus</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>sumere</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>fui</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>esse</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 163  -->
+  <question type="multichoice">
+    <name>
+      <text>The second person plural perfect indicative active of ago is</text>
+    </name>
+    <questiontext format="html">
+      <text>The second person plural perfect indicative active of ago is</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>agetis</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>egeritis</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>egistis</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>agitis</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 212  -->
+  <question type="multichoice">
+    <name>
+      <text>The third person plural future indicative active of SCRIBO is</text>
+    </name>
+    <questiontext format="html">
+      <text>quamvis</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>scribant</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>scribebant</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>scribent</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>scribunt</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 142  -->
+  <question type="multichoice">
+    <name>
+      <text>totus</text>
+    </name>
+    <questiontext format="html">
+      <text>totus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>toga</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>all</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>so many</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>thirty</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 233  -->
+  <question type="multichoice">
+    <name>
+      <text>trabs</text>
+    </name>
+    <questiontext format="html">
+      <text>trabs</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>grave</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>rudder</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>volcano</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>beam</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 231  -->
+  <question type="multichoice">
+    <name>
+      <text>Tribus diebus apud me erunt.</text>
+    </name>
+    <questiontext format="html">
+      <text>Tribus diebus apud me erunt.</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>They will be at my house for three days.</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>They will be at my house in three days.</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Three gods will be against me.</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>A tribe of gods will be against me.</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 136  -->
+  <question type="multichoice">
+    <name>
+      <text>tu</text>
+    </name>
+    <questiontext format="html">
+      <text>tu</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>your</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>two</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>toward</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>you</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 225  -->
+  <question type="multichoice">
+    <name>
+      <text>turba</text>
+    </name>
+    <questiontext format="html">
+      <text>turba</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>hat</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>crowd</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>mud</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>whirlpool</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 186  -->
+  <question type="multichoice">
+    <name>
+      <text>turpis</text>
+    </name>
+    <questiontext format="html">
+      <text>turpis</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>muddy</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>trumpet</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>shameful</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>tower</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 217  -->
+  <question type="multichoice">
+    <name>
+      <text>ubi</text>
+    </name>
+    <questiontext format="html">
+      <text>ubi</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>why</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>when</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>copiously</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>however</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 165  -->
+  <question type="multichoice">
+    <name>
+      <text>ullus</text>
+    </name>
+    <questiontext format="html">
+      <text>ullus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>only</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>further</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>any</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>other</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 226  -->
+  <question type="multichoice">
+    <name>
+      <text>ullus</text>
+    </name>
+    <questiontext format="html">
+      <text>ullus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>oak</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>oil</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>jar</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>any</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 195  -->
+  <question type="multichoice">
+    <name>
+      <text>unde</text>
+    </name>
+    <questiontext format="html">
+      <text>unde</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>whence</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>billow</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>covered</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>everywhere</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 166  -->
+  <question type="multichoice">
+    <name>
+      <text>Under the patronage of Maecenas, ________ wrote for the emperor Augustus.</text>
+    </name>
+    <questiontext format="html">
+      <text>Under the patronage of Maecenas, ________ wrote for the emperor Augustus.</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Ovid</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Vergil</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Livy</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Catullus</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 187  -->
+  <question type="multichoice">
+    <name>
+      <text>urbs</text>
+    </name>
+    <questiontext format="html">
+      <text>urbs</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>teat</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>city</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>ointment</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>urban</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 209  -->
+  <question type="multichoice">
+    <name>
+      <text>uter</text>
+    </name>
+    <questiontext format="html">
+      <text>uter</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>sheep</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>which</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>belly</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>hoof</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 159  -->
+  <question type="multichoice">
+    <name>
+      <text>vel</text>
+    </name>
+    <questiontext format="html">
+      <text>vel</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>garment</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>sail</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>wish</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>or</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 170  -->
+  <question type="multichoice">
+    <name>
+      <text>velle</text>
+    </name>
+    <questiontext format="html">
+      <text>velle</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>sail</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>parchment</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>be willing</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>prefer</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 214  -->
+  <question type="multichoice">
+    <name>
+      <text>venire</text>
+    </name>
+    <questiontext format="html">
+      <text>venire</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>sell</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>come</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>hunt</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>wound</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 146  -->
+  <question type="multichoice">
+    <name>
+      <text>vester</text>
+    </name>
+    <questiontext format="html">
+      <text>vester</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>evening</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>your</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>footprint</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>our</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 190  -->
+  <question type="multichoice">
+    <name>
+      <text>vetus</text>
+    </name>
+    <questiontext format="html">
+      <text>vetus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>prohibition</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>cloak</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>old</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>shrine</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 150  -->
+  <question type="multichoice">
+    <name>
+      <text>vincere</text>
+    </name>
+    <questiontext format="html">
+      <text>vincere</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>conquer</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>bind</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>thrive</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>stay awake</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 135  -->
+  <question type="multichoice">
+    <name>
+      <text>vir</text>
+    </name>
+    <questiontext format="html">
+      <text>vir</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>strength</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>truth</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>man</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>scarcely</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 154  -->
+  <question type="multichoice">
+    <name>
+      <text>virtus</text>
+    </name>
+    <questiontext format="html">
+      <text>virtus</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>virgin</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>conqueror</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>arbor-shed</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>valor</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 218  -->
+  <question type="multichoice">
+    <name>
+      <text>vis</text>
+    </name>
+    <questiontext format="html">
+      <text>vis</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>strong</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>desire</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>scarcely</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>strength</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 205  -->
+  <question type="multichoice">
+    <name>
+      <text>vitium</text>
+    </name>
+    <questiontext format="html">
+      <text>vitium</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>fillet</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>defect</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>glass</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>vine</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 213  -->
+  <question type="multichoice">
+    <name>
+      <text>vox</text>
+    </name>
+    <questiontext format="html">
+      <text>vox</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>voice</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>life</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>live</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>summon</text>
+      <feedback format="html">
+        <text> </text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

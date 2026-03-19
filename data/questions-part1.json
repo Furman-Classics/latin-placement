@@ -1,0 +1,1304 @@
+[
+  {
+    "id": "p1-v-001",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 1,
+    "prompt": "What is the meaning of <em>amō, amāre</em>?",
+    "options": [
+      "to fear",
+      "to love",
+      "to see",
+      "to praise"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-002",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 1,
+    "prompt": "What is the meaning of <em>timeō, timēre</em>?",
+    "options": [
+      "to hold",
+      "to teach",
+      "to fear",
+      "to love"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-003",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 1,
+    "prompt": "What is the meaning of <em>laudō, laudāre</em>?",
+    "options": [
+      "to call",
+      "to work",
+      "to desire",
+      "to praise"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-004",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 16,
+    "prompt": "What is the meaning of <em>fīdēs, fideī</em> (f.)?",
+    "options": [
+      "reputation, fame",
+      "hope, expectation",
+      "loyalty, faith",
+      "republic, state"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-005",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 2,
+    "prompt": "What is the meaning of <em>puella, puellae</em> (f.)?",
+    "options": [
+      "woman",
+      "daughter",
+      "girl",
+      "queen"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-006",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 2,
+    "prompt": "What is the meaning of <em>bellum, bellī</em> (n.)?",
+    "options": [
+      "kingdom",
+      "plan",
+      "gift",
+      "war"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-007",
+    "part": 1,
+    "type": "vocab-en-la",
+    "chapter": 2,
+    "prompt": "Which Latin word means “friend”?",
+    "options": [
+      "<em>inimīcus</em>",
+      "<em>amīcus</em>",
+      "<em>dominus</em>",
+      "<em>vir</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-008",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 3,
+    "prompt": "What is the meaning of <em>deus, deī</em> (m.)?",
+    "options": [
+      "temple",
+      "sky",
+      "story",
+      "god"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-009",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 4,
+    "prompt": "What is the meaning of <em>via, viae</em> (f.)?",
+    "options": [
+      "wall",
+      "field",
+      "road, street",
+      "cottage"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-010",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 12,
+    "prompt": "What is the meaning of <em>ācēr, ācris, ācre</em>?",
+    "options": [
+      "swift, rapid",
+      "keen, sharp, fierce",
+      "bold, reckless",
+      "heavy, serious"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-012",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 6,
+    "prompt": "What is the meaning of <em>fīlius, fīliī</em> (m.)?",
+    "options": [
+      "daughter",
+      "son",
+      "boy",
+      "master"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-013",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 7,
+    "prompt": "What is the meaning of <em>rēx, rēgis</em> (m.)?",
+    "options": [
+      "leader",
+      "general",
+      "consul",
+      "king"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-014",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 8,
+    "prompt": "What is the meaning of <em>pāx, pācis</em> (f.)?",
+    "options": [
+      "danger",
+      "law",
+      "part",
+      "peace"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-015",
+    "part": 1,
+    "type": "vocab-en-la",
+    "chapter": 9,
+    "prompt": "Which Latin verb means “to send”?",
+    "options": [
+      "<em>dūcō</em>",
+      "<em>mittō</em>",
+      "<em>dīcō</em>",
+      "<em>discō</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-016",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 9,
+    "prompt": "What is the meaning of <em>vincō, vincere</em>?",
+    "options": [
+      "to seize",
+      "to rule",
+      "to conquer",
+      "to write"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-001",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 1,
+    "prompt": "Identify the person, number, tense, mood, and voice of <em>narrant</em>.",
+    "options": [
+      "3rd person singular, present, indicative, active",
+      "3rd person plural, present, indicative, active",
+      "3rd person plural, imperfect, indicative, active",
+      "2nd person plural, present, indicative, active"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-002",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 6,
+    "prompt": "Identify the form of <em>portābāmus</em>.",
+    "options": [
+      "1st person plural, imperfect, indicative, active",
+      "1st person plural, present, indicative, active",
+      "1st person plural, future, indicative, active",
+      "1st person singular, imperfect, indicative, active"
+    ],
+    "correct": 0
+  },
+  {
+    "id": "p1-f-003",
+    "part": 1,
+    "type": "form-noun",
+    "chapter": 2,
+    "prompt": "Identify the case, number, and gender of <em>silvārum</em>.",
+    "options": [
+      "nominative plural feminine",
+      "dative plural feminine",
+      "genitive plural feminine",
+      "accusative plural feminine"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-004",
+    "part": 1,
+    "type": "form-noun",
+    "chapter": 12,
+    "prompt": "Identify all possible cases of <em>nomina</em>.",
+    "options": [
+      "nominative or accusative plural neuter",
+      "dative or ablative plural neuter",
+      "genitive plural neuter",
+      "dative singular neuter"
+    ],
+    "correct": 0
+  },
+  {
+    "id": "p1-f-005",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 6,
+    "prompt": "Identify the form of <em>parābunt</em>.",
+    "options": [
+      "3rd person plural, present, indicative, active",
+      "3rd person plural, future, indicative, active",
+      "3rd person plural, imperfect, indicative, active",
+      "3rd person singular, future, indicative, active"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-006",
+    "part": 1,
+    "type": "form-pronoun",
+    "chapter": 7,
+    "prompt": "Identify the case and number of <em>eōrum</em>.",
+    "options": [
+      "dative plural",
+      "ablative plural",
+      "genitive plural",
+      "accusative plural"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-007",
+    "part": 1,
+    "type": "form-noun",
+    "chapter": 14,
+    "prompt": "Identify the case, number, and gender of <em>ducem</em>.",
+    "options": [
+      "nominative singular masculine",
+      "genitive singular masculine",
+      "dative singular masculine",
+      "accusative singular masculine"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-f-008",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 9,
+    "prompt": "Identify the form of <em>rapiēbat</em>.",
+    "options": [
+      "3rd person singular, present, indicative, active of <em>rapiō</em>",
+      "3rd person singular, future, indicative, active of <em>rapiō</em>",
+      "3rd person singular, imperfect, indicative, active of <em>rapiō</em>",
+      "3rd person singular, imperfect, indicative, passive of <em>rapiō</em>"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-017",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 10,
+    "prompt": "What is the meaning of <em>fugiō, fugere</em>?",
+    "options": [
+      "to lead",
+      "to flee",
+      "to fall",
+      "to begin"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-018",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 11,
+    "prompt": "What is the meaning of <em>mīles, mīlitis</em> (m.)?",
+    "options": [
+      "leader",
+      "enemy",
+      "soldier",
+      "consul"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-019",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 11,
+    "prompt": "What is the meaning of <em>relinquō, relinquere</em>?",
+    "options": [
+      "to seek",
+      "to fall",
+      "to believe",
+      "to abandon"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-020",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 12,
+    "prompt": "What is the meaning of <em>tempus, temporis</em> (n.)?",
+    "options": [
+      "year",
+      "age",
+      "hour",
+      "time"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-021",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 12,
+    "prompt": "What is the meaning of <em>omnis, omne</em>?",
+    "options": [
+      "mortal",
+      "brave",
+      "swift",
+      "every; all"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-022",
+    "part": 1,
+    "type": "vocab-en-la",
+    "chapter": 13,
+    "prompt": "Which Latin verb means “to hear”?",
+    "options": [
+      "<em>sentiō</em>",
+      "<em>audiō</em>",
+      "<em>serviō</em>",
+      "<em>intellegō</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-023",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 13,
+    "prompt": "What is the meaning of <em>veniō, venīre</em>?",
+    "options": [
+      "to go",
+      "to lead",
+      "to come",
+      "to depart"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-024",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 14,
+    "prompt": "What is the meaning of <em>hostis, hostis</em> (m.)?",
+    "options": [
+      "ally",
+      "guest",
+      "citizen",
+      "enemy"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-026",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 15,
+    "prompt": "What is the meaning of <em>pōnō, pōnere</em>?",
+    "options": [
+      "to rise",
+      "to roll",
+      "to place",
+      "to yield"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-027",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 16,
+    "prompt": "What is the meaning of <em>diēs, diēī</em> (m./f.)?",
+    "options": [
+      "faith",
+      "hope",
+      "day",
+      "republic"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-028",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 16,
+    "prompt": "What is the meaning of <em>manus, manūs</em> (f.)?",
+    "options": [
+      "foot, pace",
+      "attack",
+      "hand",
+      "fall, chance"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-029",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 17,
+    "prompt": "What is the meaning of <em>exercitus, exercitūs</em> (m.)?",
+    "options": [
+      "battle",
+      "camp",
+      "multitude",
+      "army"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-030",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 18,
+    "prompt": "What is the meaning of <em>accipiō, accipere</em>?",
+    "options": [
+      "to finish",
+      "to receive",
+      "to open",
+      "to kill"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-031",
+    "part": 1,
+    "type": "vocab-en-la",
+    "chapter": 19,
+    "prompt": "Which Latin word means “ship”?",
+    "options": [
+      "<em>nūbēs</em>",
+      "<em>auris</em>",
+      "<em>nāvis</em>",
+      "<em>mare</em>"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-009",
+    "part": 1,
+    "type": "form-noun",
+    "chapter": 12,
+    "prompt": "Identify the case, number, and gender of <em>cīvī</em>.",
+    "options": [
+      "nominative singular masculine or feminine",
+      "genitive singular masculine or feminine",
+      "dative singular masculine or feminine",
+      "ablative singular masculine or feminine"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-010",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 11,
+    "prompt": "Identify the form of <em>petīvērunt</em>.",
+    "options": [
+      "3rd person plural, pluperfect, indicative, active of <em>petō</em>",
+      "3rd person plural, perfect, indicative, active of <em>petō</em>",
+      "3rd person plural, future perfect, indicative, active of <em>petō</em>",
+      "3rd person singular, perfect, indicative, active of <em>petō</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-011",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 11,
+    "prompt": "Identify the form of <em>cōnstituerat</em>.",
+    "options": [
+      "3rd person singular, perfect, indicative, active of <em>cōnstituō</em>",
+      "3rd person singular, pluperfect, indicative, active of <em>cōnstituō</em>",
+      "3rd person singular, future perfect, indicative, active of <em>cōnstituō</em>",
+      "3rd person plural, pluperfect, indicative, active of <em>cōnstituō</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-012",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 14,
+    "prompt": "Identify the form of <em>tenētur</em>.",
+    "options": [
+      "3rd person singular, present, indicative, active of <em>teneō</em>",
+      "3rd person singular, imperfect, indicative, passive of <em>teneō</em>",
+      "3rd person singular, present, indicative, passive of <em>teneō</em>",
+      "3rd person singular, future, indicative, passive of <em>teneō</em>"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-013",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 14,
+    "prompt": "Identify the form of <em>gerēbātur</em>.",
+    "options": [
+      "3rd person singular, present, indicative, passive of <em>gerō</em>",
+      "3rd person singular, imperfect, indicative, passive of <em>gerō</em>",
+      "3rd person singular, future, indicative, passive of <em>gerō</em>",
+      "3rd person singular, imperfect, subjunctive, passive of <em>gerō</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-014",
+    "part": 1,
+    "type": "form-participle",
+    "chapter": 17,
+    "prompt": "What is the form of <em>monitam</em>?",
+    "options": [
+      "present active participle, nominative singular of <em>moneō</em>",
+      "perfect passive participle, accusative singular of <em>moneō</em>",
+      "present active participle, accusative singular of <em>moneō</em>",
+      "future active participle, nominative singular of <em>moneō</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-015",
+    "part": 1,
+    "type": "form-participle",
+    "chapter": 17,
+    "prompt": "What is the form of <em>currentem</em>?",
+    "options": [
+      "present active participle, nominative singular of <em>currō</em>",
+      "present active participle, accusative singular of <em>currō</em>",
+      "perfect passive participle, accusative singular of <em>currō</em>",
+      "future active participle, dative singular of <em>currō</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-016",
+    "part": 1,
+    "type": "form-infinitive",
+    "chapter": 19,
+    "prompt": "Identify the form of <em>docuisse</em>.",
+    "options": [
+      "perfect active infinitive of <em>doceō</em>",
+      "present active infinitive of <em>doceō</em>",
+      "perfect passive infinitive of <em>doceō</em>",
+      "future active infinitive of <em>doceō</em>"
+    ],
+    "correct": 0
+  },
+  {
+    "id": "p1-f-018",
+    "part": 1,
+    "type": "form-pronoun",
+    "chapter": 13,
+    "prompt": "Identify the case and number of <em>quem</em>.",
+    "options": [
+      "nominative singular masculine",
+      "accusative singular masculine",
+      "genitive singular masculine",
+      "dative singular masculine"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-032",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 20,
+    "prompt": "What is the meaning of <em>volō, velle</em>?",
+    "options": [
+      "to be unwilling",
+      "to want",
+      "to prefer",
+      "to be able"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-033",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 20,
+    "prompt": "What is the meaning of <em>cupiō, cupere</em>?",
+    "options": [
+      "to seek",
+      "to open",
+      "to desire",
+      "to preserve"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-034",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 22,
+    "prompt": "What is the meaning of <em>loquor, loquī</em>?",
+    "options": [
+      "to follow",
+      "to speak",
+      "to use",
+      "to suffer"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-035",
+    "part": 1,
+    "type": "vocab-en-la",
+    "chapter": 22,
+    "prompt": "Which verb means “to follow”?",
+    "options": [
+      "<em>loquor</em>",
+      "<em>sequor</em>",
+      "<em>ūtor</em>",
+      "<em>fruor</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-036",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 23,
+    "prompt": "What is the meaning of <em>ferō, ferre</em>?",
+    "options": [
+      "to go",
+      "to become",
+      "to bear, carry",
+      "to be made"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-037",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 25,
+    "prompt": "What is the meaning of <em>tollō, tollere</em>?",
+    "options": [
+      "to hope, wish for",
+      "to carry, convey",
+      "to resist, withstand",
+      "to lift, raise"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-038",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 27,
+    "prompt": "What is the meaning of <em>hortor, hortārī</em>?",
+    "options": [
+      "to beg",
+      "to urge",
+      "to bloom",
+      "to despair"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-039",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 30,
+    "prompt": "What is the meaning of <em>vereor, verērī</em>?",
+    "options": [
+      "to wonder",
+      "to know",
+      "to fear",
+      "to see"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-019",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 21,
+    "prompt": "Identify the form of <em>quaererētur</em>.",
+    "options": [
+      "3rd person singular, imperfect, subjunctive, passive of <em>quaerō</em>",
+      "3rd person singular, present, subjunctive, passive of <em>quaerō</em>",
+      "3rd person singular, imperfect, indicative, passive of <em>quaerō</em>",
+      "3rd person singular, pluperfect, subjunctive, passive of <em>quaerō</em>"
+    ],
+    "correct": 0
+  },
+  {
+    "id": "p1-f-020",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 24,
+    "prompt": "Identify the form of <em>vocet</em>.",
+    "options": [
+      "3rd person singular, present, indicative, active of <em>vocō</em>",
+      "3rd person singular, present, subjunctive, active of <em>vocō</em>",
+      "3rd person singular, imperfect, subjunctive, active of <em>vocō</em>",
+      "3rd person singular, future, indicative, active of <em>vocō</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-021",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 25,
+    "prompt": "Identify the form of <em>scrīberet</em>.",
+    "options": [
+      "3rd person singular, present, subjunctive, active of <em>scrībō</em>",
+      "3rd person singular, imperfect, indicative, active of <em>scrībō</em>",
+      "3rd person singular, imperfect, subjunctive, active of <em>scrībō</em>",
+      "3rd person singular, present, indicative, active of <em>scrībō</em>"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-022",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 26,
+    "prompt": "Identify the form of <em>cūrāverint</em>.",
+    "options": [
+      "3rd person plural, future perfect, indicative, active of <em>cūrō</em>",
+      "3rd person plural, perfect, subjunctive, active of <em>cūrō</em>",
+      "3rd person plural, pluperfect, subjunctive, active of <em>cūrō</em>",
+      "3rd person plural, perfect, indicative, active of <em>cūrō</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-023",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 26,
+    "prompt": "Identify the form of <em>rogāvissent</em>.",
+    "options": [
+      "3rd person plural, perfect, subjunctive, active of <em>rogō</em>",
+      "3rd person plural, imperfect, subjunctive, active of <em>rogō</em>",
+      "3rd person plural, pluperfect, subjunctive, active of <em>rogō</em>",
+      "3rd person plural, pluperfect, indicative, active of <em>rogō</em>"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-024",
+    "part": 1,
+    "type": "form-infinitive",
+    "chapter": 25,
+    "prompt": "Identify the form of <em>ōrātūrum esse</em>.",
+    "options": [
+      "present active infinitive of <em>ōrō</em>",
+      "perfect active infinitive of <em>ōrō</em>",
+      "future active infinitive of <em>ōrō</em>",
+      "future passive infinitive of <em>ōrō</em>"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-025",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 22,
+    "prompt": "Identify the form of <em>proficīscēbātur</em>.",
+    "options": [
+      "3rd person singular, present, indicative of <em>proficīscor</em> (deponent)",
+      "3rd person singular, imperfect, indicative of <em>proficīscor</em> (deponent)",
+      "3rd person singular, imperfect, subjunctive of <em>proficīscor</em> (deponent)",
+      "3rd person singular, perfect, indicative of <em>proficīscor</em> (deponent)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-026",
+    "part": 1,
+    "type": "form-noun",
+    "chapter": 16,
+    "prompt": "Identify all possible cases of <em>spē</em>.",
+    "options": [
+      "genitive singular",
+      "ablative singular",
+      "dative singular",
+      "nominative or accusative singular"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-027",
+    "part": 1,
+    "type": "form-participle",
+    "chapter": 29,
+    "prompt": "What is the form of <em>cōgendum</em>?",
+    "options": [
+      "gerund, nominative singular of <em>cōgō</em>",
+      "gerundive, accusative singular of <em>cōgō</em>",
+      "gerundive, genitive singular of <em>cōgō</em>",
+      "gerund, dative or ablative singular of <em>cōgō</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-041",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 27,
+    "prompt": "What is the meaning of <em>nē</em> in a purpose clause?",
+    "options": [
+      "so that; in order that",
+      "in order that not",
+      "not even",
+      "whether … not"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-042",
+    "part": 1,
+    "type": "vocab-en-la",
+    "chapter": 9,
+    "prompt": "Which Latin verb means “to lead”?",
+    "options": [
+      "<em>dīcō</em>",
+      "<em>discō</em>",
+      "<em>dūcō</em>",
+      "<em>discēdō</em>"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-043",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 7,
+    "prompt": "What is the meaning of <em>corpus, corporis</em> (n.)?",
+    "options": [
+      "head",
+      "mind",
+      "body",
+      "voice"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-044",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 8,
+    "prompt": "What is the meaning of <em>perīculum, perīculī</em> (n.)?",
+    "options": [
+      "work",
+      "name",
+      "word",
+      "danger"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-045",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 22,
+    "prompt": "What is the meaning of <em>patior, patī</em>?",
+    "options": [
+      "to demand, require",
+      "to follow, pursue",
+      "to endure, suffer",
+      "to protect, defend"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-028",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 15,
+    "prompt": "Identify the form of <em>servātus erat</em>.",
+    "options": [
+      "3rd person singular, present, indicative, passive of <em>servō</em>",
+      "3rd person singular, perfect, indicative, passive of <em>servō</em>",
+      "3rd person singular, pluperfect, indicative, passive of <em>servō</em>",
+      "3rd person singular, future perfect, indicative, passive of <em>servō</em>"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-029",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 15,
+    "prompt": "Identify the form of <em>dēfēnsus est</em>.",
+    "options": [
+      "3rd person singular, perfect, indicative, passive of <em>dēfendō</em>",
+      "3rd person singular, pluperfect, indicative, passive of <em>dēfendō</em>",
+      "3rd person singular, present, indicative, passive of <em>dēfendō</em>",
+      "3rd person singular, future, indicative, passive of <em>dēfendō</em>"
+    ],
+    "correct": 0
+  },
+  {
+    "id": "p1-v-046",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 21,
+    "prompt": "What is the meaning of <em>iubeō, iubēre</em>?",
+    "options": [
+      "to forbid",
+      "to allow",
+      "to order",
+      "to prefer"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-047",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 21,
+    "prompt": "What is the meaning of <em>nōlō, nōlle</em>?",
+    "options": [
+      "to wish",
+      "to prefer",
+      "to be able",
+      "to not want"
+    ],
+    "correct": 3
+  },
+  {
+    "id": "p1-v-048",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 29,
+    "prompt": "What is the meaning of <em>fiō, fierī</em>?",
+    "options": [
+      "to carry, bear",
+      "to go",
+      "to become, be made",
+      "to place"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-049",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 24,
+    "prompt": "What is the meaning of <em>putō, putāre</em>?",
+    "options": [
+      "to plan, intend",
+      "to think, suppose",
+      "to ask, inquire",
+      "to hurry, hasten"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-050",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 26,
+    "prompt": "What is the meaning of <em>cognōscō, cognōscere</em>?",
+    "options": [
+      "to overcome, surpass",
+      "to give back, restore",
+      "to learn; come to know",
+      "to announce, report"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-030",
+    "part": 1,
+    "type": "form-pronoun",
+    "chapter": 13,
+    "prompt": "Identify the case of <em>illīus</em>.",
+    "options": [
+      "nominative singular",
+      "dative singular",
+      "genitive singular",
+      "ablative singular"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-031",
+    "part": 1,
+    "type": "form-pronoun",
+    "chapter": 13,
+    "prompt": "Identify the case and gender of <em>quid</em>.",
+    "options": [
+      "nominative or accusative singular masculine",
+      "nominative or accusative singular neuter",
+      "genitive singular (all genders)",
+      "dative singular (all genders)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-032",
+    "part": 1,
+    "type": "form-infinitive",
+    "chapter": 25,
+    "prompt": "Identify the form of <em>fuisse</em>.",
+    "options": [
+      "present active infinitive of <em>sum</em>",
+      "perfect active infinitive of <em>sum</em>",
+      "future active infinitive of <em>sum</em>",
+      "present passive infinitive of <em>sum</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-033",
+    "part": 1,
+    "type": "form-infinitive",
+    "chapter": 25,
+    "prompt": "Identify the form of <em>mortuum esse</em>.",
+    "options": [
+      "present active infinitive of <em>morior</em>",
+      "perfect deponent infinitive of <em>morior</em>",
+      "future active infinitive of <em>morior</em>",
+      "perfect passive infinitive of <em>morior</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-051",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 4,
+    "prompt": "What is the meaning of <em>animus, animī</em> (m.)?",
+    "options": [
+      "body, frame",
+      "mind, spirit",
+      "name, fame",
+      "breath, wind"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-052",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 7,
+    "prompt": "What is the meaning of <em>causa, causae</em> (f.)?",
+    "options": [
+      "battle, conflict",
+      "danger, risk",
+      "reason, cause",
+      "speech, oration"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-053",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 8,
+    "prompt": "What is the meaning of <em>virtūs, virtūtis</em> (f.)?",
+    "options": [
+      "truth, reality",
+      "valor, virtue",
+      "force, violence",
+      "peace, harmony"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-054",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 12,
+    "prompt": "What is the meaning of <em>fortis, forte</em>?",
+    "options": [
+      "fierce, wild",
+      "brave, strong",
+      "noble, distinguished",
+      "swift, quick"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-055",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 12,
+    "prompt": "What is the meaning of <em>gravis, grave</em>?",
+    "options": [
+      "light, slight",
+      "sharp, keen",
+      "heavy, serious",
+      "swift, rapid"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-056",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 15,
+    "prompt": "What is the meaning of <em>studium, studiī</em> (n.)?",
+    "options": [
+      "crowd, mass",
+      "effort, toil",
+      "eagerness, devotion",
+      "wonder, astonishment"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-057",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 16,
+    "prompt": "What is the meaning of <em>rēs, reī</em> (f.)?",
+    "options": [
+      "word, reason",
+      "thing, affair",
+      "hope, wish",
+      "day, time"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-v-058",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 20,
+    "prompt": "What is the meaning of <em>melior, melius</em>?",
+    "options": [
+      "greater, larger",
+      "more wicked",
+      "better",
+      "smaller, lesser"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-059",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 20,
+    "prompt": "What is the meaning of <em>aliquis, aliquid</em>?",
+    "options": [
+      "whoever, whatever",
+      "no one, nothing",
+      "someone, something",
+      "each one"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-060",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 9,
+    "prompt": "What is the meaning of <em>at</em>?",
+    "options": [
+      "therefore, then",
+      "or, either",
+      "but",
+      "when, since"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-v-061",
+    "part": 1,
+    "type": "vocab-la-en",
+    "chapter": 5,
+    "prompt": "What is the meaning of <em>cōnsilium, cōnsiliī</em> (n.)?",
+    "options": [
+      "consul, magistrate",
+      "plan, advice",
+      "speech, oration",
+      "reward, payment"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-034",
+    "part": 1,
+    "type": "form-pronoun",
+    "chapter": 13,
+    "prompt": "Identify the case, number, and gender of [underline: eadem] in <em>Caesar eadem dīxit</em>.",
+    "options": [
+      "nominative singular feminine",
+      "accusative singular neuter",
+      "accusative plural neuter",
+      "genitive plural feminine"
+    ],
+    "correct": 2
+  },
+  {
+    "id": "p1-f-035",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 15,
+    "prompt": "Identify the form of <em>data sunt</em>.",
+    "options": [
+      "3rd person plural, imperfect, indicative, passive of <em>dō</em>",
+      "3rd person plural, perfect, indicative, passive of <em>dō</em>",
+      "3rd person plural, pluperfect, indicative, passive of <em>dō</em>",
+      "3rd person plural, future, indicative, passive of <em>dō</em>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": "p1-f-036",
+    "part": 1,
+    "type": "form-verb",
+    "chapter": 11,
+    "prompt": "Identify the form of <em>ēgistis</em>.",
+    "options": [
+      "2nd person plural, present, indicative, active of <em>agō</em>",
+      "2nd person plural, imperfect, indicative, active of <em>agō</em>",
+      "2nd person plural, perfect, indicative, active of <em>agō</em>",
+      "2nd person plural, pluperfect, indicative, active of <em>agō</em>"
+    ],
+    "correct": 2
+  }
+]
