@@ -3,7 +3,7 @@
 // ===== CONFIG =====
 // Set APPS_SCRIPT_URL to your deployed Google Apps Script web app URL.
 // Set SUBMIT_TOKEN to match the SUBMIT_TOKEN constant in your Apps Script.
-const APPS_SCRIPT_URL = '';        // TODO: paste deployment URL here
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz8_sa2xM-jJm8BrwTlgiAg4rZ8iaMXJoOgkTOZYJf5WcZ78rEg1YoYW5ZOqHyg4UISoQ/exec';        // TODO: paste deployment URL here
 const SUBMIT_TOKEN    = 'placent-2026';
 
 const DEV_MODE    = new URLSearchParams(location.search).has('dev');
