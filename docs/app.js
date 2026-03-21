@@ -314,6 +314,7 @@ async function submitTest(autoSubmit) {
     if (APPS_SCRIPT_URL) {
       await fetch(APPS_SCRIPT_URL, {
         method: 'POST',
+        mode: 'no-cors',
         body: JSON.stringify({ token: SUBMIT_TOKEN, studentInfo: state.studentInfo, scores }),
       });
     }
