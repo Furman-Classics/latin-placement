@@ -2,3 +2,6 @@ node_modules/
 .env
 data/results.tsv
 .DS_Store
+notes.txt
+shel.toc.txt
+shel.voc.ch.csv
