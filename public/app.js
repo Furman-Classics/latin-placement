@@ -6,8 +6,9 @@
 const APPS_SCRIPT_URL = '';        // TODO: paste deployment URL here
 const SUBMIT_TOKEN    = 'placent-2026';
 
-const STORAGE_KEY = 'placent_session';
-const TIMER_MS = 45 * 60 * 1000; // 45 minutes
+const DEV_MODE    = new URLSearchParams(location.search).has('dev');
+const STORAGE_KEY = DEV_MODE ? 'placent_dev_session' : 'placent_session';
+const TIMER_MS    = 45 * 60 * 1000; // 45 minutes
 
 // ===== STATE =====
 let state = {
@@ -43,7 +44,7 @@ function renderHTML(raw) {
 }
 
 function showScreen(name) {
-  const ids = ['screen-info', 'screen-part1', 'screen-part2', 'screen-done'];
+  const ids = ['screen-info', 'screen-interstitial1', 'screen-interstitial2', 'screen-part1', 'screen-part2', 'screen-done'];
   for (const id of ids) {
     const el = document.getElementById(id);
     el.hidden = (id !== 'screen-' + name);
@@ -89,8 +90,8 @@ async function loadQuestions() {
     fetch('data/questions-part1.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
     fetch('data/questions-part2.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
   ]);
-  const p1 = stratifiedSample(p1Bank, 14, 13, 8);
-  const p2 = stratifiedSample(p2Bank, 10, 9, 6);
+  const p1 = DEV_MODE ? stratifiedSample(p1Bank, 1, 1, 0) : stratifiedSample(p1Bank, 14, 13, 8);
+  const p2 = DEV_MODE ? stratifiedSample(p2Bank, 1, 1, 0) : stratifiedSample(p2Bank, 10, 9, 6);
   return shuffle([...p1, ...p2]);
 }
 
@@ -180,9 +181,11 @@ function renderP1(moveFocus = false, focusOptionIndex = -1) {
     opts.appendChild(btn);
   }
 
-  const isLast  = (i === qs.length - 1);
-  const nextBtn = $('p1-next');
-  nextBtn.textContent = isLast ? 'Continue to Part 2 →' : 'Next →';
+  const isLast     = (i === qs.length - 1);
+  const hasAnswered = state.answers[q.id] !== undefined;
+  const nextBtn    = $('p1-next');
+  nextBtn.textContent = isLast ? 'Continue to Part 2 →' : 'Submit and move to next question';
+  nextBtn.disabled    = !hasAnswered;
   nextBtn.onclick = isLast ? goToPart2 : () => { state.p1Index++; saveState(); renderP1(true); };
 
   updateP1Progress();
@@ -199,6 +202,18 @@ function updateP1Progress() {
 }
 
 function goToPart2() {
+  const remainingMs = TIMER_MS - (Date.now() - state.timerStart);
+  const mins = Math.floor(Math.max(0, remainingMs) / 60000);
+  const secs = Math.floor((Math.max(0, remainingMs) % 60000) / 1000);
+  let timeStr;
+  if (mins === 0)       timeStr = `${secs} second${secs !== 1 ? 's' : ''}`;
+  else if (secs === 0)  timeStr = `${mins} minute${mins !== 1 ? 's' : ''}`;
+  else                  timeStr = `${mins} minute${mins !== 1 ? 's' : ''} and ${secs} second${secs !== 1 ? 's' : ''}`;
+  $('interstitial2-time').textContent = timeStr;
+  showScreen('interstitial2');
+}
+
+function startPart2() {
   state.screen = 'part2';
   state.p2Index = 0;
   saveState();
@@ -259,13 +274,16 @@ function renderP2(moveFocus = false, focusOptionIndex = -1) {
     opts.appendChild(btn);
   }
 
-  const isLast   = (i === qs.length - 1);
-  const nextBtn  = $('p2-next');
-  const submitBtn = $('p2-submit');
-  nextBtn.hidden = isLast;
-  submitBtn.parentElement.hidden = !isLast;
-  nextBtn.onclick = isLast ? null : () => { state.p2Index++; saveState(); renderP2(true); };
-  submitBtn.onclick = isLast ? () => submitTest(false) : null;
+  const isLast      = (i === qs.length - 1);
+  const hasAnswered  = state.answers[q.id] !== undefined;
+  const nextBtn     = $('p2-next');
+  const submitBtn   = $('p2-submit');
+  nextBtn.hidden    = isLast;
+  submitBtn.hidden  = !isLast;
+  nextBtn.disabled  = !hasAnswered;
+  submitBtn.disabled = !hasAnswered;
+  nextBtn.onclick   = () => { state.p2Index++; saveState(); renderP2(true); };
+  submitBtn.onclick = () => submitTest(false);
 
   updateP2Progress();
   if (moveFocus) $('p2-counter').focus();
@@ -381,9 +399,12 @@ $('info-form').addEventListener('submit', async (e) => {
 
   window.addEventListener('beforeunload', onBeforeUnload);
   startTimer(TIMER_MS);
-  showScreen('part1');
-  renderP1(true);
+  showScreen('interstitial1');
 });
+
+// ===== INTERSTITIAL BUTTONS =====
+$('interstitial1-begin').addEventListener('click', () => { showScreen('part1'); renderP1(true); });
+$('interstitial2-begin').addEventListener('click', startPart2);
 
 // ===== BEFOREUNLOAD =====
 function onBeforeUnload(e) {
@@ -433,5 +454,6 @@ function tryRestoreSession() {
 
 // ===== INIT =====
 (function init() {
+  if (DEV_MODE) $('dev-banner').hidden = false;
   if (!tryRestoreSession()) showScreen('info');
 })();

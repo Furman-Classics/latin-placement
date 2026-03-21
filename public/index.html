@@ -8,6 +8,7 @@
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="dev-banner" class="dev-banner" hidden>DEV MODE — 2 + 2 questions</div>
   <div id="main-content">
 
   <!-- ===== SCREEN: INFO (Part 0) ===== -->
@@ -106,6 +107,34 @@
     </main>
   </div>
 
+  <!-- ===== SCREEN: INTERSTITIAL 1 ===== -->
+  <div id="screen-interstitial1" class="screen" hidden>
+    <header class="page-header">
+      <h1>LATIN PLACEMENT TEST</h1>
+    </header>
+    <main class="card interstitial-card">
+      <p class="interstitial-text">The first part of the placement test asks questions about vocabulary and word forms.</p>
+      <p class="interstitial-text">Remember, you have 45 minutes to complete both parts of the test.</p>
+      <div class="nav-row interstitial-nav">
+        <button class="btn-primary" id="interstitial1-begin">Begin Part 1 →</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- ===== SCREEN: INTERSTITIAL 2 ===== -->
+  <div id="screen-interstitial2" class="screen" hidden>
+    <header class="page-header">
+      <h1>LATIN PLACEMENT TEST</h1>
+    </header>
+    <main class="card interstitial-card">
+      <p class="interstitial-text">You have completed Part 1. In Part 2, the test asks questions about syntax and reading comprehension.</p>
+      <p class="interstitial-text">You have <span id="interstitial2-time"></span> remaining to finish Part 2.</p>
+      <div class="nav-row interstitial-nav">
+        <button class="btn-primary" id="interstitial2-begin">Begin Part 2 →</button>
+      </div>
+    </main>
+  </div>
+
   <!-- ===== SCREEN: PART 1 ===== -->
   <div id="screen-part1" class="screen" hidden>
     <header class="test-header">
@@ -120,7 +149,7 @@
       <div class="question-prompt" id="p1-prompt"></div>
       <div class="options-list" id="p1-options" role="radiogroup" aria-labelledby="p1-prompt"></div>
       <div class="nav-row">
-        <button class="btn-primary" id="p1-next">Next →</button>
+        <button class="btn-primary" id="p1-next">Submit and move to next question</button>
       </div>
     </main>
   </div>
@@ -139,12 +168,10 @@
       <div class="question-prompt" id="p2-prompt"></div>
       <div class="options-list" id="p2-options" role="radiogroup" aria-labelledby="p2-prompt"></div>
       <div class="nav-row">
-        <button class="btn-primary" id="p2-next">Next →</button>
+        <button class="btn-primary" id="p2-next">Submit and move to next question</button>
+        <button class="btn-primary btn-submit-green" id="p2-submit" hidden>Submit and finish placement test</button>
       </div>
     </main>
-    <div class="submit-row" hidden>
-      <button class="btn-primary btn-submit-final" id="p2-submit">Submit Test</button>
-    </div>
   </div>
 
   <!-- ===== SCREEN: DONE ===== -->

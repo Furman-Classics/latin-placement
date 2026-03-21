@@ -49,6 +49,17 @@ body {
   min-height: 100vh;
 }
 
+/* ===== DEV BANNER ===== */
+.dev-banner {
+  background: #b45309;
+  color: #fff;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: .3rem;
+}
+
 /* ===== SKIP LINK ===== */
 .skip-link {
   position: absolute;
@@ -350,20 +361,29 @@ legend {
   flex: 1;
 }
 
-/* ===== SUBMIT FINAL ===== */
-.submit-row {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
+/* ===== GREEN SUBMIT BUTTON ===== */
+.btn-submit-green {
+  background: #4a8f65;
+  color: #fff;
 }
-.btn-submit-final {
-  min-width: 200px;
-  border: 4px solid #a891f9;
+.btn-submit-green:hover:not(:disabled) { background: #3a7a55; }
+.btn-submit-green:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ===== INTERSTITIAL CARD ===== */
+.interstitial-card { text-align: center; }
+.interstitial-text {
+  font-family: var(--sans);
+  font-size: 1.3rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin-bottom: 1.25rem;
 }
+.interstitial-nav { margin-top: 1.5rem; }
 
 /* ===== DONE SCREEN ===== */
 .done-card {
   text-align: center;
+  text-wrap
   padding: 2.5rem 1.25rem;
 }
 .done-icon {
@@ -374,8 +394,7 @@ legend {
   display: block;
 }
 .done-message {
-  font-family: var(--serif);
-  font-weight: var(--serif-weight);
+  font-family: var(--sans);
   font-size: 1.3rem;
   line-height: 1.4;
   color: var(--text);
