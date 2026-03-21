@@ -39,6 +39,7 @@
 }
 
 html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+[hidden] { display: none !important; }
 
 body {
   font-family: var(--sans);
@@ -47,6 +48,22 @@ body {
   line-height: 1.4;
   min-height: 100vh;
 }
+
+/* ===== SKIP LINK ===== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  font-size: .9rem;
+  z-index: 1000;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+}
+.skip-link:focus { top: 0; }
 
 /* ===== SCREENS ===== */
 .screen { display: block; }
@@ -81,7 +98,7 @@ body {
   gap: .5rem;
   flex-wrap: wrap;
 }
-.part-label { font-family: var(--serif); font-size: 1.09rem; font-weight: var(--serif-weight); font-style: italic; }
+.part-label { font-family: var(--serif); font-size: 1.3rem; font-weight: var(--serif-weight); font-style: italic; margin: 0; }
 .progress-label { font-size: .85rem; opacity: .85; white-space: nowrap; }
 
 /* ===== CARD ===== */
@@ -130,7 +147,7 @@ fieldset {
 legend {
   font-family: var(--serif);
   font-weight: var(--serif-weight);
-  font-size: 1.21rem;
+  font-size: 1.3rem;
   padding: 0 .4rem;
   color: var(--accent);
 }
@@ -182,12 +199,12 @@ legend {
   display: flex;
   align-items: center;
   gap: .6rem;
-  padding: .55rem .5rem;
+  padding: .25rem .5rem;
   border-radius: 6px;
   cursor: pointer;
   font-size: .95rem;
   transition: background .1s;
-  min-height: 44px;
+  /* min-height: 44px; */
 }
 .check-label:hover { background: var(--accent-light); }
 .check-label input[type="checkbox"] {
@@ -207,7 +224,7 @@ legend {
   min-width: 0;
 }
 .other-text:disabled { opacity: .4; cursor: not-allowed; }
-.other-text:focus { outline: none; border-color: var(--selected-border); }
+.other-text:focus { outline: none; border-color: var(--selected-border); box-shadow: 0 0 0 2px rgba(32,21,71,.15); }
 
 /* ===== BUTTONS ===== */
 .btn-primary, .btn-secondary {
@@ -272,7 +289,7 @@ legend {
 .question-prompt {
   font-family: var(--serif);
   font-weight: var(--serif-weight);
-  font-size: 1.21rem;
+  font-size: 1.3rem;
   line-height: 1.4;
   margin-bottom: 1.25rem;
 }
@@ -283,7 +300,7 @@ legend {
 .passage-block {
   font-family: var(--serif);
   font-weight: var(--serif-weight);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   line-height: 1.4;
   background: var(--accent-light);
   border-left: 3px solid var(--accent);
@@ -305,7 +322,7 @@ legend {
   background: var(--input-bg);
   font-family: var(--serif);
   font-weight: var(--serif-weight);
-  font-size: 1.09rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   cursor: pointer;
   transition: background .1s, border-color .1s;
@@ -313,6 +330,7 @@ legend {
   color: var(--text);
 }
 .option-btn:hover { background: var(--accent-light); border-color: var(--accent); }
+.option-btn:focus-visible { outline: 2px solid var(--selected-border); outline-offset: 2px; }
 .option-btn.selected {
   background: var(--selected-bg);
   border-color: var(--selected-border);
@@ -332,6 +350,17 @@ legend {
   flex: 1;
 }
 
+/* ===== SUBMIT FINAL ===== */
+.submit-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.btn-submit-final {
+  min-width: 200px;
+  border: 4px solid #a891f9;
+}
+
 /* ===== DONE SCREEN ===== */
 .done-card {
   text-align: center;
@@ -347,44 +376,13 @@ legend {
 .done-message {
   font-family: var(--serif);
   font-weight: var(--serif-weight);
-  font-size: 1.21rem;
+  font-size: 1.3rem;
   line-height: 1.4;
   color: var(--text);
   max-width: 36em;
   margin: 0 auto;
 }
 
-/* ===== MODAL ===== */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  padding: 1rem;
-}
-.modal-overlay[hidden] { display: none; }
-.modal {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  max-width: 400px;
-  width: 100%;
-  box-shadow: 0 8px 32px rgba(0,0,0,.2);
-}
-.modal h2 {
-  font-family: var(--serif);
-  font-weight: var(--serif-weight);
-  font-size: 1.38rem;
-  margin-bottom: .75rem;
-  color: var(--accent);
-}
-.modal p { font-size: .95rem; margin-bottom: 1.25rem; line-height: 1.6; }
-.modal-actions { display: flex; gap: .75rem; }
-.modal-actions .btn-primary,
-.modal-actions .btn-secondary { flex: 1; }
 
 /* ===== HIGHLIGHT SPAN (replaces underline for key phrases) ===== */
 .hl {
@@ -399,8 +397,8 @@ legend {
   .page-header h1 { font-size: 2.07rem; }
   .card { margin: 1.5rem auto; max-width: 700px; padding: 2rem 2rem; }
   .question-card { padding: 2rem; }
-  .question-prompt { font-size: 1.27rem; }
-  .option-btn { font-size: 1.15rem; }
+  .question-prompt { font-size: 1.3rem; }
+  .option-btn { font-size: 1.35rem; }
   #info-form .btn-primary { width: auto; min-width: 220px; }
   .nav-row .btn-primary,
   .nav-row .btn-secondary { flex: none; min-width: 130px; }

@@ -1,0 +1,67 @@
+--- Conversation: Question Selection Algorithm (2026-03-19) ---
+
+Q: How does the question selection algorithm work?
+
+The server uses stratified sampling by chapter number as a difficulty proxy.
+Questions are split into easy (ch ≤10), medium (ch 11–20), hard (ch ≥21).
+Each tier is independently Fisher-Yates shuffled, then sliced to a fixed count:
+  Part 1: 14 easy, 13 medium, 8 hard (35 total)
+  Part 2: 10 easy, 9 medium, 6 hard (25 total)
+The 60 combined questions are shuffled again before sending to the client.
+`correct` is stripped server-side before the client receives them.
+
+Q: Are there better methods?
+
+- Per-question difficulty tags (more precise than chapter number)
+- Weighted sampling (bias toward important topics)
+- Item Response Theory (IRT) — calibrate per-question difficulty from real response data
+- Computerized Adaptive Testing (CAT) — real-time adaptive selection
+- Content balancing by grammar topic
+- Enemy item tracking (prevent hint pairs)
+
+Q: What would CAT look like here?
+
+Architecture: instead of sending all 60 upfront, the server drives question-by-question.
+  POST /api/start → question 1
+  POST /api/answer → score, update ability estimate θ, return next question
+  POST /api/done → return final placement
+
+Requires server-side session state (in-memory Map is fine for low concurrency).
+Selection: pick unused question whose difficulty is closest to current θ.
+Stopping rules: fixed length (~20–30 q), confidence threshold on θ, or chapter ceiling.
+Ability estimator: even a basic EAP calculation is ~20 lines.
+
+Tradeoffs: shorter test, no skip/review, more complexity.
+Verdict: stateless 60-question approach is fine for a once/twice-yearly exam with <100 students.
+CAT earns its complexity for continuous or high-volume use.
+
+---
+
+Visit:
+https://placent-production.up.railway.app/results?key=changeme
+
+Update then:
+git add -A && git commit -m "update questions" && railway up
+
+To redeploy:
+railway up
+
+
+
+---------ANSWERS---------
+They're POSTed to the Apps Script → Google Sheets, exactly as planned. That part is wired up in public/app.js:174:
+
+
+if (APPS_SCRIPT_URL) {
+  await fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    body: JSON.stringify({ token: SUBMIT_TOKEN, studentInfo: state.studentInfo, scores }),
+  });
+}
+But right now APPS_SCRIPT_URL is an empty string at line 4, so that block is skipped — submissions succeed for the student but nothing is recorded yet.
+
+To activate storage:
+
+Create the Google Sheet + deploy the Apps Script (the doPost function is in the plan doc)
+Paste the deployment URL into line 4 of app.js
+That's it
