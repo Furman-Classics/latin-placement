@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Question Editor — Latin Placement</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== LOAD SCREEN ===== */
+    #screen-load {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    #screen-load .load-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+    .load-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      width: 100%;
+      max-width: 520px;
+    }
+    .load-card h2 {
+      font-family: var(--serif);
+      font-weight: var(--serif-weight);
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .load-slots {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+    .load-slot {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .65rem .85rem;
+      border: 1.5px dashed var(--border);
+      border-radius: 6px;
+      background: var(--bg);
+    }
+    .load-slot.loaded {
+      border-style: solid;
+      border-color: var(--success);
+      background: #eaf5ee;
+    }
+    .load-slot-label {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--muted);
+      min-width: 52px;
+    }
+    .load-slot.loaded .load-slot-label { color: var(--success); }
+    .load-slot-name {
+      flex: 1;
+      font-size: .88rem;
+      color: var(--text);
+      font-family: monospace;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .load-slot-name.empty { color: var(--muted); font-family: var(--sans); font-style: italic; }
+    .btn-open-file {
+      padding: .4rem .85rem;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      font-size: .82rem;
+      font-weight: 600;
+      font-family: var(--sans);
+      background: var(--input-bg);
+      color: var(--accent);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-open-file:hover { border-color: var(--selected-border); background: var(--accent-light); }
+    .load-actions {
+      margin-top: 1.25rem;
+      display: flex;
+      gap: .75rem;
+      justify-content: flex-end;
+    }
+    #btn-enter {
+      opacity: .4;
+      pointer-events: none;
+    }
+    #btn-enter.ready { opacity: 1; pointer-events: auto; }
+    .no-fsa-msg {
+      display: none;
+      padding: .75rem;
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 6px;
+      font-size: .85rem;
+      color: #7a4500;
+      line-height: 1.5;
+    }
+
+    /* ===== EDITOR SCREEN ===== */
+    .editor-header {
+      background: var(--accent);
+      color: #fff;
+      padding: .65rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .editor-header-title {
+      font-family: var(--serif);
+      font-weight: var(--serif-weight);
+      font-size: 1.1rem;
+      flex: 1;
+    }
+    .save-btn-group {
+      display: flex;
+      gap: .4rem;
+    }
+    .btn-save {
+      padding: .4rem .85rem;
+      border-radius: 6px;
+      font-size: .82rem;
+      font-weight: 700;
+      font-family: var(--sans);
+      cursor: pointer;
+      border: 1.5px solid rgba(255,255,255,.4);
+      background: transparent;
+      color: rgba(255,255,255,.6);
+      transition: all .15s;
+    }
+    .btn-save.dirty {
+      border-color: #fff;
+      color: #fff;
+      background: rgba(255,255,255,.15);
+    }
+    .btn-save.dirty:hover { background: rgba(255,255,255,.25); }
+    .save-status {
+      font-size: .8rem;
+      color: rgba(255,255,255,.7);
+      white-space: nowrap;
+    }
+
+    /* Toolbar */
+    .editor-toolbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: .6rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      align-items: center;
+      position: sticky;
+      top: 44px;
+      z-index: 19;
+    }
+    .editor-toolbar select,
+    .editor-toolbar input[type="text"] {
+      padding: .4rem .65rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: .85rem;
+      font-family: var(--sans);
+      background: var(--input-bg);
+      color: var(--text);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .editor-toolbar select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236b6760' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .6rem center;
+      padding-right: 1.8rem;
+    }
+    .editor-toolbar input[type="text"] { min-width: 150px; }
+    .toolbar-count {
+      font-size: .82rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .btn-add-question {
+      margin-left: auto;
+      padding: .4rem .9rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: .85rem;
+      font-weight: 700;
+      font-family: var(--sans);
+      cursor: pointer;
+    }
+    .btn-add-question:hover { background: var(--accent-hover); }
+
+    /* Question list */
+    .editor-list {
+      padding: .75rem 1rem 5rem;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* Question card — view mode */
+    .eq-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .eq-card.is-new { border-color: var(--success); }
+    .eq-card.has-note { border-color: var(--selected-border); }
+    .eq-card.tag-delete { border-left: 4px solid #c0392b; }
+    .eq-card.tag-rewrite { border-left: 4px solid #d68910; }
+    .eq-card.tag-fix-answer { border-left: 4px solid #1a6eb5; }
+    .eq-card.tag-add-option { border-left: 4px solid #2e7d4f; }
+    .eq-card.tag-unclear { border-left: 4px solid #7b4ea6; }
+
+    .eq-view { padding: .9rem 1rem; }
+    .eq-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .3rem;
+      align-items: center;
+      margin-bottom: .6rem;
+    }
+    .eq-id {
+      font-size: .75rem;
+      font-family: monospace;
+      color: var(--muted);
+      flex: 1;
+    }
+    .eq-badge {
+      font-size: .7rem;
+      padding: .12rem .45rem;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+    .badge-part1 { background: #e8e4f7; color: var(--accent); }
+    .badge-part2 { background: #fde9c8; color: #7a4500; }
+    .badge-type  { background: var(--bg); color: var(--muted); border: 1px solid var(--border); }
+    .badge-ch    { background: var(--bg); color: var(--muted); border: 1px solid var(--border); }
+    .badge-new   { background: #eaf5ee; color: var(--success); border: 1px solid #b2dfcb; }
+    .eq-card-actions {
+      display: flex;
+      gap: .4rem;
+    }
+    .btn-card-action {
+      padding: .28rem .7rem;
+      border-radius: 5px;
+      font-size: .78rem;
+      font-weight: 600;
+      font-family: var(--sans);
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--input-bg);
+      color: var(--muted);
+    }
+    .btn-card-action:hover { border-color: var(--selected-border); color: var(--accent); }
+    .btn-card-delete { color: var(--error); }
+    .btn-card-delete:hover { border-color: var(--error); color: var(--error); background: #fde8e6; }
+
+    .eq-passage {
+      font-family: var(--serif);
+      font-weight: var(--serif-weight);
+      font-size: .97rem;
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      padding: .45rem .7rem;
+      border-radius: 4px;
+      margin-bottom: .65rem;
+      line-height: 1.45;
+    }
+    .eq-prompt {
+      font-family: var(--serif);
+      font-weight: var(--serif-weight);
+      font-size: 1.08rem;
+      line-height: 1.4;
+      margin-bottom: .65rem;
+    }
+    .eq-options {
+      display: flex;
+      flex-direction: column;
+      gap: .28rem;
+      margin-bottom: .8rem;
+    }
+    .eq-option {
+      padding: .42rem .65rem;
+      border-radius: 5px;
+      font-family: var(--serif);
+      font-weight: var(--serif-weight);
+      font-size: .97rem;
+      border: 1.5px solid var(--border);
+      background: var(--input-bg);
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+    }
+    .eq-option.correct {
+      background: #eaf5ee;
+      border-color: var(--success);
+      font-weight: 700;
+      color: #1a5c37;
+    }
+    .opt-letter { font-size: .78rem; color: var(--muted); font-family: var(--sans); font-weight: 600; min-width: 1em; }
+    .correct-mark { font-size: .78rem; color: var(--success); font-weight: 700; margin-left: auto; }
+
+    /* Annotation row */
+    .eq-annotation {
+      display: flex;
+      gap: .5rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: .5rem;
+    }
+    .tag-select {
+      padding: .38rem .6rem;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      font-size: .82rem;
+      font-family: var(--sans);
+      background: var(--input-bg);
+      color: var(--text);
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236b6760' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .55rem center;
+      padding-right: 1.7rem;
+      min-width: 130px;
+    }
+    .note-textarea {
+      flex: 1;
+      min-width: 180px;
+      padding: .38rem .6rem;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      font-size: .85rem;
+      font-family: var(--sans);
+      background: var(--input-bg);
+      color: var(--text);
+      resize: vertical;
+      min-height: 54px;
+      line-height: 1.4;
+    }
+    .tag-select:focus, .note-textarea:focus {
+      outline: none;
+      border-color: var(--selected-border);
+      box-shadow: 0 0 0 2px rgba(32,21,71,.1);
+    }
+
+    /* Edit panel */
+    .eq-edit {
+      padding: 1rem;
+      background: var(--bg);
+      border-top: 1.5px solid var(--border);
+    }
+    .eq-edit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .6rem;
+      margin-bottom: .75rem;
+    }
+    .eq-edit-grid .span2 { grid-column: 1 / -1; }
+    .ef-label {
+      display: block;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: .25rem;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+    .ef-input, .ef-select, .ef-textarea {
+      width: 100%;
+      padding: .42rem .65rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: .9rem;
+      font-family: var(--sans);
+      background: var(--input-bg);
+      color: var(--text);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .ef-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236b6760' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .6rem center;
+      padding-right: 1.8rem;
+    }
+    .ef-textarea {
+      font-family: var(--sans);
+      resize: vertical;
+      min-height: 60px;
+      line-height: 1.5;
+    }
+    .ef-input:focus, .ef-select:focus, .ef-textarea:focus {
+      outline: none;
+      border-color: var(--selected-border);
+      box-shadow: 0 0 0 2px rgba(32,21,71,.1);
+    }
+    .ef-hint {
+      font-size: .74rem;
+      color: var(--muted);
+      margin-top: .2rem;
+    }
+
+    /* Options edit */
+    .options-edit-list {
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+      margin-bottom: .5rem;
+    }
+    .option-edit-row {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .option-edit-row input[type="radio"] {
+      accent-color: var(--success);
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .option-edit-row .opt-letter-label {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--muted);
+      font-family: var(--sans);
+      min-width: 1em;
+    }
+    .option-edit-row .ef-input { flex: 1; }
+    .option-edit-row .correct-radio-label {
+      font-size: .75rem;
+      color: var(--success);
+      white-space: nowrap;
+      display: none;
+    }
+    .option-edit-row input[type="radio"]:checked ~ .correct-radio-label { display: inline; }
+    .btn-rm-option {
+      padding: .28rem .5rem;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      font-size: .75rem;
+      background: var(--input-bg);
+      color: var(--muted);
+      cursor: pointer;
+    }
+    .btn-rm-option:hover { color: var(--error); border-color: var(--error); }
+    .btn-add-option {
+      align-self: flex-start;
+      padding: .3rem .7rem;
+      border: 1px dashed var(--border);
+      border-radius: 5px;
+      font-size: .8rem;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: var(--sans);
+    }
+    .btn-add-option:hover { border-color: var(--selected-border); color: var(--accent); }
+
+    /* Edit save/cancel */
+    .eq-edit-actions {
+      display: flex;
+      gap: .5rem;
+      margin-top: .85rem;
+      justify-content: flex-end;
+    }
+    .btn-save-q {
+      padding: .48rem 1.1rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: .88rem;
+      font-weight: 700;
+      font-family: var(--sans);
+      cursor: pointer;
+    }
+    .btn-save-q:hover { background: var(--accent-hover); }
+    .btn-cancel-q {
+      padding: .48rem .9rem;
+      background: var(--input-bg);
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: .88rem;
+      font-weight: 600;
+      font-family: var(--sans);
+      cursor: pointer;
+    }
+    .btn-cancel-q:hover { border-color: var(--selected-border); color: var(--accent); }
+
+    /* Bottom save bar */
+    .save-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: .65rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      z-index: 20;
+      box-shadow: 0 -2px 12px rgba(0,0,0,.08);
+    }
+    .save-bar-info {
+      font-size: .85rem;
+      color: var(--muted);
+      flex: 1;
+    }
+    .save-bar-info strong { color: var(--text); }
+    .btn-export-notes {
+      padding: .48rem .9rem;
+      background: var(--input-bg);
+      color: var(--accent);
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      font-size: .85rem;
+      font-weight: 600;
+      font-family: var(--sans);
+      cursor: pointer;
+    }
+    .btn-export-notes:hover { border-color: var(--selected-border); }
+    .btn-save-all {
+      padding: .5rem 1.1rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: .88rem;
+      font-weight: 700;
+      font-family: var(--sans);
+      cursor: pointer;
+    }
+    .btn-save-all:hover { background: var(--accent-hover); }
+    .btn-save-all:disabled { opacity: .5; pointer-events: none; }
+
+    .empty-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 520px) {
+      .eq-edit-grid { grid-template-columns: 1fr; }
+      .eq-edit-grid .span2 { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── LOAD SCREEN ─────────────────────────────────────── -->
+<div id="screen-load" class="screen">
+  <header class="page-header">
+    <h1>Question Editor</h1>
+  </header>
+  <div class="load-body">
+    <div class="load-card">
+      <h2>Open question files</h2>
+      <div class="load-slots">
+        <div class="load-slot" id="slot-p1">
+          <span class="load-slot-label">Part 1</span>
+          <span class="load-slot-name empty" id="slot-p1-name">No file loaded</span>
+          <button class="btn-open-file" id="btn-p1">Open…</button>
+        </div>
+        <div class="load-slot" id="slot-p2">
+          <span class="load-slot-label">Part 2</span>
+          <span class="load-slot-name empty" id="slot-p2-name">No file loaded</span>
+          <button class="btn-open-file" id="btn-p2">Open…</button>
+        </div>
+      </div>
+      <div id="no-fsa-msg" class="no-fsa-msg">
+        Your browser doesn't support the File System Access API. Use Chrome or Edge for full save support.
+        You can still edit and download the result as a file.
+      </div>
+      <div class="load-actions">
+        <button class="btn-cancel-q" id="btn-enter" onclick="enterEditor()">Open Editor →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── EDITOR SCREEN ───────────────────────────────────── -->
+<div id="screen-editor" class="screen" hidden>
+  <header class="editor-header">
+    <span class="editor-header-title">Question Editor</span>
+    <div class="save-btn-group">
+      <button class="btn-save" id="btn-save-p1" title="Save Part 1">Save P1</button>
+      <button class="btn-save" id="btn-save-p2" title="Save Part 2">Save P2</button>
+    </div>
+    <span class="save-status" id="save-status"></span>
+  </header>
+
+  <div class="editor-toolbar">
+    <select id="filter-part">
+      <option value="">All Parts</option>
+      <option value="1">Part 1</option>
+      <option value="2">Part 2</option>
+    </select>
+    <select id="filter-type">
+      <option value="">All Types</option>
+    </select>
+    <select id="filter-chapter">
+      <option value="">All Chapters</option>
+    </select>
+    <select id="filter-tag">
+      <option value="">All Tags</option>
+      <option value="rewrite">Rewrite</option>
+      <option value="fix-answer">Fix Answer</option>
+      <option value="delete">Delete</option>
+      <option value="add-option">Add Option</option>
+      <option value="unclear">Unclear</option>
+      <option value="annotated">Any Annotation</option>
+    </select>
+    <input type="text" id="filter-search" placeholder="Search…" />
+    <span class="toolbar-count" id="visible-count"></span>
+    <button class="btn-add-question" id="btn-add-q">+ Add Question</button>
+  </div>
+
+  <div class="editor-list" id="editor-list"></div>
+
+  <div class="save-bar">
+    <div class="save-bar-info" id="save-bar-info">Loading…</div>
+    <button class="btn-export-notes" id="btn-export-notes">Copy Notes</button>
+    <button class="btn-save-all" id="btn-save-all">Save All</button>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════════════════
+const NOTES_KEY = 'latin-editor-notes';
+const TYPES = [
+  'vocab-la-en', 'vocab-en-la',
+  'form-noun', 'form-verb', 'form-pronoun', 'form-participle', 'form-infinitive',
+  'syntax-id', 'syntax-function', 'comprehension',
+];
+const TYPE_LABELS = {
+  'vocab-la-en':      'Vocab: Latin → English',
+  'vocab-en-la':      'Vocab: English → Latin',
+  'form-noun':        'Forms: Noun',
+  'form-verb':        'Forms: Verb',
+  'form-pronoun':     'Forms: Pronoun',
+  'form-participle':  'Forms: Participle',
+  'form-infinitive':  'Forms: Infinitive',
+  'syntax-id':        'Syntax: Identify',
+  'syntax-function':  'Syntax: Function',
+  'comprehension':    'Comprehension',
+};
+
+const state = {
+  p1: { handle: null, questions: [], dirty: false },
+  p2: { handle: null, questions: [], dirty: false },
+};
+let notes = {};       // { [id]: { tag, note } }
+let expandedId = null; // currently open edit card
+let newCounter = 0;    // for generating temp new-question IDs
+const hasFSA = typeof window.showOpenFilePicker === 'function';
+
+// ══════════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════════
+if (!hasFSA) document.getElementById('no-fsa-msg').style.display = 'block';
+
+try { notes = JSON.parse(localStorage.getItem(NOTES_KEY) || '{}'); } catch { notes = {}; }
+
+document.getElementById('btn-p1').addEventListener('click', () => openFile(1));
+document.getElementById('btn-p2').addEventListener('click', () => openFile(2));
+
+// ══════════════════════════════════════════════════════════
+// FILE OPEN / SAVE
+// ══════════════════════════════════════════════════════════
+async function openFile(part) {
+  try {
+    let qs;
+    const key = part === 1 ? 'p1' : 'p2';
+    if (hasFSA) {
+      const [handle] = await window.showOpenFilePicker({
+        types: [{ description: 'JSON', accept: { 'application/json': ['.json'] } }],
+      });
+      const file = await handle.getFile();
+      const text = await file.text();
+      qs = JSON.parse(text);
+      state[key].handle = handle;
+      document.getElementById(`slot-p${part}-name`).textContent = handle.name;
+    } else {
+      // Fallback: file input
+      qs = await openFileFallback();
+    }
+    state[key].questions = qs;
+    state[key].dirty = false;
+    const slot = document.getElementById(`slot-p${part}`);
+    slot.classList.add('loaded');
+    document.getElementById(`slot-p${part}-name`).classList.remove('empty');
+    updateEnterBtn();
+  } catch (e) {
+    if (e.name !== 'AbortError') alert('Could not open file: ' + e.message);
+  }
+}
+
+function openFileFallback() {
+  return new Promise((resolve, reject) => {
+    const inp = document.createElement('input');
+    inp.type = 'file';
+    inp.accept = '.json,application/json';
+    inp.onchange = async () => {
+      try {
+        const text = await inp.files[0].text();
+        resolve(JSON.parse(text));
+      } catch (e) { reject(e); }
+    };
+    inp.oncancel = () => reject(Object.assign(new Error('Aborted'), { name: 'AbortError' }));
+    inp.click();
+  });
+}
+
+async function saveFile(part) {
+  const key = part === 1 ? 'p1' : 'p2';
+  const s = state[key];
+  if (!s.questions.length && !s.handle) return;
+  const json = JSON.stringify(s.questions, null, 2);
+  try {
+    if (hasFSA && s.handle) {
+      const writable = await s.handle.createWritable();
+      await writable.write(json);
+      await writable.close();
+      s.dirty = false;
+      updateSaveBtns();
+      flashStatus('Saved ✓');
+    } else {
+      downloadJSON(json, s.handle ? s.handle.name : `questions-part${part}.json`);
+      s.dirty = false;
+      updateSaveBtns();
+    }
+  } catch (e) {
+    if (e.name !== 'AbortError') alert('Save failed: ' + e.message);
+  }
+}
+
+function downloadJSON(text, filename) {
+  const blob = new Blob([text], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = Object.assign(document.createElement('a'), { href: url, download: filename });
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+document.getElementById('btn-save-p1').addEventListener('click', () => saveFile(1));
+document.getElementById('btn-save-p2').addEventListener('click', () => saveFile(2));
+document.getElementById('btn-save-all').addEventListener('click', async () => {
+  if (state.p1.dirty && state.p1.questions.length) await saveFile(1);
+  if (state.p2.dirty && state.p2.questions.length) await saveFile(2);
+});
+
+document.addEventListener('keydown', e => {
+  if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+    e.preventDefault();
+    document.getElementById('btn-save-all').click();
+  }
+});
+
+// ══════════════════════════════════════════════════════════
+// LOAD SCREEN LOGIC
+// ══════════════════════════════════════════════════════════
+function updateEnterBtn() {
+  const hasAny = state.p1.questions.length || state.p2.questions.length;
+  document.getElementById('btn-enter').classList.toggle('ready', !!hasAny);
+}
+
+function enterEditor() {
+  const hasAny = state.p1.questions.length || state.p2.questions.length;
+  if (!hasAny) return;
+  document.getElementById('screen-load').hidden = true;
+  document.getElementById('screen-editor').hidden = false;
+  initEditor();
+}
+
+// ══════════════════════════════════════════════════════════
+// EDITOR INIT
+// ══════════════════════════════════════════════════════════
+function initEditor() {
+  const all = allQuestions();
+
+  // Populate type filter
+  const types = [...new Set(all.map(q => q.type))].sort();
+  const typeSelect = document.getElementById('filter-type');
+  types.forEach(t => {
+    const o = document.createElement('option');
+    o.value = t; o.textContent = TYPE_LABELS[t] || t;
+    typeSelect.appendChild(o);
+  });
+
+  // Populate chapter filter
+  const chapters = [...new Set(all.map(q => q.chapter))].sort((a, b) => a - b);
+  const chSelect = document.getElementById('filter-chapter');
+  chapters.forEach(c => {
+    const o = document.createElement('option');
+    o.value = c; o.textContent = `Ch. ${c}`;
+    chSelect.appendChild(o);
+  });
+
+  ['filter-part','filter-type','filter-chapter','filter-tag','filter-search'].forEach(id => {
+    document.getElementById(id).addEventListener('input', renderList);
+  });
+
+  document.getElementById('btn-add-q').addEventListener('click', addNewQuestion);
+  document.getElementById('btn-export-notes').addEventListener('click', exportNotes);
+
+  updateSaveBtns();
+  updateSaveBar();
+  renderList();
+}
+
+function allQuestions() {
+  return [...state.p1.questions, ...state.p2.questions];
+}
+
+function partForId(id) {
+  if (state.p1.questions.find(q => q.id === id)) return 1;
+  if (state.p2.questions.find(q => q.id === id)) return 2;
+  return null;
+}
+
+// ══════════════════════════════════════════════════════════
+// RENDER LIST
+// ══════════════════════════════════════════════════════════
+function renderList() {
+  const part    = document.getElementById('filter-part').value;
+  const type    = document.getElementById('filter-type').value;
+  const chapter = document.getElementById('filter-chapter').value;
+  const tagF    = document.getElementById('filter-tag').value;
+  const search  = document.getElementById('filter-search').value.toLowerCase().trim();
+
+  const filtered = allQuestions().filter(q => {
+    if (part    && String(q.part)    !== part)    return false;
+    if (type    && q.type            !== type)    return false;
+    if (chapter && String(q.chapter) !== chapter) return false;
+    const n = notes[q.id];
+    if (tagF === 'annotated') {
+      if (!n || (!n.tag && !n.note.trim())) return false;
+    } else if (tagF) {
+      if (!n || n.tag !== tagF) return false;
+    }
+    if (search) {
+      const blob = [q.id, q.prompt, ...(q.options||[]), q.passage||''].join(' ').toLowerCase();
+      if (!blob.includes(search)) return false;
+    }
+    return true;
+  });
+
+  document.getElementById('visible-count').textContent =
+    `${filtered.length} of ${allQuestions().length}`;
+
+  const list = document.getElementById('editor-list');
+  list.innerHTML = '';
+
+  if (filtered.length === 0) {
+    list.innerHTML = '<div class="empty-state">No questions match your filters.</div>';
+    return;
+  }
+
+  filtered.forEach(q => list.appendChild(buildCard(q)));
+
+  updateSaveBar();
+}
+
+// ══════════════════════════════════════════════════════════
+// BUILD CARD
+// ══════════════════════════════════════════════════════════
+function buildCard(q) {
+  const n = notes[q.id] || { tag: '', note: '' };
+  const isNew = q._new === true;
+  const isExpanded = expandedId === q.id;
+
+  const card = document.createElement('div');
+  card.className = cardClass(q, n);
+  card.dataset.id = q.id;
+
+  // ── VIEW MODE ──
+  const view = document.createElement('div');
+  view.className = 'eq-view';
+
+  // Meta row
+  const meta = document.createElement('div');
+  meta.className = 'eq-meta';
+  meta.innerHTML =
+    `<span class="eq-id">${q.id}</span>` +
+    `<span class="eq-badge ${q.part === 1 ? 'badge-part1' : 'badge-part2'}">Part ${q.part}</span>` +
+    `<span class="eq-badge badge-type">${TYPE_LABELS[q.type] || q.type}</span>` +
+    `<span class="eq-badge badge-ch">Ch. ${q.chapter}</span>` +
+    (isNew ? `<span class="eq-badge badge-new">new</span>` : '');
+  const actions = document.createElement('div');
+  actions.className = 'eq-card-actions';
+  const editBtn = document.createElement('button');
+  editBtn.className = 'btn-card-action';
+  editBtn.textContent = isExpanded ? 'Close' : 'Edit';
+  editBtn.addEventListener('click', () => toggleEdit(q.id));
+  const delBtn = document.createElement('button');
+  delBtn.className = 'btn-card-action btn-card-delete';
+  delBtn.textContent = 'Delete';
+  delBtn.addEventListener('click', () => deleteQuestion(q.id));
+  actions.appendChild(editBtn);
+  actions.appendChild(delBtn);
+  meta.appendChild(actions);
+  view.appendChild(meta);
+
+  if (!isExpanded) {
+    // Passage
+    if (q.passage) {
+      const pass = document.createElement('div');
+      pass.className = 'eq-passage';
+      pass.innerHTML = q.passage;
+      view.appendChild(pass);
+    }
+    // Prompt
+    const prompt = document.createElement('div');
+    prompt.className = 'eq-prompt';
+    prompt.innerHTML = q.prompt || '<em style="color:var(--muted)">No prompt set</em>';
+    view.appendChild(prompt);
+    // Options
+    if (q.options && q.options.length) {
+      const optList = document.createElement('div');
+      optList.className = 'eq-options';
+      const letters = ['A','B','C','D','E','F'];
+      q.options.forEach((opt, i) => {
+        const div = document.createElement('div');
+        div.className = 'eq-option' + (i === q.correct ? ' correct' : '');
+        div.innerHTML =
+          `<span class="opt-letter">${letters[i]}</span>` +
+          `<span>${opt}</span>` +
+          (i === q.correct ? `<span class="correct-mark">✓</span>` : '');
+        optList.appendChild(div);
+      });
+      view.appendChild(optList);
+    }
+    // Annotation
+    const ann = buildAnnotationRow(q.id, n, card);
+    view.appendChild(ann);
+  }
+
+  card.appendChild(view);
+
+  // ── EDIT PANEL ──
+  if (isExpanded) {
+    card.appendChild(buildEditPanel(q));
+  }
+
+  return card;
+}
+
+function cardClass(q, n) {
+  let cls = 'eq-card';
+  if (q._new) cls += ' is-new';
+  if (n.note.trim() || n.tag) cls += ' has-note';
+  if (n.tag) cls += ` tag-${n.tag}`;
+  return cls;
+}
+
+// ══════════════════════════════════════════════════════════
+// ANNOTATION ROW
+// ══════════════════════════════════════════════════════════
+function buildAnnotationRow(id, n, card) {
+  const ann = document.createElement('div');
+  ann.className = 'eq-annotation';
+
+  const tagSel = document.createElement('select');
+  tagSel.className = 'tag-select';
+  tagSel.innerHTML =
+    `<option value="">— tag —</option>` +
+    `<option value="rewrite">Rewrite</option>` +
+    `<option value="fix-answer">Fix Answer</option>` +
+    `<option value="delete">Delete</option>` +
+    `<option value="add-option">Add Option</option>` +
+    `<option value="unclear">Unclear</option>`;
+  tagSel.value = n.tag || '';
+
+  const textarea = document.createElement('textarea');
+  textarea.className = 'note-textarea';
+  textarea.placeholder = 'Add a note or change request…';
+  textarea.value = n.note || '';
+
+  const save = () => {
+    const tag = tagSel.value;
+    const note = textarea.value;
+    if (!tag && !note.trim()) { delete notes[id]; }
+    else { notes[id] = { tag, note }; }
+    localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
+    // Update card border class only
+    const q = allQuestions().find(x => x.id === id);
+    if (q && card) {
+      const nn = notes[id] || { tag: '', note: '' };
+      card.className = cardClass(q, nn);
+    }
+    updateSaveBar();
+  };
+
+  tagSel.addEventListener('change', save);
+  textarea.addEventListener('input', save);
+
+  ann.appendChild(tagSel);
+  ann.appendChild(textarea);
+  return ann;
+}
+
+// ══════════════════════════════════════════════════════════
+// EDIT PANEL
+// ══════════════════════════════════════════════════════════
+function buildEditPanel(q) {
+  const panel = document.createElement('div');
+  panel.className = 'eq-edit';
+
+  // Top grid: ID, part, type, chapter
+  const grid = document.createElement('div');
+  grid.className = 'eq-edit-grid';
+
+  grid.appendChild(fieldBlock('ID', makeInput('ef-id', q.id, q._new ? '' : 'readonly'), 'ef-hint', q._new ? 'Enter a unique question ID' : ''));
+  grid.appendChild(fieldBlock('Part',
+    makeSelect('ef-part', [['1','Part 1'],['2','Part 2']], String(q.part))));
+  grid.appendChild(fieldBlock('Type',
+    makeSelect('ef-type', TYPES.map(t => [t, TYPE_LABELS[t] || t]), q.type)));
+  grid.appendChild(fieldBlock('Chapter',
+    makeInput('ef-chapter', q.chapter, '', 'number', '1')));
+
+  // Prompt (full width)
+  const promptTA = document.createElement('textarea');
+  promptTA.className = 'ef-textarea';
+  promptTA.value = q.prompt || '';
+  promptTA.rows = 3;
+  grid.appendChild(fieldBlock('Prompt (HTML allowed)', promptTA, '', '', 'span2'));
+
+  // Passage (full width, optional)
+  const passTA = document.createElement('textarea');
+  passTA.className = 'ef-textarea';
+  passTA.value = q.passage || '';
+  passTA.rows = 2;
+  passTA.placeholder = 'Leave blank if no passage';
+  grid.appendChild(fieldBlock('Passage (optional)', passTA, '', '', 'span2'));
+
+  panel.appendChild(grid);
+
+  // Options with correct-answer radio
+  const optLabel = document.createElement('label');
+  optLabel.className = 'ef-label';
+  optLabel.textContent = 'Options  (select ✓ for correct answer)';
+  panel.appendChild(optLabel);
+
+  const optList = document.createElement('div');
+  optList.className = 'options-edit-list';
+  const letters = ['A','B','C','D','E','F'];
+
+  const renderOptions = () => {
+    optList.innerHTML = '';
+    (q._editOptions || q.options || []).forEach((opt, i) => {
+      const row = document.createElement('div');
+      row.className = 'option-edit-row';
+
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = `correct-${q.id}`;
+      radio.value = i;
+      radio.checked = i === (q._editCorrect !== undefined ? q._editCorrect : q.correct);
+      radio.title = 'Mark as correct answer';
+      radio.addEventListener('change', () => { q._editCorrect = i; });
+
+      const lbl = document.createElement('span');
+      lbl.className = 'opt-letter-label';
+      lbl.textContent = letters[i];
+
+      const inp = document.createElement('input');
+      inp.type = 'text';
+      inp.className = 'ef-input';
+      inp.value = opt;
+      inp.placeholder = `Option ${letters[i]}`;
+      inp.addEventListener('input', () => {
+        if (!q._editOptions) q._editOptions = [...q.options];
+        q._editOptions[i] = inp.value;
+      });
+
+      const rmBtn = document.createElement('button');
+      rmBtn.className = 'btn-rm-option';
+      rmBtn.textContent = '✕';
+      rmBtn.title = 'Remove option';
+      rmBtn.addEventListener('click', () => {
+        if (!q._editOptions) q._editOptions = [...q.options];
+        const wasCorrect = q._editCorrect !== undefined ? q._editCorrect : q.correct;
+        q._editOptions.splice(i, 1);
+        if (wasCorrect >= q._editOptions.length) q._editCorrect = q._editOptions.length - 1;
+        else if (i < wasCorrect) q._editCorrect = wasCorrect - 1;
+        else q._editCorrect = wasCorrect;
+        renderOptions();
+      });
+
+      row.appendChild(radio);
+      row.appendChild(lbl);
+      row.appendChild(inp);
+      row.appendChild(rmBtn);
+      optList.appendChild(row);
+    });
+  };
+
+  if (!q._editOptions) q._editOptions = [...(q.options || [])];
+  if (q._editCorrect === undefined) q._editCorrect = q.correct || 0;
+  renderOptions();
+  panel.appendChild(optList);
+
+  const addOptBtn = document.createElement('button');
+  addOptBtn.className = 'btn-add-option';
+  addOptBtn.textContent = '+ Add option';
+  addOptBtn.addEventListener('click', () => {
+    if (!q._editOptions) q._editOptions = [...q.options];
+    q._editOptions.push('');
+    renderOptions();
+  });
+  panel.appendChild(addOptBtn);
+
+  // Save / Cancel
+  const editActions = document.createElement('div');
+  editActions.className = 'eq-edit-actions';
+
+  const cancelBtn = document.createElement('button');
+  cancelBtn.className = 'btn-cancel-q';
+  cancelBtn.textContent = 'Cancel';
+  cancelBtn.addEventListener('click', () => {
+    // Discard temp edit state
+    delete q._editOptions;
+    delete q._editCorrect;
+    expandedId = null;
+    rerenderCard(q.id);
+  });
+
+  const saveBtn = document.createElement('button');
+  saveBtn.className = 'btn-save-q';
+  saveBtn.textContent = 'Save Changes';
+  saveBtn.addEventListener('click', () => {
+    // Collect values from DOM
+    const idVal   = panel.closest('.eq-card').querySelector('.ef-id').value.trim();
+    const partVal = parseInt(panel.closest('.eq-card').querySelector('.ef-part').value);
+    const typeVal = panel.closest('.eq-card').querySelector('.ef-type').value;
+    const chVal   = parseInt(panel.closest('.eq-card').querySelector('.ef-chapter').value) || 1;
+    const promptV = panel.closest('.eq-card').querySelector('.ef-textarea:nth-of-type(1)').value.trim();
+    const passV   = panel.closest('.eq-card').querySelector('.ef-textarea:nth-of-type(2)').value.trim();
+
+    if (!idVal) { alert('Question ID is required.'); return; }
+    if (!promptV) { alert('Prompt is required.'); return; }
+    if (!q._editOptions || q._editOptions.length < 2) { alert('At least 2 options required.'); return; }
+    if (q._editOptions.some(o => !o.trim())) { alert('All options must have text.'); return; }
+
+    // Check for ID collision on new questions
+    if (q._new && idVal !== q.id) {
+      const collision = allQuestions().find(x => x.id === idVal);
+      if (collision) { alert(`ID "${idVal}" is already used.`); return; }
+    }
+
+    // Determine which part array to update
+    const oldPart = q._new ? partVal : (partForId(q.id) || partVal);
+    const newPart = partVal;
+    const oldKey = oldPart === 1 ? 'p1' : 'p2';
+    const newKey = newPart === 1 ? 'p1' : 'p2';
+
+    // Remove from old part if part changed
+    if (!q._new && oldKey !== newKey) {
+      state[oldKey].questions = state[oldKey].questions.filter(x => x.id !== q.id);
+      state[oldKey].dirty = true;
+    }
+
+    // Build updated question
+    const updated = {
+      id: idVal,
+      part: newPart,
+      type: typeVal,
+      chapter: chVal,
+      prompt: promptV,
+      options: [...q._editOptions],
+      correct: q._editCorrect !== undefined ? q._editCorrect : q.correct,
+    };
+    if (passV) updated.passage = passV;
+
+    // Update in the correct part array
+    const arr = state[newKey].questions;
+    const idx = arr.findIndex(x => x.id === q.id);
+    if (idx >= 0) {
+      arr[idx] = updated;
+    } else {
+      arr.push(updated);
+    }
+    state[newKey].dirty = true;
+
+    // Clean up temp flags
+    delete q._editOptions;
+    delete q._editCorrect;
+    expandedId = null;
+
+    updateSaveBtns();
+    updateSaveBar();
+
+    // Refresh filters if needed
+    repopulateFilters();
+    renderList();
+  });
+
+  editActions.appendChild(cancelBtn);
+  editActions.appendChild(saveBtn);
+  panel.appendChild(editActions);
+
+  return panel;
+}
+
+// ══════════════════════════════════════════════════════════
+// HELPERS: DOM field builders
+// ══════════════════════════════════════════════════════════
+function fieldBlock(labelText, input, hintClass, hintText, extraClass) {
+  const wrap = document.createElement('div');
+  if (extraClass) wrap.className = extraClass;
+  const lbl = document.createElement('label');
+  lbl.className = 'ef-label';
+  lbl.textContent = labelText;
+  wrap.appendChild(lbl);
+  wrap.appendChild(input);
+  if (hintText) {
+    const hint = document.createElement('div');
+    hint.className = 'ef-hint';
+    hint.textContent = hintText;
+    wrap.appendChild(hint);
+  }
+  return wrap;
+}
+
+function makeInput(cls, value, readonlyAttr, type = 'text', min) {
+  const inp = document.createElement('input');
+  inp.type = type;
+  inp.className = `ef-input ${cls}`;
+  inp.value = value !== undefined ? value : '';
+  if (readonlyAttr === 'readonly') inp.readOnly = true;
+  if (min !== undefined) inp.min = min;
+  return inp;
+}
+
+function makeSelect(cls, options, selected) {
+  const sel = document.createElement('select');
+  sel.className = `ef-select ${cls}`;
+  options.forEach(([val, label]) => {
+    const o = document.createElement('option');
+    o.value = val; o.textContent = label;
+    if (val === selected) o.selected = true;
+    sel.appendChild(o);
+  });
+  return sel;
+}
+
+// ══════════════════════════════════════════════════════════
+// EDIT TOGGLE / DELETE / ADD
+// ══════════════════════════════════════════════════════════
+function toggleEdit(id) {
+  if (expandedId === id) {
+    const q = allQuestions().find(x => x.id === id);
+    if (q) { delete q._editOptions; delete q._editCorrect; }
+    expandedId = null;
+  } else {
+    // Close previous
+    if (expandedId) {
+      const prev = allQuestions().find(x => x.id === expandedId);
+      if (prev) { delete prev._editOptions; delete prev._editCorrect; }
+    }
+    expandedId = id;
+  }
+  rerenderCard(id);
+  if (expandedId && expandedId !== id && expandedId) {
+    rerenderCard(expandedId);
+  }
+}
+
+function rerenderCard(id) {
+  const q = allQuestions().find(x => x.id === id);
+  if (!q) { renderList(); return; }
+  const existing = document.querySelector(`.eq-card[data-id="${CSS.escape(id)}"]`);
+  if (existing) {
+    const fresh = buildCard(q);
+    existing.replaceWith(fresh);
+  }
+}
+
+function deleteQuestion(id) {
+  const q = allQuestions().find(x => x.id === id);
+  if (!q) return;
+  if (!confirm(`Delete question "${id}"?\n\n${q.prompt ? q.prompt.replace(/<[^>]+>/g,'').substring(0,80) : ''}`)) return;
+  const part = partForId(id);
+  if (!part) return;
+  const key = part === 1 ? 'p1' : 'p2';
+  state[key].questions = state[key].questions.filter(x => x.id !== id);
+  state[key].dirty = true;
+  if (expandedId === id) expandedId = null;
+  updateSaveBtns();
+  updateSaveBar();
+  repopulateFilters();
+  renderList();
+}
+
+function addNewQuestion() {
+  newCounter++;
+  const defaultPart = document.getElementById('filter-part').value || '1';
+  const partNum = parseInt(defaultPart) || 1;
+  const tempId = `_new_${newCounter}`;
+  const newQ = {
+    id: tempId,
+    part: partNum,
+    type: 'vocab-la-en',
+    chapter: 1,
+    prompt: '',
+    options: ['', '', '', ''],
+    correct: 0,
+    _new: true,
+  };
+  const key = partNum === 1 ? 'p1' : 'p2';
+  state[key].questions.unshift(newQ);
+  state[key].dirty = true;
+  expandedId = tempId;
+  updateSaveBtns();
+  renderList();
+  // Scroll to top of list
+  document.getElementById('editor-list').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ══════════════════════════════════════════════════════════
+// UI STATE UPDATES
+// ══════════════════════════════════════════════════════════
+function updateSaveBtns() {
+  const p1Btn = document.getElementById('btn-save-p1');
+  const p2Btn = document.getElementById('btn-save-p2');
+  p1Btn.classList.toggle('dirty', state.p1.dirty && state.p1.questions.length > 0);
+  p1Btn.disabled = !state.p1.questions.length;
+  p2Btn.classList.toggle('dirty', state.p2.dirty && state.p2.questions.length > 0);
+  p2Btn.disabled = !state.p2.questions.length;
+
+  const anyDirty = (state.p1.dirty && state.p1.questions.length > 0) ||
+                   (state.p2.dirty && state.p2.questions.length > 0);
+  document.getElementById('btn-save-all').disabled = !anyDirty;
+}
+
+function updateSaveBar() {
+  const all = allQuestions();
+  const annotated = all.filter(q => {
+    const n = notes[q.id];
+    return n && (n.tag || n.note.trim());
+  }).length;
+  const dirty = (state.p1.dirty ? 1 : 0) + (state.p2.dirty ? 1 : 0);
+  document.getElementById('save-bar-info').innerHTML =
+    `<strong>${all.length}</strong> questions · ` +
+    `<strong>${annotated}</strong> annotated` +
+    (dirty ? ` · <strong style="color:var(--error)">Unsaved changes</strong>` : '');
+}
+
+function flashStatus(msg) {
+  const el = document.getElementById('save-status');
+  el.textContent = msg;
+  setTimeout(() => { el.textContent = ''; }, 2500);
+}
+
+function repopulateFilters() {
+  const all = allQuestions();
+  const typeSelect = document.getElementById('filter-type');
+  const currentType = typeSelect.value;
+  while (typeSelect.options.length > 1) typeSelect.remove(1);
+  const types = [...new Set(all.map(q => q.type))].sort();
+  types.forEach(t => {
+    const o = document.createElement('option');
+    o.value = t; o.textContent = TYPE_LABELS[t] || t;
+    typeSelect.appendChild(o);
+  });
+  typeSelect.value = currentType;
+
+  const chSelect = document.getElementById('filter-chapter');
+  const currentCh = chSelect.value;
+  while (chSelect.options.length > 1) chSelect.remove(1);
+  const chapters = [...new Set(all.map(q => q.chapter))].sort((a, b) => a - b);
+  chapters.forEach(c => {
+    const o = document.createElement('option');
+    o.value = c; o.textContent = `Ch. ${c}`;
+    chSelect.appendChild(o);
+  });
+  chSelect.value = currentCh;
+}
+
+// ══════════════════════════════════════════════════════════
+// EXPORT NOTES
+// ══════════════════════════════════════════════════════════
+function exportNotes() {
+  const all = allQuestions();
+  const annotated = all.filter(q => {
+    const n = notes[q.id];
+    return n && (n.tag || n.note.trim());
+  });
+  if (!annotated.length) { alert('No annotations yet.'); return; }
+
+  const TAG_LABELS = {
+    rewrite: 'REWRITE', 'fix-answer': 'FIX ANSWER',
+    delete: 'DELETE', 'add-option': 'ADD OPTION', unclear: 'UNCLEAR'
+  };
+  const lines = [`# Review Notes — ${annotated.length} item${annotated.length===1?'':'s'}`, ''];
+  annotated.forEach(q => {
+    const n = notes[q.id];
+    const tag = n.tag ? `[${TAG_LABELS[n.tag] || n.tag.toUpperCase()}]` : '';
+    lines.push(`---`);
+    lines.push(`**${q.id}** | Part ${q.part} | Ch. ${q.chapter}${tag ? ' | ' + tag : ''}`);
+    lines.push(`Prompt: ${q.prompt.replace(/<[^>]+>/g,'')}`);
+    const letters = ['A','B','C','D','E'];
+    q.options.forEach((o, i) => lines.push(`  ${letters[i]}) ${o}${i === q.correct ? ' ✓' : ''}`));
+    if (n.note.trim()) lines.push(`Note: ${n.note.trim()}`);
+    lines.push('');
+  });
+
+  const text = lines.join('\n');
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('btn-export-notes');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy Notes', 2000);
+  }).catch(() => prompt('Copy your notes:', text));
+}
+</script>
+</body>
+</html>
