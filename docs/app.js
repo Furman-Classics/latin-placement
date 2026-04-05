@@ -465,9 +465,9 @@ async function postSubmission(payload) {
 
 function themeLabel(theme) {
   return {
-    aeneid: 'Aeneid-Based Passage',
-    pliny: 'Pliny-Based Passage',
-    agrippina: 'Agrippina-Based Passage',
+    aeneid: 'Aeneas, leader of Trojans',
+    pliny: 'Pliny the Younger’s letter',
+    agrippina: 'Agrippina, mother of Nero',
   }[theme] || 'Passage';
 }
 
