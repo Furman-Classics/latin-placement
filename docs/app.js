@@ -2,6 +2,7 @@
 
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz8_sa2xM-jJm8BrwTlgiAg4rZ8iaMXJoOgkTOZYJf5WcZ78rEg1YoYW5ZOqHyg4UISoQ/exec';
 const SUBMIT_TOKEN = 'placent-2026';
+const PAYLOAD_VERSION = '2026-sheet-v1';
 
 const DEV_MODE = new URLSearchParams(location.search).has('dev');
 const FORM_OVERRIDE = (new URLSearchParams(location.search).get('form') || '').toUpperCase();
@@ -47,6 +48,7 @@ let state = {
   optionOrder: {},
   p1Index: 0,
   p2Index: 0,
+  submissionId: null,
   timerStart: null,
   timerHandle: null,
   submitted: false,
@@ -58,6 +60,61 @@ function $(id) {
 
 function renderHTML(raw) {
   return String(raw || '').replace(/\[underline:\s*([^\]]+)\]/g, '<span class="hl">$1</span>');
+}
+
+function trimPromptLead(raw) {
+  const cleaned = String(raw || '').replace(/^[\s,.:;!?-]+/, '').trim();
+  return cleaned.replace(/^[a-z]/, letter => letter.toUpperCase());
+}
+
+function splitPrompt(prompt) {
+  const rawPrompt = String(prompt || '');
+  const match = rawPrompt.match(/^(.*?)<em>(.*?)<\/em>(.*)$/s);
+  if (!match) {
+    return {
+      focusHtml: '',
+      promptHtml: renderHTML(rawPrompt),
+    };
+  }
+
+  const [, rawBefore, rawFocus, rawAfter] = match;
+  const before = rawBefore.trim();
+  const after = rawAfter.trim();
+  let questionText = null;
+
+  if (/^In(?: the sentence)?$/i.test(before) || /^Read the sentence$/i.test(before)) {
+    questionText = trimPromptLead(rawAfter);
+  } else if (/^What is the best translation of$/i.test(before)) {
+    questionText = 'What is the best translation?';
+  } else if (/^What is the best sense of$/i.test(before)) {
+    questionText = 'What is the best sense?';
+  } else if (/^Identify the type of condition in$/i.test(before)) {
+    questionText = 'Identify the type of condition.';
+  } else if (/^Identify the construction in$/i.test(before)) {
+    questionText = 'Identify the construction.';
+  } else if (/^In the passage, what does$/i.test(before) && /^mean\?$/i.test(after)) {
+    questionText = 'In the passage, what does this mean?';
+  } else if (/^In the final sentence, what does$/i.test(before) && /^imply\?$/i.test(after)) {
+    questionText = 'In the final sentence, what does this imply?';
+  } else if (/^What does the sentence$/i.test(before) && /^imply\?$/i.test(after)) {
+    questionText = 'What does this sentence imply?';
+  } else if (/^What does$/i.test(before) && /^imply in context\?$/i.test(after)) {
+    questionText = 'What does this imply in context?';
+  } else if (/^What fear is expressed by$/i.test(before) && /^\?$/i.test(after)) {
+    questionText = 'What fear is expressed here?';
+  }
+
+  if (!questionText) {
+    return {
+      focusHtml: '',
+      promptHtml: renderHTML(rawPrompt),
+    };
+  }
+
+  return {
+    focusHtml: `<em>${renderHTML(rawFocus)}</em>`,
+    promptHtml: renderHTML(questionText),
+  };
 }
 
 function shuffle(arr) {
@@ -78,6 +135,25 @@ function showScreen(name) {
   window.scrollTo(0, 0);
 }
 
+function generateSubmissionId() {
+  if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+    return window.crypto.randomUUID();
+  }
+  return `sub-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
+function setDoneSubmission(submissionId) {
+  const el = $('done-submission');
+  if (!el) return;
+  if (!submissionId) {
+    el.hidden = true;
+    el.textContent = '';
+    return;
+  }
+  el.hidden = false;
+  el.textContent = `Submission ID: ${submissionId}`;
+}
+
 function saveState() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
@@ -91,6 +167,7 @@ function saveState() {
       optionOrder: state.optionOrder,
       p1Index: state.p1Index,
       p2Index: state.p2Index,
+      submissionId: state.submissionId,
       timerStart: state.timerStart,
     }));
   } catch (_) {}
@@ -343,6 +420,49 @@ function buildTiming(autoSubmit) {
   };
 }
 
+function buildSubmissionPayload(autoSubmit) {
+  const scores = scoreSubmission();
+  return {
+    submissionId: state.submissionId || generateSubmissionId(),
+    payloadVersion: PAYLOAD_VERSION,
+    token: SUBMIT_TOKEN,
+    version: state.version,
+    formId: state.formId,
+    studentInfo: state.studentInfo,
+    answers: state.answers,
+    subscores: scores.subscores,
+    totals: scores.totals,
+    totalScore: scores.totalScore,
+    placement: scores.placement,
+    advisoryFlags: scores.advisoryFlags,
+    percentages: scores.percentages,
+    timing: buildTiming(autoSubmit),
+  };
+}
+
+async function postSubmission(payload) {
+  if (!APPS_SCRIPT_URL) return;
+  const response = await fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'text/plain;charset=utf-8',
+    },
+    keepalive: true,
+    redirect: 'manual',
+    body: JSON.stringify(payload),
+  });
+
+  if (response.type === 'opaqueredirect') return;
+  if (response.status >= 200 && response.status < 400) return;
+
+  let detail = '';
+  try {
+    detail = (await response.text()).trim();
+  } catch (_) {}
+
+  throw new Error(detail || `Submission failed with status ${response.status}.`);
+}
+
 function themeLabel(theme) {
   return {
     aeneid: 'Aeneid-Based Passage',
@@ -361,6 +481,25 @@ function updateQuestionHeader(partPrefix, question) {
   }
   instructionEl.hidden = true;
   instructionEl.textContent = '';
+}
+
+function renderPrompt(partPrefix, question) {
+  const promptEl = $(`${partPrefix}-prompt`);
+  const focusEl = $(`${partPrefix}-focus`);
+  const { focusHtml, promptHtml } = splitPrompt(question.prompt);
+
+  promptEl.innerHTML = promptHtml;
+  promptEl.classList.toggle('has-focus', Boolean(focusHtml));
+
+  if (!focusEl) return;
+  if (focusHtml) {
+    focusEl.hidden = false;
+    focusEl.innerHTML = focusHtml;
+    return;
+  }
+
+  focusEl.hidden = true;
+  focusEl.innerHTML = '';
 }
 
 function renderOptions(partPrefix, question, focusOptionIndex = -1) {
@@ -429,7 +568,7 @@ function updateP2Progress() {
 function renderP1(moveFocus = false, focusOptionIndex = -1) {
   const question = state.part1Questions[state.p1Index];
   $('p1-counter').textContent = `Question ${state.p1Index + 1} of ${state.part1Questions.length}`;
-  $('p1-prompt').innerHTML = renderHTML(question.prompt);
+  renderPrompt('p1', question);
   updateQuestionHeader('p1', question);
   renderOptions('p1', question, focusOptionIndex);
 
@@ -452,7 +591,7 @@ function renderP1(moveFocus = false, focusOptionIndex = -1) {
 function renderP2(moveFocus = false, focusOptionIndex = -1) {
   const question = state.part2Questions[state.p2Index];
   $('p2-counter').textContent = `Question ${state.p2Index + 1} of ${state.part2Questions.length}`;
-  $('p2-prompt').innerHTML = renderHTML(question.prompt);
+  renderPrompt('p2', question);
   updateQuestionHeader('p2', question);
 
   const passageEl = $('p2-passage');
@@ -538,33 +677,19 @@ async function submitTest(autoSubmit) {
   window.removeEventListener('beforeunload', onBeforeUnload);
 
   try {
-    const scores = scoreSubmission();
-    const payload = {
-      token: SUBMIT_TOKEN,
-      version: state.version,
-      formId: state.formId,
-      studentInfo: state.studentInfo,
-      answers: state.answers,
-      subscores: scores.subscores,
-      totals: scores.totals,
-      totalScore: scores.totalScore,
-      placement: scores.placement,
-      advisoryFlags: scores.advisoryFlags,
-      percentages: scores.percentages,
-      timing: buildTiming(autoSubmit),
-    };
-
-    if (APPS_SCRIPT_URL) {
-      await fetch(APPS_SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify(payload),
-      });
-    }
+    const payload = buildSubmissionPayload(autoSubmit);
+    state.submissionId = payload.submissionId;
+    await postSubmission(payload);
   } catch (err) {
     console.error('Submit error:', err);
+    state.submitted = false;
+    saveState();
+    window.addEventListener('beforeunload', onBeforeUnload);
+    alert('Your test could not be submitted. Please check your connection and try again.');
+    return;
   }
 
+  setDoneSubmission(state.submissionId);
   clearState();
   state.screen = 'done';
   showScreen('done');
@@ -653,8 +778,8 @@ $('info-form').addEventListener('submit', async event => {
     state.answers = {};
     state.optionOrder = {};
     for (const question of state.questions) {
-      state.optionOrder[question.id] = buildOptionOrder(question);
-    }
+    state.optionOrder[question.id] = buildOptionOrder(question);
+  }
   } catch (err) {
     errorEl.textContent = 'Could not load the placement form. Please try again.';
     submitBtn.disabled = false;
@@ -664,6 +789,7 @@ $('info-form').addEventListener('submit', async event => {
 
   state.p1Index = 0;
   state.p2Index = 0;
+  state.submissionId = generateSubmissionId();
   state.timerStart = Date.now();
   state.submitted = false;
   state.screen = 'interstitial1';
@@ -700,6 +826,7 @@ function tryRestoreSession() {
   state.optionOrder = saved.optionOrder || {};
   state.p1Index = saved.p1Index || 0;
   state.p2Index = saved.p2Index || 0;
+  state.submissionId = saved.submissionId || generateSubmissionId();
   state.timerStart = saved.timerStart;
   state.submitted = false;
 
@@ -738,5 +865,6 @@ function tryRestoreSession() {
 
 (function init() {
   if (DEV_MODE) $('dev-banner').hidden = false;
+  setDoneSubmission(null);
   if (!tryRestoreSession()) showScreen('info');
 })();
