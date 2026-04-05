@@ -307,6 +307,12 @@ legend {
 .question-prompt em { font-style: italic; }
 .question-prompt u { text-decoration: underline; }
 
+.question-guidance {
+  font-size: .92rem;
+  color: var(--muted);
+  margin: -.6rem 0 1rem;
+}
+
 /* ===== PASSAGE ===== */
 .passage-block {
   font-family: var(--serif);
@@ -318,6 +324,16 @@ legend {
   padding: .75rem 1rem;
   border-radius: 4px;
   margin-bottom: 1.25rem;
+}
+
+.passage-kicker {
+  font-family: var(--sans);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .55rem;
 }
 
 /* ===== OPTION BUTTONS ===== */

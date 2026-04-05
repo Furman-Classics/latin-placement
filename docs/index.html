@@ -114,7 +114,7 @@
       <h1>LATIN PLACEMENT TEST</h1>
     </header>
     <main class="card interstitial-card">
-      <p class="interstitial-text">The first part of the placement test asks questions about vocabulary and word forms.</p>
+      <p class="interstitial-text">Part 1 asks questions about core decoding: forms, syntax in context, and sentence meaning.</p>
       <p class="interstitial-text">Remember, you have 45 minutes to complete both parts of the test.</p>
       <div class="nav-row interstitial-nav">
         <button class="btn-primary" id="interstitial1-begin">Begin Part 1 →</button>
@@ -128,7 +128,7 @@
       <h1>LATIN PLACEMENT TEST</h1>
     </header>
     <main class="card interstitial-card">
-      <p class="interstitial-text">You have completed Part 1. In Part 2, the test asks questions about syntax and reading comprehension.</p>
+      <p class="interstitial-text">You have completed Part 1. Part 2 asks questions about reading and syntax, including adapted passages.</p>
       <p class="interstitial-text">You have <span id="interstitial2-time"></span> remaining to finish Part 2.</p>
       <div class="nav-row interstitial-nav">
         <button class="btn-primary" id="interstitial2-begin">Begin Part 2 →</button>
@@ -140,14 +140,15 @@
   <div id="screen-part1" class="screen" hidden>
     <header class="test-header">
       <div class="test-header-inner">
-        <h1 class="part-label">Part 1 — Vocabulary &amp; Forms</h1>
-        <span class="progress-label" id="p1-progress" aria-live="polite">Answered: 0 / 35</span>
+        <h1 class="part-label">Part 1 — Core Decoding</h1>
+        <span class="progress-label" id="p1-progress" aria-live="polite">Answered: 0 / 22</span>
       </div>
     </header>
     <main class="card question-card">
       <div id="p1-restore-notice" class="restore-notice" hidden>Your answers have been restored.</div>
-      <div class="question-counter" id="p1-counter" tabindex="-1">Question 1 of 35</div>
+      <div class="question-counter" id="p1-counter" tabindex="-1">Question 1 of 22</div>
       <div class="question-prompt" id="p1-prompt"></div>
+      <div class="question-guidance" id="p1-instructions" hidden></div>
       <div class="options-list" id="p1-options" role="radiogroup" aria-labelledby="p1-prompt"></div>
       <div class="nav-row">
         <button class="btn-primary" id="p1-next">Submit and move to next question</button>
@@ -159,14 +160,15 @@
   <div id="screen-part2" class="screen" hidden>
     <header class="test-header">
       <div class="test-header-inner">
-        <h1 class="part-label">Part 2 — Syntax &amp; Comprehension</h1>
-        <span class="progress-label" id="p2-progress" aria-live="polite">Answered: 0 / 25</span>
+        <h1 class="part-label">Part 2 — Reading &amp; Syntax</h1>
+        <span class="progress-label" id="p2-progress" aria-live="polite">Answered: 0 / 22</span>
       </div>
     </header>
     <main class="card question-card">
-      <div class="question-counter" id="p2-counter" tabindex="-1">Question 1 of 25</div>
+      <div class="question-counter" id="p2-counter" tabindex="-1">Question 1 of 22</div>
       <div class="passage-block" id="p2-passage" hidden></div>
       <div class="question-prompt" id="p2-prompt"></div>
+      <div class="question-guidance" id="p2-instructions" hidden></div>
       <div class="options-list" id="p2-options" role="radiogroup" aria-labelledby="p2-prompt"></div>
       <div class="nav-row">
         <button class="btn-primary" id="p2-next">Submit and move to next question</button>

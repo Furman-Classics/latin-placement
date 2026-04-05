@@ -1044,14 +1044,14 @@ function buildEditPanel(q) {
 
   // Prompt (full width)
   const promptTA = document.createElement('textarea');
-  promptTA.className = 'ef-textarea';
+  promptTA.className = 'ef-textarea ef-prompt';
   promptTA.value = q.prompt || '';
   promptTA.rows = 3;
   grid.appendChild(fieldBlock('Prompt (HTML allowed)', promptTA, '', '', 'span2'));
 
   // Passage (full width, optional)
   const passTA = document.createElement('textarea');
-  passTA.className = 'ef-textarea';
+  passTA.className = 'ef-textarea ef-passage';
   passTA.value = q.passage || '';
   passTA.rows = 2;
   passTA.placeholder = 'Leave blank if no passage';
@@ -1158,8 +1158,8 @@ function buildEditPanel(q) {
     const partVal = parseInt(panel.closest('.eq-card').querySelector('.ef-part').value);
     const typeVal = panel.closest('.eq-card').querySelector('.ef-type').value;
     const chVal   = parseInt(panel.closest('.eq-card').querySelector('.ef-chapter').value) || 1;
-    const promptV = panel.closest('.eq-card').querySelector('.ef-textarea:nth-of-type(1)').value.trim();
-    const passV   = panel.closest('.eq-card').querySelector('.ef-textarea:nth-of-type(2)').value.trim();
+    const promptV = panel.querySelector('.ef-prompt').value.trim();
+    const passV   = panel.querySelector('.ef-passage').value.trim();
 
     if (!idVal) { alert('Question ID is required.'); return; }
     if (!promptV) { alert('Prompt is required.'); return; }

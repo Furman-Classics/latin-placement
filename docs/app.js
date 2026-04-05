@@ -1,134 +1,492 @@
 'use strict';
 
-// ===== CONFIG =====
-// Set APPS_SCRIPT_URL to your deployed Google Apps Script web app URL.
-// Set SUBMIT_TOKEN to match the SUBMIT_TOKEN constant in your Apps Script.
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz8_sa2xM-jJm8BrwTlgiAg4rZ8iaMXJoOgkTOZYJf5WcZ78rEg1YoYW5ZOqHyg4UISoQ/exec';        // TODO: paste deployment URL here
-const SUBMIT_TOKEN    = 'placent-2026';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz8_sa2xM-jJm8BrwTlgiAg4rZ8iaMXJoOgkTOZYJf5WcZ78rEg1YoYW5ZOqHyg4UISoQ/exec';
+const SUBMIT_TOKEN = 'placent-2026';
 
-const DEV_MODE    = new URLSearchParams(location.search).has('dev');
-const STORAGE_KEY = DEV_MODE ? 'placent_dev_session' : 'placent_session';
-const TIMER_MS    = 45 * 60 * 1000; // 45 minutes
+const DEV_MODE = new URLSearchParams(location.search).has('dev');
+const FORM_OVERRIDE = (new URLSearchParams(location.search).get('form') || '').toUpperCase();
+const STORAGE_KEY = DEV_MODE ? 'placent_dev_session_v2' : 'placent_session_v2';
+const TIMER_MS = 45 * 60 * 1000;
+const EXAM_VERSION = '2026-fixed-forms-v1';
+const FORM_IDS = ['A', 'B', 'C'];
+const FORM_URLS = {
+  A: 'data/form-a.json',
+  B: 'data/form-b.json',
+  C: 'data/form-c.json',
+};
 
-// ===== STATE =====
+const PLACEMENT_RULES = {
+  'LATN 325': {
+    total: 34,
+    gates: {
+      reading: 9,
+      advanced_syntax: 6,
+      sentence_meaning: 7,
+    },
+  },
+  'LATN 201': {
+    total: 24,
+    gates: {
+      morphology_vocab: 8,
+      reading_plus_sentence_meaning: 12,
+      advanced_syntax: 3,
+    },
+  },
+};
+
 let state = {
   screen: 'info',
+  formId: null,
+  version: EXAM_VERSION,
   studentInfo: null,
-  questions: [],          // all 60 questions (no `correct` field)
-  part1Questions: [],     // slice with part===1
-  part2Questions: [],     // slice with part===2
-  answers: {},            // { questionId: originalOptionIndex }
-  optionOrder: {},        // { questionId: shuffledOriginalIndices[] }
+  passages: [],
+  questions: [],
+  part1Questions: [],
+  part2Questions: [],
+  answers: {},
+  optionOrder: {},
   p1Index: 0,
   p2Index: 0,
-  timerStart: null,       // Unix ms
+  timerStart: null,
   timerHandle: null,
   submitted: false,
 };
 
-// ===== HELPERS =====
-
-function $(id) { return document.getElementById(id); }
-
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
+function $(id) {
+  return document.getElementById(id);
 }
 
 function renderHTML(raw) {
-  return raw.replace(/\[underline:\s*([^\]]+)\]/g, '<span class="hl">$1</span>');
+  return String(raw || '').replace(/\[underline:\s*([^\]]+)\]/g, '<span class="hl">$1</span>');
+}
+
+function shuffle(arr) {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
 }
 
 function showScreen(name) {
   const ids = ['screen-info', 'screen-interstitial1', 'screen-interstitial2', 'screen-part1', 'screen-part2', 'screen-done'];
   for (const id of ids) {
     const el = document.getElementById(id);
-    el.hidden = (id !== 'screen-' + name);
+    el.hidden = (id !== `screen-${name}`);
   }
   window.scrollTo(0, 0);
 }
 
 function saveState() {
   try {
-    const toSave = {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({
       screen: state.screen,
+      formId: state.formId,
+      version: state.version,
       studentInfo: state.studentInfo,
+      passages: state.passages,
       questions: state.questions,
       answers: state.answers,
       optionOrder: state.optionOrder,
       p1Index: state.p1Index,
       p2Index: state.p2Index,
       timerStart: state.timerStart,
-    };
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
+    }));
   } catch (_) {}
 }
 
 function clearState() {
-  try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch (_) {}
 }
 
-// ===== QUESTION LOADING =====
-
-function stratifiedSample(bank, easyN, medN, hardN) {
-  const easy   = bank.filter(q => q.chapter <= 10);
-  const medium = bank.filter(q => q.chapter >= 11 && q.chapter <= 20);
-  const hard   = bank.filter(q => q.chapter >= 21);
-  return [
-    ...shuffle(easy).slice(0, easyN),
-    ...shuffle(medium).slice(0, medN),
-    ...shuffle(hard).slice(0, hardN),
-  ];
+function chooseFormId() {
+  if (FORM_IDS.includes(FORM_OVERRIDE)) return FORM_OVERRIDE;
+  return FORM_IDS[Math.floor(Math.random() * FORM_IDS.length)];
 }
 
-async function loadQuestions() {
-  const [p1Bank, p2Bank] = await Promise.all([
-    fetch('data/questions-part1.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
-    fetch('data/questions-part2.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
-  ]);
-  const p1 = DEV_MODE ? stratifiedSample(p1Bank, 1, 1, 0) : stratifiedSample(p1Bank, 14, 13, 8);
-  const p2 = DEV_MODE ? stratifiedSample(p2Bank, 1, 1, 0) : stratifiedSample(p2Bank, 10, 9, 6);
-  return shuffle([...p1, ...p2]);
+function normalizeQuestion(formId, rawQuestion) {
+  const question = {
+    ...rawQuestion,
+    formId,
+    correctIndices: Array.isArray(rawQuestion.correctIndices)
+      ? rawQuestion.correctIndices.map(Number)
+      : [Number(rawQuestion.correct)],
+    minSelections: Number(rawQuestion.minSelections || 1),
+    maxSelections: Number(rawQuestion.maxSelections || 1),
+    topicTags: Array.isArray(rawQuestion.topicTags) ? rawQuestion.topicTags : [],
+    pureLabel: Boolean(rawQuestion.pureLabel),
+  };
+  return question;
 }
 
-// ===== SCORING =====
-
-function calcExperienceScore(studentInfo) {
-  let score = 0;
-  const raw = String(studentInfo.termsTaken || '0');
-  const terms = raw === '8+' ? 8 : parseInt(raw, 10) || 0;
-  if (terms >= 7)      score += 3;
-  else if (terms >= 5) score += 2;
-  else if (terms >= 3) score += 1;
-  const authors = Array.isArray(studentInfo.authorsRead) ? studentInfo.authorsRead : [];
-  const meaningful = authors.filter(a => a !== 'None' && !a.startsWith('Other'));
-  if (meaningful.length >= 2)      score += 2;
-  else if (meaningful.length >= 1) score += 1;
-  return Math.min(score, 5);
-}
-
-function scoreSubmission(answerKey) {
-  let part1Score = 0, part1Total = 0;
-  let part2Score = 0, part2Total = 0;
-  for (const q of state.questions) {
-    const userAnswer = state.answers[q.id];
-    const correct    = answerKey[q.id];
-    const isCorrect  = userAnswer !== undefined && userAnswer !== null && Number(userAnswer) === correct;
-    if (q.part === 1) { part1Total++; if (isCorrect) part1Score++; }
-    else if (q.part === 2) { part2Total++; if (isCorrect) part2Score++; }
+function prepareFormPayload(rawForm, selectedFormId) {
+  const formId = rawForm.formId || selectedFormId;
+  const questions = (rawForm.questions || []).map(q => normalizeQuestion(formId, q));
+  const passages = Array.isArray(rawForm.passages) ? rawForm.passages : [];
+  if (!DEV_MODE) {
+    return {
+      formId,
+      version: rawForm.version || EXAM_VERSION,
+      passages,
+      questions,
+    };
   }
-  const rawScore         = part1Score + part2Score;
-  const experienceScore  = calcExperienceScore(state.studentInfo);
-  const totalScore       = rawScore + experienceScore;
-  const recommendedLevel = totalScore >= 48 ? 'LATN 325' : totalScore >= 28 && rawScore >= 15 ? 'LATN 201' : 'LATN 110';
-  return { part1Score, part1Total, part2Score, part2Total, rawScore, experienceScore, totalScore, recommendedLevel };
+
+  const devPart1 = questions.filter(q => q.part === 1).slice(0, 2);
+  const devPart2 = questions.filter(q => q.part === 2).slice(0, 2);
+  const kept = [...devPart1, ...devPart2];
+  const passageIds = new Set(kept.map(q => q.passageId).filter(Boolean));
+  return {
+    formId,
+    version: rawForm.version || EXAM_VERSION,
+    passages: passages.filter(p => passageIds.has(p.passageId)),
+    questions: kept,
+  };
 }
 
-// ===== TIMER =====
+async function loadSelectedForm() {
+  const formId = chooseFormId();
+  const response = await fetch(FORM_URLS[formId]);
+  if (!response.ok) throw new Error('Could not load form.');
+  const rawForm = await response.json();
+  return prepareFormPayload(rawForm, formId);
+}
+
+function buildOptionOrder(question) {
+  const base = [...Array(question.options.length).keys()];
+  return question.maxSelections > 1 ? base : shuffle(base);
+}
+
+function getPassage(passageId) {
+  return state.passages.find(p => p.passageId === passageId) || null;
+}
+
+function isMultiSelect(question) {
+  return question.maxSelections > 1 || question.minSelections > 1 || question.correctIndices.length > 1;
+}
+
+function getSelections(questionId) {
+  const saved = state.answers[questionId];
+  return Array.isArray(saved) ? [...saved] : [];
+}
+
+function setSelections(question, selections) {
+  state.answers[question.id] = [...new Set(selections)].sort((a, b) => a - b);
+  saveState();
+}
+
+function toggleSelection(question, optionIndex) {
+  const current = getSelections(question.id);
+  if (!isMultiSelect(question)) {
+    setSelections(question, [optionIndex]);
+    return;
+  }
+
+  if (current.includes(optionIndex)) {
+    setSelections(question, current.filter(idx => idx !== optionIndex));
+    return;
+  }
+
+  if (current.length >= question.maxSelections) return;
+  current.push(optionIndex);
+  setSelections(question, current);
+}
+
+function hasValidAnswer(question) {
+  const count = getSelections(question.id).length;
+  return count >= question.minSelections && count <= question.maxSelections;
+}
+
+function selectionsMatch(question) {
+  const current = getSelections(question.id).sort((a, b) => a - b);
+  const correct = [...question.correctIndices].sort((a, b) => a - b);
+  if (current.length !== correct.length) return false;
+  return current.every((value, index) => value === correct[index]);
+}
+
+function getNamedAuthorCount(studentInfo) {
+  const authors = Array.isArray(studentInfo?.authorsRead) ? studentInfo.authorsRead : [];
+  return authors.filter(author => author !== 'None' && !String(author).startsWith('Other')).length;
+}
+
+function getTermsCount(studentInfo) {
+  const raw = String(studentInfo?.termsTaken || '0');
+  return raw === '8+' ? 8 : parseInt(raw, 10) || 0;
+}
+
+function placementGap(targetPlacement, totalScore, subscores) {
+  const rule = PLACEMENT_RULES[targetPlacement];
+  if (!rule) return null;
+  const gates = [];
+  for (const [key, minimum] of Object.entries(rule.gates)) {
+    const actual = key === 'reading_plus_sentence_meaning'
+      ? subscores.reading + subscores.sentence_meaning
+      : subscores[key];
+    gates.push({ key, deficit: Math.max(0, minimum - actual) });
+  }
+  return {
+    totalDeficit: Math.max(0, rule.total - totalScore),
+    gates,
+  };
+}
+
+function buildAdvisoryFlags(placement, totalScore, subscores) {
+  const terms = getTermsCount(state.studentInfo);
+  const namedAuthors = getNamedAuthorCount(state.studentInfo);
+  const flags = [];
+
+  const target = placement === 'LATN 110'
+    ? 'LATN 201'
+    : placement === 'LATN 201'
+      ? 'LATN 325'
+      : null;
+
+  if (target && (terms >= 5 || namedAuthors >= 2)) {
+    const gap = placementGap(target, totalScore, subscores);
+    const allOtherMet = gap.gates.every(g => g.deficit === 0);
+    const strong325Reading = target === 'LATN 325'
+      && gap.totalDeficit <= 2
+      && subscores.reading >= PLACEMENT_RULES['LATN 325'].gates.reading
+      && subscores.sentence_meaning >= PLACEMENT_RULES['LATN 325'].gates.sentence_meaning
+      && subscores.advanced_syntax >= PLACEMENT_RULES['LATN 325'].gates.advanced_syntax - 1;
+    if (gap.totalDeficit <= 2 && (allOtherMet || strong325Reading)) {
+      flags.push('possible_move_up');
+    }
+  }
+
+  if (terms <= 2 && namedAuthors === 0 && placement !== 'LATN 110') {
+    flags.push('possible_drop_backer');
+  }
+
+  return flags;
+}
+
+function determinePlacement(totalScore, subscores) {
+  if (
+    totalScore >= PLACEMENT_RULES['LATN 325'].total &&
+    subscores.reading >= PLACEMENT_RULES['LATN 325'].gates.reading &&
+    subscores.advanced_syntax >= PLACEMENT_RULES['LATN 325'].gates.advanced_syntax &&
+    subscores.sentence_meaning >= PLACEMENT_RULES['LATN 325'].gates.sentence_meaning
+  ) {
+    return 'LATN 325';
+  }
+
+  if (
+    totalScore >= PLACEMENT_RULES['LATN 201'].total &&
+    subscores.morphology_vocab >= PLACEMENT_RULES['LATN 201'].gates.morphology_vocab &&
+    (subscores.reading + subscores.sentence_meaning) >= PLACEMENT_RULES['LATN 201'].gates.reading_plus_sentence_meaning &&
+    subscores.advanced_syntax >= PLACEMENT_RULES['LATN 201'].gates.advanced_syntax
+  ) {
+    return 'LATN 201';
+  }
+
+  return 'LATN 110';
+}
+
+function scoreSubmission() {
+  const totals = {
+    morphology_vocab: 0,
+    sentence_meaning: 0,
+    reading: 0,
+    advanced_syntax: 0,
+  };
+  const subscores = {
+    morphology_vocab: 0,
+    sentence_meaning: 0,
+    reading: 0,
+    advanced_syntax: 0,
+  };
+
+  for (const question of state.questions) {
+    totals[question.countsToward] += 1;
+    if (selectionsMatch(question)) {
+      subscores[question.countsToward] += 1;
+    }
+  }
+
+  const totalScore =
+    subscores.morphology_vocab +
+    subscores.sentence_meaning +
+    subscores.reading +
+    subscores.advanced_syntax;
+
+  const placement = determinePlacement(totalScore, subscores);
+  const advisoryFlags = buildAdvisoryFlags(placement, totalScore, subscores);
+
+  return {
+    totals,
+    subscores,
+    totalScore,
+    placement,
+    advisoryFlags,
+    percentages: {
+      morphology_vocab: subscores.morphology_vocab / Math.max(1, totals.morphology_vocab),
+      sentence_meaning: subscores.sentence_meaning / Math.max(1, totals.sentence_meaning),
+      reading: subscores.reading / Math.max(1, totals.reading),
+      advanced_syntax: subscores.advanced_syntax / Math.max(1, totals.advanced_syntax),
+    },
+  };
+}
+
+function buildTiming(autoSubmit) {
+  const elapsedMs = Math.min(TIMER_MS, Math.max(0, Date.now() - state.timerStart));
+  return {
+    allowedMs: TIMER_MS,
+    elapsedMs,
+    remainingMs: Math.max(0, TIMER_MS - elapsedMs),
+    autoSubmitted: Boolean(autoSubmit),
+    startedAtMs: state.timerStart,
+    submittedAtMs: Date.now(),
+  };
+}
+
+function themeLabel(theme) {
+  return {
+    aeneid: 'Aeneid-Based Passage',
+    pliny: 'Pliny-Based Passage',
+    agrippina: 'Agrippina-Based Passage',
+  }[theme] || 'Passage';
+}
+
+function updateQuestionHeader(partPrefix, question) {
+  const instructionEl = $(`${partPrefix}-instructions`);
+  if (!instructionEl) return;
+  if (isMultiSelect(question)) {
+    instructionEl.textContent = `Select ${question.maxSelections} answers.`;
+    instructionEl.hidden = false;
+    return;
+  }
+  instructionEl.hidden = true;
+  instructionEl.textContent = '';
+}
+
+function renderOptions(partPrefix, question, focusOptionIndex = -1) {
+  const container = $(`${partPrefix}-options`);
+  container.innerHTML = '';
+  const order = state.optionOrder[question.id];
+  const multi = isMultiSelect(question);
+  const selections = getSelections(question.id);
+
+  container.setAttribute('role', multi ? 'group' : 'radiogroup');
+
+  order.forEach((optionIndex, displayIndex) => {
+    const selected = selections.includes(optionIndex);
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'option-btn' + (selected ? ' selected' : '');
+    btn.innerHTML = renderHTML(question.options[optionIndex]);
+    btn.dataset.idx = String(optionIndex);
+    btn.setAttribute('role', multi ? 'checkbox' : 'radio');
+    btn.setAttribute('aria-checked', selected ? 'true' : 'false');
+    btn.tabIndex = 0;
+    btn.addEventListener('click', () => {
+      toggleSelection(question, optionIndex);
+      if (partPrefix === 'p1') renderP1(false, displayIndex);
+      else renderP2(false, displayIndex);
+    });
+    if (!multi) {
+      btn.addEventListener('keydown', event => {
+        const buttons = [...container.querySelectorAll('.option-btn')];
+        const currentIndex = buttons.indexOf(btn);
+        let nextIndex = -1;
+        if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+          event.preventDefault();
+          nextIndex = (currentIndex + 1) % buttons.length;
+        } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+          event.preventDefault();
+          nextIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+        }
+        if (nextIndex !== -1) {
+          const nextOptionIndex = Number(buttons[nextIndex].dataset.idx);
+          setSelections(question, [nextOptionIndex]);
+          if (partPrefix === 'p1') renderP1(false, nextIndex);
+          else renderP2(false, nextIndex);
+        }
+      });
+    }
+    container.appendChild(btn);
+  });
+
+  if (focusOptionIndex >= 0) {
+    const buttons = container.querySelectorAll('.option-btn');
+    if (buttons[focusOptionIndex]) buttons[focusOptionIndex].focus();
+  }
+}
+
+function updateP1Progress() {
+  const answered = state.part1Questions.filter(question => hasValidAnswer(question)).length;
+  $('p1-progress').textContent = `Answered: ${answered} / ${state.part1Questions.length}`;
+}
+
+function updateP2Progress() {
+  const answered = state.part2Questions.filter(question => hasValidAnswer(question)).length;
+  $('p2-progress').textContent = `Answered: ${answered} / ${state.part2Questions.length}`;
+}
+
+function renderP1(moveFocus = false, focusOptionIndex = -1) {
+  const question = state.part1Questions[state.p1Index];
+  $('p1-counter').textContent = `Question ${state.p1Index + 1} of ${state.part1Questions.length}`;
+  $('p1-prompt').innerHTML = renderHTML(question.prompt);
+  updateQuestionHeader('p1', question);
+  renderOptions('p1', question, focusOptionIndex);
+
+  const nextBtn = $('p1-next');
+  const isLast = state.p1Index === state.part1Questions.length - 1;
+  nextBtn.textContent = isLast ? 'Continue to Part 2 →' : 'Submit and move to next question';
+  nextBtn.disabled = !hasValidAnswer(question);
+  nextBtn.onclick = isLast
+    ? goToPart2
+    : () => {
+        state.p1Index += 1;
+        saveState();
+        renderP1(true);
+      };
+
+  updateP1Progress();
+  if (moveFocus) $('p1-counter').focus();
+}
+
+function renderP2(moveFocus = false, focusOptionIndex = -1) {
+  const question = state.part2Questions[state.p2Index];
+  $('p2-counter').textContent = `Question ${state.p2Index + 1} of ${state.part2Questions.length}`;
+  $('p2-prompt').innerHTML = renderHTML(question.prompt);
+  updateQuestionHeader('p2', question);
+
+  const passageEl = $('p2-passage');
+  const passage = question.passageId ? getPassage(question.passageId) : null;
+  if (passage) {
+    passageEl.hidden = false;
+    passageEl.innerHTML = `
+      <div class="passage-kicker">${themeLabel(passage.theme)}</div>
+      <div>${renderHTML(passage.text)}</div>
+    `;
+  } else {
+    passageEl.hidden = true;
+    passageEl.innerHTML = '';
+  }
+
+  renderOptions('p2', question, focusOptionIndex);
+
+  const isLast = state.p2Index === state.part2Questions.length - 1;
+  const nextBtn = $('p2-next');
+  const submitBtn = $('p2-submit');
+  nextBtn.hidden = isLast;
+  submitBtn.hidden = !isLast;
+  nextBtn.disabled = !hasValidAnswer(question);
+  submitBtn.disabled = !hasValidAnswer(question);
+  nextBtn.onclick = () => {
+    state.p2Index += 1;
+    saveState();
+    renderP2(true);
+  };
+  submitBtn.onclick = () => submitTest(false);
+
+  updateP2Progress();
+  if (moveFocus) $('p2-counter').focus();
+}
 
 function startTimer(remainingMs) {
   if (state.timerHandle) clearTimeout(state.timerHandle);
@@ -137,185 +495,70 @@ function startTimer(remainingMs) {
   }, remainingMs);
 }
 
-// ===== RENDER PART 1 =====
-
-function renderP1(moveFocus = false, focusOptionIndex = -1) {
-  const qs = state.part1Questions;
-  const i  = state.p1Index;
-  const q  = qs[i];
-
-  $('p1-counter').textContent = `Question ${i + 1} of ${qs.length}`;
-  $('p1-prompt').innerHTML = renderHTML(q.prompt);
-
-  const opts      = $('p1-options');
-  opts.innerHTML  = '';
-  const order1    = state.optionOrder[q.id];
-  const hasAnswer = state.answers[q.id] !== undefined;
-  for (let di = 0; di < order1.length; di++) {
-    const j          = order1[di];
-    const isSelected = state.answers[q.id] === j;
-    const btn        = document.createElement('button');
-    btn.className    = 'option-btn' + (isSelected ? ' selected' : '');
-    btn.innerHTML    = renderHTML(q.options[j]);
-    btn.setAttribute('role', 'radio');
-    btn.setAttribute('aria-checked', isSelected ? 'true' : 'false');
-    btn.tabIndex     = (isSelected || (!hasAnswer && di === 0)) ? 0 : -1;
-    btn.dataset.idx  = j;
-    btn.addEventListener('click', () => {
-      state.answers[q.id] = j;
-      saveState();
-      renderP1(false, di);
-    });
-    btn.addEventListener('keydown', (e) => {
-      const btns = [...opts.querySelectorAll('.option-btn')];
-      const cur  = btns.indexOf(btn);
-      let next = -1;
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); next = (cur + 1) % btns.length; }
-      else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); next = (cur - 1 + btns.length) % btns.length; }
-      if (next !== -1) {
-        state.answers[q.id] = parseInt(btns[next].dataset.idx);
-        saveState();
-        renderP1(false, next);
-      }
-    });
-    opts.appendChild(btn);
-  }
-
-  const isLast     = (i === qs.length - 1);
-  const hasAnswered = state.answers[q.id] !== undefined;
-  const nextBtn    = $('p1-next');
-  nextBtn.textContent = isLast ? 'Continue to Part 2 →' : 'Submit and move to next question';
-  nextBtn.disabled    = !hasAnswered;
-  nextBtn.onclick = isLast ? goToPart2 : () => { state.p1Index++; saveState(); renderP1(true); };
-
-  updateP1Progress();
-  if (moveFocus) $('p1-counter').focus();
-  else if (focusOptionIndex >= 0) {
-    const allBtns = opts.querySelectorAll('.option-btn');
-    if (allBtns[focusOptionIndex]) allBtns[focusOptionIndex].focus();
-  }
-}
-
-function updateP1Progress() {
-  const answered = state.part1Questions.filter(q => state.answers[q.id] !== undefined).length;
-  $('p1-progress').textContent = `Answered: ${answered} / ${state.part1Questions.length}`;
+function showTimeRemaining() {
+  const remainingMs = TIMER_MS - (Date.now() - state.timerStart);
+  const minutes = Math.floor(Math.max(0, remainingMs) / 60000);
+  const seconds = Math.floor((Math.max(0, remainingMs) % 60000) / 1000);
+  let text;
+  if (minutes === 0) text = `${seconds} second${seconds !== 1 ? 's' : ''}`;
+  else if (seconds === 0) text = `${minutes} minute${minutes !== 1 ? 's' : ''}`;
+  else text = `${minutes} minute${minutes !== 1 ? 's' : ''} and ${seconds} second${seconds !== 1 ? 's' : ''}`;
+  $('interstitial2-time').textContent = text;
 }
 
 function goToPart2() {
-  const remainingMs = TIMER_MS - (Date.now() - state.timerStart);
-  const mins = Math.floor(Math.max(0, remainingMs) / 60000);
-  const secs = Math.floor((Math.max(0, remainingMs) % 60000) / 1000);
-  let timeStr;
-  if (mins === 0)       timeStr = `${secs} second${secs !== 1 ? 's' : ''}`;
-  else if (secs === 0)  timeStr = `${mins} minute${mins !== 1 ? 's' : ''}`;
-  else                  timeStr = `${mins} minute${mins !== 1 ? 's' : ''} and ${secs} second${secs !== 1 ? 's' : ''}`;
-  $('interstitial2-time').textContent = timeStr;
+  state.screen = 'interstitial2';
+  saveState();
+  showTimeRemaining();
   showScreen('interstitial2');
+}
+
+function startPart1() {
+  state.screen = 'part1';
+  saveState();
+  showScreen('part1');
+  renderP1(true);
 }
 
 function startPart2() {
   state.screen = 'part2';
-  state.p2Index = 0;
   saveState();
   showScreen('part2');
   renderP2(true);
 }
 
-// ===== RENDER PART 2 =====
-
-function renderP2(moveFocus = false, focusOptionIndex = -1) {
-  const qs = state.part2Questions;
-  const i  = state.p2Index;
-  const q  = qs[i];
-
-  $('p2-counter').textContent = `Question ${i + 1} of ${qs.length}`;
-  $('p2-prompt').innerHTML = renderHTML(q.prompt);
-
-  const passageEl = $('p2-passage');
-  if (q.passage) {
-    passageEl.innerHTML = renderHTML(q.passage);
-    passageEl.hidden = false;
-  } else {
-    passageEl.hidden = true;
-    passageEl.innerHTML = '';
-  }
-
-  const opts      = $('p2-options');
-  opts.innerHTML  = '';
-  const order2    = state.optionOrder[q.id];
-  const hasAnswer = state.answers[q.id] !== undefined;
-  for (let di = 0; di < order2.length; di++) {
-    const j          = order2[di];
-    const isSelected = state.answers[q.id] === j;
-    const btn        = document.createElement('button');
-    btn.className    = 'option-btn' + (isSelected ? ' selected' : '');
-    btn.innerHTML    = renderHTML(q.options[j]);
-    btn.setAttribute('role', 'radio');
-    btn.setAttribute('aria-checked', isSelected ? 'true' : 'false');
-    btn.tabIndex     = (isSelected || (!hasAnswer && di === 0)) ? 0 : -1;
-    btn.dataset.idx  = j;
-    btn.addEventListener('click', () => {
-      state.answers[q.id] = j;
-      saveState();
-      renderP2(false, di);
-    });
-    btn.addEventListener('keydown', (e) => {
-      const btns = [...opts.querySelectorAll('.option-btn')];
-      const cur  = btns.indexOf(btn);
-      let next = -1;
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); next = (cur + 1) % btns.length; }
-      else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); next = (cur - 1 + btns.length) % btns.length; }
-      if (next !== -1) {
-        state.answers[q.id] = parseInt(btns[next].dataset.idx);
-        saveState();
-        renderP2(false, next);
-      }
-    });
-    opts.appendChild(btn);
-  }
-
-  const isLast      = (i === qs.length - 1);
-  const hasAnswered  = state.answers[q.id] !== undefined;
-  const nextBtn     = $('p2-next');
-  const submitBtn   = $('p2-submit');
-  nextBtn.hidden    = isLast;
-  submitBtn.hidden  = !isLast;
-  nextBtn.disabled  = !hasAnswered;
-  submitBtn.disabled = !hasAnswered;
-  nextBtn.onclick   = () => { state.p2Index++; saveState(); renderP2(true); };
-  submitBtn.onclick = () => submitTest(false);
-
-  updateP2Progress();
-  if (moveFocus) $('p2-counter').focus();
-  else if (focusOptionIndex >= 0) {
-    const allBtns = opts.querySelectorAll('.option-btn');
-    if (allBtns[focusOptionIndex]) allBtns[focusOptionIndex].focus();
-  }
-}
-
-function updateP2Progress() {
-  const answered = state.part2Questions.filter(q => state.answers[q.id] !== undefined).length;
-  $('p2-progress').textContent = `Answered: ${answered} / ${state.part2Questions.length}`;
-}
-
-// ===== SUBMIT =====
-
 async function submitTest(autoSubmit) {
   if (state.submitted) return;
   state.submitted = true;
 
-  if (state.timerHandle) { clearTimeout(state.timerHandle); state.timerHandle = null; }
+  if (state.timerHandle) {
+    clearTimeout(state.timerHandle);
+    state.timerHandle = null;
+  }
   window.removeEventListener('beforeunload', onBeforeUnload);
 
   try {
-    const answerKey = await fetch('data/answers.json').then(r => r.json());
-    const scores    = scoreSubmission(answerKey);
+    const scores = scoreSubmission();
+    const payload = {
+      token: SUBMIT_TOKEN,
+      version: state.version,
+      formId: state.formId,
+      studentInfo: state.studentInfo,
+      answers: state.answers,
+      subscores: scores.subscores,
+      totals: scores.totals,
+      totalScore: scores.totalScore,
+      placement: scores.placement,
+      advisoryFlags: scores.advisoryFlags,
+      percentages: scores.percentages,
+      timing: buildTiming(autoSubmit),
+    };
 
     if (APPS_SCRIPT_URL) {
       await fetch(APPS_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
-        body: JSON.stringify({ token: SUBMIT_TOKEN, studentInfo: state.studentInfo, scores }),
+        body: JSON.stringify(payload),
       });
     }
   } catch (err) {
@@ -323,40 +566,61 @@ async function submitTest(autoSubmit) {
   }
 
   clearState();
+  state.screen = 'done';
   showScreen('done');
 }
 
-// ===== INFO FORM =====
+function onBeforeUnload(event) {
+  event.preventDefault();
+  event.returnValue = '';
+}
 
 $('textbook-other-check').addEventListener('change', function () {
   $('textbook-other-text').disabled = !this.checked;
   if (this.checked) $('textbook-other-text').focus();
 });
+
 $('author-other-check').addEventListener('change', function () {
   $('author-other-text').disabled = !this.checked;
   if (this.checked) $('author-other-text').focus();
 });
 
-$('info-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const errEl = $('info-error');
-  errEl.textContent = '';
+$('author-none-check').addEventListener('change', function () {
+  if (!this.checked) return;
+  document.querySelectorAll('input[name="author"]').forEach(cb => {
+    if (cb !== this) cb.checked = false;
+  });
+  $('author-other-text').disabled = true;
+});
+
+document.querySelectorAll('input[name="author"]').forEach(cb => {
+  if (cb.id !== 'author-none-check') {
+    cb.addEventListener('change', () => {
+      if (cb.checked) $('author-none-check').checked = false;
+    });
+  }
+});
+
+$('info-form').addEventListener('submit', async event => {
+  event.preventDefault();
+  const errorEl = $('info-error');
+  errorEl.textContent = '';
 
   const firstName = $('firstName').value.trim();
-  const lastName  = $('lastName').value.trim();
+  const lastName = $('lastName').value.trim();
   const studentId = $('studentId').value.trim();
   const termsTaken = $('termsTaken').value;
 
   if (!firstName || !lastName || !studentId || !termsTaken) {
-    errEl.textContent = 'Please fill in all required fields.';
+    errorEl.textContent = 'Please fill in all required fields.';
     return;
   }
 
   const textbooks = [];
   document.querySelectorAll('input[name="textbook"]:checked').forEach(cb => {
     if (cb.value === '__other_textbook__') {
-      const txt = $('textbook-other-text').value.trim();
-      if (txt) textbooks.push('Other: ' + txt);
+      const text = $('textbook-other-text').value.trim();
+      if (text) textbooks.push(`Other: ${text}`);
     } else {
       textbooks.push(cb.value);
     }
@@ -365,8 +629,8 @@ $('info-form').addEventListener('submit', async (e) => {
   const authorsRead = [];
   document.querySelectorAll('input[name="author"]:checked').forEach(cb => {
     if (cb.value === '__other_author__') {
-      const txt = $('author-other-text').value.trim();
-      if (txt) authorsRead.push('Other: ' + txt);
+      const text = $('author-other-text').value.trim();
+      if (text) authorsRead.push(`Other: ${text}`);
     } else {
       authorsRead.push(cb.value);
     }
@@ -374,28 +638,35 @@ $('info-form').addEventListener('submit', async (e) => {
 
   state.studentInfo = { firstName, lastName, studentId, termsTaken, textbooks, authorsRead };
 
-  const submitBtn = e.submitter || document.querySelector('#info-form .btn-primary');
+  const submitBtn = event.submitter || document.querySelector('#info-form .btn-primary');
   submitBtn.disabled = true;
   submitBtn.textContent = 'Loading…';
 
   try {
-    state.questions      = await loadQuestions();
-    state.part1Questions = state.questions.filter(q => q.part === 1);
-    state.part2Questions = state.questions.filter(q => q.part === 2);
-    state.optionOrder    = {};
-    for (const q of state.questions) {
-      state.optionOrder[q.id] = shuffle([...Array(q.options.length).keys()]);
+    const form = await loadSelectedForm();
+    state.formId = form.formId;
+    state.version = form.version || EXAM_VERSION;
+    state.passages = form.passages;
+    state.questions = form.questions;
+    state.part1Questions = form.questions.filter(q => q.part === 1);
+    state.part2Questions = form.questions.filter(q => q.part === 2);
+    state.answers = {};
+    state.optionOrder = {};
+    for (const question of state.questions) {
+      state.optionOrder[question.id] = buildOptionOrder(question);
     }
   } catch (err) {
-    errEl.textContent = 'Could not load questions. Please check your connection and try again.';
+    errorEl.textContent = 'Could not load the placement form. Please try again.';
     submitBtn.disabled = false;
     submitBtn.textContent = 'Begin Test →';
     return;
   }
 
+  state.p1Index = 0;
+  state.p2Index = 0;
   state.timerStart = Date.now();
-  state.screen     = 'part1';
-  state.p1Index    = 0;
+  state.submitted = false;
+  state.screen = 'interstitial1';
   saveState();
 
   window.addEventListener('beforeunload', onBeforeUnload);
@@ -403,34 +674,34 @@ $('info-form').addEventListener('submit', async (e) => {
   showScreen('interstitial1');
 });
 
-// ===== INTERSTITIAL BUTTONS =====
-$('interstitial1-begin').addEventListener('click', () => { showScreen('part1'); renderP1(true); });
+$('interstitial1-begin').addEventListener('click', startPart1);
 $('interstitial2-begin').addEventListener('click', startPart2);
 
-// ===== BEFOREUNLOAD =====
-function onBeforeUnload(e) {
-  e.preventDefault();
-  e.returnValue = '';
-}
-
-// ===== SESSION RESTORE =====
 function tryRestoreSession() {
   let saved;
-  try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch (_) { return false; }
-  if (!saved || !saved.timerStart || !saved.questions || !saved.studentInfo) return false;
+  try {
+    saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+  } catch (_) {
+    return false;
+  }
+
+  if (!saved || !saved.timerStart || !saved.questions || !saved.studentInfo || !saved.formId) return false;
 
   const elapsed = Date.now() - saved.timerStart;
-
-  state.screen         = saved.screen || 'part1';
-  state.studentInfo    = saved.studentInfo;
-  state.questions      = saved.questions;
-  state.part1Questions = saved.questions.filter(q => q.part === 1);
-  state.part2Questions = saved.questions.filter(q => q.part === 2);
-  state.answers        = saved.answers || {};
-  state.optionOrder    = saved.optionOrder || {};
-  state.p1Index        = saved.p1Index || 0;
-  state.p2Index        = saved.p2Index || 0;
-  state.timerStart     = saved.timerStart;
+  state.screen = saved.screen || 'part1';
+  state.formId = saved.formId;
+  state.version = saved.version || EXAM_VERSION;
+  state.studentInfo = saved.studentInfo;
+  state.passages = saved.passages || [];
+  state.questions = saved.questions || [];
+  state.part1Questions = state.questions.filter(q => q.part === 1);
+  state.part2Questions = state.questions.filter(q => q.part === 2);
+  state.answers = saved.answers || {};
+  state.optionOrder = saved.optionOrder || {};
+  state.p1Index = saved.p1Index || 0;
+  state.p2Index = saved.p2Index || 0;
+  state.timerStart = saved.timerStart;
+  state.submitted = false;
 
   if (elapsed >= TIMER_MS) {
     submitTest(true);
@@ -440,20 +711,31 @@ function tryRestoreSession() {
   startTimer(TIMER_MS - elapsed);
   window.addEventListener('beforeunload', onBeforeUnload);
 
-  if (state.screen === 'part2') {
+  if (state.screen === 'interstitial1') {
+    showScreen('interstitial1');
+  } else if (state.screen === 'part1') {
+    showScreen('part1');
+    const notice = $('p1-restore-notice');
+    if (notice) {
+      notice.hidden = false;
+      setTimeout(() => {
+        notice.hidden = true;
+      }, 5000);
+    }
+    renderP1(true);
+  } else if (state.screen === 'interstitial2') {
+    showTimeRemaining();
+    showScreen('interstitial2');
+  } else if (state.screen === 'part2') {
     showScreen('part2');
     renderP2(true);
   } else {
-    showScreen('part1');
-    const notice = $('p1-restore-notice');
-    if (notice) { notice.hidden = false; setTimeout(() => { notice.hidden = true; }, 5000); }
-    renderP1(true);
+    showScreen('info');
   }
 
   return true;
 }
 
-// ===== INIT =====
 (function init() {
   if (DEV_MODE) $('dev-banner').hidden = false;
   if (!tryRestoreSession()) showScreen('info');
