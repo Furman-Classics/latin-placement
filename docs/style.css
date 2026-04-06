@@ -317,7 +317,7 @@ legend {
   margin-bottom: 1.25rem;
 }
 .question-prompt.has-focus {
-  font-weight: 600;
+  /* font-weight: 600; */
   line-height: 1.45;
 }
 .question-prompt em { font-style: italic; }
@@ -338,7 +338,7 @@ legend {
   background: var(--accent-light);
   border-left: 3px solid var(--accent);
   padding: .75rem 1rem;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   margin-bottom: 1.25rem;
 }
 
@@ -448,6 +448,35 @@ legend {
   background-color: var(--accent-light);
   padding: 1px 4px;
   font-style: italic;
+}
+
+/* ===== PASSAGE DETAILS (Part 3 collapsible) ===== */
+.passage-details {
+  margin-bottom: 1.25rem;
+}
+.passage-details summary {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: .3rem 0;
+  user-select: none;
+  list-style: none;
+}
+.passage-details summary::-webkit-details-marker { display: none; }
+.passage-details summary::before {
+  content: '▶ ';
+  font-size: .7rem;
+}
+.passage-details[open] summary::before {
+  content: '▼ ';
+}
+.passage-details .passage-block {
+  margin-top: .6rem;
+  margin-bottom: 0;
 }
 
 /* ===== DESKTOP ENHANCEMENTS ===== */

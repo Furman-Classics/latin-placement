@@ -99,20 +99,20 @@
       "skill": "vocabulary",
       "difficultyBand": "easy",
       "countsToward": "morphology_vocab",
-      "prompt": "What is the meaning of <em>bellum, bellī</em> (n.)?",
+      "prompt": "What is the meaning of <em>fīdēs, fideī</em> (f.)?",
       "options": [
-        "kingdom",
-        "beauty",
-        "gift",
-        "war"
+        "reputation, fame",
+        "hope, expectation",
+        "loyalty, faith",
+        "republic, state"
       ],
-      "correct": 3,
+      "correct": 2,
       "topicTags": [
         "vocabulary",
         "core"
       ],
       "correctIndices": [
-        3
+        2
       ],
       "minSelections": 1,
       "maxSelections": 1,
@@ -126,20 +126,20 @@
       "skill": "vocabulary",
       "difficultyBand": "easy",
       "countsToward": "morphology_vocab",
-      "prompt": "What is the meaning of <em>via, viae</em> (f.)?",
+      "prompt": "What is the meaning of <em>ācēr, ācris, ācre</em>?",
       "options": [
-        "wall",
-        "field",
-        "road",
-        "cottage"
+        "swift, rapid",
+        "keen, sharp",
+        "bold, reckless",
+        "heavy, serious"
       ],
-      "correct": 2,
+      "correct": 1,
       "topicTags": [
         "vocabulary",
         "core"
       ],
       "correctIndices": [
-        2
+        1
       ],
       "minSelections": 1,
       "maxSelections": 1,
@@ -153,12 +153,12 @@
       "skill": "vocabulary",
       "difficultyBand": "easy",
       "countsToward": "morphology_vocab",
-      "prompt": "Which Latin verb means “to send”?",
+      "prompt": "Which Latin verb means “to conquer”?",
       "options": [
-        "<em>dūcō</em>",
         "<em>mittō</em>",
-        "<em>dīcō</em>",
-        "<em>discō</em>"
+        "<em>vincō</em>",
+        "<em>videō</em>",
+        "<em>petō</em>"
       ],
       "correct": 1,
       "topicTags": [
@@ -288,20 +288,20 @@
       "skill": "noun-form",
       "difficultyBand": "medium",
       "countsToward": "morphology_vocab",
-      "prompt": "In <em>Multī [underline: mīlitēs] ad urbem cucurrērunt</em>, what is the case and number of [underline: mīlitēs]?",
+      "prompt": "In <em>Cīvēs [underline: mīlitēs] in urbe vident</em>, what is the case and number of [underline: mīlitēs]?",
       "options": [
         "nominative plural",
         "accusative plural",
         "genitive singular",
         "ablative singular"
       ],
-      "correct": 0,
+      "correct": 1,
       "topicTags": [
         "noun-form",
         "third-declension"
       ],
       "correctIndices": [
-        0
+        1
       ],
       "minSelections": 1,
       "maxSelections": 1,
@@ -342,20 +342,20 @@
       "skill": "case-function",
       "difficultyBand": "medium",
       "countsToward": "morphology_vocab",
-      "prompt": "In <em>Mūrī [underline: urbis] altī erant</em>, what is the function of [underline: urbis]?",
+      "prompt": "In <em>Pars [underline: urbis] dēlēta est</em>, what is the function of [underline: urbis]?",
       "options": [
         "possessive genitive",
         "objective genitive",
         "genitive of the whole",
         "dative of possession"
       ],
-      "correct": 0,
+      "correct": 2,
       "topicTags": [
         "genitive",
-        "possession"
+        "partitive"
       ],
       "correctIndices": [
-        0
+        2
       ],
       "minSelections": 1,
       "maxSelections": 1,
@@ -369,20 +369,20 @@
       "skill": "prepositional-phrase",
       "difficultyBand": "medium",
       "countsToward": "morphology_vocab",
-      "prompt": "In <em>Rōmānī [underline: in Italiam] nāvigāvērunt</em>, what does [underline: in Italiam] express?",
+      "prompt": "In <em>Nautae [underline: cum magnā cūrā] nāvigāvērunt</em>, what does [underline: cum magnā cūrā] express?",
       "options": [
         "place where",
         "place from which",
         "place to which",
         "manner"
       ],
-      "correct": 2,
+      "correct": 3,
       "topicTags": [
         "preposition",
-        "motion"
+        "manner"
       ],
       "correctIndices": [
-        2
+        3
       ],
       "minSelections": 1,
       "maxSelections": 1,
@@ -506,10 +506,10 @@
       "countsToward": "sentence_meaning",
       "prompt": "What is the best translation of <em>Mīlitibus victīs, dux tamen spem nōn abiecit</em>?",
       "options": [
-        "After the soldiers had been defeated, the general nevertheless did not abandon hope.",
-        "The soldiers defeated the general because they had no hope.",
-        "The general was not defeated although the soldiers hoped.",
-        "Because the general had been defeated, the soldiers lost hope."
+        "After the soldiers were defeated, the general nevertheless did not abandon hope.",
+        "After the general was defeated, the soldiers nevertheless did not abandon hope.",
+        "Because the soldiers had hope, the general was not defeated in battle.",
+        "When the soldiers were defeated, the general nevertheless abandoned all hope."
       ],
       "correct": 0,
       "topicTags": [
@@ -583,14 +583,14 @@
       "chapter": 30,
       "type": "sentence-meaning",
       "skill": "relative-characteristic",
-      "difficultyBand": "hard",
+      "difficultyBand": "medium",
       "countsToward": "sentence_meaning",
-      "prompt": "What is the best translation of <em>Quī hoc faciat invenīre difficile est</em>?",
+      "prompt": "What is the best translation of <em>Nēmō est quī hoc facere possit</em>?",
       "options": [
-        "It is difficult to find someone who would do this.",
-        "Whoever does this finds the task difficult.",
-        "This is difficult because someone is doing it.",
-        "To do this is difficult for the finder."
+        "There is no one who could do this.",
+        "No one knows how this can be done.",
+        "Anyone who does this is able to succeed.",
+        "He says that no one should do this."
       ],
       "correct": 0,
       "topicTags": [
@@ -693,7 +693,7 @@
       "skill": "ablative-absolute",
       "difficultyBand": "medium",
       "countsToward": "advanced_syntax",
-      "prompt": "Identify the construction in <em>Mīlitēs hostibus victīs domum rediērunt</em>.",
+      "prompt": "<em>Mīlitēs hostibus victīs domum rediērunt</em> What is the syntactic construction of <em>hostibus victīs</em>?",
       "options": [
         "indirect statement",
         "ablative absolute",
@@ -720,7 +720,7 @@
       "skill": "indirect-statement",
       "difficultyBand": "medium",
       "countsToward": "advanced_syntax",
-      "prompt": "Identify the Latin construction in <em>Caesar dīcit mīlitēs fortēs esse</em>.",
+      "prompt": "<em>Caesar dīcit mīlitēs fortēs esse</em> What is the syntactic construction of <em>mīlitēs fortēs esse</em>?",
       "options": [
         "purpose clause",
         "indirect command",
@@ -747,7 +747,7 @@
       "skill": "indirect-question",
       "difficultyBand": "hard",
       "countsToward": "advanced_syntax",
-      "prompt": "Identify the construction in <em>Dūx quaesīvit cūr mīlitēs tam serō vēnissent</em>.",
+      "prompt": "<em>Dūx quaesīvit cūr mīlitēs tam serō vēnissent</em> What is the syntactic construction of <em>cūr mīlitēs tam serō vēnissent</em>?",
       "options": [
         "indirect question",
         "result clause",
@@ -801,20 +801,20 @@
       "skill": "passive-periphrastic",
       "difficultyBand": "hard",
       "countsToward": "advanced_syntax",
-      "prompt": "What is the best translation of <em>Haec nōbīs statim faciunda sunt</em>?",
+      "prompt": "In <em>Carthāgō Rōmānīs dēlenda erat</em>, what does the gerundive construction express?",
       "options": [
-        "We had been doing these things at once.",
-        "These things must be done by us at once.",
-        "These things were being made for us at once.",
-        "We will make these things at once."
+        "necessity or obligation",
+        "a completed action in past time",
+        "a purpose clause with an implied subject",
+        "a wish about a possible future action"
       ],
-      "correct": 1,
+      "correct": 0,
       "topicTags": [
         "passive-periphrastic",
-        "top-band"
+        "construction"
       ],
       "correctIndices": [
-        1
+        0
       ],
       "minSelections": 1,
       "maxSelections": 1,
@@ -823,25 +823,25 @@
     },
     {
       "part": 2,
-      "chapter": 30,
+      "chapter": 26,
       "type": "syntax-id",
-      "skill": "relative-characteristic",
+      "skill": "result-clause",
       "difficultyBand": "hard",
       "countsToward": "advanced_syntax",
-      "prompt": "Identify the construction in <em>Nemo est quī hoc negāre possit</em>.",
+      "prompt": "<em>Tanta erat tempestās ut nautae terrerentur</em> What is the syntactic construction of <em>ut nautae terrerentur</em>?",
       "options": [
         "purpose clause",
         "relative clause of characteristic",
         "indirect question",
         "result clause"
       ],
-      "correct": 1,
+      "correct": 3,
       "topicTags": [
-        "relative-characteristic",
+        "result-clause",
         "construction"
       ],
       "correctIndices": [
-        1
+        3
       ],
       "minSelections": 1,
       "maxSelections": 1,
@@ -855,17 +855,17 @@
       "skill": "impersonal-construction",
       "difficultyBand": "hard",
       "countsToward": "advanced_syntax",
-      "prompt": "In <em>Oportet tē nunc discēdere</em>, what does <em>oportet</em> express?",
+      "prompt": "What is the best translation of <em>Mihi domum redīre licet</em>?",
       "options": [
-        "obligation or necessity",
-        "doubt",
-        "reported speech",
-        "completed action"
+        "I am permitted to return home.",
+        "I ought to return home at once.",
+        "He allows me to return to the house.",
+        "It was necessary for me to return home."
       ],
       "correct": 0,
       "topicTags": [
         "impersonal-construction",
-        "top-band"
+        "translation"
       ],
       "correctIndices": [
         0

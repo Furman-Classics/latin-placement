@@ -1,0 +1,536 @@
+{
+  "formId": "MAIN",
+  "version": "2026-3part-v1",
+  "passages": [
+    {
+      "passageId": "passage-p3-main",
+      "usedInPart": 3,
+      "theme": "agrippina",
+      "difficultyRole": "intermediate",
+      "text": "Agrippina Minor, fīlia Germanicī et mater Nerōnis imperātōris, erat fēmina magnae potentiae. Multōs annōs, [underline: marītō suō Claudiō imperante], rem pūblicam summā cūrā administrābat. Multī senatōrēs eam timēbant, quod et Claudium imperātōrem et ipsum Nerōnem magnā cum arte regēbat. Saepe enim in cōnsiliīs aderat et prō salūte reī pūblicae loquī nōn timēbat. Quam ob rem nōmen eius per tōtam Italiam clārum erat.\n\nNerō autem, postquam imperātor factus est, mātrem suam pati nōluit. Tandem nūntiōs suōs mīsit quī Agrippinam interficerent. Quod ubi audīvit, Agrippina, [underline: nūntiīs mortem suam portantibus] respondēns, pectus suum aperuit et \u201chūc fērī!\u201d inquit.\n\nPost mortem eius, fāma sceleris Nerōnis per tōtam Italiam vulgāta est. Multī Rōmānī crēdēbant eum tyrannum esse. Ita Agrippina, quamquam cum magnā virtūte vīxerat, per vim fīliī suī occīsa est. Memoria tamen eius apud multōs Rōmānōs diū manēbat."
+    }
+  ],
+  "questions": [
+    {
+      "id": "f-p1-01",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 1,
+      "prompt": "What is the meaning of <em>amō, amāre</em>?",
+      "options": ["to fear", "to love", "to praise", "to call"],
+      "correct": 1
+    },
+    {
+      "id": "f-p1-02",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 2,
+      "prompt": "What is the meaning of <em>bellum, bellī</em> (n.)?",
+      "options": ["peace", "war", "city", "kingdom"],
+      "correct": 1
+    },
+    {
+      "id": "f-p1-03",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 3,
+      "prompt": "What is the meaning of <em>imperium, imperiī</em> (n.)?",
+      "options": ["kingdom", "command, power", "temple", "story"],
+      "correct": 1
+    },
+    {
+      "id": "f-p1-04",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 4,
+      "prompt": "What is the meaning of <em>via, viae</em> (f.)?",
+      "options": ["sea", "gate", "street, road", "field"],
+      "correct": 2
+    },
+    {
+      "id": "f-p1-05",
+      "part": 1,
+      "type": "vocab-en-la",
+      "chapter": 5,
+      "prompt": "Which of the following means 'good'?",
+      "options": ["malus –a –um", "bonus –a –um", "magnus –a –um", "parvus –a –um"],
+      "correct": 1
+    },
+    {
+      "id": "f-p1-06",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 7,
+      "prompt": "What is the meaning of <em>māter, mātris</em> (f.)?",
+      "options": ["wife", "daughter", "queen", "mother"],
+      "correct": 3
+    },
+    {
+      "id": "f-p1-07",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 8,
+      "prompt": "What is the meaning of <em>pāx, pācis</em> (f.)?",
+      "options": ["law", "peace", "praise", "power"],
+      "correct": 1
+    },
+    {
+      "id": "f-p1-08",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 9,
+      "prompt": "What is the meaning of <em>faciō, facere</em>?",
+      "options": ["to carry", "to call", "to do, make", "to send"],
+      "correct": 2
+    },
+    {
+      "id": "f-p1-09",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 10,
+      "prompt": "What does <em>ille, illa, illud</em> mean?",
+      "options": ["this", "that", "who", "the same"],
+      "correct": 1
+    },
+    {
+      "id": "f-p1-10",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 11,
+      "prompt": "What is the meaning of <em>timor, timōris</em> (m.)?",
+      "options": ["anger", "grief", "fear", "delay"],
+      "correct": 2
+    },
+    {
+      "id": "f-p1-11",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 13,
+      "prompt": "What is the meaning of <em>sciō, scīre</em>?",
+      "options": ["to learn", "to perceive", "to know", "to understand"],
+      "correct": 2
+    },
+    {
+      "id": "f-p1-12",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 14,
+      "prompt": "What is the meaning of <em>moneō, monēre</em>?",
+      "options": ["to hinder", "to warn, advise", "to care for", "to remain"],
+      "correct": 1
+    },
+    {
+      "id": "f-p1-13",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 15,
+      "prompt": "What is the meaning of <em>ignis, ignis</em> (m.)?",
+      "options": ["fire", "light", "storm", "wind"],
+      "correct": 0
+    },
+    {
+      "id": "f-p1-14",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 16,
+      "prompt": "What is the meaning of <em>fidēs, fideī</em> (f.)?",
+      "options": ["hope", "trust, faith", "republic", "matter"],
+      "correct": 1
+    },
+    {
+      "id": "f-p1-15",
+      "part": 1,
+      "type": "vocab-en-la",
+      "chapter": 19,
+      "prompt": "Which of the following means 'who, which' (relative pronoun)?",
+      "options": ["is, ea, id", "ille, illa, illud", "quī, quae, quod", "ipse, ipsa, ipsum"],
+      "correct": 2
+    },
+    {
+      "id": "f-p1-16",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 21,
+      "prompt": "What is the meaning of <em>volō, velle</em>?",
+      "options": ["to prefer", "to be unwilling", "to wish", "to command"],
+      "correct": 2
+    },
+    {
+      "id": "f-p1-17",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 22,
+      "prompt": "What is the meaning of <em>putō, putāre</em>?",
+      "options": ["to know", "to say", "to answer", "to think"],
+      "correct": 3
+    },
+    {
+      "id": "f-p1-18",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 23,
+      "prompt": "What is the meaning of <em>loquor, loquī</em>?",
+      "options": ["to read", "to speak", "to write", "to follow"],
+      "correct": 1
+    },
+    {
+      "id": "f-p1-19",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 24,
+      "prompt": "What is the meaning of <em>interficiō, interficere</em>?",
+      "options": ["to wound", "to overcome", "to destroy", "to kill"],
+      "correct": 3
+    },
+    {
+      "id": "f-p1-20",
+      "part": 1,
+      "type": "vocab-la-en",
+      "chapter": 27,
+      "prompt": "What is the meaning of <em>glōria, glōriae</em> (f.)?",
+      "options": ["glory, renown", "power", "virtue", "truth"],
+      "correct": 0
+    },
+    {
+      "id": "f-p2-01",
+      "part": 2,
+      "type": "form-verb",
+      "chapter": 4,
+      "prompt": "What is the form of <em>amāvit</em>?",
+      "options": [
+        "3rd person singular imperfect active",
+        "3rd person singular perfect active",
+        "3rd person plural perfect active",
+        "2nd person singular perfect active"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p2-02",
+      "part": 2,
+      "type": "form-verb",
+      "chapter": 13,
+      "prompt": "What is the form of <em>dūcēbātur</em>?",
+      "options": [
+        "3rd person singular future passive",
+        "3rd person singular present passive",
+        "3rd person singular imperfect passive",
+        "3rd person plural imperfect passive"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "f-p2-03",
+      "part": 2,
+      "type": "form-verb",
+      "chapter": 13,
+      "prompt": "What is the form of <em>missī sunt</em>?",
+      "options": [
+        "3rd person plural future passive",
+        "3rd person singular perfect passive",
+        "3rd person plural pluperfect passive",
+        "3rd person plural perfect passive"
+      ],
+      "correct": 3
+    },
+    {
+      "id": "f-p2-04",
+      "part": 2,
+      "type": "form-verb",
+      "chapter": 15,
+      "prompt": "What is the form of <em>amāberis</em>?",
+      "options": [
+        "2nd person singular present passive",
+        "2nd person singular future passive",
+        "2nd person singular imperfect passive",
+        "2nd person singular perfect passive"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p2-05",
+      "part": 2,
+      "type": "form-noun",
+      "chapter": 7,
+      "prompt": "What is the form of <em>rēgibus</em>?",
+      "options": [
+        "nominative plural",
+        "genitive plural",
+        "dative/ablative plural",
+        "dative/ablative singular"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "f-p2-06",
+      "part": 2,
+      "type": "form-noun",
+      "chapter": 7,
+      "prompt": "What is the form of <em>ducum</em>?",
+      "options": [
+        "nominative plural",
+        "genitive plural",
+        "dative/ablative plural",
+        "accusative singular"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p2-07",
+      "part": 2,
+      "type": "form-noun",
+      "chapter": 7,
+      "prompt": "What is the form of <em>urbī</em>?",
+      "options": [
+        "nominative singular",
+        "genitive singular",
+        "dative singular",
+        "accusative singular"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "f-p2-08",
+      "part": 2,
+      "type": "form-pronoun",
+      "chapter": 10,
+      "prompt": "What is the case of <em>eius</em> (from <em>is, ea, id</em>)?",
+      "options": [
+        "nominative singular (masculine)",
+        "dative singular",
+        "genitive singular (all genders)",
+        "accusative plural"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "f-p2-09",
+      "part": 2,
+      "type": "form-pronoun",
+      "chapter": 23,
+      "prompt": "What case and number is <em>ipsius</em> (from <em>ipse, ipsa, ipsum</em>)?",
+      "options": [
+        "nominative singular",
+        "genitive singular",
+        "dative singular",
+        "accusative plural"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p2-10",
+      "part": 2,
+      "type": "form-identify-multi",
+      "chapter": 7,
+      "prompt": "Which of the following are <strong>ablative plural</strong>?",
+      "options": ["rēgibus", "urbium", "mīlitibus", "ducum", "hominibus"],
+      "correctIndices": [0, 2, 4],
+      "minSelections": 3,
+      "maxSelections": 3
+    },
+    {
+      "id": "f-p2-11",
+      "part": 2,
+      "type": "form-identify-multi",
+      "chapter": 4,
+      "prompt": "Which of the following are <strong>present active infinitives</strong>?",
+      "options": ["amāre", "amāvisse", "amātum", "dūcere", "capī"],
+      "correctIndices": [0, 3],
+      "minSelections": 2,
+      "maxSelections": 2
+    },
+    {
+      "id": "f-p2-12",
+      "part": 2,
+      "type": "form-identify-multi",
+      "chapter": 7,
+      "prompt": "Which of the following are <strong>nominative plural</strong>?",
+      "options": ["rēgēs", "ducēs", "urbem", "cīvēs", "mīlitum"],
+      "correctIndices": [0, 1, 3],
+      "minSelections": 3,
+      "maxSelections": 3
+    },
+    {
+      "id": "f-p2-13",
+      "part": 2,
+      "type": "syntax-id",
+      "chapter": 17,
+      "prompt": "Identify the construction in: <em>Hostibus victīs, mīlitēs domum redīērunt.</em>",
+      "options": [
+        "indirect statement",
+        "ablative absolute",
+        "purpose clause",
+        "cum-clause"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p2-14",
+      "part": 2,
+      "type": "syntax-id",
+      "chapter": 19,
+      "prompt": "Identify the construction in: <em>Caesar dīxit sē hostēs vīcisse.</em>",
+      "options": [
+        "purpose clause",
+        "indirect command",
+        "indirect statement",
+        "ablative absolute"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "f-p2-15",
+      "part": 2,
+      "type": "syntax-id",
+      "chapter": 22,
+      "prompt": "Identify the construction in: <em>Dux mīlitibus imperāvit ut fortiter pugnārent.</em>",
+      "options": [
+        "result clause",
+        "purpose clause",
+        "indirect command",
+        "fear clause"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "f-p3-01",
+      "part": 3,
+      "type": "translation",
+      "passageId": "passage-p3-main",
+      "prompt": "What is the best translation of <em>Multōs annōs, marītō suō Claudiō imperante, rem pūblicam summā cūrā administrābat</em>?",
+      "options": [
+        "She administered public affairs with great care for many years, while her husband Claudius was ruling.",
+        "For many years after her husband Claudius ruled, she managed public affairs with great care.",
+        "She and her husband Claudius jointly administered public affairs with great care for many years.",
+        "Her husband Claudius administered public affairs with great care for many years."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "f-p3-02",
+      "part": 3,
+      "type": "translation",
+      "passageId": "passage-p3-main",
+      "prompt": "What is the best translation of <em>Tandem nūntiōs suōs mīsit quī Agrippinam interficerent</em>?",
+      "options": [
+        "Finally, he sent his messengers who had killed Agrippina.",
+        "He finally sent his messengers to kill Agrippina.",
+        "At last, Agrippina sent her messengers who were to be killed.",
+        "His messengers, who had come to kill him, were finally sent away."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p3-03",
+      "part": 3,
+      "type": "translation",
+      "passageId": "passage-p3-main",
+      "prompt": "What is the best translation of <em>hūc fērī!</em>",
+      "options": [
+        "Strike here!",
+        "Come here!",
+        "Carry this here!",
+        "Fight on!"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "f-p3-04",
+      "part": 3,
+      "type": "translation",
+      "passageId": "passage-p3-main",
+      "prompt": "What does <em>Multī Rōmānī crēdēbant eum tyrannum esse</em> mean?",
+      "options": [
+        "Many Romans were believed to be tyrants by him.",
+        "He believed that many Romans were tyrants.",
+        "Many Romans believed that he was a tyrant.",
+        "The Romans feared him because he was a tyrant."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "f-p3-05",
+      "part": 3,
+      "type": "reading",
+      "passageId": "passage-p3-main",
+      "prompt": "According to the passage, why did many senators fear Agrippina?",
+      "options": [
+        "She had exiled them from Rome.",
+        "She governed both Emperor Claudius and Nero himself with great skill.",
+        "She had poisoned her husband Claudius.",
+        "She had led an army against them."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p3-06",
+      "part": 3,
+      "type": "reading",
+      "passageId": "passage-p3-main",
+      "prompt": "According to the passage, what did Agrippina do when she heard Nero's plan?",
+      "options": [
+        "She fled to the temple for sanctuary.",
+        "She sent her own messengers to negotiate with Nero.",
+        "She exposed her chest and said 'Strike here!'",
+        "She appealed to the senate for protection."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "f-p3-07",
+      "part": 3,
+      "type": "reading",
+      "passageId": "passage-p3-main",
+      "prompt": "What does the passage say about Nero's reputation after Agrippina's death?",
+      "options": [
+        "He was celebrated as a wise ruler throughout Italy.",
+        "News of his crime spread throughout all Italy.",
+        "The senate voted to honor him for his decision.",
+        "He was mourned by all Romans as a tragic figure."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p3-08",
+      "part": 3,
+      "type": "syntax-id",
+      "passageId": "passage-p3-main",
+      "prompt": "What construction is used in [underline: marītō suō Claudiō imperante]?",
+      "options": [
+        "Dative of possession",
+        "Ablative absolute",
+        "Indirect statement",
+        "Cum-clause with the subjunctive"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p3-09",
+      "part": 3,
+      "type": "form-noun",
+      "passageId": "passage-p3-main",
+      "prompt": "In the phrase [underline: nūntiīs mortem suam portantibus], what is the case of <em>nūntiīs</em>?",
+      "options": [
+        "Nominative, subject of the sentence",
+        "Dative, object of <em>respondēns</em>",
+        "Ablative, expressing means",
+        "Accusative, direct object"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p3-10",
+      "part": 3,
+      "type": "inference",
+      "passageId": "passage-p3-main",
+      "prompt": "What can be inferred from the passage about how Romans viewed Nero's killing of his mother?",
+      "options": [
+        "Most Romans approved of Nero's decision as politically necessary.",
+        "Nero's reputation was damaged and Romans viewed the act as criminal.",
+        "Romans were indifferent to Agrippina's death since she had too much power.",
+        "The senators who had feared Agrippina celebrated her death."
+      ],
+      "correct": 1
+    }
+  ]
+}

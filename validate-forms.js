@@ -2,34 +2,11 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = __dirname;
-const FORM_FILES = ['form-a.json', 'form-b.json', 'form-c.json'].map(name =>
-  path.join(ROOT, 'docs', 'data', name)
-);
-
-const EXPECTED_SUBSCORES = {
-  morphology_vocab: 16,
-  sentence_meaning: 12,
-  reading: 4,
-  advanced_syntax: 8,
-};
+const FORM_FILE = path.join(ROOT, 'docs', 'data', 'form.json');
 
 const PLACEMENT_RULES = {
-  'LATN 325': {
-    total: 31,
-    gates: {
-      reading: 3,
-      advanced_syntax: 6,
-      sentence_meaning: 8,
-    },
-  },
-  'LATN 201': {
-    total: 22,
-    gates: {
-      morphology_vocab: 9,
-      reading_plus_sentence_meaning: 9,
-      advanced_syntax: 3,
-    },
-  },
+  'LATN 325': { totalMin: 32, p1Min: 14, p2Min: 11, p3Min: 7 },
+  'LATN 201': { totalMin: 20, p1Min: 11, p2Min: 7 },
 };
 
 function assert(condition, message) {
@@ -43,30 +20,30 @@ function loadForm(filename) {
 function wordCount(text) {
   return String(text || '')
     .replace(/<[^>]+>/g, ' ')
+    .replace(/\[underline:\s*[^\]]+\]/g, ' ')
     .trim()
     .split(/\s+/)
     .filter(Boolean).length;
 }
 
-function determinePlacement(totalScore, subscores) {
+function determinePlacement(totalScore, p1Score, p2Score, p3Score) {
+  const r325 = PLACEMENT_RULES['LATN 325'];
   if (
-    totalScore >= PLACEMENT_RULES['LATN 325'].total &&
-    subscores.reading >= PLACEMENT_RULES['LATN 325'].gates.reading &&
-    subscores.advanced_syntax >= PLACEMENT_RULES['LATN 325'].gates.advanced_syntax &&
-    subscores.sentence_meaning >= PLACEMENT_RULES['LATN 325'].gates.sentence_meaning
+    totalScore >= r325.totalMin &&
+    p1Score >= r325.p1Min &&
+    p2Score >= r325.p2Min &&
+    p3Score >= r325.p3Min
   ) {
     return 'LATN 325';
   }
-
+  const r201 = PLACEMENT_RULES['LATN 201'];
   if (
-    totalScore >= PLACEMENT_RULES['LATN 201'].total &&
-    subscores.morphology_vocab >= PLACEMENT_RULES['LATN 201'].gates.morphology_vocab &&
-    (subscores.reading + subscores.sentence_meaning) >= PLACEMENT_RULES['LATN 201'].gates.reading_plus_sentence_meaning &&
-    subscores.advanced_syntax >= PLACEMENT_RULES['LATN 201'].gates.advanced_syntax
+    totalScore >= r201.totalMin &&
+    p1Score >= r201.p1Min &&
+    p2Score >= r201.p2Min
   ) {
     return 'LATN 201';
   }
-
   return 'LATN 110';
 }
 
@@ -74,117 +51,109 @@ function validatePlacementFixtures() {
   const fixtures = [
     {
       label: 'clear 110',
-      total: 16,
-      subscores: { morphology_vocab: 6, sentence_meaning: 6, reading: 1, advanced_syntax: 3 },
+      total: 10, p1: 5, p2: 3, p3: 2,
       expected: 'LATN 110',
     },
     {
-      label: 'borderline 110/201 stays 110',
-      total: 21,
-      subscores: { morphology_vocab: 9, sentence_meaning: 8, reading: 1, advanced_syntax: 3 },
+      label: 'borderline 110/201 stays 110 (vocab gate)',
+      total: 22, p1: 10, p2: 7, p3: 5,
       expected: 'LATN 110',
     },
     {
       label: 'clear 201',
-      total: 24,
-      subscores: { morphology_vocab: 10, sentence_meaning: 7, reading: 2, advanced_syntax: 5 },
+      total: 24, p1: 12, p2: 8, p3: 4,
       expected: 'LATN 201',
     },
     {
-      label: 'borderline 201/325 stays 201',
-      total: 30,
-      subscores: { morphology_vocab: 12, sentence_meaning: 9, reading: 2, advanced_syntax: 7 },
+      label: 'borderline 201/325 stays 201 (reading gate)',
+      total: 34, p1: 14, p2: 13, p3: 6,
       expected: 'LATN 201',
     },
     {
       label: 'clear 325',
-      total: 33,
-      subscores: { morphology_vocab: 12, sentence_meaning: 8, reading: 3, advanced_syntax: 6 },
+      total: 35, p1: 15, p2: 12, p3: 8,
       expected: 'LATN 325',
     },
   ];
 
   for (const fixture of fixtures) {
-    const actual = determinePlacement(fixture.total, fixture.subscores);
-    assert(actual === fixture.expected, `placement fixture failed: ${fixture.label}`);
+    const actual = determinePlacement(fixture.total, fixture.p1, fixture.p2, fixture.p3);
+    assert(actual === fixture.expected, `placement fixture failed: ${fixture.label} (got ${actual})`);
   }
 }
 
 function validateForm(form) {
-  assert(form.version === '2026-fixed-forms-v2', `${form.formId}: unexpected version`);
-  assert(Array.isArray(form.passages) && form.passages.length === 1, `${form.formId}: expected 1 passage`);
-  assert(Array.isArray(form.questions) && form.questions.length === 40, `${form.formId}: expected 40 questions`);
+  assert(form.version === '2026-3part-v1', `unexpected version: ${form.version}`);
+  assert(Array.isArray(form.passages) && form.passages.length === 1, 'expected exactly 1 passage');
+  assert(Array.isArray(form.questions) && form.questions.length === 45, `expected 45 questions, got ${form.questions.length}`);
 
   const [passage] = form.passages;
-  assert(passage.difficultyRole === 'upper-intermediate', `${form.formId}: passage should be upper-intermediate`);
-  assert(wordCount(passage.text) >= 120, `${form.formId}: passage too short`);
+  assert(passage.passageId, 'passage must have a passageId');
+  assert(passage.usedInPart === 3, 'passage must be used in part 3');
+  assert(wordCount(passage.text) >= 120, `passage too short (${wordCount(passage.text)} words)`);
 
   const part1 = form.questions.filter(q => q.part === 1);
   const part2 = form.questions.filter(q => q.part === 2);
-  assert(part1.length === 24, `${form.formId}: part 1 should have 24 questions`);
-  assert(part2.length === 16, `${form.formId}: part 2 should have 16 questions`);
+  const part3 = form.questions.filter(q => q.part === 3);
+  assert(part1.length === 20, `part 1 should have 20 questions, got ${part1.length}`);
+  assert(part2.length === 15, `part 2 should have 15 questions, got ${part2.length}`);
+  assert(part3.length === 10, `part 3 should have 10 questions, got ${part3.length}`);
 
-  const typeCountsP1 = part1.reduce((acc, q) => {
-    acc[q.type] = (acc[q.type] || 0) + 1;
-    return acc;
-  }, {});
-  assert(typeCountsP1['morphology-in-context'] === 6, `${form.formId}: wrong morphology count`);
-  assert((typeCountsP1['vocab-la-en'] || 0) + (typeCountsP1['vocab-en-la'] || 0) === 6, `${form.formId}: wrong vocab count`);
-  assert(typeCountsP1['syntax-function'] === 4, `${form.formId}: wrong syntax-function count`);
-  assert(typeCountsP1['sentence-meaning'] === 8, `${form.formId}: wrong sentence-meaning count in part 1`);
-  assert(part1.every(q => q.countsToward === 'morphology_vocab' || q.countsToward === 'sentence_meaning'), `${form.formId}: unexpected part 1 bucket`);
-  assert(form.questions.filter(q => q.maxSelections > 1).length === 0, `${form.formId}: expected no multi-select items`);
+  // Part 1: all vocab types
+  const p1Types = part1.map(q => q.type);
+  assert(p1Types.every(t => t === 'vocab-la-en' || t === 'vocab-en-la'), 'part 1 should have only vocab question types');
 
-  const part2Passage = part2.filter(q => q.passageId);
-  const part2Standalone = part2.filter(q => !q.passageId);
-  assert(part2Passage.length === 4, `${form.formId}: expected 4 passage-based part 2 items`);
-  assert(part2Standalone.length === 12, `${form.formId}: expected 12 standalone part 2 items`);
-  assert(part2.slice(0, 12).every(q => !q.passageId), `${form.formId}: only final 4 part 2 questions should use the passage`);
-  assert(part2.slice(12).every(q => q.passageId === passage.passageId), `${form.formId}: final 4 questions should share the same passage`);
-
-  const typeCountsP2 = part2.reduce((acc, q) => {
-    acc[q.type] = (acc[q.type] || 0) + 1;
-    return acc;
-  }, {});
-  assert((typeCountsP2['syntax-id'] || 0) + (typeCountsP2['advanced-syntax'] || 0) === 8, `${form.formId}: wrong syntax/construction count in part 2`);
-  assert(typeCountsP2['sentence-meaning'] === 4, `${form.formId}: wrong standalone sentence-meaning count in part 2`);
-  assert(typeCountsP2.reading === 4, `${form.formId}: wrong reading count in part 2`);
-
-  const badSequenceQuestions = form.questions.filter(q =>
-    q.skill === 'infinitive-tense' ||
-    /tense relationship/i.test(String(q.prompt || ''))
-  );
-  assert(badSequenceQuestions.length === 0, `${form.formId}: sequence-of-tenses item still present`);
-
-  const countsToward = form.questions.reduce((acc, q) => {
-    acc[q.countsToward] = (acc[q.countsToward] || 0) + 1;
-    return acc;
-  }, {});
-  for (const [bucket, count] of Object.entries(EXPECTED_SUBSCORES)) {
-    assert(countsToward[bucket] === count, `${form.formId}: wrong subscore count for ${bucket}`);
+  // Part 2: multi-select questions have correctIndices.length >= 2
+  const p2Multi = part2.filter(q => (q.maxSelections || 1) > 1);
+  for (const q of p2Multi) {
+    const indices = Array.isArray(q.correctIndices) ? q.correctIndices : [];
+    assert(indices.length >= 2, `multi-select question ${q.id} should have >= 2 correct indices`);
+    assert(indices.length === q.maxSelections, `multi-select question ${q.id}: correctIndices.length must equal maxSelections`);
   }
 
+  // Part 3: all questions reference the passage
+  assert(
+    part3.every(q => q.passageId === passage.passageId),
+    `all part 3 questions must reference passage ${passage.passageId}`
+  );
+
+  // Per-question validation
+  const ids = new Set();
   for (const question of form.questions) {
-    assert(question.formId === form.formId, `${form.formId}: ${question.id} has mismatched formId`);
-    assert(Array.isArray(question.options) && question.options.length >= 4, `${form.formId}: ${question.id} must have at least 4 options`);
-    assert(Array.isArray(question.correctIndices) && question.correctIndices.length >= 1, `${form.formId}: ${question.id} missing correct indices`);
-    assert(question.minSelections >= 1 && question.maxSelections >= question.minSelections, `${form.formId}: ${question.id} has invalid selection bounds`);
-    for (const idx of question.correctIndices) {
-      assert(Number.isInteger(idx) && idx >= 0 && idx < question.options.length, `${form.formId}: ${question.id} has invalid correct index`);
+    assert(question.id, `question missing id`);
+    assert(!ids.has(question.id), `duplicate question id: ${question.id}`);
+    ids.add(question.id);
+    assert(Array.isArray(question.options) && question.options.length >= 4, `${question.id}: must have at least 4 options`);
+
+    const correctIndices = Array.isArray(question.correctIndices)
+      ? question.correctIndices.map(Number)
+      : [Number(question.correct)];
+    assert(correctIndices.length >= 1, `${question.id}: missing correct indices`);
+
+    const minSel = Number(question.minSelections || 1);
+    const maxSel = Number(question.maxSelections || 1);
+    assert(minSel >= 1 && maxSel >= minSel, `${question.id}: invalid selection bounds (min=${minSel}, max=${maxSel})`);
+
+    for (const idx of correctIndices) {
+      assert(
+        Number.isInteger(idx) && idx >= 0 && idx < question.options.length,
+        `${question.id}: invalid correct index ${idx}`
+      );
     }
-    if (question.maxSelections === 1) {
-      assert(question.correctIndices.length === 1, `${form.formId}: ${question.id} single-select must have one correct answer`);
+
+    if (maxSel === 1) {
+      assert(correctIndices.length === 1, `${question.id}: single-select must have exactly 1 correct answer`);
     } else {
-      assert(question.correctIndices.length === question.maxSelections, `${form.formId}: ${question.id} multi-select must match max selections`);
+      assert(correctIndices.length === maxSel, `${question.id}: multi-select correctIndices.length must equal maxSelections`);
     }
   }
 }
 
 function main() {
-  const forms = FORM_FILES.map(loadForm);
-  forms.forEach(validateForm);
+  const form = loadForm(FORM_FILE);
+  validateForm(form);
   validatePlacementFixtures();
-  console.log(`Validated ${forms.length} forms and placement fixtures.`);
+  console.log('Validated form.json and placement fixtures. All checks passed.');
 }
 
 main();

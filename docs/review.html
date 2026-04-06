@@ -372,7 +372,7 @@
         if (!res.ok) { throw new Error('Invalid key'); }
         const data = await res.json();
         activeKey = key;
-        allQuestions = data.questions;
+        allQuestions = normalizeReviewPayload(data);
         loadNotes();
         initReview();
       } catch (e) {
@@ -422,15 +422,88 @@
       return {
         'vocab-la-en': 'Vocab: Latin → English',
         'vocab-en-la': 'Vocab: English → Latin',
+        'vocab-in-context': 'Vocab: In Context',
         'form-noun':   'Forms: Noun',
         'form-verb':   'Forms: Verb',
         'form-pronoun':'Forms: Pronoun',
         'form-participle':'Forms: Participle',
         'form-infinitive':'Forms: Infinitive',
+        'morphology-in-context': 'Forms: In Context',
         'syntax-id':   'Syntax: Identify',
         'syntax-function':'Syntax: Function',
+        'sentence-meaning': 'Sentence Meaning',
+        'reading': 'Reading',
+        'advanced-syntax': 'Advanced Syntax',
         'comprehension':'Comprehension',
       }[t] || t;
+    }
+
+    function normalizeQuestion(question, passageMap, inherited = {}) {
+      const correctIndices = Array.isArray(question.correctIndices)
+        ? question.correctIndices.map(Number)
+        : Number.isInteger(question.correct)
+          ? [Number(question.correct)]
+          : [];
+      const passage = question.passage
+        || question.passageText
+        || (question.passageId ? passageMap.get(question.passageId) : '')
+        || inherited.passage
+        || '';
+
+      return {
+        ...inherited,
+        ...question,
+        correctIndices,
+        passage,
+      };
+    }
+
+    function normalizeReviewPayload(data) {
+      const passageMap = new Map();
+      const normalized = [];
+
+      const addPassages = passages => {
+        (Array.isArray(passages) ? passages : []).forEach(passage => {
+          if (passage && passage.passageId) {
+            passageMap.set(passage.passageId, passage.text || '');
+          }
+        });
+      };
+
+      const addQuestions = (questions, inherited = {}) => {
+        (Array.isArray(questions) ? questions : []).forEach(question => {
+          normalized.push(normalizeQuestion(question, passageMap, inherited));
+        });
+      };
+
+      addPassages(data?.passages);
+
+      if (Array.isArray(data?.forms)) {
+        data.forms.forEach(form => {
+          addPassages(form.passages);
+          addQuestions(form.questions, {
+            formId: form.formId || '',
+            version: form.version || '',
+          });
+        });
+      }
+
+      if (Array.isArray(data?.questions)) {
+        addQuestions(data.questions, {
+          formId: data.formId || '',
+          version: data.version || '',
+        });
+      }
+
+      if (data?.form && Array.isArray(data.form.questions)) {
+        addPassages(data.form.passages);
+        addQuestions(data.form.questions, {
+          formId: data.form.formId || '',
+          version: data.form.version || '',
+        });
+      }
+
+      return normalized;
     }
 
     // ── Render list ────────────────────────────────────────
@@ -494,6 +567,7 @@
         `<span class="rq-id">${q.id}</span>` +
         `<span class="rq-badge ${q.part===1?'badge-part1':'badge-part2'}">Part ${q.part}</span>` +
         `<span class="rq-badge badge-type">${formatType(q.type)}</span>` +
+        (q.formId ? `<span class="rq-badge badge-ch">Form ${q.formId}</span>` : '') +
         `<span class="rq-badge badge-ch">Ch. ${q.chapter}</span>`;
       card.appendChild(meta);
 
@@ -515,13 +589,14 @@
       const optList = document.createElement('div');
       optList.className = 'rq-options';
       const letters = ['A','B','C','D','E'];
+      const correctSet = new Set(Array.isArray(q.correctIndices) ? q.correctIndices : []);
       q.options.forEach((opt, i) => {
         const div = document.createElement('div');
-        div.className = 'rq-option' + (i === q.correct ? ' correct' : '');
+        div.className = 'rq-option' + (correctSet.has(i) ? ' correct' : '');
         div.innerHTML =
           `<span class="opt-letter">${letters[i]}</span>` +
           `<span>${renderInline(opt)}</span>` +
-          (i === q.correct ? `<span class="correct-mark">✓ correct</span>` : '');
+          (correctSet.has(i) ? `<span class="correct-mark">✓ correct</span>` : '');
         optList.appendChild(div);
       });
       card.appendChild(optList);
@@ -634,8 +709,9 @@
         lines.push(`Prompt: ${plainPrompt}`);
 
         const letters = ['A','B','C','D','E'];
+        const correctSet = new Set(Array.isArray(q.correctIndices) ? q.correctIndices : []);
         q.options.forEach((opt, i) => {
-          const mark = i === q.correct ? ' ✓' : '';
+          const mark = correctSet.has(i) ? ' ✓' : '';
           lines.push(`  ${letters[i]}) ${stripHtml(opt)}${mark}`);
         });
 
