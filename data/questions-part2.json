@@ -586,12 +586,12 @@
     "part": 2,
     "type": "syntax-function",
     "chapter": 19,
-    "prompt": "In <em>Putō eum bonum esse</em>, what is the tense relationship of the infinitive <em>esse</em> to <em>putō</em>?",
+    "prompt": "In <em>Putō eum bonum esse</em>, what is the syntactic function of <em>eum</em>?",
     "options": [
-      "the infinitive indicates action prior to the main verb",
-      "the infinitive indicates action at the same time as the main verb",
-      "the infinitive indicates action after the main verb",
-      "there is no tense relationship; the infinitive is timeless"
+      "subject of the main verb",
+      "accusative subject of the infinitive",
+      "direct object of <em>putō</em>",
+      "predicate nominative"
     ],
     "correct": 1
   },

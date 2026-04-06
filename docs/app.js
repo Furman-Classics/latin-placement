@@ -7,8 +7,8 @@ const PAYLOAD_VERSION = '2026-sheet-v1';
 const DEV_MODE = new URLSearchParams(location.search).has('dev');
 const FORM_OVERRIDE = (new URLSearchParams(location.search).get('form') || '').toUpperCase();
 const STORAGE_KEY = DEV_MODE ? 'placent_dev_session_v2' : 'placent_session_v2';
-const TIMER_MS = 45 * 60 * 1000;
-const EXAM_VERSION = '2026-fixed-forms-v1';
+const TIMER_MS = 40 * 60 * 1000;
+const EXAM_VERSION = '2026-fixed-forms-v2';
 const FORM_IDS = ['A', 'B', 'C'];
 const FORM_URLS = {
   A: 'data/form-a.json',
@@ -18,18 +18,18 @@ const FORM_URLS = {
 
 const PLACEMENT_RULES = {
   'LATN 325': {
-    total: 34,
+    total: 31,
     gates: {
-      reading: 9,
+      reading: 3,
       advanced_syntax: 6,
-      sentence_meaning: 7,
+      sentence_meaning: 8,
     },
   },
   'LATN 201': {
-    total: 24,
+    total: 22,
     gates: {
-      morphology_vocab: 8,
-      reading_plus_sentence_meaning: 12,
+      morphology_vocab: 9,
+      reading_plus_sentence_meaning: 9,
       advanced_syntax: 3,
     },
   },
@@ -565,6 +565,19 @@ function updateP2Progress() {
   $('p2-progress').textContent = `Answered: ${answered} / ${state.part2Questions.length}`;
 }
 
+function getFinalPassageSetMeta() {
+  const finalQuestions = state.part2Questions.slice(-4);
+  if (finalQuestions.length !== 4) return null;
+  const passageId = finalQuestions[0]?.passageId;
+  if (!passageId || !finalQuestions.every(question => question.passageId === passageId)) return null;
+  const startIndex = state.part2Questions.length - finalQuestions.length;
+  if (state.p2Index < startIndex) return null;
+  return {
+    index: state.p2Index - startIndex + 1,
+    size: finalQuestions.length,
+  };
+}
+
 function renderP1(moveFocus = false, focusOptionIndex = -1) {
   const question = state.part1Questions[state.p1Index];
   $('p1-counter').textContent = `Question ${state.p1Index + 1} of ${state.part1Questions.length}`;
@@ -590,7 +603,10 @@ function renderP1(moveFocus = false, focusOptionIndex = -1) {
 
 function renderP2(moveFocus = false, focusOptionIndex = -1) {
   const question = state.part2Questions[state.p2Index];
-  $('p2-counter').textContent = `Question ${state.p2Index + 1} of ${state.part2Questions.length}`;
+  const finalPassageSet = getFinalPassageSetMeta();
+  $('p2-counter').textContent = finalPassageSet
+    ? `Question ${finalPassageSet.index} of ${finalPassageSet.size} on this passage`
+    : `Question ${state.p2Index + 1} of ${state.part2Questions.length}`;
   renderPrompt('p2', question);
   updateQuestionHeader('p2', question);
 

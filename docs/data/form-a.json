@@ -1,21 +1,7 @@
 {
   "formId": "A",
-  "version": "2026-fixed-forms-v1",
+  "version": "2026-fixed-forms-v2",
   "passages": [
-    {
-      "passageId": "aeneid-a",
-      "theme": "aeneid",
-      "difficultyRole": "intermediate",
-      "text": "Nocte Trōia ardebat et clamor per urbem volābat. Aenēās, monitu deōrum excitātus, primum ad arma cucurrit; sed mox intellexit urbem servārī nōn posse. Itaque ad domum rediit, patrem senem umerīs sustulit, manū parvum Ascānium tenuit, uxōrem monuit ut paulō post sequerētur. Dum per obscūrās viās tacitī procedunt, flammae appropinquant et hostēs iam propinquī audiuntur. Anchīsēs, quamquam annīs gravis erat, fīlium hortābātur nē spem dēpōneret. Cum ad portam vēnissent, Aenēās subitō cōnstitit, quod Creūsa nōn iam vidēbātur. Frūstrā eam quaesīvit; tandem, urbe relictā, cum paucīs comitibus ad montēs proximōs contendit, ubi reliquōs Trōiānōs convenit. Ibi omnēs audīvērunt sibi novam patriam per maria quaerendam esse. Virīs femīnīsque collectīs, dux exposuit quid accidisset et suāsit ut secum exsilium ferrent.",
-      "wordCountTarget": "120-160"
-    },
-    {
-      "passageId": "pliny-a",
-      "theme": "pliny",
-      "difficultyRole": "intermediate-high",
-      "text": "Plinius ad Tacitum scrīpsit quō modō avunculus suus tempore Vesuvii sē gessisset. Cum nūntiātum esset nubem inusitātā magnitūdine super montem surgere, avunculus, vir simul studii simul officii cupidus, prīmum rem propius cōnspicere voluit. Mox tamen epistula recitāta est ab amīcā quae perīculum nūntiābat et auxilium petēbat. Tum ille nāvēs parārī iussit et ad litus contendit, ut nōn sōlum quod accideret videret sed etiam perīclitantēs servāret. Ventō adversō retardātus tamen cursum nōn omīsit. Ubi ad oppidum pervēnit, cineres calidī iam cadēbant et mare tam turbātum erat ut nōn licēret omnibus exīre. Plinius ipse sociōs hortātus est ut fortēs essent, dum ille omnia diligenter observāre et aliīs exemplum tranquillitātis dare cōnābātur. Nox intereā appropinquābat, sed ille vultū compositō timōrem suum celāre studēbat.",
-      "wordCountTarget": "120-160"
-    },
     {
       "passageId": "agrippina-a",
       "theme": "agrippina",
@@ -26,8 +12,168 @@
   ],
   "questions": [
     {
+      "part": 1,
+      "chapter": 1,
+      "type": "vocab-la-en",
+      "skill": "vocabulary",
+      "difficultyBand": "easy",
+      "countsToward": "morphology_vocab",
+      "prompt": "What is the meaning of <em>amō, amāre</em>?",
+      "options": [
+        "to fear",
+        "to love",
+        "to see",
+        "to praise"
+      ],
+      "correct": 1,
+      "topicTags": [
+        "vocabulary",
+        "core"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
       "id": "fa-p1-01",
-      "formId": "A",
+      "formId": "A"
+    },
+    {
+      "part": 1,
+      "chapter": 2,
+      "type": "vocab-la-en",
+      "skill": "vocabulary",
+      "difficultyBand": "easy",
+      "countsToward": "morphology_vocab",
+      "prompt": "What is the meaning of <em>puella, puellae</em> (f.)?",
+      "options": [
+        "woman",
+        "daughter",
+        "girl",
+        "queen"
+      ],
+      "correct": 2,
+      "topicTags": [
+        "vocabulary",
+        "core"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p1-02",
+      "formId": "A"
+    },
+    {
+      "part": 1,
+      "chapter": 2,
+      "type": "vocab-en-la",
+      "skill": "vocabulary",
+      "difficultyBand": "easy",
+      "countsToward": "morphology_vocab",
+      "prompt": "Which Latin word means “friend”?",
+      "options": [
+        "<em>inimīcus</em>",
+        "<em>amīcus</em>",
+        "<em>dominus</em>",
+        "<em>vir</em>"
+      ],
+      "correct": 1,
+      "topicTags": [
+        "vocabulary",
+        "core"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p1-03",
+      "formId": "A"
+    },
+    {
+      "part": 1,
+      "chapter": 2,
+      "type": "vocab-la-en",
+      "skill": "vocabulary",
+      "difficultyBand": "easy",
+      "countsToward": "morphology_vocab",
+      "prompt": "What is the meaning of <em>bellum, bellī</em> (n.)?",
+      "options": [
+        "kingdom",
+        "beauty",
+        "gift",
+        "war"
+      ],
+      "correct": 3,
+      "topicTags": [
+        "vocabulary",
+        "core"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p1-04",
+      "formId": "A"
+    },
+    {
+      "part": 1,
+      "chapter": 4,
+      "type": "vocab-la-en",
+      "skill": "vocabulary",
+      "difficultyBand": "easy",
+      "countsToward": "morphology_vocab",
+      "prompt": "What is the meaning of <em>via, viae</em> (f.)?",
+      "options": [
+        "wall",
+        "field",
+        "road",
+        "cottage"
+      ],
+      "correct": 2,
+      "topicTags": [
+        "vocabulary",
+        "core"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p1-05",
+      "formId": "A"
+    },
+    {
+      "part": 1,
+      "chapter": 9,
+      "type": "vocab-en-la",
+      "skill": "vocabulary",
+      "difficultyBand": "easy",
+      "countsToward": "morphology_vocab",
+      "prompt": "Which Latin verb means “to send”?",
+      "options": [
+        "<em>dūcō</em>",
+        "<em>mittō</em>",
+        "<em>dīcō</em>",
+        "<em>discō</em>"
+      ],
+      "correct": 1,
+      "topicTags": [
+        "vocabulary",
+        "core"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p1-06",
+      "formId": "A"
+    },
+    {
       "part": 1,
       "chapter": 8,
       "type": "morphology-in-context",
@@ -41,15 +187,20 @@
         "3rd person plural, imperfect, indicative, active",
         "3rd person singular, perfect, indicative, active"
       ],
-      "correctIndices": [1],
       "correct": 1,
+      "topicTags": [
+        "verb-form",
+        "present-indicative"
+      ],
+      "correctIndices": [
+        1
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["verb-form", "present-indicative"]
+      "id": "fa-p1-07",
+      "formId": "A"
     },
     {
-      "id": "fa-p1-02",
-      "formId": "A",
       "part": 1,
       "chapter": 6,
       "type": "morphology-in-context",
@@ -63,191 +214,20 @@
         "3rd person singular, imperfect, indicative, active",
         "3rd person plural, pluperfect, indicative, active"
       ],
-      "correctIndices": [0],
       "correct": 0,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["verb-form", "imperfect"]
-    },
-    {
-      "id": "fa-p1-03",
-      "formId": "A",
-      "part": 1,
-      "chapter": 19,
-      "type": "morphology-in-context",
-      "skill": "infinitive-form",
-      "difficultyBand": "medium",
-      "countsToward": "morphology_vocab",
-      "prompt": "In <em>Dux dīxit sē crās [underline: ventūrum esse]</em>, what is the form of [underline: ventūrum esse]?",
-      "options": [
-        "present active infinitive",
-        "perfect passive infinitive",
-        "future active infinitive",
-        "future passive infinitive"
+      "topicTags": [
+        "verb-form",
+        "imperfect"
       ],
-      "correctIndices": [2],
-      "correct": 2,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["infinitive", "indirect-statement"]
-    },
-    {
-      "id": "fa-p1-04",
-      "formId": "A",
-      "part": 1,
-      "chapter": 17,
-      "type": "morphology-in-context",
-      "skill": "participle-form",
-      "difficultyBand": "medium",
-      "countsToward": "morphology_vocab",
-      "prompt": "In <em>Urbe [underline: captā], cīvēs fugērunt</em>, what is the form of [underline: captā]?",
-      "options": [
-        "future active participle, nominative singular feminine",
-        "present active participle, ablative singular feminine",
-        "perfect passive participle, ablative singular feminine",
-        "perfect passive participle, nominative singular feminine"
+      "correctIndices": [
+        0
       ],
-      "correctIndices": [2],
-      "correct": 2,
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["participle", "ablative-absolute"]
-    },
-    {
-      "id": "fa-p1-05",
-      "formId": "A",
-      "part": 1,
-      "chapter": 27,
-      "type": "morphology-in-context",
-      "skill": "verb-form",
-      "difficultyBand": "hard",
-      "countsToward": "morphology_vocab",
-      "prompt": "In <em>Sī hostēs vēnissent, Rōmānī [underline: restitissent]</em>, what is the form of [underline: restitissent]?",
-      "options": [
-        "3rd person plural, perfect, subjunctive, active",
-        "3rd person plural, pluperfect, subjunctive, active",
-        "3rd person plural, future perfect, indicative, active",
-        "3rd person plural, pluperfect, indicative, active"
-      ],
-      "correctIndices": [1],
-      "correct": 1,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["conditional", "pluperfect-subjunctive"]
-    },
-    {
-      "id": "fa-p1-06",
-      "formId": "A",
-      "part": 1,
-      "chapter": 19,
-      "type": "morphology-in-context",
-      "skill": "infinitive-form",
-      "difficultyBand": "hard",
-      "countsToward": "morphology_vocab",
-      "prompt": "In <em>Nōn crēdidit epistulam [underline: missam esse]</em>, what is the form of [underline: missam esse]?",
-      "options": [
-        "present passive infinitive",
-        "perfect active infinitive",
-        "perfect passive infinitive",
-        "future passive infinitive"
-      ],
-      "correctIndices": [2],
-      "correct": 2,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["infinitive", "perfect-passive"]
-    },
-    {
-      "id": "fa-p1-07",
-      "formId": "A",
-      "part": 1,
-      "chapter": 4,
-      "type": "vocab-in-context",
-      "skill": "vocabulary",
-      "difficultyBand": "easy",
-      "countsToward": "morphology_vocab",
-      "prompt": "In <em>Post tempestātem nāvēs ad [underline: lītora] dēductae sunt</em>, what does [underline: lītora] mean?",
-      "options": [
-        "battles",
-        "shores",
-        "letters",
-        "altars"
-      ],
-      "correctIndices": [1],
-      "correct": 1,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["vocabulary", "travel"]
-    },
-    {
       "id": "fa-p1-08",
-      "formId": "A",
-      "part": 1,
-      "chapter": 19,
-      "type": "vocab-in-context",
-      "skill": "vocabulary",
-      "difficultyBand": "medium",
-      "countsToward": "morphology_vocab",
-      "prompt": "In <em>Plinius amīcō [underline: respondit] sē statim ventūrum esse</em>, what does [underline: respondit] mean?",
-      "options": [
-        "he answered",
-        "he hid",
-        "he ordered",
-        "he feared"
-      ],
-      "correctIndices": [0],
-      "correct": 0,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["vocabulary", "reported-speech"]
+      "formId": "A"
     },
     {
-      "id": "fa-p1-09",
-      "formId": "A",
-      "part": 1,
-      "chapter": 16,
-      "type": "vocab-in-context",
-      "skill": "vocabulary",
-      "difficultyBand": "medium",
-      "countsToward": "morphology_vocab",
-      "prompt": "In <em>Agrippina magnā [underline: potentiā] in aulā valuit</em>, what does [underline: potentiā] mean?",
-      "options": [
-        "influence or power",
-        "patience",
-        "distance",
-        "army camp"
-      ],
-      "correctIndices": [0],
-      "correct": 0,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["vocabulary", "politics"]
-    },
-    {
-      "id": "fa-p1-10",
-      "formId": "A",
-      "part": 1,
-      "chapter": 23,
-      "type": "vocab-in-context",
-      "skill": "vocabulary",
-      "difficultyBand": "medium",
-      "countsToward": "morphology_vocab",
-      "prompt": "In <em>Mīlitēs signum [underline: cōnspēcērunt] et tacitī steterunt</em>, what does [underline: cōnspēcērunt] mean?",
-      "options": [
-        "they seized",
-        "they caught sight of",
-        "they concealed",
-        "they followed"
-      ],
-      "correctIndices": [1],
-      "correct": 1,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["vocabulary", "perfect-tense"]
-    },
-    {
-      "id": "fa-p1-11",
-      "formId": "A",
       "part": 1,
       "chapter": 3,
       "type": "syntax-function",
@@ -261,15 +241,20 @@
         "ablative of means",
         "subject"
       ],
-      "correctIndices": [1],
       "correct": 1,
+      "topicTags": [
+        "dative",
+        "indirect-object"
+      ],
+      "correctIndices": [
+        1
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["dative", "indirect-object"]
+      "id": "fa-p1-09",
+      "formId": "A"
     },
     {
-      "id": "fa-p1-12",
-      "formId": "A",
       "part": 1,
       "chapter": 11,
       "type": "syntax-function",
@@ -283,15 +268,74 @@
         "ablative absolute",
         "direct object"
       ],
-      "correctIndices": [0],
       "correct": 0,
+      "topicTags": [
+        "ablative",
+        "time-when"
+      ],
+      "correctIndices": [
+        0
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["ablative", "time-when"]
+      "id": "fa-p1-10",
+      "formId": "A"
     },
     {
-      "id": "fa-p1-13",
-      "formId": "A",
+      "part": 1,
+      "chapter": 2,
+      "type": "morphology-in-context",
+      "skill": "noun-form",
+      "difficultyBand": "medium",
+      "countsToward": "morphology_vocab",
+      "prompt": "In <em>Multī [underline: mīlitēs] ad urbem cucurrērunt</em>, what is the case and number of [underline: mīlitēs]?",
+      "options": [
+        "nominative plural",
+        "accusative plural",
+        "genitive singular",
+        "ablative singular"
+      ],
+      "correct": 0,
+      "topicTags": [
+        "noun-form",
+        "third-declension"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p1-11",
+      "formId": "A"
+    },
+    {
+      "part": 1,
+      "chapter": 19,
+      "type": "morphology-in-context",
+      "skill": "infinitive-form",
+      "difficultyBand": "medium",
+      "countsToward": "morphology_vocab",
+      "prompt": "In <em>Dux dīxit sē crās [underline: ventūrum esse]</em>, what is the form of [underline: ventūrum esse]?",
+      "options": [
+        "present active infinitive",
+        "perfect passive infinitive",
+        "future active infinitive",
+        "future passive infinitive"
+      ],
+      "correct": 2,
+      "topicTags": [
+        "infinitive",
+        "indirect-statement"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p1-12",
+      "formId": "A"
+    },
+    {
       "part": 1,
       "chapter": 3,
       "type": "syntax-function",
@@ -305,15 +349,20 @@
         "genitive of the whole",
         "dative of possession"
       ],
-      "correctIndices": [0],
       "correct": 0,
+      "topicTags": [
+        "genitive",
+        "possession"
+      ],
+      "correctIndices": [
+        0
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["genitive", "possession"]
+      "id": "fa-p1-13",
+      "formId": "A"
     },
     {
-      "id": "fa-p1-14",
-      "formId": "A",
       "part": 1,
       "chapter": 4,
       "type": "syntax-function",
@@ -327,15 +376,74 @@
         "place to which",
         "manner"
       ],
-      "correctIndices": [2],
       "correct": 2,
+      "topicTags": [
+        "preposition",
+        "motion"
+      ],
+      "correctIndices": [
+        2
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["preposition", "motion"]
+      "id": "fa-p1-14",
+      "formId": "A"
     },
     {
+      "part": 1,
+      "chapter": 17,
+      "type": "morphology-in-context",
+      "skill": "participle-form",
+      "difficultyBand": "medium",
+      "countsToward": "morphology_vocab",
+      "prompt": "In <em>Urbe [underline: captā], cīvēs fugērunt</em>, what is the form of [underline: captā]?",
+      "options": [
+        "future active participle, nominative singular feminine",
+        "present active participle, ablative singular feminine",
+        "perfect passive participle, ablative singular feminine",
+        "perfect passive participle, nominative singular feminine"
+      ],
+      "correct": 2,
+      "topicTags": [
+        "participle",
+        "ablative-absolute"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
       "id": "fa-p1-15",
-      "formId": "A",
+      "formId": "A"
+    },
+    {
+      "part": 1,
+      "chapter": 27,
+      "type": "morphology-in-context",
+      "skill": "verb-form",
+      "difficultyBand": "hard",
+      "countsToward": "morphology_vocab",
+      "prompt": "In <em>Sī hostēs vēnissent, Rōmānī [underline: restitissent]</em>, what is the form of [underline: restitissent]?",
+      "options": [
+        "3rd person plural, perfect, subjunctive, active",
+        "3rd person plural, pluperfect, subjunctive, active",
+        "3rd person plural, future perfect, indicative, active",
+        "3rd person plural, pluperfect, indicative, active"
+      ],
+      "correct": 1,
+      "topicTags": [
+        "conditional",
+        "pluperfect-subjunctive"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p1-16",
+      "formId": "A"
+    },
+    {
       "part": 1,
       "chapter": 19,
       "type": "sentence-meaning",
@@ -349,15 +457,20 @@
         "Aeneas feared that his companions had approached.",
         "Aeneas was approached by his companions."
       ],
-      "correctIndices": [1],
       "correct": 1,
+      "topicTags": [
+        "translation",
+        "indirect-statement"
+      ],
+      "correctIndices": [
+        1
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["translation", "indirect-statement"]
+      "id": "fa-p1-17",
+      "formId": "A"
     },
     {
-      "id": "fa-p1-16",
-      "formId": "A",
       "part": 1,
       "chapter": 25,
       "type": "sentence-meaning",
@@ -371,15 +484,20 @@
         "Envoys were sent because peace was near.",
         "Envoys had been sent after they sought peace."
       ],
-      "correctIndices": [0],
       "correct": 0,
+      "topicTags": [
+        "translation",
+        "purpose-clause"
+      ],
+      "correctIndices": [
+        0
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["translation", "purpose-clause"]
+      "id": "fa-p1-18",
+      "formId": "A"
     },
     {
-      "id": "fa-p1-17",
-      "formId": "A",
       "part": 1,
       "chapter": 17,
       "type": "sentence-meaning",
@@ -393,59 +511,20 @@
         "The general was not defeated although the soldiers hoped.",
         "Because the general had been defeated, the soldiers lost hope."
       ],
-      "correctIndices": [0],
       "correct": 0,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["translation", "ablative-absolute"]
-    },
-    {
-      "id": "fa-p1-18",
-      "formId": "A",
-      "part": 1,
-      "chapter": 29,
-      "type": "sentence-meaning",
-      "skill": "passive-periphrastic",
-      "difficultyBand": "hard",
-      "countsToward": "sentence_meaning",
-      "prompt": "What is the best translation of <em>Nōbīs haec epistula statim legenda est</em>?",
-      "options": [
-        "We were reading this letter at once.",
-        "This letter ought to be read by us at once.",
-        "This letter was read to us at once.",
-        "We will send this letter at once."
+      "topicTags": [
+        "translation",
+        "ablative-absolute"
       ],
-      "correctIndices": [1],
-      "correct": 1,
+      "correctIndices": [
+        0
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["translation", "passive-periphrastic"]
-    },
-    {
       "id": "fa-p1-19",
-      "formId": "A",
-      "part": 1,
-      "chapter": 30,
-      "type": "sentence-meaning",
-      "skill": "relative-characteristic",
-      "difficultyBand": "hard",
-      "countsToward": "sentence_meaning",
-      "prompt": "What is the best translation of <em>Quī hoc faciat invenīre difficile est</em>?",
-      "options": [
-        "It is difficult to find someone who would do this.",
-        "Whoever does this finds the task difficult.",
-        "This is difficult because someone is doing it.",
-        "To do this is difficult for the finder."
-      ],
-      "correctIndices": [0],
-      "correct": 0,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["translation", "relative-characteristic"]
+      "formId": "A"
     },
     {
-      "id": "fa-p1-20",
-      "formId": "A",
       "part": 1,
       "chapter": 27,
       "type": "sentence-meaning",
@@ -459,297 +538,452 @@
         "Since you do this, you help many people.",
         "Although you did this, you helped many people."
       ],
-      "correctIndices": [1],
       "correct": 1,
+      "topicTags": [
+        "translation",
+        "conditionals"
+      ],
+      "correctIndices": [
+        1
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["translation", "conditionals"]
+      "id": "fa-p1-20",
+      "formId": "A"
     },
     {
-      "id": "fa-p1-21",
-      "formId": "A",
-      "part": 1,
-      "chapter": 19,
-      "type": "sentence-meaning",
-      "skill": "multi-select-meaning",
-      "difficultyBand": "medium",
-      "countsToward": "sentence_meaning",
-      "prompt": "Read the sentence <em>Cīvēs dīxērunt sē urbem relinquere nōlle</em>. Select the two statements supported by the Latin.",
-      "options": [
-        "The citizens were speaking.",
-        "The citizens did not want to leave the city.",
-        "The city had already been abandoned.",
-        "Someone else ordered the citizens to leave."
-      ],
-      "correctIndices": [0, 1],
-      "minSelections": 2,
-      "maxSelections": 2,
-      "topicTags": ["multi-select", "indirect-statement"]
-    },
-    {
-      "id": "fa-p1-22",
-      "formId": "A",
       "part": 1,
       "chapter": 29,
       "type": "sentence-meaning",
-      "skill": "multi-select-meaning",
+      "skill": "passive-periphrastic",
       "difficultyBand": "hard",
       "countsToward": "sentence_meaning",
-      "prompt": "Read the sentence <em>Senātus cēnsuit legātōs statim mittendōs esse</em>. Select the two statements supported by the Latin.",
+      "prompt": "What is the best translation of <em>Nōbīs haec epistula statim legenda est</em>?",
       "options": [
-        "The senate made a formal judgment or resolution.",
-        "Envoys ought to be sent at once.",
-        "The envoys had already returned.",
-        "The sentence contains a future more vivid condition."
+        "We were reading this letter at once.",
+        "This letter ought to be read by us at once.",
+        "This letter was read to us at once.",
+        "We will send this letter at once."
       ],
-      "correctIndices": [0, 1],
-      "minSelections": 2,
-      "maxSelections": 2,
-      "topicTags": ["multi-select", "passive-periphrastic"]
-    },
-    {
-      "id": "fa-p2-01",
-      "formId": "A",
-      "part": 2,
-      "chapter": 15,
-      "type": "reading",
-      "skill": "narrative-comprehension",
-      "difficultyBand": "medium",
-      "countsToward": "reading",
-      "passageId": "aeneid-a",
-      "prompt": "Why did Aenēās return to his house?",
-      "options": [
-        "He realized that the city could not be saved.",
-        "He wanted to collect more weapons.",
-        "He heard that Ascanius had been captured.",
-        "He wished to consult the senate."
-      ],
-      "correctIndices": [0],
-      "correct": 0,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["reading", "main-idea"],
-      "pureLabel": false
-    },
-    {
-      "id": "fa-p2-02",
-      "formId": "A",
-      "part": 2,
-      "chapter": 17,
-      "type": "reading",
-      "skill": "referent-tracking",
-      "difficultyBand": "medium",
-      "countsToward": "reading",
-      "passageId": "aeneid-a",
-      "prompt": "Who was urging Aenēās not to abandon hope?",
-      "options": [
-        "Ascanius",
-        "Creūsa",
-        "Anchīsēs",
-        "A nearby soldier"
-      ],
-      "correctIndices": [2],
-      "correct": 2,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["reading", "referent-tracking"],
-      "pureLabel": false
-    },
-    {
-      "id": "fa-p2-03",
-      "formId": "A",
-      "part": 2,
-      "chapter": 17,
-      "type": "reading",
-      "skill": "detail-comprehension",
-      "difficultyBand": "medium",
-      "countsToward": "reading",
-      "passageId": "aeneid-a",
-      "prompt": "What caused Aenēās to stop suddenly at the gate?",
-      "options": [
-        "He saw Greek soldiers blocking the road.",
-        "He noticed that Creūsa was no longer visible.",
-        "Anchīsēs refused to continue.",
-        "Ascanius dropped the household gods."
-      ],
-      "correctIndices": [1],
       "correct": 1,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["reading", "detail"],
-      "pureLabel": false
-    },
-    {
-      "id": "fa-p2-04",
-      "formId": "A",
-      "part": 2,
-      "chapter": 19,
-      "type": "reading",
-      "skill": "inference",
-      "difficultyBand": "medium",
-      "countsToward": "reading",
-      "passageId": "aeneid-a",
-      "prompt": "After the Trojans were gathered, what did they understand they had to do next?",
-      "options": [
-        "Return to the burning city",
-        "Seek a new homeland across the sea",
-        "Wait for Creūsa outside the gate",
-        "Build a camp in the nearby mountains"
+      "topicTags": [
+        "translation",
+        "passive-periphrastic"
       ],
-      "correctIndices": [1],
-      "correct": 1,
+      "correctIndices": [
+        1
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["reading", "inference"],
-      "pureLabel": false
+      "id": "fa-p1-21",
+      "formId": "A"
     },
     {
-      "id": "fa-p2-05",
-      "formId": "A",
-      "part": 2,
-      "chapter": 15,
+      "part": 1,
+      "chapter": 30,
       "type": "sentence-meaning",
-      "skill": "sentence-meaning",
+      "skill": "relative-characteristic",
+      "difficultyBand": "hard",
+      "countsToward": "sentence_meaning",
+      "prompt": "What is the best translation of <em>Quī hoc faciat invenīre difficile est</em>?",
+      "options": [
+        "It is difficult to find someone who would do this.",
+        "Whoever does this finds the task difficult.",
+        "This is difficult because someone is doing it.",
+        "To do this is difficult for the finder."
+      ],
+      "correct": 0,
+      "topicTags": [
+        "translation",
+        "relative-characteristic"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p1-22",
+      "formId": "A"
+    },
+    {
+      "part": 1,
+      "chapter": 28,
+      "type": "sentence-meaning",
+      "skill": "indirect-question",
       "difficultyBand": "medium",
       "countsToward": "sentence_meaning",
-      "passageId": "aeneid-a",
-      "prompt": "What is the best translation of <em>patrem senem umerīs sustulit, manū parvum Ascānium tenuit</em>?",
+      "prompt": "What is the best translation of <em>Rogāvit quid hostēs facerent</em>?",
       "options": [
-        "He placed his father on a horse and led Ascanius before him.",
-        "He carried his old father on his shoulders and held little Ascanius by the hand.",
-        "He urged his father to hurry and sent Ascanius ahead alone.",
-        "He rescued both father and son from the sea."
+        "He asked what the enemies were doing.",
+        "He asked the enemies to act.",
+        "He said that the enemies had acted.",
+        "He wondered whether the enemies had been seen."
       ],
-      "correctIndices": [1],
-      "correct": 1,
+      "correct": 0,
+      "topicTags": [
+        "translation",
+        "indirect-question"
+      ],
+      "correctIndices": [
+        0
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["translation", "passage"],
-      "pureLabel": false
+      "id": "fa-p1-23",
+      "formId": "A"
     },
     {
-      "id": "fa-p2-06",
-      "formId": "A",
+      "part": 1,
+      "chapter": 26,
+      "type": "sentence-meaning",
+      "skill": "result-clause",
+      "difficultyBand": "medium",
+      "countsToward": "sentence_meaning",
+      "prompt": "What is the best translation of <em>Tam fortis erat ut hostēs eum timerent</em>?",
+      "options": [
+        "He was so brave that the enemies feared him.",
+        "Although he was brave, the enemies feared him.",
+        "He was brave in order to frighten the enemies.",
+        "The enemies were fearing that he had been brave."
+      ],
+      "correct": 0,
+      "topicTags": [
+        "translation",
+        "result-clause"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p1-24",
+      "formId": "A"
+    },
+    {
+      "part": 2,
+      "chapter": 3,
+      "type": "syntax-id",
+      "skill": "objective-genitive",
+      "difficultyBand": "medium",
+      "countsToward": "advanced_syntax",
+      "prompt": "Identify the use of the genitive in <em>Amor patriae mīlitēs incendit</em>.",
+      "options": [
+        "genitive of the whole",
+        "objective genitive",
+        "subjective genitive",
+        "explanatory genitive"
+      ],
+      "correct": 1,
+      "topicTags": [
+        "genitive",
+        "objective-genitive"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p2-01",
+      "formId": "A"
+    },
+    {
+      "part": 2,
+      "chapter": 17,
+      "type": "syntax-id",
+      "skill": "ablative-absolute",
+      "difficultyBand": "medium",
+      "countsToward": "advanced_syntax",
+      "prompt": "Identify the construction in <em>Mīlitēs hostibus victīs domum rediērunt</em>.",
+      "options": [
+        "indirect statement",
+        "ablative absolute",
+        "cum-clause",
+        "result clause"
+      ],
+      "correct": 1,
+      "topicTags": [
+        "ablative-absolute",
+        "construction"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p2-02",
+      "formId": "A"
+    },
+    {
       "part": 2,
       "chapter": 19,
-      "type": "reading",
-      "skill": "author-purpose",
+      "type": "syntax-id",
+      "skill": "indirect-statement",
       "difficultyBand": "medium",
-      "countsToward": "reading",
-      "passageId": "pliny-a",
-      "prompt": "Why did the woman send a letter to Pliny's uncle?",
+      "countsToward": "advanced_syntax",
+      "prompt": "Identify the Latin construction in <em>Caesar dīcit mīlitēs fortēs esse</em>.",
       "options": [
-        "She wanted him to describe the cloud more carefully.",
-        "She wanted him to bring books from Misenum.",
-        "She reported danger and asked for help.",
-        "She invited him to inspect her villa."
+        "purpose clause",
+        "indirect command",
+        "indirect statement",
+        "ablative absolute"
       ],
-      "correctIndices": [2],
       "correct": 2,
+      "topicTags": [
+        "indirect-statement",
+        "construction"
+      ],
+      "correctIndices": [
+        2
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["reading", "author-purpose"],
-      "pureLabel": false
+      "id": "fa-p2-03",
+      "formId": "A"
     },
     {
+      "part": 2,
+      "chapter": 28,
+      "type": "syntax-id",
+      "skill": "indirect-question",
+      "difficultyBand": "hard",
+      "countsToward": "advanced_syntax",
+      "prompt": "Identify the construction in <em>Dūx quaesīvit cūr mīlitēs tam serō vēnissent</em>.",
+      "options": [
+        "indirect question",
+        "result clause",
+        "indirect command",
+        "relative clause of characteristic"
+      ],
+      "correct": 0,
+      "topicTags": [
+        "indirect-question",
+        "construction"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p2-04",
+      "formId": "A"
+    },
+    {
+      "part": 2,
+      "chapter": 27,
+      "type": "advanced-syntax",
+      "skill": "conditionals",
+      "difficultyBand": "hard",
+      "countsToward": "advanced_syntax",
+      "prompt": "Identify the type of condition in <em>Sī hoc facerēs, laudārēris</em>.",
+      "options": [
+        "simple future condition",
+        "contrary-to-fact present condition",
+        "contrary-to-fact past condition",
+        "general condition"
+      ],
+      "correct": 1,
+      "topicTags": [
+        "conditional",
+        "top-band"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p2-05",
+      "formId": "A"
+    },
+    {
+      "part": 2,
+      "chapter": 29,
+      "type": "advanced-syntax",
+      "skill": "passive-periphrastic",
+      "difficultyBand": "hard",
+      "countsToward": "advanced_syntax",
+      "prompt": "What is the best translation of <em>Haec nōbīs statim faciunda sunt</em>?",
+      "options": [
+        "We had been doing these things at once.",
+        "These things must be done by us at once.",
+        "These things were being made for us at once.",
+        "We will make these things at once."
+      ],
+      "correct": 1,
+      "topicTags": [
+        "passive-periphrastic",
+        "top-band"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p2-06",
+      "formId": "A"
+    },
+    {
+      "part": 2,
+      "chapter": 30,
+      "type": "syntax-id",
+      "skill": "relative-characteristic",
+      "difficultyBand": "hard",
+      "countsToward": "advanced_syntax",
+      "prompt": "Identify the construction in <em>Nemo est quī hoc negāre possit</em>.",
+      "options": [
+        "purpose clause",
+        "relative clause of characteristic",
+        "indirect question",
+        "result clause"
+      ],
+      "correct": 1,
+      "topicTags": [
+        "relative-characteristic",
+        "construction"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
       "id": "fa-p2-07",
-      "formId": "A",
-      "part": 2,
-      "chapter": 25,
-      "type": "reading",
-      "skill": "cause-and-effect",
-      "difficultyBand": "medium",
-      "countsToward": "reading",
-      "passageId": "pliny-a",
-      "prompt": "Why did Pliny's uncle order ships to be prepared?",
-      "options": [
-        "He wanted only to escape as quickly as possible.",
-        "He wanted both to see what was happening and to rescue people in danger.",
-        "He needed to transport soldiers to Pompeii.",
-        "He had been commanded by the emperor to sail."
-      ],
-      "correctIndices": [1],
-      "correct": 1,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["reading", "cause-effect"],
-      "pureLabel": false
+      "formId": "A"
     },
     {
-      "id": "fa-p2-08",
-      "formId": "A",
-      "part": 2,
-      "chapter": 23,
-      "type": "reading",
-      "skill": "detail-comprehension",
-      "difficultyBand": "medium",
-      "countsToward": "reading",
-      "passageId": "pliny-a",
-      "prompt": "What slowed the voyage?",
-      "options": [
-        "A lack of sailors",
-        "An opposing wind",
-        "Darkness",
-        "A broken rudder"
-      ],
-      "correctIndices": [1],
-      "correct": 1,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["reading", "detail"],
-      "pureLabel": false
-    },
-    {
-      "id": "fa-p2-09",
-      "formId": "A",
       "part": 2,
       "chapter": 31,
       "type": "advanced-syntax",
       "skill": "impersonal-construction",
       "difficultyBand": "hard",
       "countsToward": "advanced_syntax",
-      "passageId": "pliny-a",
-      "prompt": "In the passage, what does <em>nōn licēret omnibus exīre</em> mean?",
+      "prompt": "In <em>Oportet tē nunc discēdere</em>, what does <em>oportet</em> express?",
       "options": [
-        "Everyone refused to leave.",
-        "It was not possible for everyone to get out.",
-        "Everyone had permission to go out.",
-        "The crowd ordered everyone to leave."
+        "obligation or necessity",
+        "doubt",
+        "reported speech",
+        "completed action"
       ],
-      "correctIndices": [1],
-      "correct": 1,
+      "correct": 0,
+      "topicTags": [
+        "impersonal-construction",
+        "top-band"
+      ],
+      "correctIndices": [
+        0
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["impersonal-construction", "passage", "top-band"],
-      "pureLabel": false
+      "id": "fa-p2-08",
+      "formId": "A"
     },
     {
-      "id": "fa-p2-10",
-      "formId": "A",
       "part": 2,
       "chapter": 19,
-      "type": "reading",
-      "skill": "tone",
-      "difficultyBand": "medium",
-      "countsToward": "reading",
-      "passageId": "pliny-a",
-      "prompt": "What example was Pliny's uncle trying to give to the others?",
+      "type": "sentence-meaning",
+      "skill": "indirect-statement",
+      "difficultyBand": "hard",
+      "countsToward": "sentence_meaning",
+      "prompt": "What is the best translation of <em>Senātus cēnsuit legātōs statim mittī</em>?",
       "options": [
-        "An example of learned silence",
-        "An example of military discipline",
-        "An example of calmness",
-        "An example of political obedience"
+        "The senate decided that envoys should be sent at once.",
+        "The envoys decided to summon the senate at once.",
+        "The senate was being sent by the envoys at once.",
+        "The senate had sent envoys because it was necessary."
       ],
-      "correctIndices": [2],
-      "correct": 2,
+      "correct": 0,
+      "topicTags": [
+        "translation",
+        "indirect-statement"
+      ],
+      "correctIndices": [
+        0
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["reading", "tone"],
-      "pureLabel": false
+      "id": "fa-p2-09",
+      "formId": "A"
     },
     {
+      "part": 2,
+      "chapter": 30,
+      "type": "sentence-meaning",
+      "skill": "cum-clause",
+      "difficultyBand": "medium",
+      "countsToward": "sentence_meaning",
+      "prompt": "What is the best translation of <em>Cum hostēs appropinquārent, cīvēs portās clausērunt</em>?",
+      "options": [
+        "Since the citizens approached, the enemies closed the gates.",
+        "When the enemies were approaching, the citizens closed the gates.",
+        "Although the citizens had approached, the enemies closed the gates.",
+        "The citizens closed the gates so that the enemies might approach."
+      ],
+      "correct": 1,
+      "topicTags": [
+        "translation",
+        "cum-clause"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p2-10",
+      "formId": "A"
+    },
+    {
+      "part": 2,
+      "chapter": 26,
+      "type": "sentence-meaning",
+      "skill": "result-clause",
+      "difficultyBand": "medium",
+      "countsToward": "sentence_meaning",
+      "prompt": "What is the best translation of <em>Tanta fuit tempestās ut nautae terram vidēre nōn possent</em>?",
+      "options": [
+        "The storm was so great that the sailors could not see land.",
+        "The sailors could not see land because the storm had ended.",
+        "The storm was great in order that the sailors might see land.",
+        "Although the storm was great, the sailors saw land."
+      ],
+      "correct": 0,
+      "topicTags": [
+        "translation",
+        "result-clause"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
       "id": "fa-p2-11",
-      "formId": "A",
+      "formId": "A"
+    },
+    {
+      "part": 2,
+      "chapter": 28,
+      "type": "sentence-meaning",
+      "skill": "indirect-question",
+      "difficultyBand": "hard",
+      "countsToward": "sentence_meaning",
+      "prompt": "What is the best translation of <em>Dūbitābat num sociī satis auxiliī habērent</em>?",
+      "options": [
+        "He doubted whether his allies had enough help.",
+        "He asked his allies to bring enough help.",
+        "His allies doubted that help had arrived.",
+        "He knew that his allies had been helped enough."
+      ],
+      "correct": 0,
+      "topicTags": [
+        "translation",
+        "indirect-question"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "minSelections": 1,
+      "maxSelections": 1,
+      "id": "fa-p2-12",
+      "formId": "A"
+    },
+    {
       "part": 2,
       "chapter": 28,
       "type": "reading",
@@ -764,16 +998,20 @@
         "They had discovered that she hated all military service.",
         "They believed she was secretly serving the Parthians."
       ],
-      "correctIndices": [0],
       "correct": 0,
+      "topicTags": [
+        "reading",
+        "cause-effect"
+      ],
+      "correctIndices": [
+        0
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["reading", "cause-effect"],
-      "pureLabel": false
+      "id": "fa-p2-13",
+      "formId": "A"
     },
     {
-      "id": "fa-p2-12",
-      "formId": "A",
       "part": 2,
       "chapter": 31,
       "type": "reading",
@@ -788,40 +1026,20 @@
         "Why the senators had remained silent",
         "How the army had entered the city"
       ],
-      "correctIndices": [0],
       "correct": 0,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["reading", "inference"],
-      "pureLabel": false
-    },
-    {
-      "id": "fa-p2-13",
-      "formId": "A",
-      "part": 2,
-      "chapter": 19,
-      "type": "sentence-meaning",
-      "skill": "indirect-statement",
-      "difficultyBand": "hard",
-      "countsToward": "sentence_meaning",
-      "passageId": "agrippina-a",
-      "prompt": "What is the best translation of <em>nūntiātum est Agrippinam occīsam esse</em>?",
-      "options": [
-        "Agrippina announced that she had been killed.",
-        "It was announced that Agrippina had been killed.",
-        "Agrippina had announced a killing.",
-        "It had to be announced by Agrippina."
+      "topicTags": [
+        "reading",
+        "inference"
       ],
-      "correctIndices": [1],
-      "correct": 1,
+      "correctIndices": [
+        0
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["translation", "indirect-statement"],
-      "pureLabel": false
+      "id": "fa-p2-14",
+      "formId": "A"
     },
     {
-      "id": "fa-p2-14",
-      "formId": "A",
       "part": 2,
       "chapter": 28,
       "type": "reading",
@@ -836,40 +1054,20 @@
         "He discovered that she had fled the palace.",
         "He wanted her to marry again."
       ],
-      "correctIndices": [1],
       "correct": 1,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["reading", "cause-effect"],
-      "pureLabel": false
-    },
-    {
-      "id": "fa-p2-15",
-      "formId": "A",
-      "part": 2,
-      "chapter": 19,
-      "type": "advanced-syntax",
-      "skill": "indirect-statement",
-      "difficultyBand": "hard",
-      "countsToward": "advanced_syntax",
-      "passageId": "agrippina-a",
-      "prompt": "What does the sentence <em>Aliī etiam dīcēbant senātōrēs apertē resistere nōn ausūrōs esse</em> imply?",
-      "options": [
-        "Some also said that the senators would not dare to resist openly.",
-        "The senators ordered others not to resist.",
-        "Some dared the senators to resist openly.",
-        "The senators were preparing to resist openly."
+      "topicTags": [
+        "reading",
+        "cause-effect"
       ],
-      "correctIndices": [0],
-      "correct": 0,
+      "correctIndices": [
+        1
+      ],
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["advanced-syntax", "indirect-statement", "top-band"],
-      "pureLabel": false
+      "id": "fa-p2-15",
+      "formId": "A"
     },
     {
-      "id": "fa-p2-16",
-      "formId": "A",
       "part": 2,
       "chapter": 31,
       "type": "reading",
@@ -884,150 +1082,18 @@
         "That the senate would immediately overthrow Nero",
         "That foreign enemies had already invaded Italy"
       ],
-      "correctIndices": [1],
       "correct": 1,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["reading", "inference"],
-      "pureLabel": false
-    },
-    {
-      "id": "fa-p2-17",
-      "formId": "A",
-      "part": 2,
-      "chapter": 19,
-      "type": "advanced-syntax",
-      "skill": "infinitive-tense",
-      "difficultyBand": "hard",
-      "countsToward": "advanced_syntax",
-      "prompt": "In <em>Spērābat hostēs postrīdiē ventūrōs esse</em>, what is the tense relationship of <em>ventūrōs esse</em> to <em>spērābat</em>?",
-      "options": [
-        "The infinitive shows action before the main verb.",
-        "The infinitive shows action at the same time as the main verb.",
-        "The infinitive shows action after the main verb.",
-        "The infinitive has no time value at all."
+      "topicTags": [
+        "reading",
+        "inference"
       ],
-      "correctIndices": [2],
-      "correct": 2,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["indirect-statement", "future-infinitive", "top-band"],
-      "pureLabel": false
-    },
-    {
-      "id": "fa-p2-18",
-      "formId": "A",
-      "part": 2,
-      "chapter": 27,
-      "type": "advanced-syntax",
-      "skill": "conditionals",
-      "difficultyBand": "hard",
-      "countsToward": "advanced_syntax",
-      "prompt": "Identify the type of condition in <em>Sī hoc facerēs, laudārēris</em>.",
-      "options": [
-        "simple future condition",
-        "contrary-to-fact present condition",
-        "contrary-to-fact past condition",
-        "general condition"
+      "correctIndices": [
+        1
       ],
-      "correctIndices": [1],
-      "correct": 1,
       "minSelections": 1,
       "maxSelections": 1,
-      "topicTags": ["conditional", "top-band"],
-      "pureLabel": true
-    },
-    {
-      "id": "fa-p2-19",
-      "formId": "A",
-      "part": 2,
-      "chapter": 29,
-      "type": "advanced-syntax",
-      "skill": "passive-periphrastic",
-      "difficultyBand": "hard",
-      "countsToward": "advanced_syntax",
-      "prompt": "What is the best translation of <em>Haec nōbīs statim faciunda sunt</em>?",
-      "options": [
-        "We had been doing these things at once.",
-        "These things must be done by us at once.",
-        "These things were being made for us at once.",
-        "We will make these things at once."
-      ],
-      "correctIndices": [1],
-      "correct": 1,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["passive-periphrastic", "top-band"],
-      "pureLabel": false
-    },
-    {
-      "id": "fa-p2-20",
-      "formId": "A",
-      "part": 2,
-      "chapter": 30,
-      "type": "advanced-syntax",
-      "skill": "relative-characteristic",
-      "difficultyBand": "hard",
-      "countsToward": "advanced_syntax",
-      "prompt": "Identify the construction in <em>Nemo est quī hoc negāre possit</em>.",
-      "options": [
-        "purpose clause",
-        "relative clause of characteristic",
-        "indirect question",
-        "result clause"
-      ],
-      "correctIndices": [1],
-      "correct": 1,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["relative-characteristic", "top-band"],
-      "pureLabel": true
-    },
-    {
-      "id": "fa-p2-21",
-      "formId": "A",
-      "part": 2,
-      "chapter": 31,
-      "type": "advanced-syntax",
-      "skill": "impersonal-construction",
-      "difficultyBand": "hard",
-      "countsToward": "advanced_syntax",
-      "prompt": "In <em>Oportet tē nunc discēdere</em>, what does <em>oportet</em> express?",
-      "options": [
-        "obligation or necessity",
-        "doubt",
-        "reported speech",
-        "completed action"
-      ],
-      "correctIndices": [0],
-      "correct": 0,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["impersonal-construction", "top-band"],
-      "pureLabel": false
-    },
-    {
-      "id": "fa-p2-22",
-      "formId": "A",
-      "part": 2,
-      "chapter": 29,
-      "type": "advanced-syntax",
-      "skill": "gerundive-purpose",
-      "difficultyBand": "hard",
-      "countsToward": "advanced_syntax",
-      "prompt": "In <em>Mīsit legātōs ad pācem petendam</em>, what is the best translation of <em>ad pācem petendam</em>?",
-      "options": [
-        "because peace had been sought",
-        "although peace was being requested",
-        "to seek peace",
-        "that peace had been sought"
-      ],
-      "correctIndices": [2],
-      "correct": 2,
-      "minSelections": 1,
-      "maxSelections": 1,
-      "topicTags": ["gerundive", "purpose", "top-band"],
-      "pureLabel": false
+      "id": "fa-p2-16",
+      "formId": "A"
     }
   ]
 }
