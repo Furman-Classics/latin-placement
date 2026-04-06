@@ -355,7 +355,7 @@ function buildSubmissionPayload(autoSubmit) {
       part2: scored.part2Score,
       part3: scored.part3Score,
     },
-    totals: { part1: 20, part2: 15, part3: 10 },
+    totals: { part1: 20, part2: 20, part3: 12 },
     totalScore: scored.totalScore,
     placement: scored.placement,
     bumpUpDown: scored.bumpUpDown,

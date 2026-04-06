@@ -35,7 +35,7 @@
       "type": "vocab-la-en",
       "chapter": 3,
       "prompt": "What is the meaning of <em>imperium, imperiī</em> (n.)?",
-      "options": ["kingdom", "command, power", "temple", "story"],
+      "options": ["kingdom", "command", "temple", "story"],
       "correct": 1
     },
     {
@@ -44,7 +44,7 @@
       "type": "vocab-la-en",
       "chapter": 4,
       "prompt": "What is the meaning of <em>via, viae</em> (f.)?",
-      "options": ["sea", "gate", "street, road", "field"],
+      "options": ["sea", "gate", "road", "field"],
       "correct": 2
     },
     {
@@ -80,7 +80,7 @@
       "type": "vocab-la-en",
       "chapter": 9,
       "prompt": "What is the meaning of <em>faciō, facere</em>?",
-      "options": ["to carry", "to call", "to do, make", "to send"],
+      "options": ["to carry", "to call", "to make", "to send"],
       "correct": 2
     },
     {
@@ -116,7 +116,7 @@
       "type": "vocab-la-en",
       "chapter": 14,
       "prompt": "What is the meaning of <em>moneō, monēre</em>?",
-      "options": ["to hinder", "to warn, advise", "to care for", "to remain"],
+      "options": ["to hinder", "to warn", "to care for", "to remain"],
       "correct": 1
     },
     {
@@ -134,7 +134,7 @@
       "type": "vocab-la-en",
       "chapter": 16,
       "prompt": "What is the meaning of <em>fidēs, fideī</em> (f.)?",
-      "options": ["hope", "trust, faith", "republic", "matter"],
+      "options": ["hope", "trust", "republic", "matter"],
       "correct": 1
     },
     {
@@ -186,10 +186,10 @@
       "id": "f-p1-20",
       "part": 1,
       "type": "vocab-la-en",
-      "chapter": 27,
-      "prompt": "What is the meaning of <em>glōria, glōriae</em> (f.)?",
-      "options": ["glory, renown", "power", "virtue", "truth"],
-      "correct": 0
+      "chapter": 25,
+      "prompt": "What is the meaning of <em>ōtium, ōtiī</em> (n.)?",
+      "options": ["toil", "wealth", "duty", "leisure"],
+      "correct": 3
     },
     {
       "id": "f-p2-01",
@@ -393,6 +393,76 @@
       "correct": 2
     },
     {
+      "id": "f-p2-16",
+      "part": 2,
+      "type": "form-verb",
+      "chapter": 18,
+      "prompt": "What is the form of <em>dūceret</em>?",
+      "options": [
+        "3rd person singular present active indicative",
+        "3rd person singular imperfect active subjunctive",
+        "3rd person singular imperfect passive subjunctive",
+        "3rd person singular pluperfect active"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p2-17",
+      "part": 2,
+      "type": "form-verb",
+      "chapter": 20,
+      "prompt": "What is the form of <em>vīcerat</em>?",
+      "options": [
+        "3rd person singular perfect active",
+        "3rd person singular pluperfect active",
+        "3rd person singular future perfect active",
+        "3rd person plural pluperfect active"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p2-18",
+      "part": 2,
+      "type": "form-noun",
+      "chapter": 3,
+      "prompt": "What is the form of <em>populō</em> (from <em>populus, populī</em>)?",
+      "options": [
+        "genitive singular",
+        "nominative plural",
+        "accusative singular",
+        "dative/ablative singular"
+      ],
+      "correct": 3
+    },
+    {
+      "id": "f-p2-19",
+      "part": 2,
+      "type": "syntax-id",
+      "chapter": 17,
+      "prompt": "Identify the construction in: <em>Mīlitēs ad urbem vēnērunt ut eam dēfenderent.</em>",
+      "options": [
+        "indirect statement",
+        "ablative absolute",
+        "result clause",
+        "purpose clause"
+      ],
+      "correct": 3
+    },
+    {
+      "id": "f-p2-20",
+      "part": 2,
+      "type": "syntax-id",
+      "chapter": 23,
+      "prompt": "Identify the type of condition in: <em>Sī mīlitēs fortiter pugnāvissent, hostēs vīcissent.</em>",
+      "options": [
+        "simple condition",
+        "future more vivid",
+        "future less vivid",
+        "past contrary to fact"
+      ],
+      "correct": 3
+    },
+    {
       "id": "f-p3-01",
       "part": 3,
       "type": "translation",
@@ -529,6 +599,34 @@
         "Nero's reputation was damaged and Romans viewed the act as criminal.",
         "Romans were indifferent to Agrippina's death since she had too much power.",
         "The senators who had feared Agrippina celebrated her death."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "f-p3-11",
+      "part": 3,
+      "type": "translation",
+      "passageId": "passage-p3-main",
+      "prompt": "What is the best translation of <em>Nerō autem, postquam imperātor factus est, mātrem suam patī nōluit</em>?",
+      "options": [
+        "But Nero, after he became emperor, was unwilling to tolerate his mother.",
+        "But Nero, before he became emperor, had refused to listen to his mother.",
+        "Nero became emperor because his mother would no longer tolerate him.",
+        "After his mother refused him, Nero was made emperor against his will."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "f-p3-12",
+      "part": 3,
+      "type": "reading",
+      "passageId": "passage-p3-main",
+      "prompt": "According to the passage, what does the phrase <em>nōmen eius per tōtam Italiam clārum erat</em> tell us about Agrippina?",
+      "options": [
+        "Her name was feared only within the city of Rome.",
+        "Her reputation was famous throughout all Italy.",
+        "Her name appeared in official Roman state records.",
+        "She was known throughout Italy solely as a devoted wife."
       ],
       "correct": 1
     }
