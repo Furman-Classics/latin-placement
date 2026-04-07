@@ -1242,8 +1242,8 @@
       "sourceNumber": 86,
       "part": 2,
       "weight": 2,
-      "promptText": "The ablative singular of the word VIRTŪS is",
-      "focusText": null,
+      "promptText": "Choose the best answer.",
+      "focusText": "The ablative singular of the word VIRTŪS is",
       "options": [
         "virtō",
         "virtūte",

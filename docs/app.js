@@ -385,7 +385,7 @@ function renderP2(moveFocus = false, focusOptionIndex = -1) {
 
   const nextBtn = $('p2-next');
   const isLast = state.p2Index === state.part2Questions.length - 1;
-  nextBtn.textContent = isLast ? 'Submit and finish placement test' : 'Submit and move to next question';
+  nextBtn.textContent = isLast ? 'Submit and finish placement test (takes a few seconds)' : 'Submit and move to next question';
   nextBtn.disabled = !hasValidAnswer(question);
   nextBtn.onclick = isLast
     ? () => submitTest(false)
