@@ -296,9 +296,9 @@
       "chapter": 10,
       "prompt": "What is the case of <em>eius</em> (from <em>is, ea, id</em>)?",
       "options": [
-        "nominative singular (masculine)",
+        "nominative singular",
         "dative singular",
-        "genitive singular (all genders)",
+        "genitive singular",
         "accusative plural"
       ],
       "correct": 2
@@ -308,23 +308,23 @@
       "part": 2,
       "type": "form-pronoun",
       "chapter": 23,
-      "prompt": "What case and number is <em>ipsius</em> (from <em>ipse, ipsa, ipsum</em>)?",
+      "prompt": "What case and number is <em>ipsōs</em> (from <em>ipse, ipsa, ipsum</em>)?",
       "options": [
-        "nominative singular",
-        "genitive singular",
-        "dative singular",
+        "nominative plural",
+        "genitive plural",
+        "dative/ablative plural",
         "accusative plural"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
       "id": "f-p2-10",
       "part": 2,
       "type": "form-identify-multi",
-      "chapter": 7,
-      "prompt": "Which of the following are <strong>ablative plural</strong>?",
-      "options": ["rēgibus", "urbium", "mīlitibus", "ducum", "hominibus"],
-      "correctIndices": [0, 2, 4],
+      "chapter": 4,
+      "prompt": "Which of the following are <strong>accusative</strong> (singular or plural)?",
+      "options": ["puellam", "puellārum", "dominum", "agrōs", "rēgnō"],
+      "correctIndices": [0, 2, 3],
       "minSelections": 3,
       "maxSelections": 3
     },
@@ -332,12 +332,12 @@
       "id": "f-p2-11",
       "part": 2,
       "type": "form-identify-multi",
-      "chapter": 4,
-      "prompt": "Which of the following are <strong>present active infinitives</strong>?",
-      "options": ["amāre", "amāvisse", "amātum", "dūcere", "capī"],
-      "correctIndices": [0, 3],
-      "minSelections": 2,
-      "maxSelections": 2
+      "chapter": 14,
+      "prompt": "Which of the following are <strong>participles</strong>?",
+      "options": ["amāns", "amāre", "victus", "amāvit", "portātūrus"],
+      "correctIndices": [0, 2, 4],
+      "minSelections": 3,
+      "maxSelections": 3
     },
     {
       "id": "f-p2-12",
@@ -509,7 +509,7 @@
       "part": 3,
       "type": "translation",
       "passageId": "passage-p3-main",
-      "prompt": "What does <em>Multī Rōmānī crēdēbant eum tyrannum esse</em> mean?",
+      "prompt": "What is the best translation of <em>Multī Rōmānī crēdēbant eum tyrannum esse</em>?",
       "options": [
         "Many Romans were believed to be tyrants by him.",
         "He believed that many Romans were tyrants.",
@@ -582,7 +582,7 @@
       "prompt": "In the phrase [underline: nūntiīs mortem suam portantibus], what is the case of <em>nūntiīs</em>?",
       "options": [
         "Nominative, subject of the sentence",
-        "Dative, object of <em>respondēns</em>",
+        "Dative, indirect object",
         "Ablative, expressing means",
         "Accusative, direct object"
       ],

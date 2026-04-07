@@ -32,12 +32,11 @@ function doPost(e) {
       info.termsTaken || '',                           // terms_taken
       (info.textbooks || []).join(', '),               // textbooks (comma list)
       (info.authorsRead || []).join(', '),             // authors_read (comma list)
-      scores.part1 || 0,                               // part1_score
-      scores.part2 || 0,                               // part2_score
-      scores.part3 || 0,                               // part3_score
+      scores.part1 || 0,                               // part1_score/20
+      scores.part2 || 0,                               // part2_score/20
+      scores.part3 || 0,                               // part3_score/12
       payload.version || '',                           // version
-      timing.elapsedMs || '',                          // elapsed_ms
-      timing.remainingMs || '',                        // remaining_ms
+      timing.timeTakenMin || '',                       // time_taken_min
       Boolean(timing.autoSubmitted),                   // auto_submitted
       timing.startedAtMs || '',                        // started_at_ms
       timing.submittedAtMs || '',                      // submitted_at_ms

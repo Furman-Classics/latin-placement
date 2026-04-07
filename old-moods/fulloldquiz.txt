@@ -1,0 +1,3278 @@
+Question 2
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+-que
+Question 2 Select one:
+A.
+but
+B.
+and
+C.
+or
+D.
+each
+Feedback
+The correct answer is: and
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: and 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 3
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+hic
+Question 3 Select one:
+A.
+there
+B.
+his
+C.
+that
+D.
+this
+Feedback
+The correct answer is: this
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: this 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 4
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+ad
+Question 4 Select one:
+A.
+toward
+B.
+away
+C.
+above
+D.
+from
+Feedback
+The correct answer is: toward
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: toward 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 5
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+dicere
+Question 5 Select one:
+A.
+teach
+B.
+lead
+C.
+ask
+D.
+ask
+Feedback
+The correct answer is: ask
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: ask 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 6
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+si
+Question 6 Select one:
+A.
+thus
+B.
+or
+C.
+if
+D.
+yes
+Feedback
+The correct answer is: if
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: if 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 7
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+facere
+Question 7 Select one:
+A.
+crime
+B.
+fact
+C.
+easy
+D.
+make
+Feedback
+The correct answer is: make
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: make 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 8
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+e
+Question 8 Select one:
+A.
+she
+B.
+go
+C.
+down
+D.
+out
+Feedback
+The correct answer is: out
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: down 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 9
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+res
+Question 9 Select one:
+A.
+witness
+B.
+testify
+C.
+affair
+D.
+laugh
+Feedback
+The correct answer is: affair
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: witness 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 10
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+alius
+Question 10 Select one:
+A.
+the other (of two)
+B.
+elsewhere
+C.
+another
+D.
+winged
+Feedback
+The correct answer is: another
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: the other (of two) 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 11
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+venire
+Question 11 Select one:
+A.
+sell
+B.
+come
+C.
+hunt
+D.
+wound
+Feedback
+The correct answer is: come
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: come 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 12
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+ne
+Question 12 Select one:
+A.
+neither
+B.
+not
+C.
+never
+D.
+nor
+Feedback
+The correct answer is: not
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: not 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 13
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+quidam
+Question 13 Select one:
+A.
+indeed
+B.
+therefore
+C.
+any
+D.
+a certain
+Feedback
+The correct answer is: a certain
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: a certain 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 14
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+tamen
+Question 14 Select one:
+A.
+finally
+B.
+whereas
+C.
+whichever
+D.
+nevertheless
+Feedback
+The correct answer is: nevertheless
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: nevertheless 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 15
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+velle
+Question 15 Select one:
+A.
+sail
+B.
+parchment
+C.
+be willing
+D.
+prefer
+Feedback
+The correct answer is: be willing
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: be willing 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 16
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+manus
+Question 16 Select one:
+A.
+hand
+B.
+hut
+C.
+ghost
+D.
+morning
+Feedback
+The correct answer is: hand
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: hand 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 17
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+animus
+Question 17 Select one:
+A.
+mind
+B.
+animal
+C.
+drawing
+D.
+year
+Feedback
+The correct answer is: mind
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: mind 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 18
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+vel
+Question 18 Select one:
+A.
+garment
+B.
+sail
+C.
+wish
+D.
+or
+Feedback
+The correct answer is: or
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: or 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 19
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+quia
+Question 19 Select one:
+A.
+who
+B.
+because
+C.
+which (things)
+D.
+of such a kind
+Feedback
+The correct answer is: because
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: because 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 20
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+at
+Question 20 Select one:
+A.
+at
+B.
+near
+C.
+from
+D.
+but
+Feedback
+The correct answer is: but
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: but 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 21
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+malus
+Question 21 Select one:
+A.
+apple
+B.
+bad
+C.
+prefer
+D.
+hammer
+Feedback
+The correct answer is: bad
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:40:10 	Saved: bad 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Next page ▶︎
+
+
+Skip to main content
+Moodle
+
+    Home
+    Dashboard
+    My courses
+    Textbooks
+
+Edit mode
+ 
+
+Blocks
+Skip Quiz navigation
+Quiz navigation
+Show all questions on one page
+Finish review
+
+    Latin Placement Test
+    Latin placement activities
+    Latin Placement Test
+
+Latin Placement Test
+
+    Quiz
+    Settings
+    Questions
+    Results
+    Question bank
+    More
+
+Attempt 1 summary
+LB 	Lauren Bolzan
+Question 22
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+dum
+Question 22 Select one:
+A.
+then
+B.
+for a long time
+C.
+while
+D.
+next
+Feedback
+The correct answers are: then, while
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: while 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 23
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+caelum
+Question 23 Select one:
+A.
+sky
+B.
+carve
+C.
+corpse
+D.
+seal
+Feedback
+The correct answer is: sky
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: sky 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 24
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+ubi
+Question 24 Select one:
+A.
+why
+B.
+when
+C.
+copiously
+D.
+however
+Feedback
+The correct answer is: when
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: when 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 25
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+urbs
+Question 25 Select one:
+A.
+teat
+B.
+city
+C.
+ointment
+D.
+urban
+Feedback
+The correct answer is: city
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: city 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 26
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+aliquis
+Question 26 Select one:
+A.
+someone
+B.
+whoever
+C.
+nurse
+D.
+each one
+Feedback
+The correct answer is: someone
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: someone 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 27
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+miles
+Question 27 Select one:
+A.
+soldier
+B.
+mile(stone)
+C.
+military
+D.
+battle
+Feedback
+The correct answer is: soldier
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: soldier 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 28
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+causa
+Question 28 Select one:
+A.
+hut
+B.
+tail
+C.
+disaster
+D.
+reason
+Feedback
+The correct answer is: reason
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: reason 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 29
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+accipere
+Question 29 Select one:
+A.
+approach
+B.
+kill
+C.
+receive
+D.
+summon
+Feedback
+The correct answer is: receive
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: receive 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 30
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+vis
+Question 30 Select one:
+A.
+strong
+B.
+desire
+C.
+scarcely
+D.
+strength
+Feedback
+The correct answer is: strength
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: strength 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 31
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+talis
+Question 31 Select one:
+A.
+so large
+B.
+of such a kind
+C.
+so many
+D.
+at such a time
+Feedback
+The correct answer is: of such a kind
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: of such a kind 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 32
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+opus
+Question 32 Select one:
+A.
+work
+B.
+music
+C.
+town
+D.
+burden
+Feedback
+The correct answer is: work
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: work 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 33
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+cura
+Question 33 Select one:
+A.
+care
+B.
+cure
+C.
+wax
+D.
+senate house
+Feedback
+The correct answer is: care
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: care 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 34
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+vincere
+Question 34 Select one:
+A.
+conquer
+B.
+bind
+C.
+thrive
+D.
+stay awake
+Feedback
+The correct answer is: conquer
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: conquer 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 35
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+fortis
+Question 35 Select one:
+A.
+brave
+B.
+maybe
+C.
+military camp
+D.
+by chance
+Feedback
+The correct answer is: brave
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: brave 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 36
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+saepe
+Question 36 Select one:
+A.
+always
+B.
+division
+C.
+often
+D.
+almost
+Feedback
+The correct answer is: often
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: often 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 37
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+vox
+Question 37 Select one:
+A.
+voice
+B.
+life
+C.
+live
+D.
+summon
+Feedback
+The correct answer is: voice
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: voice 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 38
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+sequi
+Question 38 Select one:
+A.
+second
+B.
+follow
+C.
+sparkle
+D.
+after
+Feedback
+The correct answer is: follow
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: follow 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 39
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+summus
+Question 39 Select one:
+A.
+total
+B.
+mountain
+C.
+we are
+D.
+highest
+Feedback
+The correct answer is: highest
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: we are 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 40
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+iuvenis
+Question 40 Select one:
+A.
+cattle
+B.
+young
+C.
+court
+D.
+ridge
+Feedback
+The correct answer is: young
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: young 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 41
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+ergo
+Question 41 Select one:
+A.
+therefore
+B.
+against
+C.
+toward
+D.
+effort
+Feedback
+The correct answer is: therefore
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:44:05 	Saved: therefore 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+◀︎ Previous page
+Next page ▶︎
+
+
+Skip to main content
+Moodle
+
+    Home
+    Dashboard
+    My courses
+    Textbooks
+
+Edit mode
+ 
+
+Blocks
+Skip Quiz navigation
+Quiz navigation
+Show all questions on one page
+Finish review
+
+    Latin Placement Test
+    Latin placement activities
+    Latin Placement Test
+
+Latin Placement Test
+
+    Quiz
+    Settings
+    Questions
+    Results
+    Question bank
+    More
+
+Attempt 1 summary
+LB 	Lauren Bolzan
+Question 42
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+gravis
+Question 42 Select one:
+A.
+tomb
+B.
+important
+C.
+carved
+D.
+deadly
+Feedback
+The correct answer is: important
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: important 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 43
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+consilium
+Question 43 Select one:
+A.
+comfort
+B.
+plan
+C.
+consulship
+D.
+place of honor
+Feedback
+The correct answer is: plan
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: plan 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 44
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+coepisse
+Question 44 Select one:
+A.
+began
+B.
+division of a legion
+C.
+collected
+D.
+kinsman
+Feedback
+The correct answer is: began
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: collected 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 45
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+stare
+Question 45 Select one:
+A.
+stand
+B.
+stare
+C.
+at night
+D.
+strike
+Feedback
+The correct answer is: stand
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: stand 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 46
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+cunctus
+Question 46 Select one:
+A.
+delay
+B.
+broken
+C.
+all together
+D.
+underground passage
+Feedback
+The correct answer is: all together
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: broken 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 47
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+studium
+Question 47 Select one:
+A.
+studious
+B.
+eagerness
+C.
+foolishness
+D.
+astonishment
+Feedback
+The correct answer is: eagerness
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: studious 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 48
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+redire
+Question 48 Select one:
+A.
+blush
+B.
+say again
+C.
+give back
+D.
+go back
+Feedback
+The correct answer is: go back
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: go back 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 49
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+relinquere
+Question 49 Select one:
+A.
+abandonment
+B.
+resist
+C.
+open
+D.
+leave behind
+Feedback
+The correct answer is: leave behind
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: leave behind 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 50
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+simul
+Question 50 Select one:
+A.
+pretend
+B.
+once
+C.
+like
+D.
+at the same time
+Feedback
+The correct answer is: at the same time
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: at the same time 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 51
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+aurum
+Question 51 Select one:
+A.
+ear
+B.
+gold
+C.
+hall
+D.
+altar
+Feedback
+The correct answer is: gold
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: gold 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 52
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+gerere
+Question 52 Select one:
+A.
+age
+B.
+family
+C.
+kind
+D.
+wear
+Feedback
+The correct answer is: wear
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: wear 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 53
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+solere
+Question 53 Select one:
+A.
+be alone
+B.
+be in the habit of
+C.
+shine
+D.
+lie still
+Feedback
+The correct answer is: be in the habit of
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: shine 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 54
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+laus
+Question 54 Select one:
+A.
+happiness
+B.
+law
+C.
+praise
+D.
+flea
+Feedback
+The correct answer is: praise
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: praise 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 55
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+finis
+Question 55 Select one:
+A.
+neighbor
+B.
+trust
+C.
+boundary
+D.
+delicate
+Feedback
+The correct answer is: boundary
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: boundary 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 56
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+noscere
+Question 56 Select one:
+A.
+learn
+B.
+not know
+C.
+harm
+D.
+call by name
+Feedback
+The correct answer is: learn
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: not know 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 57
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+deinde
+Question 57 Select one:
+A.
+down from there
+B.
+next
+C.
+however
+D.
+because
+Feedback
+The correct answer is: next
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: next 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 58
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+melior
+Question 58 Select one:
+A.
+bigger
+B.
+better
+C.
+woman
+D.
+honey
+Feedback
+The correct answer is: better
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: better 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 59
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+ullus
+Question 59 Select one:
+A.
+oak
+B.
+oil
+C.
+jar
+D.
+any
+Feedback
+The correct answer is: any
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: any 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 60
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+seu
+Question 60 Select one:
+A.
+alas
+B.
+for
+C.
+just as
+D.
+or if
+Feedback
+The correct answer is: or if
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: or if 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 61
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+parare
+Question 61 Select one:
+A.
+make level
+B.
+make ready
+C.
+give birth
+D.
+obey
+Feedback
+The correct answer is: make ready
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 12:47:29 	Saved: make ready 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+◀︎ Previous page
+Next page ▶︎
+
+
+Skip to main content
+Moodle
+
+    Home
+    Dashboard
+    My courses
+    Textbooks
+
+Edit mode
+ 
+
+Blocks
+Skip Quiz navigation
+Quiz navigation
+Show all questions on one page
+Finish review
+
+    Latin Placement Test
+    Latin placement activities
+    Latin Placement Test
+
+Latin Placement Test
+
+    Quiz
+    Settings
+    Questions
+    Results
+    Question bank
+    More
+
+Attempt 1 summary
+LB 	Lauren Bolzan
+Question 62
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+All the following writers were poets EXCEPT
+Question 62 Select one:
+A.
+Vergil
+B.
+Livy
+C.
+Catullus
+D.
+Horace
+Feedback
+The correct answer is: Livy
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: Livy 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 63
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+All the following terms refer to Latin cases EXCEPT
+Question 63 Select one:
+A.
+Ablative
+B.
+Indicative
+C.
+Vocative
+D.
+Genitive
+Feedback
+The correct answer is: Indicative
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: Indicative 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 64
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+________ agricola in agris laborat.
+Question 64 Select one:
+A.
+Bona
+B.
+Bonus
+C.
+Bonum
+D.
+Boni
+Feedback
+The correct answer is: Bonus
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: Bonus 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 65
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+The present infinitive active of the verb SUM is
+Question 65 Select one:
+A.
+futurus
+B.
+sumere
+C.
+fui
+D.
+esse
+Feedback
+The correct answer is: esse
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: esse 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 66
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Multam gloriam HABEBUNT.
+Question 66 Select one:
+A.
+they have
+B.
+they have had
+C.
+they used to have
+D.
+they will have
+Feedback
+The correct answer is: they will have
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: they will have 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 67
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Pauci in oppido MANERE poterunt.
+Question 67 Select one:
+A.
+infinitive in indirect statement
+B.
+subjective infinitive
+C.
+objective infinitive
+D.
+complementary infinitive
+Feedback
+The correct answer is: complementary infinitive
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: complementary infinitive 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 68
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+The ablative singular of the word VIRTUS is
+Question 68 Select one:
+A.
+virto
+B.
+virtute
+C.
+viro
+D.
+virtuti
+Feedback
+The correct answer is: virtute
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: virtute 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 69
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+quamvis
+Question 69 Select one:
+A.
+scribant
+B.
+scribebant
+C.
+scribent
+D.
+scribunt
+Feedback
+The correct answer is: scribent
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: scribunt 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 70
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Pecuniam dabant huic puero ______
+Question 70 Select one:
+A.
+soli
+B.
+solo
+C.
+solum
+D.
+solus
+Feedback
+The correct answer is: soli
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: solo 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 71
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Crās tē vīcturūm, crās dicis, Postume, semper.
+In this line of dactylic hexameter, the fourth foot is a(n)
+Question 71 Select one:
+A.
+iamb
+B.
+trochee
+C.
+dactyl
+D.
+spondee
+Feedback
+The correct answer is: spondee
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: dactyl 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 72
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Caesar EADEM dixit.
+Question 72 Select one:
+A.
+feminine accusative singular
+B.
+neuter accusative plural
+C.
+feminine genitive plural
+D.
+masculine accusative singular
+Feedback
+The correct answer is: neuter accusative plural
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: feminine accusative singular 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 73
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+The second person plural perfect indicative active of ago is
+Question 73 Select one:
+A.
+agetis
+B.
+egeritis
+C.
+egistis
+D.
+agitis
+Feedback
+The correct answer is: egistis
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: egistis 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 74
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Cicero multas epistulas in quibus SE laudavit scripsit.
+Question 74 Select one:
+A.
+accusative singular
+B.
+ablative singular
+C.
+nominative singular
+D.
+accusative plural
+Feedback
+The correct answer is: accusative singular
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: accusative singular 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 75
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Id oculis meis vidi.
+Question 75 Select one:
+A.
+I saw it with my own eyes.
+B.
+It saw me with its eyes.
+C.
+It saw my eyes.
+D.
+I saw my own eyes with it.
+Feedback
+The correct answer is: I saw it with my own eyes.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: I saw it with my own eyes. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 76
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Tribus diebus apud me erunt.
+Question 76 Select one:
+A.
+They will be at my house for three days.
+B.
+They will be at my house in three days.
+C.
+Three gods will be against me.
+D.
+A tribe of gods will be against me.
+Feedback
+The correct answer is: They will be at my house in three days.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: They will be at my house in three days. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 77
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Issa est passere nequior Catulli;
+Issa est purior osculo columbae;
+Issa est blandior omnibus puellis;
+Issa est carior Indicis lapillis;
+Issa est deliciae catella Publi.
+
+This passage demonstrates what rhetorical figure?
+Question 77 Select one:
+A.
+zeugma
+B.
+anaphora
+C.
+anastrophe
+D.
+polysyndeton
+Feedback
+The correct answer is: anaphora
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: anaphora 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 78
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Omnes puellae ____ amorem nostram dedimus pauperes sunt.
+Question 78 Select one:
+A.
+quae
+B.
+quas
+C.
+quibus
+D.
+quem
+Feedback
+The correct answer is: quibus
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: quem 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 79
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+fratrem tuum, A QUO saepe iuvabar, cras in foro videbo.
+Question 79 Select one:
+A.
+by whom
+B.
+from whom
+C.
+than whom
+D.
+for whom
+Feedback
+The correct answer is: by whom
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: by whom 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 80
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+DATA SUNT is the __________ of DO
+Question 80 Select one:
+A.
+third person plural perfect indicative passive
+B.
+third person plural perfect indicative active
+C.
+third person plural perfect subjunctive passive
+D.
+third person plural pluperfect indicative passive
+Feedback
+The correct answer is: third person plural perfect indicative passive
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: third person plural pluperfect indicative passive 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 81
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Arma virumque canō Trōiae quī prīmus ab ōris...
+In this line of hexamter, the caesura fals between
+Question 81 Select one:
+A.
+Arma AND virumque
+B.
+Virumque AND canō
+C.
+canō AND Trōiae
+D.
+Trōiae AND quī
+Feedback
+The correct answer is: canō AND Trōiae
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:01:05 	Saved: canō AND Trōiae 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+◀︎ Previous page
+Next page ▶︎
+
+
+Skip to main content
+Moodle
+
+    Home
+    Dashboard
+    My courses
+    Textbooks
+
+Edit mode
+ 
+
+Blocks
+Skip Quiz navigation
+Quiz navigation
+Show all questions on one page
+Finish review
+
+    Latin Placement Test
+    Latin placement activities
+    Latin Placement Test
+
+Latin Placement Test
+
+    Quiz
+    Settings
+    Questions
+    Results
+    Question bank
+    More
+
+Attempt 1 summary
+LB 	Lauren Bolzan
+Question 82
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Under the patronage of Maecenas, ________ wrote for the emperor Augustus.
+Question 82 Select one:
+A.
+Ovid
+B.
+Vergil
+C.
+Livy
+D.
+Catullus
+Feedback
+The correct answer is: Vergil
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: Vergil 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 83
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+All of the following are uses of the ablative case EXCEPT
+Question 83 Select one:
+A.
+place where from
+B.
+place where
+C.
+respect
+D.
+extent
+Feedback
+The correct answer is: extent
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: extent 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 84
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+CAESARE AUDIENTE, nuntius tmaen nihil dicebat.
+Question 84 Select one:
+A.
+Although Caesar was listening,
+B.
+After Caesar was listening,
+C.
+While Caesar was listening,
+D.
+With Caesar having been heard,
+Feedback
+The correct answer is: Although Caesar was listening,
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: With Caesar having been heard, 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 85
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+sodalis
+Question 85 Select one:
+A.
+companion
+B.
+sunny
+C.
+comfortable
+D.
+thirsty
+Feedback
+The correct answer is: companion
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: companion 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 86
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+solus
+Question 86 Select one:
+A.
+alone
+B.
+safe
+C.
+loose
+D.
+ground
+Feedback
+The correct answer is: alone
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: alone 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 87
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+stultus
+Question 87 Select one:
+A.
+debauched
+B.
+eager
+C.
+noisy
+D.
+silly
+Feedback
+The correct answer is: silly
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: noisy 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 88
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+sub
+Question 88 Select one:
+A.
+over
+B.
+under
+C.
+behind
+D.
+in front
+Feedback
+The correct answer is: under
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: under 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 89
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+totus
+Question 89 Select one:
+A.
+toga
+B.
+all
+C.
+so many
+D.
+thirty
+Feedback
+The correct answer is: all
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: so many 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 90
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+trabs
+Question 90 Select one:
+A.
+grave
+B.
+rudder
+C.
+volcano
+D.
+beam
+Feedback
+The correct answer is: beam
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: rudder 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 91
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+tu
+Question 91 Select one:
+A.
+your
+B.
+two
+C.
+toward
+D.
+you
+Feedback
+The correct answer is: you
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: you 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 92
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+turba
+Question 92 Select one:
+A.
+hat
+B.
+crowd
+C.
+mud
+D.
+whirlpool
+Feedback
+The correct answer is: crowd
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: hat 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 93
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+turpis
+Question 93 Select one:
+A.
+muddy
+B.
+trumpet
+C.
+shameful
+D.
+tower
+Feedback
+The correct answer is: shameful
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: tower 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 94
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+ullus
+Question 94 Select one:
+A.
+only
+B.
+further
+C.
+any
+D.
+other
+Feedback
+The correct answer is: any
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: any 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 95
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+unde
+Question 95 Select one:
+A.
+whence
+B.
+billow
+C.
+covered
+D.
+everywhere
+Feedback
+The correct answer is: whence
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: whence 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 96
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+uter
+Question 96 Select one:
+A.
+sheep
+B.
+which
+C.
+belly
+D.
+hoof
+Feedback
+The correct answer is: which
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: which 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 97
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+vester
+Question 97 Select one:
+A.
+evening
+B.
+your
+C.
+footprint
+D.
+our
+Feedback
+The correct answer is: your
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: your 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 98
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+vetus
+Question 98 Select one:
+A.
+prohibition
+B.
+cloak
+C.
+old
+D.
+shrine
+Feedback
+The correct answer is: old
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: old 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 99
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+vir
+Question 99 Select one:
+A.
+strength
+B.
+truth
+C.
+man
+D.
+scarcely
+Feedback
+The correct answer is: man
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: man 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 100
+Correct
+1.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+virtus
+Question 100 Select one:
+A.
+virgin
+B.
+conqueror
+C.
+arbor-shed
+D.
+valor
+Feedback
+The correct answer is: valor
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: valor 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	1.00
+Question 101
+Incorrect
+0.00 points out of 1.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+vitium
+Question 101 Select one:
+A.
+fillet
+B.
+defect
+C.
+glass
+D.
+vine
+Feedback
+The correct answer is: defect
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:04:08 	Saved: glass 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+◀︎ Previous page
+Next page ▶︎
+
+
+Skip to main content
+Moodle
+
+    Home
+    Dashboard
+    My courses
+    Textbooks
+
+Edit mode
+ 
+
+Blocks
+Skip Quiz navigation
+Quiz navigation
+Show all questions on one page
+Finish review
+
+    Latin Placement Test
+    Latin placement activities
+    Latin Placement Test
+
+Latin Placement Test
+
+    Quiz
+    Settings
+    Questions
+    Results
+    Question bank
+    More
+
+Attempt 1 summary
+LB 	Lauren Bolzan
+Question 102
+Complete
+Not graded
+Flag question
+Edit question
+v1 (latest)
+Question text
+Agricola bonus pediti cibum dedit.
+Question 102 Select one:
+A.
+The farmer gave the foot soldier good food.
+B.
+The good farmer was given food by the foot soldier.
+C.
+The foot soldier gave the farmer food as a bonus.
+D.
+The good farmer gave the foot soldier food.
+Feedback
+The correct answer is: The good farmer gave the foot soldier food.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: The good farmer gave the foot soldier food. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Complete 	0.00
+Question 103
+Correct
+5.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Adventu Ariovisti cognito, cuique centurioni exposuit quo modo proelium initurus esset.
+Question 103 Select one:
+A.
+Ariovistus learned of each arrival and explained to the centurion how the battle had started.
+B.
+After learning of the arrival of Ariovistus, he explained to each centurion how he intended to start the battle.
+C.
+The arrival of Ariovistus having been known, he showed each centurion how the battle had been started.
+Feedback
+The correct answer is: After learning of the arrival of Ariovistus, he explained to each centurion how he intended to start the battle.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: After learning of the arrival of Ariovistus, he explained to each centurion how he intended to start the battle. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	5.00
+Question 104
+Correct
+5.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Archias, cum Heracliae breve tempus incoluisset, multos amicos sibi conciliavit.
+Question 104 Select one:
+A.
+Archias had lived with Heraclia for a short time and won for himself many friends.
+B.
+Although Archias and Heraclia had lived together but a short time, they won for themselves many friends.
+C.
+When Archias had lived for a short time at Heraclia, he won for himself many friends.
+Feedback
+The correct answer is: When Archias had lived for a short time at Heraclia, he won for himself many friends.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: When Archias had lived for a short time at Heraclia, he won for himself many friends. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	5.00
+Question 105
+Correct
+5.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Coniuratis, si amantiores patriae fuissent, nunc non opus esset viro idoneo qui causam ageret.
+Question 105 Select one:
+A.
+If the conspirators had been more patriotic, they would not now be in need of a man suitable to plead their cause.
+B.
+If the lovers had not conspired against their country, there would now be work for a suitable man who might plead their cause.
+C.
+There would now be no need of conspirators if patriotic men had been suitable to plead the cause of this man.
+Feedback
+The correct answer is: If the conspirators had been more patriotic, they would not now be in need of a man suitable to plead their cause.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: If the conspirators had been more patriotic, they would not now be in need of a man suitable to plead their cause. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	5.00
+Question 106
+Correct
+5.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Cur Caesaris duci nuntiabat hostem quarto die profecturum esse?
+Question 106 Select one:
+A.
+Why did the leader tell Caesar that the enemy had been marching for four days?
+B.
+Why did he tell Caesar that the enemy’s leader would set out within four days?
+C.
+Why did he tell Caesar’s leader that the enemy would set out on the fourth day?
+D.
+Why did he tell Caesar’s leader that the enemy would march for four days?
+Feedback
+The correct answer is: Why did he tell Caesar’s leader that the enemy would set out on the fourth day?
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: Why did he tell Caesar’s leader that the enemy would set out on the fourth day? 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	5.00
+Question 107
+Incorrect
+0.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Ea studia quae semper delectationi mihi fuerunt omnibus petenda sunt.
+Question 107 Select one:
+A.
+All men should seek those studies which have always delighted me.
+B.
+Those studies which have always been sought by all have been a delight to me.
+C.
+Those studies which have always seemed delightful to me have been sought for all.
+Feedback
+The correct answer is: All men should seek those studies which have always delighted me.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: Those studies which have always been sought by all have been a delight to me. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 108
+Correct
+5.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Equitem, a quo equus ab iniuria retentus erat, laudavit.
+Question 108 Select one:
+A.
+He praised the horseman from whom the horse had been kept by injury.
+B.
+He praised indeed any one by whom a horse had been kept from injury.
+C.
+He praised any horse which had kept a horseman from injury.
+D.
+He praised the horseman by whom the horse had been kept from injury.
+Feedback
+The correct answer is: He praised the horseman by whom the horse had been kept from injury.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: He praised the horseman by whom the horse had been kept from injury. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	5.00
+Question 109
+Correct
+5.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Femina magna diligentia labore non magnopere perturbatur.
+Question 109 Select one:
+A.
+The large woman was not greatly disturbed by diligent labor.
+B.
+A woman of great diligence is not greatly disturbed by toil.
+C.
+A diligent woman is not greatly disturbed by great toil.
+D.
+It greatly disturbs a woman of great diligence not to labor.
+Feedback
+The correct answer is: A woman of great diligence is not greatly disturbed by toil.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: A woman of great diligence is not greatly disturbed by toil. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	5.00
+Question 110
+Correct
+5.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Hic vir fuit dux barbarorum.
+Question 110 Select one:
+A.
+This man was a barbarous leader.
+B.
+A man of the barbarians was leader here.
+C.
+This man was a leader of the barbarians.
+D.
+That hero should be leader of the barbarians.
+Feedback
+The correct answer is: This man was a leader of the barbarians.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: This man was a leader of the barbarians. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	5.00
+Question 111
+Incorrect
+0.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Latrones mihi nocere conabuntur dummodo me reppererint priusquam servi mei ex villa arcessiti sint.
+Question 111 Select one:
+A.
+They will try to ward off the bandits from me provided I am discovered before my servants can fortify my villa.
+B.
+The bandits will try to harm me provided they discover me before my servants have been summoned from the farm.
+C.
+The bandits will try to harm me after they have found me unless my servants shall be summoned from the villa.
+Feedback
+The correct answer is: The bandits will try to harm me provided they discover me before my servants have been summoned from the farm.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: The bandits will try to harm me after they have found me unless my servants shall be summoned from the villa. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 112
+Correct
+5.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Milites sunt fortes.
+Question 112 Select one:
+A.
+The soldier is brave.
+B.
+Soldiers are fortified.
+C.
+Forts are military.
+D.
+The soldiers are brave.
+Feedback
+The correct answer is: The soldiers are brave.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: The soldiers are brave. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	5.00
+Question 113
+Correct
+5.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Navis nos reliquis cum captivis ad insulam feret.
+Question 113 Select one:
+A.
+He is bringing us with the rest of the captives by ship to the island.
+B.
+The ship will bring the captives with the rest of us to the island.
+C.
+We shall bring the ship with the rest of the captives to the island.
+D.
+The ship will bring us with the rest of the captives to the island.
+Feedback
+The correct answer is: The ship will bring us with the rest of the captives to the island.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: The ship will bring us with the rest of the captives to the island. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Correct 	5.00
+Question 114
+Incorrect
+0.00 points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Nisi eo tempore quidam nuntii de Caesaris victoria essent allati existimabant plerique futurum fuisse uti oppidum amitteretur.
+Question 114 Select one:
+A.
+Unless the messengers at this certain time had brought news of Caesar’s victory, most people would have thought that the town had been lost.
+B.
+Most people thought that unless at that time certain reports of Caesar’s victory had been brought, the town would have been lost.
+C.
+Unless certain messages concerning Caesar’s victory had been brought at that time, most people thought that the future would have been to lose the town.
+Feedback
+The correct answer is: Most people thought that unless at that time certain reports of Caesar’s victory had been brought, the town would have been lost.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Saved: Unless certain messages concerning Caesar’s victory had been brought at that time, most people thought that the future would have been to lose the town. 	Answer saved 	
+3 	05/20/20, 13:11:13 	Attempt finished 	Incorrect 	0.00
+Question 115
+Not answered
+Points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Num tu iudex, si quis contenderit integro homini non ignoscendum, decernas ut hic ad mortem ducatur?
+Question 115 Select one:
+A.
+If any judge should not hasten to pardon an upright man, would you decree that this man be led to his death?
+B.
+If any one should maintain that an upright man should not be pardoned, would you as judge decree that he be led to his death?
+C.
+Would you as judge decree that an upright man should not be pardoned if any one should maintain that he be led to his death?
+Feedback
+The correct answer is: If any one should maintain that an upright man should not be pardoned, would you as judge decree that he be led to his death?
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Attempt finished 	Not answered 	
+Question 116
+Not answered
+Points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Nunc egredere, improbe, nam omnes sciunt te esse consuli invisiorem quam tuis sociis.
+Question 116 Select one:
+A.
+Now hasten to depart, for all men know that you are more hateful to your comrades than the consul.
+B.
+Now go, wicked fellow, for they know that you are all more hateful to the consul than to your comrades.
+C.
+Now go, depraved one, for everybody knows that you are more detestable to the consul than to your comrades.
+Feedback
+The correct answer is: Now go, depraved one, for everybody knows that you are more detestable to the consul than to your comrades.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Attempt finished 	Not answered 	
+Question 117
+Not answered
+Points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Pascere crudelis, nostro dolore corque ferum satia; miserae mihi plura supersunt quam tibi felici.
+Question 117 Select one:
+A.
+Be satisfied to feed your savage heart upon my grief, cruel one; I have more when wretched than you have when happy.
+B.
+A savage heart is satisfied to feed upon my grief, cruel one; I shall survive longer though wretched than you when happy.
+C.
+Feed upon my grief, cruel one, and satisfy your savage heart; I possess more in misery than you do in happiness.
+Feedback
+The correct answer is: Feed upon my grief, cruel one, and satisfy your savage heart; I possess more in misery than you do in happiness.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Attempt finished 	Not answered 	
+Question 118
+Not answered
+Points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Pauci Athenis multos menses habitare poterant.
+Question 118 Select one:
+A.
+A few of the Athenians were able to live for many months.
+B.
+Few can live in Athens for many months.
+C.
+Many were able to live a few miles out of Athens.
+D.
+A few were able to live at Athens for many months.
+Feedback
+The correct answer is: A few were able to live at Athens for many months.
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Attempt finished 	Not answered 	
+Question 119
+Not answered
+Points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Praeficiesne militem munitioni quam subsidio Caesari Aedui struxerant?
+Question 119 Select one:
+A.
+Is a soldier in command of the fortification which Caesar had the Aeduans build to aid him?
+B.
+Will you put any soldier in charge of the fortification which the Aeduans had built as an aid to Caesar?
+C.
+Will you place a soldier in command of the fortification which the Aeduans had built to aid Caesar?
+Feedback
+The correct answer is: Will you place a soldier in command of the fortification which the Aeduans had built to aid Caesar?
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Attempt finished 	Not answered 	
+Question 120
+Not answered
+Points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Qua, tandem, fidelitate esse vestros amicos cum eos totiens fefelleritis oportere existimatis?
+Question 120 Select one:
+A.
+How loyal, pray, do you judge that your friends should be since you have so often deceived them?
+B.
+How loyal, pray, should you think that your friends ought to be since you have deceived them so often?
+C.
+With what loyalty, pray, ought your friends to be inclined toward you when you consider how many times you have deceived them?
+Feedback
+The correct answer is: How loyal, pray, do you judge that your friends should be since you have so often deceived them?
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Attempt finished 	Not answered 	
+Question 121
+Not answered
+Points out of 5.00
+Flag question
+Edit question
+v1 (latest)
+Question text
+Quam diu passus est senatus Catilinam urbem incendere temptare?
+Question 121 Select one:
+A.
+How long has the senate been permitted to tempt Catiline to burn the city?
+B.
+How long has the senate allowed Catiline to try to burn the city?
+C.
+How many times has the senate passed a decree to try Catiline for burning the city?
+Feedback
+The correct answer is: How long has the senate allowed Catiline to try to burn the city?
+Comments
+Make comment or override points
+Response history
+Step 	Time 	Action 	State 	Points
+1 	05/20/20, 12:36:13 	Started 	Not yet answered 	
+2 	05/20/20, 13:11:13 	Attempt finished 	Not answered 	
+◀︎ Previous page
+Finish review

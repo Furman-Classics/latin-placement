@@ -1,0 +1,1652 @@
+{
+  "version": "2026-2part-v1",
+  "timeLimitMinutes": 40,
+  "totals": {
+    "part1": 80,
+    "part2": 114,
+    "overall": 194
+  },
+  "questions": [
+    {
+      "id": "q-001",
+      "sourceNumber": 1,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "-que",
+      "options": [
+        "but",
+        "and",
+        "or",
+        "each"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-002",
+      "sourceNumber": 2,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "hic",
+      "options": [
+        "there",
+        "his",
+        "that",
+        "this"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-003",
+      "sourceNumber": 3,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "ad",
+      "options": [
+        "toward",
+        "away",
+        "above",
+        "from"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-004",
+      "sourceNumber": 4,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "dīcere",
+      "options": [
+        "teach",
+        "lead",
+        "ask",
+        "say"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-005",
+      "sourceNumber": 5,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "sī",
+      "options": [
+        "thus",
+        "or",
+        "if",
+        "yes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-006",
+      "sourceNumber": 6,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "facere",
+      "options": [
+        "crime",
+        "fact",
+        "easy",
+        "make"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-007",
+      "sourceNumber": 7,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "ē/ex",
+      "options": [
+        "she",
+        "go",
+        "down",
+        "out"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-008",
+      "sourceNumber": 8,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "rēs",
+      "options": [
+        "witness",
+        "testify",
+        "affair",
+        "laugh"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-009",
+      "sourceNumber": 9,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "alius",
+      "options": [
+        "the other (of two)",
+        "elsewhere",
+        "another",
+        "winged"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-010",
+      "sourceNumber": 10,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "venīre",
+      "options": [
+        "sell",
+        "come",
+        "hunt",
+        "wound"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-011",
+      "sourceNumber": 11,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "nē",
+      "options": [
+        "neither",
+        "not",
+        "never",
+        "nor"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-012",
+      "sourceNumber": 12,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "quīdam",
+      "options": [
+        "indeed",
+        "therefore",
+        "any",
+        "a certain"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-013",
+      "sourceNumber": 13,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "tamen",
+      "options": [
+        "finally",
+        "whereas",
+        "whichever",
+        "nevertheless"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-014",
+      "sourceNumber": 14,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "velle",
+      "options": [
+        "sail",
+        "parchment",
+        "want",
+        "prefer"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-015",
+      "sourceNumber": 15,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "manus",
+      "options": [
+        "hand",
+        "hut",
+        "ghost",
+        "morning"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-016",
+      "sourceNumber": 16,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "animus",
+      "options": [
+        "mind",
+        "animal",
+        "drawing",
+        "year"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-017",
+      "sourceNumber": 17,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "vel",
+      "options": [
+        "garment",
+        "sail",
+        "wish",
+        "or"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-018",
+      "sourceNumber": 18,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "quia",
+      "options": [
+        "who",
+        "because",
+        "which (things)",
+        "of such a kind"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-019",
+      "sourceNumber": 19,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "at",
+      "options": [
+        "at",
+        "near",
+        "from",
+        "but"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-020",
+      "sourceNumber": 20,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "malus",
+      "options": [
+        "apple",
+        "bad",
+        "prefer",
+        "hammer"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-021",
+      "sourceNumber": 21,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "dum",
+      "options": [
+        "then",
+        "for a long time",
+        "while",
+        "next"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-022",
+      "sourceNumber": 22,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "caelum",
+      "options": [
+        "sky",
+        "carve",
+        "corpse",
+        "seal"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-023",
+      "sourceNumber": 23,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "ubi",
+      "options": [
+        "why",
+        "when",
+        "copiously",
+        "however"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-024",
+      "sourceNumber": 24,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "urbs",
+      "options": [
+        "teat",
+        "city",
+        "ointment",
+        "urban"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-025",
+      "sourceNumber": 25,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "aliquis",
+      "options": [
+        "someone",
+        "whoever",
+        "nurse",
+        "each one"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-026",
+      "sourceNumber": 26,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "mīles",
+      "options": [
+        "soldier",
+        "mile(stone)",
+        "military",
+        "battle"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-027",
+      "sourceNumber": 27,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "causa",
+      "options": [
+        "hut",
+        "tail",
+        "disaster",
+        "reason"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-028",
+      "sourceNumber": 28,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "accipere",
+      "options": [
+        "approach",
+        "kill",
+        "receive",
+        "summon"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-029",
+      "sourceNumber": 29,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "vīs",
+      "options": [
+        "strong",
+        "desire",
+        "scarcely",
+        "strength"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-030",
+      "sourceNumber": 30,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "tālis",
+      "options": [
+        "so large",
+        "of such a kind",
+        "so many",
+        "at such a time"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-031",
+      "sourceNumber": 31,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "opus",
+      "options": [
+        "work",
+        "music",
+        "town",
+        "burden"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-032",
+      "sourceNumber": 32,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "cūra",
+      "options": [
+        "care",
+        "cure",
+        "wax",
+        "senate house"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-033",
+      "sourceNumber": 33,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "vincere",
+      "options": [
+        "conquer",
+        "bind",
+        "thrive",
+        "stay awake"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-034",
+      "sourceNumber": 34,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "fortis",
+      "options": [
+        "brave",
+        "maybe",
+        "military camp",
+        "by chance"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-035",
+      "sourceNumber": 35,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "saepe",
+      "options": [
+        "always",
+        "division",
+        "often",
+        "almost"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-036",
+      "sourceNumber": 36,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "vox",
+      "options": [
+        "voice",
+        "life",
+        "live",
+        "summon"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-037",
+      "sourceNumber": 37,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "sequī",
+      "options": [
+        "second",
+        "follow",
+        "sparkle",
+        "after"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-038",
+      "sourceNumber": 38,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "summus",
+      "options": [
+        "total",
+        "mountain",
+        "we are",
+        "highest"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-039",
+      "sourceNumber": 39,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "iuvenis",
+      "options": [
+        "cattle",
+        "young",
+        "court",
+        "ridge"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-040",
+      "sourceNumber": 40,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "ergo",
+      "options": [
+        "therefore",
+        "against",
+        "toward",
+        "effort"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-041",
+      "sourceNumber": 41,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "gravis",
+      "options": [
+        "tomb",
+        "important",
+        "carved",
+        "deadly"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-042",
+      "sourceNumber": 42,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "cōnsilium",
+      "options": [
+        "comfort",
+        "plan",
+        "consulship",
+        "place of honor"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-043",
+      "sourceNumber": 43,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "coepisse",
+      "options": [
+        "began",
+        "division of a legion",
+        "collected",
+        "kinsman"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-044",
+      "sourceNumber": 44,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "stāre",
+      "options": [
+        "stand",
+        "stare",
+        "at night",
+        "strike"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-045",
+      "sourceNumber": 45,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "cūnctus",
+      "options": [
+        "delay",
+        "broken",
+        "all together",
+        "underground passage"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-046",
+      "sourceNumber": 46,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "studium",
+      "options": [
+        "studious",
+        "eagerness",
+        "foolishness",
+        "astonishment"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-047",
+      "sourceNumber": 47,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "redīre",
+      "options": [
+        "blush",
+        "say again",
+        "give back",
+        "go back"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-048",
+      "sourceNumber": 48,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "relinquere",
+      "options": [
+        "abandonment",
+        "resist",
+        "open",
+        "leave behind"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-049",
+      "sourceNumber": 49,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "simul",
+      "options": [
+        "pretend",
+        "once",
+        "like",
+        "at the same time"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-050",
+      "sourceNumber": 50,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "aurum",
+      "options": [
+        "ear",
+        "gold",
+        "hall",
+        "altar"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-051",
+      "sourceNumber": 51,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "gerere",
+      "options": [
+        "age",
+        "family",
+        "kind",
+        "wear"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-052",
+      "sourceNumber": 52,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "solēre",
+      "options": [
+        "be alone",
+        "be in the habit of",
+        "shine",
+        "lie still"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-053",
+      "sourceNumber": 53,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "laus",
+      "options": [
+        "happiness",
+        "law",
+        "praise",
+        "flea"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-054",
+      "sourceNumber": 54,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "fīnis",
+      "options": [
+        "neighbor",
+        "trust",
+        "boundary",
+        "delicate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-055",
+      "sourceNumber": 55,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "nōscere",
+      "options": [
+        "learn",
+        "not know",
+        "harm",
+        "call by name"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-056",
+      "sourceNumber": 56,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "deinde",
+      "options": [
+        "down from there",
+        "next",
+        "however",
+        "because"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-057",
+      "sourceNumber": 57,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "melior",
+      "options": [
+        "bigger",
+        "better",
+        "woman",
+        "honey"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-058",
+      "sourceNumber": 58,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "ūllus",
+      "options": [
+        "oak",
+        "oil",
+        "jar",
+        "any"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-059",
+      "sourceNumber": 59,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "seu",
+      "options": [
+        "alas",
+        "for",
+        "just as",
+        "or if"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-060",
+      "sourceNumber": 60,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "parāre",
+      "options": [
+        "make level",
+        "make ready",
+        "give birth",
+        "obey"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-061",
+      "sourceNumber": 61,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "sodālis",
+      "options": [
+        "companion",
+        "sunny",
+        "comfortable",
+        "thirsty"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-062",
+      "sourceNumber": 62,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "sōlus",
+      "options": [
+        "alone",
+        "safe",
+        "loose",
+        "ground"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-063",
+      "sourceNumber": 63,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "stultus",
+      "options": [
+        "debauched",
+        "eager",
+        "noisy",
+        "foolish"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-064",
+      "sourceNumber": 64,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "sub",
+      "options": [
+        "over",
+        "under",
+        "behind",
+        "in front"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-065",
+      "sourceNumber": 65,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "tōtus",
+      "options": [
+        "toga",
+        "all",
+        "so many",
+        "thirty"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-066",
+      "sourceNumber": 66,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "trabs",
+      "options": [
+        "grave",
+        "rudder",
+        "volcano",
+        "beam"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-067",
+      "sourceNumber": 67,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "tū",
+      "options": [
+        "your",
+        "two",
+        "toward",
+        "you"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-068",
+      "sourceNumber": 68,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "turba",
+      "options": [
+        "hat",
+        "crowd",
+        "mud",
+        "whirlpool"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-069",
+      "sourceNumber": 69,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "turpis",
+      "options": [
+        "muddy",
+        "trumpet",
+        "shameful",
+        "tower"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-070",
+      "sourceNumber": 70,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "ūllus",
+      "options": [
+        "only",
+        "further",
+        "any",
+        "other"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-071",
+      "sourceNumber": 71,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "unde",
+      "options": [
+        "whence",
+        "billow",
+        "covered",
+        "everywhere"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-072",
+      "sourceNumber": 72,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "uter",
+      "options": [
+        "sheep",
+        "which",
+        "belly",
+        "hoof"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-073",
+      "sourceNumber": 73,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "vester",
+      "options": [
+        "evening",
+        "your",
+        "footprint",
+        "our"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-074",
+      "sourceNumber": 74,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "vetus",
+      "options": [
+        "prohibition",
+        "cloak",
+        "old",
+        "shrine"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-075",
+      "sourceNumber": 75,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "vir",
+      "options": [
+        "strength",
+        "truth",
+        "man",
+        "scarcely"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-076",
+      "sourceNumber": 76,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "virtūs",
+      "options": [
+        "virgin",
+        "conqueror",
+        "arbor",
+        "valor"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-077",
+      "sourceNumber": 77,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "vitium",
+      "options": [
+        "fillet",
+        "defect",
+        "glass",
+        "vine"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-078",
+      "sourceNumber": 78,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "bellum, bellī",
+      "options": [
+        "peace",
+        "war",
+        "city",
+        "kingdom"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-079",
+      "sourceNumber": 79,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "imperium, imperiī",
+      "options": [
+        "kingdom",
+        "command",
+        "temple",
+        "story"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-080",
+      "sourceNumber": 80,
+      "part": 1,
+      "weight": 1,
+      "promptText": "Choose the best English meaning.",
+      "focusText": "timor, timōris",
+      "options": [
+        "anger",
+        "grief",
+        "fear",
+        "delay"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-081",
+      "sourceNumber": 84,
+      "part": 2,
+      "weight": 2,
+      "promptText": "Choose the best answer.",
+      "focusText": "Multam glōriam HABĒBUNT.",
+      "options": [
+        "they have",
+        "they have had",
+        "they used to have",
+        "they will have"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-082",
+      "sourceNumber": 85,
+      "part": 2,
+      "weight": 2,
+      "promptText": "Choose the best answer.",
+      "focusText": "Paucī in oppidō MANĒRE poterunt.",
+      "options": [
+        "infinitive in indirect statement",
+        "subjective infinitive",
+        "objective infinitive",
+        "complementary infinitive"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-083",
+      "sourceNumber": 86,
+      "part": 2,
+      "weight": 2,
+      "promptText": "The ablative singular of the word VIRTŪS is",
+      "focusText": null,
+      "options": [
+        "virtō",
+        "virtūte",
+        "virō",
+        "virtūtī"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-084",
+      "sourceNumber": 88,
+      "part": 2,
+      "weight": 2,
+      "promptText": "Choose the best answer.",
+      "focusText": "Caesar EADEM dīxit.",
+      "options": [
+        "feminine accusative singular",
+        "neuter accusative plural",
+        "feminine genitive plural",
+        "masculine accusative singular"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-085",
+      "sourceNumber": 90,
+      "part": 2,
+      "weight": 2,
+      "promptText": "Choose the best answer.",
+      "focusText": "Cicerō multās epistulās in quibus SĒ laudāvit scrīpsit.",
+      "options": [
+        "accusative singular",
+        "ablative singular",
+        "nominative singular",
+        "accusative plural"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-086",
+      "sourceNumber": 91,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Id oculīs meīs vīdī.",
+      "options": [
+        "I saw it with my own eyes.",
+        "It saw me with its eyes.",
+        "It saw my eyes.",
+        "I saw my own eyes with it."
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-087",
+      "sourceNumber": 92,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Tribus diēbus apud mē erunt.",
+      "options": [
+        "They will be at my house for three days.",
+        "They will be at my house in three days.",
+        "Three gods will be against me.",
+        "A tribe of gods will be against me."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-088",
+      "sourceNumber": 93,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Omnēs puellae ____ amōrem nostram dedimus pauperēs sunt.",
+      "options": [
+        "quae",
+        "quas",
+        "quibus",
+        "quem"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-089",
+      "sourceNumber": 94,
+      "part": 2,
+      "weight": 2,
+      "promptText": "Choose the best answer.",
+      "focusText": "frātrem tuum, Ā QUŌ saepe iuvābar, crās in forō vidēbō.",
+      "options": [
+        "by whom",
+        "from whom",
+        "than whom",
+        "for whom"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-090",
+      "sourceNumber": 95,
+      "part": 2,
+      "weight": 2,
+      "promptText": "Choose the best answer.",
+      "focusText": "DĀTA SUNT is the __________ of DŌ",
+      "options": [
+        "third person plural perfect indicative passive",
+        "third person plural perfect indicative active",
+        "third person plural perfect subjunctive passive",
+        "third person plural pluperfect indicative passive"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-091",
+      "sourceNumber": 99,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Adventū Ariovistī cognitō, cuique centuriōnī exposuit quō modō proelium initūrus esset.",
+      "options": [
+        "Ariovistus learned of each arrival and explained to the centurion how the battle had started.",
+        "After learning of the arrival of Ariovistus, he explained to each centurion how he intended to start the battle.",
+        "The arrival of Ariovistus having been known, he showed each centurion how the battle had been started."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-092",
+      "sourceNumber": 100,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Archiās, cum Heracliae breve tempus incoluisset, multōs amīcōs sibi conciliāvit.",
+      "options": [
+        "Archias had lived with Heraclia for a short time and won for himself many friends.",
+        "Although Archias and Heraclia had lived together but a short time, they won for themselves many friends.",
+        "When Archias had lived for a short time at Heraclia, he won for himself many friends."
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-093",
+      "sourceNumber": 101,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Coniūrātīs, sī amantiōrēs patriae fuissent, nunc nōn opus esset virō idōneō quī causam ageret.",
+      "options": [
+        "If the conspirators had been more patriotic, they would not now be in need of a man suitable to plead their cause.",
+        "If the lovers had not conspired against their country, there would now be work for a suitable man who might plead their cause.",
+        "There would now be no need of conspirators if patriotic men had been suitable to plead the cause of this man."
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-094",
+      "sourceNumber": 102,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Cūr Caesaris dūcī nūntiābat hostem quārtō diē profectūrum esse?",
+      "options": [
+        "Why did the leader tell Caesar that the enemy had been marching for four days?",
+        "Why did he tell Caesar that the enemy’s leader would set out within four days?",
+        "Why did he tell Caesar’s leader that the enemy would set out on the fourth day?",
+        "Why did he tell Caesar’s leader that the enemy would march for four days?"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-095",
+      "sourceNumber": 103,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Ea studia quae semper dēlectātiōnī mihi fuērunt omnibus petenda sunt.",
+      "options": [
+        "All men should seek those studies which have always delighted me.",
+        "Those studies which have always been sought by all have been a delight to me.",
+        "Those studies which have always seemed delightful to me have been sought for all."
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q-096",
+      "sourceNumber": 104,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Equitem, ā quō equus ab iniūriā retentus erat, laudāvit.",
+      "options": [
+        "He praised the horseman from whom the horse had been kept by injury.",
+        "He praised indeed any one by whom a horse had been kept from injury.",
+        "He praised any horse which had kept a horseman from injury.",
+        "He praised the horseman by whom the horse had been kept from injury."
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-097",
+      "sourceNumber": 105,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Fēmina magnā dīligentiā labōre nōn magnopere perturbātur.",
+      "options": [
+        "The large woman was not greatly disturbed by diligent labor.",
+        "A woman of great diligence is not greatly disturbed by toil.",
+        "A diligent woman is not greatly disturbed by great toil.",
+        "It greatly disturbs a woman of great diligence not to labor."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-098",
+      "sourceNumber": 106,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Hic vir fuit dux barbarōrum.",
+      "options": [
+        "This man was a barbarous leader.",
+        "A man of the barbarians was leader here.",
+        "This man was a leader of the barbarians.",
+        "That hero should be leader of the barbarians."
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-099",
+      "sourceNumber": 107,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Latrōnēs mihi nocēre cōnābuntur dummodo me reppererint priusquam servī meī ex vīllā arcessītī sint.",
+      "options": [
+        "They will try to ward off the bandits from me provided I am discovered before my servants can fortify my villa.",
+        "The bandits will try to harm me provided they discover me before my servants have been summoned from the farm.",
+        "The bandits will try to harm me after they have found me unless my servants shall be summoned from the villa."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-100",
+      "sourceNumber": 109,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Nāvis nōs reliquīs cum captīvīs ad īnsulam feret.",
+      "options": [
+        "He is bringing us with the rest of the captives by ship to the island.",
+        "The ship will bring the captives with the rest of us to the island.",
+        "We shall bring the ship with the rest of the captives to the island.",
+        "The ship will bring us with the rest of the captives to the island."
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-101",
+      "sourceNumber": 110,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Nisi eō tempore quīdam nūntiī de Caesaris victōriā essent allātī existimābant plērique futūrum fuisse utī oppidum amitterētur.",
+      "options": [
+        "Unless the messengers at this certain time had brought news of Caesar’s victory, most people would have thought that the town had been lost.",
+        "Most people thought that unless at that time certain reports of Caesar’s victory had been brought, the town would have been lost.",
+        "Unless certain messages concerning Caesar’s victory had been brought at that time, most people thought that the future would have been to lose the town."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-102",
+      "sourceNumber": 112,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Nunc ēgredere, improbe, nam omnēs sciunt tē esse cōnsulī invisiōrem quam tuīs sociīs.",
+      "options": [
+        "Now hasten to depart, for all men know that you are more hateful to your comrades than the consul.",
+        "Now go, wicked fellow, for they know that you are all more hateful to the consul than to your comrades.",
+        "Now go, depraved one, for everybody knows that you are more detestable to the consul than to your comrades."
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-103",
+      "sourceNumber": 113,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Pascere crudēlis, nostrō dolōre corque ferum satia; miserae mihi plūra supersunt quam tibi fēlīcī.",
+      "options": [
+        "Be satisfied to feed your savage heart upon my grief, cruel one; I have more when wretched than you have when happy.",
+        "A savage heart is satisfied to feed upon my grief, cruel one; I shall survive longer though wretched than you when happy.",
+        "Feed upon my grief, cruel one, and satisfy your savage heart; I possess more in misery than you do in happiness."
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-104",
+      "sourceNumber": 114,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Paucī Athēnīs multōs mēnsēs habitāre poterant.",
+      "options": [
+        "A few of the Athenians were able to live for many months.",
+        "Few can live in Athens for many months.",
+        "Many were able to live a few miles out of Athens.",
+        "A few were able to live at Athens for many months."
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-105",
+      "sourceNumber": 117,
+      "part": 2,
+      "weight": 5,
+      "promptText": "Choose the best answer.",
+      "focusText": "Quam diū passus est senātus Catilīnam urbem incendere temptāre?",
+      "options": [
+        "How long has the senate been permitted to tempt Catiline to burn the city?",
+        "How long has the senate allowed Catiline to try to burn the city?",
+        "How many times has the senate passed a decree to try Catiline for burning the city?"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-106",
+      "sourceNumber": 118,
+      "part": 2,
+      "weight": 2,
+      "promptText": "What is the syntactical construction?",
+      "focusText": "Hostibus victīs, mīlitēs domum redīērunt",
+      "options": [
+        "indirect statement",
+        "ablative absolute",
+        "purpose clause",
+        "cum-clause"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q-107",
+      "sourceNumber": 119,
+      "part": 2,
+      "weight": 2,
+      "promptText": "What is the syntactical construction?",
+      "focusText": "Caesar dīxit sē hostēs vīcisse",
+      "options": [
+        "purpose clause",
+        "indirect command",
+        "indirect statement",
+        "ablative absolute"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-108",
+      "sourceNumber": 120,
+      "part": 2,
+      "weight": 2,
+      "promptText": "What is the syntactical construction?",
+      "focusText": "Dux mīlitibus imperāvit ut fortiter pugnārent",
+      "options": [
+        "result clause",
+        "purpose clause",
+        "indirect command",
+        "fear clause"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "q-109",
+      "sourceNumber": 121,
+      "part": 2,
+      "weight": 2,
+      "promptText": "What is the syntactical construction?",
+      "focusText": "Mīlitēs ad urbem vēnērunt ut eam dēfenderent",
+      "options": [
+        "indirect statement",
+        "ablative absolute",
+        "result clause",
+        "purpose clause"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "q-110",
+      "sourceNumber": 122,
+      "part": 2,
+      "weight": 2,
+      "promptText": "What is the syntactical construction?",
+      "focusText": "Marītō suō Claudiō imperante, rem pūblicam summā cūrā administrābat",
+      "options": [
+        "Dative of possession",
+        "Ablative of manner",
+        "Indirect statement",
+        "Gerundive expressing purpose"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

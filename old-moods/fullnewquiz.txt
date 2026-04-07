@@ -1,0 +1,1093 @@
+#1
+Question weight: 1
+Question text: -que
+Possible answers:
+{A} but
+{B} and
+{C} or
+{D} each
+Correct answer: {B} and
+
+#2
+Question weight: 1
+Question text: hic
+Possible answers:
+{A} there
+{B} his
+{C} that
+{D} this
+Correct answer: {D} this
+
+#3
+Question weight: 1
+Question text: ad
+Possible answers:
+{A} toward
+{B} away
+{C} above
+{D} from
+Correct answer: {A} toward
+
+#4
+Question weight: 1
+Question text: dīcere
+Possible answers:
+{A} teach
+{B} lead
+{C} ask
+{D} say
+Correct answer: {D} say
+
+#5
+Question weight: 1
+Question text: sī
+Possible answers:
+{A} thus
+{B} or
+{C} if
+{D} yes
+Correct answer: {C} if
+
+#6
+Question weight: 1
+Question text: facere
+Possible answers:
+{A} crime
+{B} fact
+{C} easy
+{D} make
+Correct answer: {D} make
+
+#7
+Question weight: 1
+Question text: ē/ex
+Possible answers:
+{A} she
+{B} go
+{C} down
+{D} out
+Correct answer: {D} out
+
+#8
+Question weight: 1
+Question text: rēs
+Possible answers:
+{A} witness
+{B} testify
+{C} affair
+{D} laugh
+Correct answer: {C} affair
+
+#9
+Question weight: 1
+Question text: alius
+Possible answers:
+{A} the other (of two)
+{B} elsewhere
+{C} another
+{D} winged
+Correct answer: {C} another
+
+#10
+Question weight: 1
+Question text: venīre
+Possible answers:
+{A} sell
+{B} come
+{C} hunt
+{D} wound
+Correct answer: {B} come
+
+#11
+Question weight: 1
+Question text: nē
+Possible answers:
+{A} neither
+{B} not
+{C} never
+{D} nor
+Correct answer: {B} not
+
+#12
+Question weight: 1
+Question text: quīdam
+Possible answers:
+{A} indeed
+{B} therefore
+{C} any
+{D} a certain
+Correct answer: {D} a certain
+
+#13
+Question weight: 1
+Question text: tamen
+Possible answers:
+{A} finally
+{B} whereas
+{C} whichever
+{D} nevertheless
+Correct answer: {D} nevertheless
+
+#14
+Question weight: 1
+Question text: velle
+Possible answers:
+{A} sail
+{B} parchment
+{C} want
+{D} prefer
+Correct answer: {C} want
+
+#15
+Question weight: 1
+Question text: manus
+Possible answers:
+{A} hand
+{B} hut
+{C} ghost
+{D} morning
+Correct answer: {A} hand
+
+#16
+Question weight: 1
+Question text: animus
+Possible answers:
+{A} mind
+{B} animal
+{C} drawing
+{D} year
+Correct answer: {A} mind
+
+#17
+Question weight: 1
+Question text: vel
+Possible answers:
+{A} garment
+{B} sail
+{C} wish
+{D} or
+Correct answer: {D} or
+
+#18
+Question weight: 1
+Question text: quia
+Possible answers:
+{A} who
+{B} because
+{C} which (things)
+{D} of such a kind
+Correct answer: {B} because
+
+#19
+Question weight: 1
+Question text: at
+Possible answers:
+{A} at
+{B} near
+{C} from
+{D} but
+Correct answer: {D} but
+
+#20
+Question weight: 1
+Question text: malus
+Possible answers:
+{A} apple
+{B} bad
+{C} prefer
+{D} hammer
+Correct answer: {B} bad
+
+#21
+Question weight: 1
+Question text: dum
+Possible answers:
+{A} then
+{B} for a long time
+{C} while
+{D} next
+Correct answer: {C} while
+
+#22
+Question weight: 1
+Question text: caelum
+Possible answers:
+{A} sky
+{B} carve
+{C} corpse
+{D} seal
+Correct answer: {A} sky
+
+#23
+Question weight: 1
+Question text: ubi
+Possible answers:
+{A} why
+{B} when
+{C} copiously
+{D} however
+Correct answer: {B} when
+
+#24
+Question weight: 1
+Question text: urbs
+Possible answers:
+{A} teat
+{B} city
+{C} ointment
+{D} urban
+Correct answer: {B} city
+
+#25
+Question weight: 1
+Question text: aliquis
+Possible answers:
+{A} someone
+{B} whoever
+{C} nurse
+{D} each one
+Correct answer: {A} someone
+
+#26
+Question weight: 1
+Question text: mīles
+Possible answers:
+{A} soldier
+{B} mile(stone)
+{C} military
+{D} battle
+Correct answer: {A} soldier
+
+#27
+Question weight: 1
+Question text: causa
+Possible answers:
+{A} hut
+{B} tail
+{C} disaster
+{D} reason
+Correct answer: {D} reason
+
+#28
+Question weight: 1
+Question text: accipere
+Possible answers:
+{A} approach
+{B} kill
+{C} receive
+{D} summon
+Correct answer: {C} receive
+
+#29
+Question weight: 1
+Question text: vīs
+Possible answers:
+{A} strong
+{B} desire
+{C} scarcely
+{D} strength
+Correct answer: {D} strength
+
+#30
+Question weight: 1
+Question text: tālis
+Possible answers:
+{A} so large
+{B} of such a kind
+{C} so many
+{D} at such a time
+Correct answer: {B} of such a kind
+
+#31
+Question weight: 1
+Question text: opus
+Possible answers:
+{A} work
+{B} music
+{C} town
+{D} burden
+Correct answer: {A} work
+
+#32
+Question weight: 1
+Question text: cūra
+Possible answers:
+{A} care
+{B} cure
+{C} wax
+{D} senate house
+Correct answer: {A} care
+
+#33
+Question weight: 1
+Question text: vincere
+Possible answers:
+{A} conquer
+{B} bind
+{C} thrive
+{D} stay awake
+Correct answer: {A} conquer
+
+#34
+Question weight: 1
+Question text: fortis
+Possible answers:
+{A} brave
+{B} maybe
+{C} military camp
+{D} by chance
+Correct answer: {A} brave
+
+#35
+Question weight: 1
+Question text: saepe
+Possible answers:
+{A} always
+{B} division
+{C} often
+{D} almost
+Correct answer: {C} often
+
+#36
+Question weight: 1
+Question text: vox
+Possible answers:
+{A} voice
+{B} life
+{C} live
+{D} summon
+Correct answer: {A} voice
+
+#37
+Question weight: 1
+Question text: sequī
+Possible answers:
+{A} second
+{B} follow
+{C} sparkle
+{D} after
+Correct answer: {B} follow
+
+#38
+Question weight: 1
+Question text: summus
+Possible answers:
+{A} total
+{B} mountain
+{C} we are
+{D} highest
+Correct answer: {D} highest
+
+#39
+Question weight: 1
+Question text: iuvenis
+Possible answers:
+{A} cattle
+{B} young
+{C} court
+{D} ridge
+Correct answer: {B} young
+
+#40
+Question weight: 1
+Question text: ergo
+Possible answers:
+{A} therefore
+{B} against
+{C} toward
+{D} effort
+Correct answer: {A} therefore
+
+#41
+Question weight: 1
+Question text: gravis
+Possible answers:
+{A} tomb
+{B} important
+{C} carved
+{D} deadly
+Correct answer: {B} important
+
+#42
+Question weight: 1
+Question text: cōnsilium
+Possible answers:
+{A} comfort
+{B} plan
+{C} consulship
+{D} place of honor
+Correct answer: {B} plan
+
+#43
+Question weight: 1
+Question text: coepisse
+Possible answers:
+{A} began
+{B} division of a legion
+{C} collected
+{D} kinsman
+Correct answer: {A} began
+
+#44
+Question weight: 1
+Question text: stāre
+Possible answers:
+{A} stand
+{B} stare
+{C} at night
+{D} strike
+Correct answer: {A} stand
+
+#45
+Question weight: 1
+Question text: cūnctus
+Possible answers:
+{A} delay
+{B} broken
+{C} all together
+{D} underground passage
+Correct answer: {C} all together
+
+#46
+Question weight: 1
+Question text: studium
+Possible answers:
+{A} studious
+{B} eagerness
+{C} foolishness
+{D} astonishment
+Correct answer: {B} eagerness
+
+#47
+Question weight: 1
+Question text: redīre
+Possible answers:
+{A} blush
+{B} say again
+{C} give back
+{D} go back
+Correct answer: {D} go back
+
+#48
+Question weight: 1
+Question text: relinquere
+Possible answers:
+{A} abandonment
+{B} resist
+{C} open
+{D} leave behind
+Correct answer: {D} leave behind
+
+#49
+Question weight: 1
+Question text: simul
+Possible answers:
+{A} pretend
+{B} once
+{C} like
+{D} at the same time
+Correct answer: {D} at the same time
+
+#50
+Question weight: 1
+Question text: aurum
+Possible answers:
+{A} ear
+{B} gold
+{C} hall
+{D} altar
+Correct answer: {B} gold
+
+#51
+Question weight: 1
+Question text: gerere
+Possible answers:
+{A} age
+{B} family
+{C} kind
+{D} wear
+Correct answer: {D} wear
+
+#52
+Question weight: 1
+Question text: solēre
+Possible answers:
+{A} be alone
+{B} be in the habit of
+{C} shine
+{D} lie still
+Correct answer: {B} be in the habit of
+
+#53
+Question weight: 1
+Question text: laus
+Possible answers:
+{A} happiness
+{B} law
+{C} praise
+{D} flea
+Correct answer: {C} praise
+
+#54
+Question weight: 1
+Question text: fīnis
+Possible answers:
+{A} neighbor
+{B} trust
+{C} boundary
+{D} delicate
+Correct answer: {C} boundary
+
+#55
+Question weight: 1
+Question text: nōscere
+Possible answers:
+{A} learn
+{B} not know
+{C} harm
+{D} call by name
+Correct answer: {A} learn
+
+#56
+Question weight: 1
+Question text: deinde
+Possible answers:
+{A} down from there
+{B} next
+{C} however
+{D} because
+Correct answer: {B} next
+
+#57
+Question weight: 1
+Question text: melior
+Possible answers:
+{A} bigger
+{B} better
+{C} woman
+{D} honey
+Correct answer: {B} better
+
+#58
+Question weight: 1
+Question text: ūllus
+Possible answers:
+{A} oak
+{B} oil
+{C} jar
+{D} any
+Correct answer: {D} any
+
+#59
+Question weight: 1
+Question text: seu
+Possible answers:
+{A} alas
+{B} for
+{C} just as
+{D} or if
+Correct answer: {D} or if
+
+#60
+Question weight: 1
+Question text: parāre
+Possible answers:
+{A} make level
+{B} make ready
+{C} give birth
+{D} obey
+Correct answer: {B} make ready
+
+#61
+Question weight: 1
+Question text: sodālis
+Possible answers:
+{A} companion
+{B} sunny
+{C} comfortable
+{D} thirsty
+Correct answer: {A} companion
+
+#62
+Question weight: 1
+Question text: sōlus
+Possible answers:
+{A} alone
+{B} safe
+{C} loose
+{D} ground
+Correct answer: {A} alone
+
+#63
+Question weight: 1
+Question text: stultus
+Possible answers:
+{A} debauched
+{B} eager
+{C} noisy
+{D} foolish
+Correct answer: {D} foolish
+
+#64
+Question weight: 1
+Question text: sub
+Possible answers:
+{A} over
+{B} under
+{C} behind
+{D} in front
+Correct answer: {B} under
+
+#65
+Question weight: 1
+Question text: tōtus
+Possible answers:
+{A} toga
+{B} all
+{C} so many
+{D} thirty
+Correct answer: {B} all
+
+#66
+Question weight: 1
+Question text: trabs
+Possible answers:
+{A} grave
+{B} rudder
+{C} volcano
+{D} beam
+Correct answer: {D} beam
+
+#67
+Question weight: 1
+Question text: tū
+Possible answers:
+{A} your
+{B} two
+{C} toward
+{D} you
+Correct answer: {D} you
+
+#68
+Question weight: 1
+Question text: turba
+Possible answers:
+{A} hat
+{B} crowd
+{C} mud
+{D} whirlpool
+Correct answer: {B} crowd
+
+#69
+Question weight: 1
+Question text: turpis
+Possible answers:
+{A} muddy
+{B} trumpet
+{C} shameful
+{D} tower
+Correct answer: {C} shameful
+
+#70
+Question weight: 1
+Question text: ūllus
+Possible answers:
+{A} only
+{B} further
+{C} any
+{D} other
+Correct answer: {C} any
+
+#71
+Question weight: 1
+Question text: unde
+Possible answers:
+{A} whence
+{B} billow
+{C} covered
+{D} everywhere
+Correct answer: {A} whence
+
+#72
+Question weight: 1
+Question text: uter
+Possible answers:
+{A} sheep
+{B} which
+{C} belly
+{D} hoof
+Correct answer: {B} which
+
+#73
+Question weight: 1
+Question text: vester
+Possible answers:
+{A} evening
+{B} your
+{C} footprint
+{D} our
+Correct answer: {B} your
+
+#74
+Question weight: 1
+Question text: vetus
+Possible answers:
+{A} prohibition
+{B} cloak
+{C} old
+{D} shrine
+Correct answer: {C} old
+
+#75
+Question weight: 1
+Question text: vir
+Possible answers:
+{A} strength
+{B} truth
+{C} man
+{D} scarcely
+Correct answer: {C} man
+
+#76
+Question weight: 1
+Question text: virtūs
+Possible answers:
+{A} virgin
+{B} conqueror
+{C} arbor
+{D} valor
+Correct answer: {D} valor
+
+#77
+Question weight: 1
+Question text: vitium
+Possible answers:
+{A} fillet
+{B} defect
+{C} glass
+{D} vine
+Correct answer: {B} defect
+
+#78
+Question weight: 1
+Question text: bellum, bellī
+Possible answers:
+{A} peace
+{B} war
+{C} city
+{D} kingdom
+Correct answer: {B} war
+
+#79
+Question weight: 1
+Question text: imperium, imperiī
+Possible answers:
+{A} kingdom
+{B} command
+{C} temple
+{D} story
+Correct answer: {B} command
+
+#80
+Question weight: 1
+Question text: timor, timōris
+Possible answers:
+{A} anger
+{B} grief
+{C} fear
+{D} delay
+Correct answer: {C} fear
+
+============================
+
+#84
+Question weight: 2
+Question text: Multam glōriam HABĒBUNT.
+Possible answers:
+{A} they have
+{B} they have had
+{C} they used to have
+{D} they will have
+Correct answer: {D} they will have
+
+#85
+Question weight: 2
+Question text: Paucī in oppidō MANĒRE poterunt.
+Possible answers:
+{A} infinitive in indirect statement
+{B} subjective infinitive
+{C} objective infinitive
+{D} complementary infinitive
+Correct answer: {D} complementary infinitive
+
+#86
+Question weight: 2
+Question text: The ablative singular of the word VIRTŪS is
+Possible answers:
+{A} virtō
+{B} virtūte
+{C} virō
+{D} virtūtī
+Correct answer: {B} virtūte
+
+#88
+Question weight: 2
+Question text: Caesar EADEM dīxit.
+Possible answers:
+{A} feminine accusative singular
+{B} neuter accusative plural
+{C} feminine genitive plural
+{D} masculine accusative singular
+Correct answer: {B} neuter accusative plural
+
+#90
+Question weight: 2
+Question text: Cicerō multās epistulās in quibus SĒ laudāvit scrīpsit.
+Possible answers:
+{A} accusative singular
+{B} ablative singular
+{C} nominative singular
+{D} accusative plural
+Correct answer: {A} accusative singular
+
+#91
+Question weight: 5
+Question text: Id oculīs meīs vīdī.
+Possible answers:
+{A} I saw it with my own eyes.
+{B} It saw me with its eyes.
+{C} It saw my eyes.
+{D} I saw my own eyes with it.
+Correct answer: {A} I saw it with my own eyes.
+
+#92
+Question weight: 5
+Question text: Tribus diēbus apud mē erunt.
+Possible answers:
+{A} They will be at my house for three days.
+{B} They will be at my house in three days.
+{C} Three gods will be against me.
+{D} A tribe of gods will be against me.
+Correct answer: {B} They will be at my house in three days.
+
+
+#93
+Question weight: 5
+Question text: Omnēs puellae ____ amōrem nostram dedimus pauperēs sunt.
+Possible answers:
+{A} quae
+{B} quas
+{C} quibus
+{D} quem
+Correct answer: {C} quibus
+
+#94
+Question weight: 2
+Question text: frātrem tuum, Ā QUŌ saepe iuvābar, crās in forō vidēbō.
+Possible answers:
+{A} by whom
+{B} from whom
+{C} than whom
+{D} for whom
+Correct answer: {A} by whom
+
+#95
+Question weight: 2
+Question text: DĀTA SUNT is the __________ of DŌ
+Possible answers:
+{A} third person plural perfect indicative passive
+{B} third person plural perfect indicative active
+{C} third person plural perfect subjunctive passive
+{D} third person plural pluperfect indicative passive
+Correct answer: {A} third person plural perfect indicative passive
+
+#99
+Question weight: 5
+Question text: Adventū Ariovistī cognitō, cuique centuriōnī exposuit quō modō proelium initūrus esset.
+Possible answers:
+{A} Ariovistus learned of each arrival and explained to the centurion how the battle had started.
+{B} After learning of the arrival of Ariovistus, he explained to each centurion how he intended to start the battle.
+{C} The arrival of Ariovistus having been known, he showed each centurion how the battle had been started.
+Correct answer: {B} After learning of the arrival of Ariovistus, he explained to each centurion how he intended to start the battle.
+
+#100
+Question weight: 5
+Question text: Archiās, cum Heracliae breve tempus incoluisset, multōs amīcōs sibi conciliāvit.
+Possible answers:
+{A} Archias had lived with Heraclia for a short time and won for himself many friends.
+{B} Although Archias and Heraclia had lived together but a short time, they won for themselves many friends.
+{C} When Archias had lived for a short time at Heraclia, he won for himself many friends.
+Correct answer: {C} When Archias had lived for a short time at Heraclia, he won for himself many friends.
+
+#101
+Question weight: 5
+Question text: Coniūrātīs, sī amantiōrēs patriae fuissent, nunc nōn opus esset virō idōneō quī causam ageret.
+Possible answers:
+{A} If the conspirators had been more patriotic, they would not now be in need of a man suitable to plead their cause.
+{B} If the lovers had not conspired against their country, there would now be work for a suitable man who might plead their cause.
+{C} There would now be no need of conspirators if patriotic men had been suitable to plead the cause of this man.
+Correct answer: {A} If the conspirators had been more patriotic, they would not now be in need of a man suitable to plead their cause.
+
+#102
+Question weight: 5
+Question text: Cūr Caesaris dūcī nūntiābat hostem quārtō diē profectūrum esse?
+Possible answers:
+{A} Why did the leader tell Caesar that the enemy had been marching for four days?
+{B} Why did he tell Caesar that the enemy’s leader would set out within four days?
+{C} Why did he tell Caesar’s leader that the enemy would set out on the fourth day?
+{D} Why did he tell Caesar’s leader that the enemy would march for four days?
+Correct answer: {C} Why did he tell Caesar’s leader that the enemy would set out on the fourth day?
+
+#103
+Question weight: 5
+Question text: Ea studia quae semper dēlectātiōnī mihi fuērunt omnibus petenda sunt.
+Possible answers:
+{A} All men should seek those studies which have always delighted me.
+{B} Those studies which have always been sought by all have been a delight to me.
+{C} Those studies which have always seemed delightful to me have been sought for all.
+Correct answer: {A} All men should seek those studies which have always delighted me.
+
+#104
+Question weight: 5
+Question text: Equitem, ā quō equus ab iniūriā retentus erat, laudāvit.
+Possible answers:
+{A} He praised the horseman from whom the horse had been kept by injury.
+{B} He praised indeed any one by whom a horse had been kept from injury.
+{C} He praised any horse which had kept a horseman from injury.
+{D} He praised the horseman by whom the horse had been kept from injury.
+Correct answer: {D} He praised the horseman by whom the horse had been kept from injury.
+
+#105
+Question weight: 5
+Question text: Fēmina magnā dīligentiā labōre nōn magnopere perturbātur.
+Possible answers:
+{A} The large woman was not greatly disturbed by diligent labor.
+{B} A woman of great diligence is not greatly disturbed by toil.
+{C} A diligent woman is not greatly disturbed by great toil.
+{D} It greatly disturbs a woman of great diligence not to labor.
+Correct answer: {B} A woman of great diligence is not greatly disturbed by toil.
+
+#106
+Question weight: 5
+Question text: Hic vir fuit dux barbarōrum.
+Possible answers:
+{A} This man was a barbarous leader.
+{B} A man of the barbarians was leader here.
+{C} This man was a leader of the barbarians.
+{D} That hero should be leader of the barbarians.
+Correct answer: {C} This man was a leader of the barbarians.
+
+#107
+Question weight: 5
+Question text: Latrōnēs mihi nocēre cōnābuntur dummodo me reppererint priusquam servī meī ex vīllā arcessītī sint.
+Possible answers:
+{A} They will try to ward off the bandits from me provided I am discovered before my servants can fortify my villa.
+{B} The bandits will try to harm me provided they discover me before my servants have been summoned from the farm.
+{C} The bandits will try to harm me after they have found me unless my servants shall be summoned from the villa.
+Correct answer: {B} The bandits will try to harm me provided they discover me before my servants have been summoned from the farm.
+
+#109
+Question weight: 5
+Question text: Nāvis nōs reliquīs cum captīvīs ad īnsulam feret.
+Possible answers:
+{A} He is bringing us with the rest of the captives by ship to the island.
+{B} The ship will bring the captives with the rest of us to the island.
+{C} We shall bring the ship with the rest of the captives to the island.
+{D} The ship will bring us with the rest of the captives to the island.
+Correct answer: {D} The ship will bring us with the rest of the captives to the island.
+
+#110
+Question weight: 5
+Question text: Nisi eō tempore quīdam nūntiī de Caesaris victōriā essent allātī existimābant plērique futūrum fuisse utī oppidum amitterētur.
+Possible answers:
+{A} Unless the messengers at this certain time had brought news of Caesar’s victory, most people would have thought that the town had been lost.
+{B} Most people thought that unless at that time certain reports of Caesar’s victory had been brought, the town would have been lost.
+{C} Unless certain messages concerning Caesar’s victory had been brought at that time, most people thought that the future would have been to lose the town.
+Correct answer: {B} Most people thought that unless at that time certain reports of Caesar’s victory had been brought, the town would have been lost.
+
+#112
+Question weight: 5
+Question text: Nunc ēgredere, improbe, nam omnēs sciunt tē esse cōnsulī invisiōrem quam tuīs sociīs.
+Possible answers:
+{A} Now hasten to depart, for all men know that you are more hateful to your comrades than the consul.
+{B} Now go, wicked fellow, for they know that you are all more hateful to the consul than to your comrades.
+{C} Now go, depraved one, for everybody knows that you are more detestable to the consul than to your comrades.
+Correct answer: {C} Now go, depraved one, for everybody knows that you are more detestable to the consul than to your comrades.
+
+#113
+Question weight: 5
+Question text: Pascere crudēlis, nostrō dolōre corque ferum satia; miserae mihi plūra supersunt quam tibi fēlīcī.
+Possible answers:
+{A} Be satisfied to feed your savage heart upon my grief, cruel one; I have more when wretched than you have when happy.
+{B} A savage heart is satisfied to feed upon my grief, cruel one; I shall survive longer though wretched than you when happy.
+{C} Feed upon my grief, cruel one, and satisfy your savage heart; I possess more in misery than you do in happiness.
+Correct answer: {C} Feed upon my grief, cruel one, and satisfy your savage heart; I possess more in misery than you do in happiness.
+
+#114
+Question weight: 5
+Question text: Paucī Athēnīs multōs mēnsēs habitāre poterant.
+Possible answers:
+{A} A few of the Athenians were able to live for many months.
+{B} Few can live in Athens for many months.
+{C} Many were able to live a few miles out of Athens.
+{D} A few were able to live at Athens for many months.
+Correct answer: {D} A few were able to live at Athens for many months.
+
+#117
+Question weight: 5
+Question text: Quam diū passus est senātus Catilīnam urbem incendere temptāre?
+Possible answers:
+{A} How long has the senate been permitted to tempt Catiline to burn the city?
+{B} How long has the senate allowed Catiline to try to burn the city?
+{C} How many times has the senate passed a decree to try Catiline for burning the city?
+Correct answer: {B} How long has the senate allowed Catiline to try to burn the city?
+
+#118
+Question weight: 2
+Question text: What is the syntactical construction in Hostibus victīs, mīlitēs domum redīērunt?
+Possible answers:
+{A} indirect statement
+{B} ablative absolute
+{C} purpose clause
+{D} cum-clause
+Correct answer: {B} ablative absolute
+
+#119
+Question weight: 2
+Question text: What is the syntactical construction in Caesar dīxit sē hostēs vīcisse?
+Possible answers:
+{A} purpose clause
+{B} indirect command
+{C} indirect statement
+{D} ablative absolute
+Correct answer: {C} indirect statement
+
+#120
+Question weight: 2
+Question text: What is the syntactical construction in Dux mīlitibus imperāvit ut fortiter pugnārent?
+Possible answers:
+{A} result clause
+{B} purpose clause
+{C} indirect command
+{D} fear clause
+Correct answer: {C} indirect command
+
+#121
+Question weight: 2
+Question text: What is the syntactical construction in Mīlitēs ad urbem vēnērunt ut eam dēfenderent?
+Possible answers:
+{A} indirect statement
+{B} ablative absolute
+{C} result clause
+{D} purpose clause
+Correct answer: {D} purpose clause
+
+#122
+Question weight: 2
+Question text: What is the syntactical construction in Marītō suō Claudiō imperante, rem pūblicam summā cūrā administrābat?
+Possible answers:
+{A} Dative of possession
+{B} Ablative of manner
+{C} Indirect statement
+{D} Gerundive expressing purpose
+Correct answer: {B} Ablative of manner

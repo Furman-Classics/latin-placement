@@ -2,37 +2,30 @@
 
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz8_sa2xM-jJm8BrwTlgiAg4rZ8iaMXJoOgkTOZYJf5WcZ78rEg1YoYW5ZOqHyg4UISoQ/exec';
 const SUBMIT_TOKEN = 'placent-2026';
-const PAYLOAD_VERSION = '2026-sheet-v3';
-
+const PAYLOAD_VERSION = '2026-sheet-v4';
+const EXAM_URL = 'data/exam.json';
 const DEV_MODE = new URLSearchParams(location.search).has('dev');
-const STORAGE_KEY = DEV_MODE ? 'placent_dev_session_v3' : 'placent_session_v3';
-const TIMER_MS = 45 * 60 * 1000;
-const EXAM_VERSION = '2026-3part-v1';
-const FORM_URL = 'data/form.json';
-
-const PLACEMENT_RULES = {
-  'LATN 325': { totalMin: 32, p1Min: 14, p2Min: 11, p3Min: 7 },
-  'LATN 201': { totalMin: 20, p1Min: 11, p2Min: 7 },
-};
+const STORAGE_KEY = DEV_MODE ? 'placent_session_v4_dev' : 'placent_session_v4';
+const TIMER_MS = 40 * 60 * 1000;
 
 let state = {
   screen: 'info',
-  formId: null,
-  version: EXAM_VERSION,
+  version: null,
+  totals: { part1: 0, part2: 0, overall: 0 },
   studentInfo: null,
-  passages: [],
+  selfEval: null,
   questions: [],
   part1Questions: [],
   part2Questions: [],
-  part3Questions: [],
   answers: {},
   optionOrder: {},
   p1Index: 0,
   p2Index: 0,
-  p3Index: 0,
   submissionId: null,
   timerStart: null,
+  timerVisible: false,
   timerHandle: null,
+  tickHandle: null,
   submitted: false,
 };
 
@@ -42,57 +35,6 @@ function $(id) {
 
 function renderHTML(raw) {
   return String(raw || '').replace(/\[underline:\s*([^\]]+)\]/g, '<span class="hl">$1</span>');
-}
-
-function trimPromptLead(raw) {
-  const cleaned = String(raw || '').replace(/^[\s,.:;!?-]+/, '').trim();
-  return cleaned.replace(/^[a-z]/, letter => letter.toUpperCase());
-}
-
-function splitPrompt(prompt) {
-  const rawPrompt = String(prompt || '');
-  const match = rawPrompt.match(/^(.*?)<em>(.*?)<\/em>(.*)$/s);
-  if (!match) {
-    return {
-      focusHtml: '',
-      promptHtml: renderHTML(rawPrompt),
-    };
-  }
-
-  const [, rawBefore, rawFocus, rawAfter] = match;
-  const before = rawBefore.trim();
-  const after = rawAfter.trim();
-  let questionText = null;
-
-  if (/^In(?: the sentence)?$/i.test(before) || /^Read the sentence$/i.test(before)) {
-    questionText = trimPromptLead(rawAfter);
-  } else if (/^What is the best translation of$/i.test(before)) {
-    questionText = 'What is the best translation?';
-  } else if (/^What is the best sense of$/i.test(before)) {
-    questionText = 'What is the best sense?';
-  } else if (/^Identify the type of condition in$/i.test(before)) {
-    questionText = 'Identify the type of condition.';
-  } else if (/^Identify the construction in$/i.test(before)) {
-    questionText = 'Identify the construction.';
-  } else if (/^In the passage, what does$/i.test(before) && /^mean\?$/i.test(after)) {
-    questionText = 'In the passage, what does this mean?';
-  } else if (/^What does the sentence$/i.test(before) && /^imply\?$/i.test(after)) {
-    questionText = 'What does this sentence imply?';
-  } else if (/^What does$/i.test(before) && /^imply in context\?$/i.test(after)) {
-    questionText = 'What does this imply in context?';
-  }
-
-  if (!questionText) {
-    return {
-      focusHtml: '',
-      promptHtml: renderHTML(rawPrompt),
-    };
-  }
-
-  return {
-    focusHtml: `<em>${renderHTML(rawFocus)}</em>`,
-    promptHtml: renderHTML(questionText),
-  };
 }
 
 function shuffle(arr) {
@@ -107,18 +49,18 @@ function shuffle(arr) {
 function showScreen(name) {
   const ids = [
     'screen-info',
+    'screen-selfeval',
     'screen-interstitial1',
     'screen-interstitial2',
-    'screen-interstitial3',
     'screen-part1',
     'screen-part2',
-    'screen-part3',
     'screen-done',
   ];
   for (const id of ids) {
     const el = document.getElementById(id);
     if (el) el.hidden = (id !== `screen-${name}`);
   }
+  updateTimerUI();
   window.scrollTo(0, 0);
 }
 
@@ -129,34 +71,22 @@ function generateSubmissionId() {
   return `sub-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 }
 
-function setDoneSubmission(submissionId) {
-  const el = $('done-submission');
-  if (!el) return;
-  if (!submissionId) {
-    el.hidden = true;
-    el.textContent = '';
-    return;
-  }
-  el.hidden = false;
-  el.textContent = `Submission ID: ${submissionId}`;
-}
-
 function saveState() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
       screen: state.screen,
-      formId: state.formId,
       version: state.version,
+      totals: state.totals,
       studentInfo: state.studentInfo,
-      passages: state.passages,
+      selfEval: state.selfEval,
       questions: state.questions,
       answers: state.answers,
       optionOrder: state.optionOrder,
       p1Index: state.p1Index,
       p2Index: state.p2Index,
-      p3Index: state.p3Index,
       submissionId: state.submissionId,
       timerStart: state.timerStart,
+      timerVisible: state.timerVisible,
     }));
   } catch (_) {}
 }
@@ -167,65 +97,34 @@ function clearState() {
   } catch (_) {}
 }
 
-function normalizeQuestion(formId, rawQuestion) {
-  const question = {
-    ...rawQuestion,
-    formId,
-    correctIndices: Array.isArray(rawQuestion.correctIndices)
-      ? rawQuestion.correctIndices.map(Number)
-      : [Number(rawQuestion.correct)],
-    minSelections: Number(rawQuestion.minSelections || 1),
-    maxSelections: Number(rawQuestion.maxSelections || 1),
-    topicTags: Array.isArray(rawQuestion.topicTags) ? rawQuestion.topicTags : [],
-    pureLabel: Boolean(rawQuestion.pureLabel),
-  };
-  return question;
-}
+async function loadExam() {
+  const response = await fetch(EXAM_URL);
+  if (!response.ok) throw new Error('Could not load exam data.');
+  const raw = await response.json();
+  const allQuestions = Array.isArray(raw.questions) ? raw.questions : [];
 
-function prepareFormPayload(rawForm, selectedFormId) {
-  const formId = rawForm.formId || selectedFormId;
-  const questions = (rawForm.questions || []).map(q => normalizeQuestion(formId, q));
-  const passages = Array.isArray(rawForm.passages) ? rawForm.passages : [];
-  if (!DEV_MODE) {
-    return {
-      formId,
-      version: rawForm.version || EXAM_VERSION,
-      passages,
-      questions,
-    };
+  let questions = allQuestions;
+  if (DEV_MODE) {
+    const devP1 = allQuestions.filter(q => q.part === 1).slice(0, 3);
+    const devP2 = allQuestions.filter(q => q.part === 2).slice(0, 3);
+    questions = [...devP1, ...devP2];
   }
 
-  const devPart1 = questions.filter(q => q.part === 1).slice(0, 2);
-  const devPart2 = questions.filter(q => q.part === 2).slice(0, 2);
-  const devPart3 = questions.filter(q => q.part === 3).slice(0, 2);
-  const kept = [...devPart1, ...devPart2, ...devPart3];
-  const passageIds = new Set(kept.map(q => q.passageId).filter(Boolean));
-  return {
-    formId,
-    version: rawForm.version || EXAM_VERSION,
-    passages: passages.filter(p => passageIds.has(p.passageId)),
-    questions: kept,
+  const totals = {
+    part1: questions.filter(q => q.part === 1).reduce((sum, q) => sum + Number(q.weight || 0), 0),
+    part2: questions.filter(q => q.part === 2).reduce((sum, q) => sum + Number(q.weight || 0), 0),
   };
-}
+  totals.overall = totals.part1 + totals.part2;
 
-async function loadForm() {
-  const response = await fetch(FORM_URL);
-  if (!response.ok) throw new Error('Could not load form.');
-  const rawForm = await response.json();
-  return prepareFormPayload(rawForm, rawForm.formId || 'MAIN');
+  return {
+    version: raw.version || '2026-2part-v1',
+    totals,
+    questions,
+  };
 }
 
 function buildOptionOrder(question) {
-  const base = [...Array(question.options.length).keys()];
-  return question.maxSelections > 1 ? base : shuffle(base);
-}
-
-function getPassage(passageId) {
-  return state.passages.find(p => p.passageId === passageId) || null;
-}
-
-function isMultiSelect(question) {
-  return question.maxSelections > 1 || question.minSelections > 1 || question.correctIndices.length > 1;
+  return shuffle([...Array(question.options.length).keys()]);
 }
 
 function getSelections(questionId) {
@@ -239,103 +138,43 @@ function setSelections(question, selections) {
 }
 
 function toggleSelection(question, optionIndex) {
-  const current = getSelections(question.id);
-  if (!isMultiSelect(question)) {
-    setSelections(question, [optionIndex]);
-    return;
-  }
-
-  if (current.includes(optionIndex)) {
-    setSelections(question, current.filter(idx => idx !== optionIndex));
-    return;
-  }
-
-  if (current.length >= question.maxSelections) return;
-  current.push(optionIndex);
-  setSelections(question, current);
+  setSelections(question, [optionIndex]);
 }
 
 function hasValidAnswer(question) {
-  const count = getSelections(question.id).length;
-  return count >= question.minSelections && count <= question.maxSelections;
+  return getSelections(question.id).length === 1;
 }
 
 function selectionsMatch(question) {
-  const current = getSelections(question.id).sort((a, b) => a - b);
-  const correct = [...question.correctIndices].sort((a, b) => a - b);
-  if (current.length !== correct.length) return false;
-  return current.every((value, index) => value === correct[index]);
-}
-
-function getNamedAuthorCount(studentInfo) {
-  const authors = Array.isArray(studentInfo?.authorsRead) ? studentInfo.authorsRead : [];
-  return authors.filter(author => author !== 'None' && !String(author).startsWith('Other')).length;
-}
-
-function getTermsCount(studentInfo) {
-  const raw = String(studentInfo?.termsTaken || '0');
-  return raw === '8+' ? 8 : parseInt(raw, 10) || 0;
-}
-
-function determinePlacement(totalScore, p1Score, p2Score, p3Score) {
-  const r325 = PLACEMENT_RULES['LATN 325'];
-  if (
-    totalScore >= r325.totalMin &&
-    p1Score >= r325.p1Min &&
-    p2Score >= r325.p2Min &&
-    p3Score >= r325.p3Min
-  ) {
-    return 'LATN 325';
-  }
-
-  const r201 = PLACEMENT_RULES['LATN 201'];
-  if (
-    totalScore >= r201.totalMin &&
-    p1Score >= r201.p1Min &&
-    p2Score >= r201.p2Min
-  ) {
-    return 'LATN 201';
-  }
-
-  return 'LATN 110';
-}
-
-function determineBumpUpDown(placement) {
-  const terms = getTermsCount(state.studentInfo);
-  const namedAuthors = getNamedAuthorCount(state.studentInfo);
-  if (terms >= 5 || namedAuthors >= 2) return 'up';
-  if (terms <= 2 && namedAuthors === 0 && placement !== 'LATN 110') return 'down';
-  return 'neither';
+  const current = getSelections(question.id);
+  return current.length === 1 && current[0] === Number(question.correctIndex);
 }
 
 function scoreSubmission() {
   let part1Score = 0;
   let part2Score = 0;
-  let part3Score = 0;
 
   for (const question of state.questions) {
-    if (selectionsMatch(question)) {
-      if (question.part === 1) part1Score++;
-      else if (question.part === 2) part2Score++;
-      else if (question.part === 3) part3Score++;
-    }
+    if (!selectionsMatch(question)) continue;
+    if (question.part === 1) part1Score += Number(question.weight || 0);
+    if (question.part === 2) part2Score += Number(question.weight || 0);
   }
 
-  const totalScore = part1Score + part2Score + part3Score;
-  const placement = determinePlacement(totalScore, part1Score, part2Score, part3Score);
-  const bumpUpDown = determineBumpUpDown(placement);
-
-  return { part1Score, part2Score, part3Score, totalScore, placement, bumpUpDown };
+  return {
+    part1Score,
+    part2Score,
+    totalScore: part1Score + part2Score,
+  };
 }
 
 function buildTiming(autoSubmit) {
-  const elapsedMs = Math.min(TIMER_MS, Math.max(0, Date.now() - state.timerStart));
+  const startedAtMs = state.timerStart || Date.now();
+  const elapsedMs = Math.min(TIMER_MS, Math.max(0, Date.now() - startedAtMs));
   return {
     allowedMs: TIMER_MS,
-    elapsedMs,
-    remainingMs: Math.max(0, TIMER_MS - elapsedMs),
+    timeTakenMin: Math.round((elapsedMs / 60000) * 10) / 10,
     autoSubmitted: Boolean(autoSubmit),
-    startedAtMs: state.timerStart,
+    startedAtMs,
     submittedAtMs: Date.now(),
   };
 }
@@ -347,29 +186,27 @@ function buildSubmissionPayload(autoSubmit) {
     payloadVersion: PAYLOAD_VERSION,
     token: SUBMIT_TOKEN,
     version: state.version,
-    formId: state.formId,
     studentInfo: state.studentInfo,
-    answers: state.answers,
+    selfEval: state.selfEval,
     scores: {
       part1: scored.part1Score,
       part2: scored.part2Score,
-      part3: scored.part3Score,
+      total: scored.totalScore,
     },
-    totals: { part1: 20, part2: 20, part3: 12 },
-    totalScore: scored.totalScore,
-    placement: scored.placement,
-    bumpUpDown: scored.bumpUpDown,
+    totals: state.totals,
     timing: buildTiming(autoSubmit),
   };
 }
 
 async function postSubmission(payload) {
-  if (!APPS_SCRIPT_URL) return;
+  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('REPLACE_WITH_DEPLOYED_URL')) {
+    if (DEV_MODE) return;
+    throw new Error('Apps Script URL is not configured.');
+  }
+
   const response = await fetch(APPS_SCRIPT_URL, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'text/plain;charset=utf-8',
-    },
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     keepalive: true,
     redirect: 'manual',
     body: JSON.stringify(payload),
@@ -382,95 +219,127 @@ async function postSubmission(payload) {
   try {
     detail = (await response.text()).trim();
   } catch (_) {}
-
   throw new Error(detail || `Submission failed with status ${response.status}.`);
 }
 
-function themeLabel(theme) {
-  return {
-    aeneid: 'Aeneas, leader of Trojans',
-    pliny: 'Pliny the Younger\u2019s letter',
-    agrippina: 'Agrippina, mother of Nero',
-  }[theme] || 'Passage';
+function formatRemainingMinutes() {
+  const remainingMs = state.timerStart ? Math.max(0, TIMER_MS - (Date.now() - state.timerStart)) : TIMER_MS;
+  const minutes = Math.max(0, Math.ceil(remainingMs / 60000));
+  return `${minutes} min left`;
 }
 
-function updateQuestionHeader(partPrefix, question) {
-  const instructionEl = $(`${partPrefix}-instructions`);
-  if (!instructionEl) return;
-  if (isMultiSelect(question)) {
-    instructionEl.textContent = `Select ${question.maxSelections} answers.`;
-    instructionEl.hidden = false;
-    return;
+function showTimeRemaining(elementId) {
+  const el = $(elementId);
+  if (!el) return;
+  const remainingMs = state.timerStart ? Math.max(0, TIMER_MS - (Date.now() - state.timerStart)) : TIMER_MS;
+  const minutes = Math.max(0, Math.ceil(remainingMs / 60000));
+  el.textContent = `${minutes} minute${minutes === 1 ? '' : 's'}`;
+}
+
+function updateTimerUI() {
+  const part1Active = state.screen === 'part1';
+  const part2Active = state.screen === 'part2';
+  const visible = state.timerVisible && (part1Active || part2Active) && Boolean(state.timerStart);
+  const label = formatRemainingMinutes();
+
+  for (const id of ['p1-timer', 'p2-timer']) {
+    const el = $(id);
+    if (!el) continue;
+    el.textContent = label;
+    el.hidden = !visible || !((id === 'p1-timer' && part1Active) || (id === 'p2-timer' && part2Active));
   }
-  instructionEl.hidden = true;
-  instructionEl.textContent = '';
+
+  for (const id of ['p1-timer-toggle', 'p2-timer-toggle']) {
+    const el = $(id);
+    if (!el) continue;
+    el.setAttribute('aria-expanded', visible ? 'true' : 'false');
+  }
+
+  if (state.screen === 'interstitial2') {
+    showTimeRemaining('interstitial2-time');
+  }
 }
 
-function renderPrompt(partPrefix, question) {
-  const promptEl = $(`${partPrefix}-prompt`);
+function startTimer() {
+  stopTimer();
+  if (!state.timerStart) return;
+  const remainingMs = Math.max(0, TIMER_MS - (Date.now() - state.timerStart));
+  state.timerHandle = setTimeout(() => submitTest(true), remainingMs);
+  state.tickHandle = setInterval(updateTimerUI, 1000);
+  updateTimerUI();
+}
+
+function stopTimer() {
+  if (state.timerHandle) clearTimeout(state.timerHandle);
+  if (state.tickHandle) clearInterval(state.tickHandle);
+  state.timerHandle = null;
+  state.tickHandle = null;
+}
+
+function onBeforeUnload(event) {
+  event.preventDefault();
+  event.returnValue = '';
+}
+
+function toggleTimerVisible() {
+  if (!state.timerStart) return;
+  state.timerVisible = !state.timerVisible;
+  saveState();
+  updateTimerUI();
+}
+
+function updateQuestionHeader(partPrefix, question, index, total) {
+  $(`${partPrefix}-counter`).textContent = `Question ${index + 1} of ${total}`;
   const focusEl = $(`${partPrefix}-focus`);
-  const { focusHtml, promptHtml } = splitPrompt(question.prompt);
+  const promptEl = $(`${partPrefix}-prompt`);
 
-  promptEl.innerHTML = promptHtml;
-  promptEl.classList.toggle('has-focus', Boolean(focusHtml));
-
-  if (!focusEl) return;
-  if (focusHtml) {
+  if (question.focusText) {
     focusEl.hidden = false;
-    focusEl.innerHTML = focusHtml;
-    return;
+    focusEl.innerHTML = renderHTML(question.focusText);
+  } else {
+    focusEl.hidden = true;
+    focusEl.innerHTML = '';
   }
-
-  focusEl.hidden = true;
-  focusEl.innerHTML = '';
+  promptEl.innerHTML = renderHTML(question.promptText);
 }
 
 function renderOptions(partPrefix, question, focusOptionIndex = -1) {
   const container = $(`${partPrefix}-options`);
   container.innerHTML = '';
   const order = state.optionOrder[question.id];
-  const multi = isMultiSelect(question);
-  const selections = getSelections(question.id);
-
-  container.setAttribute('role', multi ? 'group' : 'radiogroup');
+  const current = getSelections(question.id);
 
   order.forEach((optionIndex, displayIndex) => {
-    const selected = selections.includes(optionIndex);
+    const selected = current.includes(optionIndex);
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'option-btn' + (selected ? ' selected' : '');
     btn.innerHTML = renderHTML(question.options[optionIndex]);
     btn.dataset.idx = String(optionIndex);
-    btn.setAttribute('role', multi ? 'checkbox' : 'radio');
+    btn.setAttribute('role', 'radio');
     btn.setAttribute('aria-checked', selected ? 'true' : 'false');
-    btn.tabIndex = 0;
     btn.addEventListener('click', () => {
       toggleSelection(question, optionIndex);
       if (partPrefix === 'p1') renderP1(false, displayIndex);
-      else if (partPrefix === 'p2') renderP2(false, displayIndex);
-      else renderP3(false, displayIndex);
+      else renderP2(false, displayIndex);
     });
-    if (!multi) {
-      btn.addEventListener('keydown', event => {
-        const buttons = [...container.querySelectorAll('.option-btn')];
-        const currentIndex = buttons.indexOf(btn);
-        let nextIndex = -1;
-        if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
-          event.preventDefault();
-          nextIndex = (currentIndex + 1) % buttons.length;
-        } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
-          event.preventDefault();
-          nextIndex = (currentIndex - 1 + buttons.length) % buttons.length;
-        }
-        if (nextIndex !== -1) {
-          const nextOptionIndex = Number(buttons[nextIndex].dataset.idx);
-          setSelections(question, [nextOptionIndex]);
-          if (partPrefix === 'p1') renderP1(false, nextIndex);
-          else if (partPrefix === 'p2') renderP2(false, nextIndex);
-          else renderP3(false, nextIndex);
-        }
-      });
-    }
+    btn.addEventListener('keydown', event => {
+      const buttons = [...container.querySelectorAll('.option-btn')];
+      const currentIndex = buttons.indexOf(btn);
+      let nextIndex = -1;
+      if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+        event.preventDefault();
+        nextIndex = (currentIndex + 1) % buttons.length;
+      } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+        event.preventDefault();
+        nextIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+      }
+      if (nextIndex === -1) return;
+      const nextOptionIndex = Number(buttons[nextIndex].dataset.idx);
+      setSelections(question, [nextOptionIndex]);
+      if (partPrefix === 'p1') renderP1(false, nextIndex);
+      else renderP2(false, nextIndex);
+    });
     container.appendChild(btn);
   });
 
@@ -480,31 +349,19 @@ function renderOptions(partPrefix, question, focusOptionIndex = -1) {
   }
 }
 
-function updateP1Progress() {
-  const answered = state.part1Questions.filter(q => hasValidAnswer(q)).length;
-  $('p1-progress').textContent = `Answered: ${answered} / ${state.part1Questions.length}`;
-}
-
-function updateP2Progress() {
-  const answered = state.part2Questions.filter(q => hasValidAnswer(q)).length;
-  $('p2-progress').textContent = `Answered: ${answered} / ${state.part2Questions.length}`;
-}
-
-function updateP3Progress() {
-  const answered = state.part3Questions.filter(q => hasValidAnswer(q)).length;
-  $('p3-progress').textContent = `Answered: ${answered} / ${state.part3Questions.length}`;
+function updateProgress(partPrefix, questions) {
+  const answered = questions.filter(q => hasValidAnswer(q)).length;
+  $(`${partPrefix}-progress`).textContent = `Answered: ${answered} / ${questions.length}`;
 }
 
 function renderP1(moveFocus = false, focusOptionIndex = -1) {
   const question = state.part1Questions[state.p1Index];
-  $('p1-counter').textContent = `Question ${state.p1Index + 1} of ${state.part1Questions.length}`;
-  renderPrompt('p1', question);
-  updateQuestionHeader('p1', question);
+  updateQuestionHeader('p1', question, state.p1Index, state.part1Questions.length);
   renderOptions('p1', question, focusOptionIndex);
 
   const nextBtn = $('p1-next');
   const isLast = state.p1Index === state.part1Questions.length - 1;
-  nextBtn.textContent = isLast ? 'Continue to Part 2 \u2192' : 'Submit and move to next question';
+  nextBtn.textContent = isLast ? 'Continue to Part 2 →' : 'Submit and move to next question';
   nextBtn.disabled = !hasValidAnswer(question);
   nextBtn.onclick = isLast
     ? goToPart2
@@ -514,84 +371,43 @@ function renderP1(moveFocus = false, focusOptionIndex = -1) {
         renderP1(true);
       };
 
-  updateP1Progress();
+  updateProgress('p1', state.part1Questions);
+  updateTimerUI();
   if (moveFocus) $('p1-counter').focus();
 }
 
 function renderP2(moveFocus = false, focusOptionIndex = -1) {
   const question = state.part2Questions[state.p2Index];
-  $('p2-counter').textContent = `Question ${state.p2Index + 1} of ${state.part2Questions.length}`;
-  renderPrompt('p2', question);
-  updateQuestionHeader('p2', question);
+  updateQuestionHeader('p2', question, state.p2Index, state.part2Questions.length);
   renderOptions('p2', question, focusOptionIndex);
 
   const nextBtn = $('p2-next');
   const isLast = state.p2Index === state.part2Questions.length - 1;
-  nextBtn.textContent = isLast ? 'Continue to Part 3 \u2192' : 'Submit and move to next question';
+  nextBtn.textContent = isLast ? 'Submit and finish placement test' : 'Submit and move to next question';
   nextBtn.disabled = !hasValidAnswer(question);
   nextBtn.onclick = isLast
-    ? goToPart3
+    ? () => submitTest(false)
     : () => {
         state.p2Index += 1;
         saveState();
         renderP2(true);
       };
 
-  updateP2Progress();
+  updateProgress('p2', state.part2Questions);
+  updateTimerUI();
   if (moveFocus) $('p2-counter').focus();
 }
 
-function renderP3(moveFocus = false, focusOptionIndex = -1) {
-  const question = state.part3Questions[state.p3Index];
-  $('p3-counter').textContent = `Question ${state.p3Index + 1} of ${state.part3Questions.length}`;
-
-  const passageEl = $('p3-passage');
-  const passage = question.passageId ? getPassage(question.passageId) : null;
-  if (passage) {
-    passageEl.innerHTML = `
-      <div class="passage-kicker">${themeLabel(passage.theme)}</div>
-      <div>${renderHTML(passage.text)}</div>
-    `;
+function startPart1() {
+  if (!state.timerStart) {
+    state.timerStart = Date.now();
+    window.addEventListener('beforeunload', onBeforeUnload);
+    startTimer();
   }
-
-  renderPrompt('p3', question);
-  updateQuestionHeader('p3', question);
-  renderOptions('p3', question, focusOptionIndex);
-
-  const isLast = state.p3Index === state.part3Questions.length - 1;
-  const nextBtn = $('p3-next');
-  const submitBtn = $('p3-submit');
-  nextBtn.hidden = isLast;
-  submitBtn.hidden = !isLast;
-  nextBtn.disabled = !hasValidAnswer(question);
-  submitBtn.disabled = !hasValidAnswer(question);
-  nextBtn.onclick = () => {
-    state.p3Index += 1;
-    saveState();
-    renderP3(true);
-  };
-  submitBtn.onclick = () => submitTest(false);
-
-  updateP3Progress();
-  if (moveFocus) $('p3-counter').focus();
-}
-
-function startTimer(remainingMs) {
-  if (state.timerHandle) clearTimeout(state.timerHandle);
-  state.timerHandle = setTimeout(() => {
-    if (!state.submitted) submitTest(true);
-  }, remainingMs);
-}
-
-function showTimeRemaining(elementId) {
-  const remainingMs = TIMER_MS - (Date.now() - state.timerStart);
-  const minutes = Math.floor(Math.max(0, remainingMs) / 60000);
-  const seconds = Math.floor((Math.max(0, remainingMs) % 60000) / 1000);
-  let text;
-  if (minutes === 0) text = `${seconds} second${seconds !== 1 ? 's' : ''}`;
-  else if (seconds === 0) text = `${minutes} minute${minutes !== 1 ? 's' : ''}`;
-  else text = `${minutes} minute${minutes !== 1 ? 's' : ''} and ${seconds} second${seconds !== 1 ? 's' : ''}`;
-  $(elementId).textContent = text;
+  state.screen = 'part1';
+  saveState();
+  showScreen('part1');
+  renderP1(true);
 }
 
 function goToPart2() {
@@ -601,20 +417,6 @@ function goToPart2() {
   showScreen('interstitial2');
 }
 
-function goToPart3() {
-  state.screen = 'interstitial3';
-  saveState();
-  showTimeRemaining('interstitial3-time');
-  showScreen('interstitial3');
-}
-
-function startPart1() {
-  state.screen = 'part1';
-  saveState();
-  showScreen('part1');
-  renderP1(true);
-}
-
 function startPart2() {
   state.screen = 'part2';
   saveState();
@@ -622,21 +424,24 @@ function startPart2() {
   renderP2(true);
 }
 
-function startPart3() {
-  state.screen = 'part3';
-  saveState();
-  showScreen('part3');
-  renderP3(true);
+function setDoneScreen(autoSubmitted, submissionId) {
+  $('done-message-primary').textContent = autoSubmitted
+    ? 'Your time has elapsed, and your current answers have been submitted.'
+    : 'Your placement test has been submitted.';
+  const submissionEl = $('done-submission');
+  if (submissionId) {
+    submissionEl.hidden = false;
+    submissionEl.textContent = `Submission ID: ${submissionId}`;
+  } else {
+    submissionEl.hidden = true;
+    submissionEl.textContent = '';
+  }
 }
 
 async function submitTest(autoSubmit) {
   if (state.submitted) return;
   state.submitted = true;
-
-  if (state.timerHandle) {
-    clearTimeout(state.timerHandle);
-    state.timerHandle = null;
-  }
+  stopTimer();
   window.removeEventListener('beforeunload', onBeforeUnload);
 
   try {
@@ -647,63 +452,35 @@ async function submitTest(autoSubmit) {
     console.error('Submit error:', err);
     state.submitted = false;
     saveState();
-    window.addEventListener('beforeunload', onBeforeUnload);
+    if (state.timerStart) {
+      window.addEventListener('beforeunload', onBeforeUnload);
+      startTimer();
+    }
     alert('Your test could not be submitted. Please check your connection and try again.');
     return;
   }
 
-  setDoneSubmission(state.submissionId);
+  setDoneScreen(autoSubmit, state.submissionId);
   clearState();
   state.screen = 'done';
   showScreen('done');
 }
 
-function onBeforeUnload(event) {
-  event.preventDefault();
-  event.returnValue = '';
+function setCheckedValues(name, values) {
+  const wanted = new Set(values || []);
+  document.querySelectorAll(`input[name="${name}"]`).forEach(input => {
+    input.checked = wanted.has(input.value);
+  });
 }
 
-$('textbook-other-check').addEventListener('change', function () {
-  $('textbook-other-text').disabled = !this.checked;
-  if (this.checked) $('textbook-other-text').focus();
-});
+function updateOtherInput(checkId, inputId) {
+  const check = $(checkId);
+  const input = $(inputId);
+  if (!check || !input) return;
+  input.disabled = !check.checked;
+}
 
-$('author-other-check').addEventListener('change', function () {
-  $('author-other-text').disabled = !this.checked;
-  if (this.checked) $('author-other-text').focus();
-});
-
-$('author-none-check').addEventListener('change', function () {
-  if (!this.checked) return;
-  document.querySelectorAll('input[name="author"]').forEach(cb => {
-    if (cb !== this) cb.checked = false;
-  });
-  $('author-other-text').disabled = true;
-});
-
-document.querySelectorAll('input[name="author"]').forEach(cb => {
-  if (cb.id !== 'author-none-check') {
-    cb.addEventListener('change', () => {
-      if (cb.checked) $('author-none-check').checked = false;
-    });
-  }
-});
-
-$('info-form').addEventListener('submit', async event => {
-  event.preventDefault();
-  const errorEl = $('info-error');
-  errorEl.textContent = '';
-
-  const firstName = $('firstName').value.trim();
-  const lastName = $('lastName').value.trim();
-  const studentId = $('studentId').value.trim();
-  const termsTaken = $('termsTaken').value;
-
-  if (!firstName || !lastName || !studentId || !termsTaken) {
-    errorEl.textContent = 'Please fill in all required fields.';
-    return;
-  }
-
+function collectStudentInfo() {
   const textbooks = [];
   document.querySelectorAll('input[name="textbook"]:checked').forEach(cb => {
     if (cb.value === '__other_textbook__') {
@@ -724,50 +501,151 @@ $('info-form').addEventListener('submit', async event => {
     }
   });
 
-  state.studentInfo = { firstName, lastName, studentId, termsTaken, textbooks, authorsRead };
+  return {
+    firstName: $('firstName').value.trim(),
+    lastName: $('lastName').value.trim(),
+    studentId: $('studentId').value.trim(),
+    termsTaken: $('termsTaken').value,
+    textbooks,
+    authorsRead,
+  };
+}
 
-  const submitBtn = event.submitter || document.querySelector('#info-form .btn-primary');
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Loading\u2026';
+function populateStudentInfoForm() {
+  const info = state.studentInfo;
+  if (!info) return;
+  $('firstName').value = info.firstName || '';
+  $('lastName').value = info.lastName || '';
+  $('studentId').value = info.studentId || '';
+  $('termsTaken').value = info.termsTaken || '';
 
-  try {
-    const form = await loadForm();
-    state.formId = form.formId;
-    state.version = form.version || EXAM_VERSION;
-    state.passages = form.passages;
-    state.questions = form.questions;
-    state.part1Questions = form.questions.filter(q => q.part === 1);
-    state.part2Questions = form.questions.filter(q => q.part === 2);
-    state.part3Questions = form.questions.filter(q => q.part === 3);
-    state.answers = {};
-    state.optionOrder = {};
-    for (const question of state.questions) {
-      state.optionOrder[question.id] = buildOptionOrder(question);
-    }
-  } catch (err) {
-    errorEl.textContent = 'Could not load the placement form. Please try again.';
-    submitBtn.disabled = false;
-    submitBtn.textContent = 'Begin Test \u2192';
+  setCheckedValues('textbook', (info.textbooks || []).map(value => value.startsWith('Other: ') ? '__other_textbook__' : value));
+  const otherTextbook = (info.textbooks || []).find(value => value.startsWith('Other: '));
+  $('textbook-other-text').value = otherTextbook ? otherTextbook.replace(/^Other:\s*/, '') : '';
+  updateOtherInput('textbook-other-check', 'textbook-other-text');
+
+  setCheckedValues('author', (info.authorsRead || []).map(value => value.startsWith('Other: ') ? '__other_author__' : value));
+  const otherAuthor = (info.authorsRead || []).find(value => value.startsWith('Other: '));
+  $('author-other-text').value = otherAuthor ? otherAuthor.replace(/^Other:\s*/, '') : '';
+  updateOtherInput('author-other-check', 'author-other-text');
+}
+
+function collectSelfEval() {
+  return {
+    vocabEval: document.querySelector('input[name="vocabEval"]:checked')?.value || '',
+    grammarEval: document.querySelector('input[name="grammarEval"]:checked')?.value || '',
+    topicsConfidence: [...document.querySelectorAll('input[name="topicConfidence"]:checked')].map(input => input.value),
+    expectedPlacement: $('expectedPlacement').value,
+  };
+}
+
+function populateSelfEvalForm() {
+  const info = state.selfEval;
+  if (!info) return;
+  document.querySelectorAll('input[name="vocabEval"]').forEach(input => { input.checked = input.value === String(info.vocabEval || ''); });
+  document.querySelectorAll('input[name="grammarEval"]').forEach(input => { input.checked = input.value === String(info.grammarEval || ''); });
+  setCheckedValues('topicConfidence', info.topicsConfidence || []);
+  $('expectedPlacement').value = info.expectedPlacement || '';
+}
+
+function initializeExam(form) {
+  state.version = form.version;
+  state.totals = form.totals;
+  state.questions = form.questions;
+  state.part1Questions = form.questions.filter(q => q.part === 1);
+  state.part2Questions = form.questions.filter(q => q.part === 2);
+  state.answers = {};
+  state.optionOrder = {};
+  for (const question of state.questions) {
+    state.optionOrder[question.id] = buildOptionOrder(question);
+  }
+  state.p1Index = 0;
+  state.p2Index = 0;
+  state.submissionId = generateSubmissionId();
+  state.timerStart = null;
+  state.timerVisible = false;
+  state.submitted = false;
+}
+
+$('textbook-other-check').addEventListener('change', function () {
+  updateOtherInput('textbook-other-check', 'textbook-other-text');
+  if (this.checked) $('textbook-other-text').focus();
+});
+
+$('author-other-check').addEventListener('change', function () {
+  updateOtherInput('author-other-check', 'author-other-text');
+  if (this.checked) $('author-other-text').focus();
+});
+
+$('author-none-check').addEventListener('change', function () {
+  if (!this.checked) return;
+  document.querySelectorAll('input[name="author"]').forEach(cb => {
+    if (cb !== this) cb.checked = false;
+  });
+  updateOtherInput('author-other-check', 'author-other-text');
+});
+
+document.querySelectorAll('input[name="author"]').forEach(cb => {
+  if (cb.id !== 'author-none-check') {
+    cb.addEventListener('change', () => {
+      if (cb.checked) $('author-none-check').checked = false;
+    });
+  }
+});
+
+$('info-form').addEventListener('submit', event => {
+  event.preventDefault();
+  const errorEl = $('info-error');
+  errorEl.textContent = '';
+  const info = collectStudentInfo();
+  if (!info.firstName || !info.lastName || !info.studentId || !info.termsTaken) {
+    errorEl.textContent = 'Please fill in all required fields.';
+    return;
+  }
+  state.studentInfo = info;
+  state.screen = 'selfeval';
+  saveState();
+  showScreen('selfeval');
+  populateSelfEvalForm();
+});
+
+$('selfeval-form').addEventListener('submit', async event => {
+  event.preventDefault();
+  const errorEl = $('selfeval-error');
+  errorEl.textContent = '';
+  const selfEval = collectSelfEval();
+  if (!selfEval.vocabEval || !selfEval.grammarEval || !selfEval.expectedPlacement) {
+    errorEl.textContent = 'Please fill in all required fields.';
     return;
   }
 
-  state.p1Index = 0;
-  state.p2Index = 0;
-  state.p3Index = 0;
-  state.submissionId = generateSubmissionId();
-  state.timerStart = Date.now();
-  state.submitted = false;
+  const submitBtn = event.submitter || document.querySelector('#selfeval-form .btn-primary');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Loading…';
+
+  try {
+    const exam = await loadExam();
+    state.selfEval = selfEval;
+    initializeExam(exam);
+  } catch (err) {
+    console.error(err);
+    errorEl.textContent = 'Could not load the placement exam. Please try again.';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Continue to Test Instructions →';
+    return;
+  }
+
   state.screen = 'interstitial1';
   saveState();
-
-  window.addEventListener('beforeunload', onBeforeUnload);
-  startTimer(TIMER_MS);
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Continue to Test Instructions →';
   showScreen('interstitial1');
 });
 
 $('interstitial1-begin').addEventListener('click', startPart1);
 $('interstitial2-begin').addEventListener('click', startPart2);
-$('interstitial3-begin').addEventListener('click', startPart3);
+$('p1-timer-toggle').addEventListener('click', toggleTimerVisible);
+$('p2-timer-toggle').addEventListener('click', toggleTimerVisible);
 
 function tryRestoreSession() {
   let saved;
@@ -777,72 +655,81 @@ function tryRestoreSession() {
     return false;
   }
 
-  if (!saved || !saved.timerStart || !saved.questions || !saved.studentInfo || !saved.formId) return false;
+  if (!saved) return false;
 
-  const elapsed = Date.now() - saved.timerStart;
-  state.screen = saved.screen || 'part1';
-  state.formId = saved.formId;
-  state.version = saved.version || EXAM_VERSION;
-  state.studentInfo = saved.studentInfo;
-  state.passages = saved.passages || [];
+  state.screen = saved.screen || 'info';
+  state.version = saved.version || null;
+  state.totals = saved.totals || { part1: 0, part2: 0, overall: 0 };
+  state.studentInfo = saved.studentInfo || null;
+  state.selfEval = saved.selfEval || null;
   state.questions = saved.questions || [];
   state.part1Questions = state.questions.filter(q => q.part === 1);
   state.part2Questions = state.questions.filter(q => q.part === 2);
-  state.part3Questions = state.questions.filter(q => q.part === 3);
   state.answers = saved.answers || {};
   state.optionOrder = saved.optionOrder || {};
   state.p1Index = saved.p1Index || 0;
   state.p2Index = saved.p2Index || 0;
-  state.p3Index = saved.p3Index || 0;
   state.submissionId = saved.submissionId || generateSubmissionId();
-  state.timerStart = saved.timerStart;
+  state.timerStart = saved.timerStart || null;
+  state.timerVisible = Boolean(saved.timerVisible);
   state.submitted = false;
 
-  if (elapsed >= TIMER_MS) {
-    submitTest(true);
+  populateStudentInfoForm();
+  populateSelfEvalForm();
+
+  if (!state.questions.length && ['interstitial1', 'part1', 'interstitial2', 'part2'].includes(state.screen)) {
+    clearState();
+    return false;
+  }
+
+  if (state.timerStart) {
+    const elapsed = Date.now() - state.timerStart;
+    if (elapsed >= TIMER_MS) {
+      submitTest(true);
+      return true;
+    }
+    window.addEventListener('beforeunload', onBeforeUnload);
+    startTimer();
+  }
+
+  if (state.screen === 'selfeval') {
+    showScreen('selfeval');
+    return true;
+  }
+  if (state.screen === 'interstitial1') {
+    showScreen('interstitial1');
+    return true;
+  }
+  if (state.screen === 'part1') {
+    showScreen('part1');
+    const notice = $('p1-restore-notice');
+    notice.hidden = false;
+    setTimeout(() => { notice.hidden = true; }, 5000);
+    renderP1(true);
+    return true;
+  }
+  if (state.screen === 'interstitial2') {
+    showTimeRemaining('interstitial2-time');
+    showScreen('interstitial2');
+    return true;
+  }
+  if (state.screen === 'part2') {
+    showScreen('part2');
+    renderP2(true);
     return true;
   }
 
-  startTimer(TIMER_MS - elapsed);
-  window.addEventListener('beforeunload', onBeforeUnload);
-
-  if (state.screen === 'interstitial1') {
-    showScreen('interstitial1');
-  } else if (state.screen === 'part1') {
-    showScreen('part1');
-    const notice = $('p1-restore-notice');
-    if (notice) {
-      notice.hidden = false;
-      setTimeout(() => { notice.hidden = true; }, 5000);
-    }
-    renderP1(true);
-  } else if (state.screen === 'interstitial2') {
-    showTimeRemaining('interstitial2-time');
-    showScreen('interstitial2');
-  } else if (state.screen === 'part2') {
-    showScreen('part2');
-    renderP2(true);
-  } else if (state.screen === 'interstitial3') {
-    showTimeRemaining('interstitial3-time');
-    showScreen('interstitial3');
-  } else if (state.screen === 'part3') {
-    showScreen('part3');
-    renderP3(true);
-  } else {
-    showScreen('info');
-  }
-
+  showScreen('info');
   return true;
 }
 
 (function init() {
   if (DEV_MODE) {
     const banner = $('dev-banner');
-    if (banner) {
-      banner.hidden = false;
-      banner.textContent = 'DEV MODE \u2014 2 + 2 + 2 questions';
-    }
+    banner.hidden = false;
+    banner.textContent = 'DEV MODE — 3 + 3 questions';
   }
-  setDoneSubmission(null);
-  if (!tryRestoreSession()) showScreen('info');
+  if (!tryRestoreSession()) {
+    showScreen('info');
+  }
 })();
