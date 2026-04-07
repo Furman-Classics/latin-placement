@@ -122,7 +122,7 @@
       "options": [
         "witness",
         "testify",
-        "affair",
+        "thing",
         "laugh"
       ],
       "correctIndex": 2
@@ -1168,11 +1168,11 @@
       "part": 1,
       "weight": 1,
       "promptText": "Choose the best English meaning.",
-      "focusText": "bellum, bellī",
+      "focusText": "bellum",
       "options": [
         "peace",
         "war",
-        "city",
+        "beauty",
         "kingdom"
       ],
       "correctIndex": 1
@@ -1183,9 +1183,9 @@
       "part": 1,
       "weight": 1,
       "promptText": "Choose the best English meaning.",
-      "focusText": "imperium, imperiī",
+      "focusText": "imperium",
       "options": [
-        "kingdom",
+        "anger",
         "command",
         "temple",
         "story"
@@ -1198,9 +1198,9 @@
       "part": 1,
       "weight": 1,
       "promptText": "Choose the best English meaning.",
-      "focusText": "timor, timōris",
+      "focusText": "timor",
       "options": [
-        "anger",
+        "beam",
         "grief",
         "fear",
         "delay"
@@ -1579,7 +1579,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "What is the syntactical construction?",
-      "focusText": "Hostibus victīs, mīlitēs domum redīērunt",
+      "focusText": "Hostibus victīs, mīlitēs domum redīērunt.",
       "options": [
         "indirect statement",
         "ablative absolute",
@@ -1594,7 +1594,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "What is the syntactical construction?",
-      "focusText": "Caesar dīxit sē hostēs vīcisse",
+      "focusText": "Caesar dīxit sē hostēs vīcisse.",
       "options": [
         "purpose clause",
         "indirect command",
@@ -1609,7 +1609,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "What is the syntactical construction?",
-      "focusText": "Dux mīlitibus imperāvit ut fortiter pugnārent",
+      "focusText": "Dux mīlitibus imperāvit ut fortiter pugnārent.",
       "options": [
         "result clause",
         "purpose clause",
@@ -1624,7 +1624,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "What is the syntactical construction?",
-      "focusText": "Mīlitēs ad urbem vēnērunt ut eam dēfenderent",
+      "focusText": "Mīlitēs ad urbem vēnērunt ut eam dēfenderent.",
       "options": [
         "indirect statement",
         "ablative absolute",
@@ -1639,7 +1639,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "What is the syntactical construction?",
-      "focusText": "Marītō suō Claudiō imperante, rem pūblicam summā cūrā administrābat",
+      "focusText": "Marītō suō Claudiō imperante, rem pūblicam summā cūrā administrābat.",
       "options": [
         "Dative of possession",
         "Ablative of manner",

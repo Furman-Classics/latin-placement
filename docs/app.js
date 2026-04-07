@@ -34,7 +34,9 @@ function $(id) {
 }
 
 function renderHTML(raw) {
-  return String(raw || '').replace(/\[underline:\s*([^\]]+)\]/g, '<span class="hl">$1</span>');
+  return String(raw || '')
+    .replace(/\[underline:\s*([^\]]+)\]/g, '<span class="hl">$1</span>')
+    .replace(/\b([A-ZĀĒĪŌŪȲ]{2,}(?:\s+[A-ZĀĒĪŌŪȲ]{2,})*)\b/g, '<span class="smallcaps">$1</span>');
 }
 
 function shuffle(arr) {
