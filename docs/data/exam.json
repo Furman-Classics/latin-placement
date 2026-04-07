@@ -1213,7 +1213,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "Choose the best answer.",
-      "focusText": "Multam glōriam HABĒBUNT.",
+      "focusText": "Multam glōriam <span class=\"caps-underline\">habēbunt</span>.",
       "options": [
         "they have",
         "they have had",
@@ -1228,7 +1228,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "Choose the best answer.",
-      "focusText": "Paucī in oppidō MANĒRE poterunt.",
+      "focusText": "Paucī in oppidō <span class=\"caps-underline\">manēre</span> poterunt.",
       "options": [
         "infinitive in indirect statement",
         "subjective infinitive",
@@ -1243,7 +1243,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "Choose the best answer.",
-      "focusText": "The ablative singular of the word VIRTŪS is",
+      "focusText": "The ablative singular of the word <span class=\"caps-underline\">virtūs</span> is",
       "options": [
         "virtō",
         "virtūte",
@@ -1258,7 +1258,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "Choose the best answer.",
-      "focusText": "Caesar EADEM dīxit.",
+      "focusText": "Caesar <span class=\"caps-underline\">eadem</span> dīxit.",
       "options": [
         "feminine accusative singular",
         "neuter accusative plural",
@@ -1273,7 +1273,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "Choose the best answer.",
-      "focusText": "Cicerō multās epistulās in quibus SĒ laudāvit scrīpsit.",
+      "focusText": "Cicerō multās epistulās in quibus <span class=\"caps-underline\">sē</span> laudāvit scrīpsit.",
       "options": [
         "accusative singular",
         "ablative singular",
@@ -1333,7 +1333,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "Choose the best answer.",
-      "focusText": "frātrem tuum, Ā QUŌ saepe iuvābar, crās in forō vidēbō.",
+      "focusText": "frātrem tuum, <span class=\"caps-underline\">ā quō</span> saepe iuvābar, crās in forō vidēbō.",
       "options": [
         "by whom",
         "from whom",
@@ -1348,7 +1348,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "Choose the best answer.",
-      "focusText": "DĀTA SUNT is the __________ of DŌ",
+      "focusText": "<span class=\"caps-underline\">dāta sunt</span> is the __________ of <span class=\"caps-underline\">dō</span>",
       "options": [
         "third person plural perfect indicative passive",
         "third person plural perfect indicative active",
@@ -1579,7 +1579,7 @@
       "part": 2,
       "weight": 2,
       "promptText": "What is the syntactical construction?",
-      "focusText": "Hostibus victīs, mīlitēs domum redīērunt.",
+      "focusText": "Hostibus victīs, mīlitēs domum rediērunt.",
       "options": [
         "indirect statement",
         "ablative absolute",

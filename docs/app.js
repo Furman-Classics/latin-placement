@@ -35,8 +35,7 @@ function $(id) {
 
 function renderHTML(raw) {
   return String(raw || '')
-    .replace(/\[underline:\s*([^\]]+)\]/g, '<span class="hl">$1</span>')
-    .replace(/\b([A-ZĀĒĪŌŪȲ]{2,}(?:\s+[A-ZĀĒĪŌŪȲ]{2,})*)\b/g, '<span class="smallcaps">$1</span>');
+    .replace(/\[underline:\s*([^\]]+)\]/g, '<span class="hl">$1</span>');
 }
 
 function shuffle(arr) {
@@ -97,6 +96,19 @@ function clearState() {
   try {
     localStorage.removeItem(STORAGE_KEY);
   } catch (_) {}
+}
+
+function showTermsZeroModal() {
+  const modal = $('terms-zero-modal');
+  if (!modal) return;
+  modal.hidden = false;
+  $('terms-zero-close')?.focus();
+}
+
+function hideTermsZeroModal() {
+  const modal = $('terms-zero-modal');
+  if (!modal) return;
+  modal.hidden = true;
 }
 
 async function loadExam() {
@@ -569,6 +581,33 @@ function initializeExam(form) {
   state.submitted = false;
 }
 
+async function bootstrapDevShortcut() {
+  const exam = await loadExam();
+  state.studentInfo = {
+    firstName: 'Dev',
+    lastName: 'User',
+    studentId: '999999',
+    termsTaken: '4',
+    textbooks: [],
+    authorsRead: [],
+  };
+  state.selfEval = {
+    vocabEval: '3',
+    grammarEval: '3',
+    topicsConfidence: [],
+    expectedPlacement: 'Intermediate',
+  };
+  initializeExam(exam);
+  state.screen = 'part2';
+  state.p2Index = 0;
+  state.timerStart = Date.now();
+  saveState();
+  window.addEventListener('beforeunload', onBeforeUnload);
+  startTimer();
+  showScreen('part2');
+  renderP2(true);
+}
+
 $('textbook-other-check').addEventListener('change', function () {
   updateOtherInput('textbook-other-check', 'textbook-other-text');
   if (this.checked) $('textbook-other-text').focus();
@@ -602,6 +641,14 @@ $('info-form').addEventListener('submit', event => {
   const info = collectStudentInfo();
   if (!info.firstName || !info.lastName || !info.studentId || !info.termsTaken) {
     errorEl.textContent = 'Please fill in all required fields.';
+    return;
+  }
+  if (!/^\d+$/.test(info.studentId)) {
+    errorEl.textContent = 'Student ID must contain numerals only.';
+    return;
+  }
+  if (info.termsTaken === '0') {
+    showTermsZeroModal();
     return;
   }
   state.studentInfo = info;
@@ -648,6 +695,10 @@ $('interstitial1-begin').addEventListener('click', startPart1);
 $('interstitial2-begin').addEventListener('click', startPart2);
 $('p1-timer-toggle').addEventListener('click', toggleTimerVisible);
 $('p2-timer-toggle').addEventListener('click', toggleTimerVisible);
+$('terms-zero-close').addEventListener('click', hideTermsZeroModal);
+$('terms-zero-modal').addEventListener('click', event => {
+  if (event.target === $('terms-zero-modal')) hideTermsZeroModal();
+});
 
 function tryRestoreSession() {
   let saved;
@@ -725,13 +776,21 @@ function tryRestoreSession() {
   return true;
 }
 
-(function init() {
+(async function init() {
   if (DEV_MODE) {
     const banner = $('dev-banner');
     banner.hidden = false;
-    banner.textContent = 'DEV MODE — 3 + 3 questions';
+    banner.textContent = 'DEV MODE — shortcut to Part 2';
   }
   if (!tryRestoreSession()) {
+    if (DEV_MODE) {
+      try {
+        await bootstrapDevShortcut();
+        return;
+      } catch (err) {
+        console.error('DEV shortcut load failed:', err);
+      }
+    }
     showScreen('info');
   }
 })();

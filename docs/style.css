@@ -262,6 +262,7 @@ legend {
   border-radius: 6px;
   cursor: pointer;
   font-size: .95rem;
+  font-weight: 400 !important;
   transition: background .1s;
 }
 
@@ -334,35 +335,50 @@ legend {
 }
 
 .survey-scale-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: .6rem;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2rem;
 }
 
 .survey-choice {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: .45rem;
-  padding: .85rem .25rem;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  background: var(--input-bg);
   cursor: pointer;
-  min-height: 74px;
+  padding: .25rem;
 }
 
-.survey-choice:hover { background: var(--accent-light); }
-
 .survey-choice input[type="radio"] {
-  accent-color: var(--accent);
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .survey-choice span {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1rem;
   font-weight: 700;
+  color: var(--text);
+  background: var(--accent-light);
+  transition: background .15s, border-color .15s, color .15s;
+}
+
+.survey-choice:hover span {
+  border-color: var(--accent);
   color: var(--accent);
+}
+
+.survey-choice:has(input:checked) span {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
 }
 
 .survey-endpoints {
@@ -556,9 +572,47 @@ legend {
   margin: .6rem auto 1rem;
 }
 
-.smallcaps {
-  font-variant-caps: all-small-caps;
-  letter-spacing: .03em;
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 26, 23, .45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 560px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+  padding: 1.4rem 1.2rem;
+}
+
+.modal-card h2 {
+  font-family: var(--serif);
+  font-weight: var(--serif-weight);
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: .8rem;
+}
+
+.modal-card p {
+  font-size: 1rem;
+  line-height: 1.55;
+  margin-bottom: 1.1rem;
+}
+
+.modal-actions {
+  justify-content: flex-end;
+}
+
+.caps-underline {
+  border-bottom: 1.5px dotted var(--accent);
+  padding-bottom: 1px;
 }
 
 @media (min-width: 640px) {

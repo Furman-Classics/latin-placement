@@ -37,12 +37,13 @@
             </div>
             <div class="field">
               <label for="studentId">Student ID <span class="req">*</span></label>
-              <input type="text" id="studentId" name="studentId" inputmode="numeric" required />
+              <input type="text" id="studentId" name="studentId" inputmode="numeric" pattern="[0-9]+" required />
             </div>
             <div class="field">
               <label for="termsTaken">How many terms of Latin have you taken? <span class="req">*</span></label>
               <select id="termsTaken" name="termsTaken" required>
                 <option value="">— select —</option>
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -128,8 +129,8 @@
                   <label class="survey-choice"><input type="radio" name="vocabEval" value="5" /><span>5</span></label>
                 </div>
                 <div class="survey-endpoints">
-                  <span>I've forgotten almost everything</span>
-                  <span>I'm confident I know the majority of the words in anything I read</span>
+                  <span>I've forgotten<br/>almost everything</span>
+                  <span>I'm confident I know<br/>the majority of the<br/>words in anything I read</span>
                 </div>
               </fieldset>
             </div>
@@ -146,8 +147,8 @@
                   <label class="survey-choice"><input type="radio" name="grammarEval" value="5" /><span>5</span></label>
                 </div>
                 <div class="survey-endpoints">
-                  <span>I've forgotten almost everything</span>
-                  <span>Ask me anything about the subjunctive</span>
+                  <span>I've forgotten<br/>almost everything</span>
+                  <span>Ask me anything<br/>about the subjunctive</span>
                 </div>
               </fieldset>
             </div>
@@ -264,6 +265,16 @@
         <p class="done-submission" id="done-submission" hidden></p>
         <p class="done-message" id="done-message-secondary">Data from this test will be used to determine the appropriate placement level in the Latin sequence for you, and this will appear later among your Workday information.</p>
       </main>
+    </div>
+
+    <div id="terms-zero-modal" class="modal-backdrop" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="terms-zero-title">
+        <h2 id="terms-zero-title">No Placement Test Needed</h2>
+        <p>If you have never taken Latin before, you don’t need to take this test. You will be placed automatically into Introductory Latin. You may close this page and exit.</p>
+        <div class="nav-row modal-actions">
+          <button type="button" class="btn-primary" id="terms-zero-close">Close</button>
+        </div>
+      </div>
     </div>
 
   </div>
