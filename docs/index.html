@@ -118,24 +118,38 @@
 
             <div class="field">
               <label>How’s your Latin vocabulary? <span class="req">*</span></label>
-              <div class="scale-grid" role="radiogroup" aria-labelledby="vocab-eval-label">
-                <label class="scale-option"><input type="radio" name="vocabEval" value="1" required /><span>1</span><small>I've forgotten almost everything</small></label>
-                <label class="scale-option"><input type="radio" name="vocabEval" value="2" /><span>2</span><small>I recognize a little</small></label>
-                <label class="scale-option"><input type="radio" name="vocabEval" value="3" /><span>3</span><small>I know a fair amount</small></label>
-                <label class="scale-option"><input type="radio" name="vocabEval" value="4" /><span>4</span><small>I usually follow most passages</small></label>
-                <label class="scale-option"><input type="radio" name="vocabEval" value="5" /><span>5</span><small>I'm confident I know the majority of the words in anything I read</small></label>
-              </div>
+              <fieldset class="survey-scale">
+                <legend class="sr-only">Latin vocabulary self-evaluation</legend>
+                <div class="survey-scale-grid" role="radiogroup">
+                  <label class="survey-choice"><input type="radio" name="vocabEval" value="1" required /><span>1</span></label>
+                  <label class="survey-choice"><input type="radio" name="vocabEval" value="2" /><span>2</span></label>
+                  <label class="survey-choice"><input type="radio" name="vocabEval" value="3" /><span>3</span></label>
+                  <label class="survey-choice"><input type="radio" name="vocabEval" value="4" /><span>4</span></label>
+                  <label class="survey-choice"><input type="radio" name="vocabEval" value="5" /><span>5</span></label>
+                </div>
+                <div class="survey-endpoints">
+                  <span>I've forgotten almost everything</span>
+                  <span>I'm confident I know the majority of the words in anything I read</span>
+                </div>
+              </fieldset>
             </div>
 
             <div class="field">
               <label>How’s your grammar and syntax? <span class="req">*</span></label>
-              <div class="scale-grid" role="radiogroup" aria-labelledby="grammar-eval-label">
-                <label class="scale-option"><input type="radio" name="grammarEval" value="1" required /><span>1</span><small>I've forgotten almost everything</small></label>
-                <label class="scale-option"><input type="radio" name="grammarEval" value="2" /><span>2</span><small>I remember the basics</small></label>
-                <label class="scale-option"><input type="radio" name="grammarEval" value="3" /><span>3</span><small>I can usually work things out</small></label>
-                <label class="scale-option"><input type="radio" name="grammarEval" value="4" /><span>4</span><small>I feel strong on most constructions</small></label>
-                <label class="scale-option"><input type="radio" name="grammarEval" value="5" /><span>5</span><small>Ask me anything about the subjunctive</small></label>
-              </div>
+              <fieldset class="survey-scale">
+                <legend class="sr-only">Grammar and syntax self-evaluation</legend>
+                <div class="survey-scale-grid" role="radiogroup">
+                  <label class="survey-choice"><input type="radio" name="grammarEval" value="1" required /><span>1</span></label>
+                  <label class="survey-choice"><input type="radio" name="grammarEval" value="2" /><span>2</span></label>
+                  <label class="survey-choice"><input type="radio" name="grammarEval" value="3" /><span>3</span></label>
+                  <label class="survey-choice"><input type="radio" name="grammarEval" value="4" /><span>4</span></label>
+                  <label class="survey-choice"><input type="radio" name="grammarEval" value="5" /><span>5</span></label>
+                </div>
+                <div class="survey-endpoints">
+                  <span>I've forgotten almost everything</span>
+                  <span>Ask me anything about the subjunctive</span>
+                </div>
+              </fieldset>
             </div>
 
             <div class="field">
