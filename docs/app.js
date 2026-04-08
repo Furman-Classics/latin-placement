@@ -365,7 +365,7 @@ function renderOptions(partPrefix, question, focusOptionIndex = -1) {
 
 function updateProgress(partPrefix, questions) {
   const answered = questions.filter(q => hasValidAnswer(q)).length;
-  $(`${partPrefix}-progress`).textContent = `Answered: ${answered} / ${questions.length}`;
+  $(`${partPrefix}-progress`).textContent = `${answered} / ${questions.length}`;
 }
 
 function renderP1(moveFocus = false, focusOptionIndex = -1) {
