@@ -10,11 +10,12 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <div id="dev-banner" class="dev-banner" hidden>DEV MODE</div>
-  <div id="main-content">
+  <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <div id="main-content" tabindex="-1">
 
     <div id="screen-info" class="screen">
       <header class="page-header">
-        <h1>LATIN PLACEMENT TEST</h1>
+        <h1 id="info-title" tabindex="-1">LATIN PLACEMENT TEST</h1>
       </header>
       <main class="card">
         <ul class="intro-notice">
@@ -70,9 +71,14 @@
               <label class="check-label"><input type="checkbox" name="textbook" value="Ecce Romani" /> Ecce Romani</label>
               <label class="check-label"><input type="checkbox" name="textbook" value="Henle Latin" /> Henle Latin</label>
               <label class="check-label"><input type="checkbox" name="textbook" value="Latin via Ovid" /> Latin via Ovid</label>
-              <label class="check-label"><input type="checkbox" name="textbook" value="__other_textbook__" id="textbook-other-check" /> Other:
-                <input type="text" id="textbook-other-text" class="other-text" placeholder="specify" aria-label="Other textbook" disabled />
-              </label>
+              <div class="check-label other-option">
+                <label class="check-label-inline" for="textbook-other-check">
+                  <input type="checkbox" name="textbook" value="__other_textbook__" id="textbook-other-check" />
+                  <span>Other</span>
+                </label>
+                <label class="sr-only" for="textbook-other-text">Other textbook</label>
+                <input type="text" id="textbook-other-text" class="other-text" placeholder="specify" disabled />
+              </div>
             </div>
           </fieldset>
 
@@ -96,9 +102,14 @@
               <label class="check-label"><input type="checkbox" name="author" value="Nepos" /> Nepos</label>
               <label class="check-label"><input type="checkbox" name="author" value="Juvenal" /> Juvenal</label>
               <label class="check-label"><input type="checkbox" name="author" value="None" id="author-none-check" /> None</label>
-              <label class="check-label"><input type="checkbox" name="author" value="__other_author__" id="author-other-check" /> Other:
-                <input type="text" id="author-other-text" class="other-text" placeholder="specify" aria-label="Other author" disabled />
-              </label>
+              <div class="check-label other-option">
+                <label class="check-label-inline" for="author-other-check">
+                  <input type="checkbox" name="author" value="__other_author__" id="author-other-check" />
+                  <span>Other</span>
+                </label>
+                <label class="sr-only" for="author-other-text">Other author</label>
+                <input type="text" id="author-other-text" class="other-text" placeholder="specify" disabled />
+              </div>
             </div>
           </fieldset>
 
@@ -110,7 +121,7 @@
 
     <div id="screen-selfeval" class="screen" hidden>
       <header class="page-header">
-        <h1>LATIN PLACEMENT TEST</h1>
+        <h1 id="selfeval-title" tabindex="-1">LATIN PLACEMENT TEST</h1>
       </header>
       <main class="card">
         <form id="selfeval-form" novalidate>
@@ -118,10 +129,10 @@
             <legend>Self-Evaluation</legend>
 
             <div class="field">
-              <label>How’s your Latin vocabulary? <span class="req">*</span></label>
+              <p class="field-label" aria-hidden="true">How’s your Latin vocabulary? <span class="req">*</span></p>
               <fieldset class="survey-scale">
-                <legend class="sr-only">Latin vocabulary self-evaluation</legend>
-                <div class="survey-scale-grid" role="radiogroup">
+                <legend class="sr-only">How’s your Latin vocabulary?</legend>
+                <div class="survey-scale-grid">
                   <label class="survey-choice"><input type="radio" name="vocabEval" value="1" required /><span>1</span></label>
                   <label class="survey-choice"><input type="radio" name="vocabEval" value="2" /><span>2</span></label>
                   <label class="survey-choice"><input type="radio" name="vocabEval" value="3" /><span>3</span></label>
@@ -136,10 +147,10 @@
             </div>
 
             <div class="field">
-              <label>How’s your grammar and syntax? <span class="req">*</span></label>
+              <p class="field-label" aria-hidden="true">How’s your grammar and syntax? <span class="req">*</span></p>
               <fieldset class="survey-scale">
-                <legend class="sr-only">Grammar and syntax self-evaluation</legend>
-                <div class="survey-scale-grid" role="radiogroup">
+                <legend class="sr-only">How’s your grammar and syntax?</legend>
+                <div class="survey-scale-grid">
                   <label class="survey-choice"><input type="radio" name="grammarEval" value="1" required /><span>1</span></label>
                   <label class="survey-choice"><input type="radio" name="grammarEval" value="2" /><span>2</span></label>
                   <label class="survey-choice"><input type="radio" name="grammarEval" value="3" /><span>3</span></label>
@@ -154,7 +165,7 @@
             </div>
 
             <div class="field">
-              <label>Click on topics you're confident about:</label>
+              <p class="field-label">Select the topics you're confident about:</p>
               <div class="check-group">
                 <label class="check-label"><input type="checkbox" name="topicConfidence" value="noun cases" /> noun cases</label>
                 <label class="check-label"><input type="checkbox" name="topicConfidence" value="verb tenses" /> verb tenses</label>
@@ -183,7 +194,7 @@
 
     <div id="screen-interstitial1" class="screen" hidden>
       <header class="page-header">
-        <h1>LATIN PLACEMENT TEST</h1>
+        <h1 id="interstitial1-title" tabindex="-1">LATIN PLACEMENT TEST</h1>
       </header>
       <main class="card interstitial-card">
         <p class="interstitial-text">Part 1 contains 80 questions on <strong>vocabulary</strong>.</p>
@@ -197,7 +208,7 @@
 
     <div id="screen-interstitial2" class="screen" hidden>
       <header class="page-header">
-        <h1>LATIN PLACEMENT TEST</h1>
+        <h1 id="interstitial2-title" tabindex="-1">LATIN PLACEMENT TEST</h1>
       </header>
       <main class="card interstitial-card">
         <p class="interstitial-text">You have completed Part 1.<br />Part 2 asks questions about <strong>grammar and syntax</strong>.</p>
@@ -214,7 +225,7 @@
           <h1 class="part-label">Part 1</h1>
           <div class="test-header-tools">
             <span class="progress-label" id="p1-progress" aria-live="polite">0 / 80</span>
-            <button type="button" class="timer-toggle" id="p1-timer-toggle" aria-expanded="false">Time</button>
+            <button type="button" class="timer-toggle" id="p1-timer-toggle" aria-expanded="false" aria-controls="p1-timer" aria-label="Show remaining time">Time</button>
             <span class="timer-pill" id="p1-timer" hidden>40 min left</span>
           </div>
         </div>
@@ -222,8 +233,8 @@
       <main class="card question-card">
         <div id="p1-restore-notice" class="restore-notice" hidden>Your answers have been restored.</div>
         <div class="question-counter" id="p1-counter" tabindex="-1">Question 1 of 80</div>
-        <div class="question-focus" id="p1-focus" hidden></div>
-        <div class="question-prompt" id="p1-prompt"></div>
+        <div class="question-focus" id="p1-focus" tabindex="-1" hidden></div>
+        <div class="question-prompt" id="p1-prompt" tabindex="-1"></div>
         <div class="options-list" id="p1-options" role="radiogroup" aria-labelledby="p1-prompt"></div>
         <div class="nav-row">
           <button class="btn-primary" id="p1-next">Submit and move to next question</button>
@@ -237,15 +248,15 @@
           <h1 class="part-label">Part 2</h1>
           <div class="test-header-tools">
             <span class="progress-label" id="p2-progress" aria-live="polite">0 / 30</span>
-            <button type="button" class="timer-toggle" id="p2-timer-toggle" aria-expanded="false">Time</button>
+            <button type="button" class="timer-toggle" id="p2-timer-toggle" aria-expanded="false" aria-controls="p2-timer" aria-label="Show remaining time">Time</button>
             <span class="timer-pill" id="p2-timer" hidden>40 min left</span>
           </div>
         </div>
       </header>
       <main class="card question-card">
         <div class="question-counter" id="p2-counter" tabindex="-1">Question 1 of 30</div>
-        <div class="question-focus" id="p2-focus" hidden></div>
-        <div class="question-prompt" id="p2-prompt"></div>
+        <div class="question-focus" id="p2-focus" tabindex="-1" hidden></div>
+        <div class="question-prompt" id="p2-prompt" tabindex="-1"></div>
         <div class="options-list" id="p2-options" role="radiogroup" aria-labelledby="p2-prompt"></div>
         <div class="nav-row">
           <button class="btn-primary" id="p2-next">Submit and move to next question</button>
@@ -255,23 +266,23 @@
 
     <div id="screen-done" class="screen" hidden>
       <header class="page-header">
-        <h1>LATIN PLACEMENT TEST</h1>
+        <h1 id="done-title" tabindex="-1">LATIN PLACEMENT TEST</h1>
       </header>
       <main class="card done-card">
         <svg class="done-icon" viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
           <polyline points="7,12 10.5,15.5 17,8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>
         </svg>
-        <p class="done-message" id="done-message-primary">Your placement test has been submitted.</p>
+        <p class="done-message" id="done-message-primary" tabindex="-1">Your placement test has been submitted.</p>
         <p class="done-submission" id="done-submission" hidden></p>
         <p class="done-message" id="done-message-secondary">Data from this test will be used to determine the appropriate placement level in the Latin sequence for you, and this will appear later among your Workday information.</p>
       </main>
     </div>
 
     <div id="terms-zero-modal" class="modal-backdrop" hidden>
-      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="terms-zero-title">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="terms-zero-title" aria-describedby="terms-zero-desc">
         <h2 id="terms-zero-title">No Placement Test Needed</h2>
-        <p>If you have never taken Latin before, you don’t need to take this test. You will be placed automatically into Introductory Latin. You may close this page and exit.</p>
+        <p id="terms-zero-desc">If you have never taken Latin before, you don’t need to take this test. You will be placed automatically into Introductory Latin. You may close this page and exit.</p>
         <div class="nav-row modal-actions">
           <button type="button" class="btn-primary" id="terms-zero-close">Close</button>
         </div>

@@ -48,6 +48,10 @@ body {
   min-height: 100vh;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .dev-banner {
   background: #b45309;
   color: #fff;
@@ -209,7 +213,8 @@ legend {
 
 .field { margin-bottom: 1rem; }
 
-.field label {
+.field label,
+.field-label {
   display: block;
   font-size: .9rem;
   font-weight: 600;
@@ -264,6 +269,16 @@ legend {
   grid-column: 1 / -1;
 }
 
+.check-label-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+}
+
 .check-label {
   display: flex;
   align-items: center;
@@ -284,6 +299,11 @@ legend {
   flex-shrink: 0;
   accent-color: var(--accent);
   cursor: pointer;
+}
+
+.other-option {
+  align-items: center;
+  gap: .75rem;
 }
 
 .other-text {
@@ -618,6 +638,14 @@ legend {
 
 .modal-actions {
   justify-content: flex-end;
+}
+
+.modal-card:focus-visible,
+.question-focus:focus-visible,
+.question-prompt:focus-visible,
+.done-message:focus-visible {
+  outline: 2px solid var(--selected-border);
+  outline-offset: 4px;
 }
 
 .caps-underline {

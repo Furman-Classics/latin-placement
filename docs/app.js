@@ -29,6 +29,17 @@ let state = {
   submitted: false,
 };
 
+let lastModalFocus = null;
+let lastQuestionAnnouncementKey = '';
+
+const SCREEN_FOCUS_TARGETS = {
+  info: 'info-title',
+  selfeval: 'selfeval-title',
+  interstitial1: 'interstitial1-title',
+  interstitial2: 'interstitial2-title',
+  done: 'done-message-primary',
+};
+
 function $(id) {
   return document.getElementById(id);
 }
@@ -36,6 +47,80 @@ function $(id) {
 function renderHTML(raw) {
   return String(raw || '')
     .replace(/\[underline:\s*([^\]]+)\]/g, '<span class="hl">$1</span>');
+}
+
+function getPlainText(raw) {
+  const temp = document.createElement('div');
+  temp.innerHTML = renderHTML(raw);
+  return temp.textContent.replace(/\s+/g, ' ').trim();
+}
+
+function announce(message) {
+  const announcer = $('sr-announcer');
+  if (!announcer || !message) return;
+  announcer.textContent = '';
+  window.setTimeout(() => {
+    announcer.textContent = message;
+  }, 0);
+}
+
+function focusElement(id) {
+  $(id)?.focus();
+}
+
+function focusScreenTarget(name) {
+  const targetId = SCREEN_FOCUS_TARGETS[name];
+  if (!targetId) return;
+  requestAnimationFrame(() => focusElement(targetId));
+}
+
+function setScreensHiddenFromAssistiveTech(hidden) {
+  document.querySelectorAll('.screen').forEach(screen => {
+    if (hidden) {
+      screen.setAttribute('aria-hidden', 'true');
+      if ('inert' in screen) screen.inert = true;
+      return;
+    }
+    screen.removeAttribute('aria-hidden');
+    if ('inert' in screen) screen.inert = false;
+  });
+}
+
+function getFocusableElements(container) {
+  return [...container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')]
+    .filter(el => !el.disabled && !el.hidden && el.getAttribute('aria-hidden') !== 'true');
+}
+
+function handleTermsZeroModalKeydown(event) {
+  const modal = $('terms-zero-modal');
+  if (!modal || modal.hidden) return;
+
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    hideTermsZeroModal();
+    return;
+  }
+
+  if (event.key !== 'Tab') return;
+
+  const dialog = modal.querySelector('[role="dialog"]');
+  if (!dialog) return;
+  const focusable = getFocusableElements(dialog);
+  if (!focusable.length) {
+    event.preventDefault();
+    return;
+  }
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
 }
 
 function shuffle(arr) {
@@ -47,7 +132,7 @@ function shuffle(arr) {
   return copy;
 }
 
-function showScreen(name) {
+function showScreen(name, moveFocus = false) {
   const ids = [
     'screen-info',
     'screen-selfeval',
@@ -63,6 +148,7 @@ function showScreen(name) {
   }
   updateTimerUI();
   window.scrollTo(0, 0);
+  if (moveFocus) focusScreenTarget(name);
 }
 
 function generateSubmissionId() {
@@ -101,7 +187,12 @@ function clearState() {
 function showTermsZeroModal() {
   const modal = $('terms-zero-modal');
   if (!modal) return;
+  lastModalFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  setScreensHiddenFromAssistiveTech(true);
+  document.body.classList.add('modal-open');
   modal.hidden = false;
+  document.addEventListener('keydown', handleTermsZeroModalKeydown);
+  announce('No placement test needed dialog opened.');
   $('terms-zero-close')?.focus();
 }
 
@@ -109,6 +200,14 @@ function hideTermsZeroModal() {
   const modal = $('terms-zero-modal');
   if (!modal) return;
   modal.hidden = true;
+  document.body.classList.remove('modal-open');
+  document.removeEventListener('keydown', handleTermsZeroModalKeydown);
+  setScreensHiddenFromAssistiveTech(false);
+  if (lastModalFocus && document.contains(lastModalFocus)) {
+    lastModalFocus.focus();
+  } else {
+    focusElement('termsTaken');
+  }
 }
 
 async function loadExam() {
@@ -267,6 +366,7 @@ function updateTimerUI() {
     const el = $(id);
     if (!el) continue;
     el.setAttribute('aria-expanded', visible ? 'true' : 'false');
+    el.setAttribute('aria-label', visible ? 'Hide remaining time' : 'Show remaining time');
   }
 
   if (state.screen === 'interstitial2') {
@@ -303,9 +403,13 @@ function toggleTimerVisible() {
 }
 
 function updateQuestionHeader(partPrefix, question, index, total) {
-  $(`${partPrefix}-counter`).textContent = `Question ${index + 1} of ${total}`;
+  const counterEl = $(`${partPrefix}-counter`);
   const focusEl = $(`${partPrefix}-focus`);
   const promptEl = $(`${partPrefix}-prompt`);
+  const optionsEl = $(`${partPrefix}-options`);
+  const countText = `Question ${index + 1} of ${total}`;
+
+  counterEl.textContent = countText;
 
   if (question.focusText) {
     focusEl.hidden = false;
@@ -315,6 +419,17 @@ function updateQuestionHeader(partPrefix, question, index, total) {
     focusEl.innerHTML = '';
   }
   promptEl.innerHTML = renderHTML(question.promptText);
+
+  const labelIds = [counterEl.id];
+  if (question.focusText) labelIds.push(focusEl.id);
+  labelIds.push(promptEl.id);
+  optionsEl.setAttribute('aria-labelledby', labelIds.join(' '));
+
+  const announcementKey = `${partPrefix}:${question.id}:${index}`;
+  if (announcementKey !== lastQuestionAnnouncementKey) {
+    lastQuestionAnnouncementKey = announcementKey;
+    announce([countText, getPlainText(question.focusText), getPlainText(question.promptText)].filter(Boolean).join('. '));
+  }
 }
 
 function renderOptions(partPrefix, question, focusOptionIndex = -1) {
@@ -332,6 +447,9 @@ function renderOptions(partPrefix, question, focusOptionIndex = -1) {
     btn.dataset.idx = String(optionIndex);
     btn.setAttribute('role', 'radio');
     btn.setAttribute('aria-checked', selected ? 'true' : 'false');
+    btn.setAttribute('aria-posinset', String(displayIndex + 1));
+    btn.setAttribute('aria-setsize', String(order.length));
+    btn.tabIndex = selected || (!current.length && displayIndex === 0) ? 0 : -1;
     btn.addEventListener('click', () => {
       toggleSelection(question, optionIndex);
       if (partPrefix === 'p1') renderP1(false, displayIndex);
@@ -387,7 +505,7 @@ function renderP1(moveFocus = false, focusOptionIndex = -1) {
 
   updateProgress('p1', state.part1Questions);
   updateTimerUI();
-  if (moveFocus) $('p1-counter').focus();
+  if (moveFocus) (question.focusText ? $('p1-focus') : $('p1-prompt')).focus();
 }
 
 function renderP2(moveFocus = false, focusOptionIndex = -1) {
@@ -409,7 +527,7 @@ function renderP2(moveFocus = false, focusOptionIndex = -1) {
 
   updateProgress('p2', state.part2Questions);
   updateTimerUI();
-  if (moveFocus) $('p2-counter').focus();
+  if (moveFocus) (question.focusText ? $('p2-focus') : $('p2-prompt')).focus();
 }
 
 function startPart1() {
@@ -428,7 +546,7 @@ function goToPart2() {
   state.screen = 'interstitial2';
   saveState();
   showTimeRemaining('interstitial2-time');
-  showScreen('interstitial2');
+  showScreen('interstitial2', true);
 }
 
 function startPart2() {
@@ -477,7 +595,7 @@ async function submitTest(autoSubmit) {
   setDoneScreen(autoSubmit, state.submissionId);
   clearState();
   state.screen = 'done';
-  showScreen('done');
+  showScreen('done', true);
 }
 
 function setCheckedValues(name, values) {
@@ -492,6 +610,7 @@ function updateOtherInput(checkId, inputId) {
   const input = $(inputId);
   if (!check || !input) return;
   input.disabled = !check.checked;
+  input.setAttribute('aria-disabled', input.disabled ? 'true' : 'false');
 }
 
 function collectStudentInfo() {
@@ -639,12 +758,24 @@ $('info-form').addEventListener('submit', event => {
   const errorEl = $('info-error');
   errorEl.textContent = '';
   const info = collectStudentInfo();
+  ['firstName', 'lastName', 'studentId', 'termsTaken'].forEach(id => $(id).removeAttribute('aria-invalid'));
+
   if (!info.firstName || !info.lastName || !info.studentId || !info.termsTaken) {
+    if (!info.firstName) $('firstName').setAttribute('aria-invalid', 'true');
+    if (!info.lastName) $('lastName').setAttribute('aria-invalid', 'true');
+    if (!info.studentId) $('studentId').setAttribute('aria-invalid', 'true');
+    if (!info.termsTaken) $('termsTaken').setAttribute('aria-invalid', 'true');
     errorEl.textContent = 'Please fill in all required fields.';
+    if (!info.firstName) $('firstName').focus();
+    else if (!info.lastName) $('lastName').focus();
+    else if (!info.studentId) $('studentId').focus();
+    else $('termsTaken').focus();
     return;
   }
   if (!/^\d+$/.test(info.studentId)) {
+    $('studentId').setAttribute('aria-invalid', 'true');
     errorEl.textContent = 'Student ID must contain numerals only.';
+    $('studentId').focus();
     return;
   }
   if (info.termsTaken === '0') {
@@ -654,8 +785,8 @@ $('info-form').addEventListener('submit', event => {
   state.studentInfo = info;
   state.screen = 'selfeval';
   saveState();
-  showScreen('selfeval');
   populateSelfEvalForm();
+  showScreen('selfeval', true);
 });
 
 $('selfeval-form').addEventListener('submit', async event => {
@@ -663,8 +794,17 @@ $('selfeval-form').addEventListener('submit', async event => {
   const errorEl = $('selfeval-error');
   errorEl.textContent = '';
   const selfEval = collectSelfEval();
+  $('expectedPlacement').removeAttribute('aria-invalid');
   if (!selfEval.vocabEval || !selfEval.grammarEval || !selfEval.expectedPlacement) {
     errorEl.textContent = 'Please fill in all required fields.';
+    if (!selfEval.vocabEval) {
+      document.querySelector('input[name="vocabEval"]')?.focus();
+    } else if (!selfEval.grammarEval) {
+      document.querySelector('input[name="grammarEval"]')?.focus();
+    } else {
+      $('expectedPlacement').setAttribute('aria-invalid', 'true');
+      $('expectedPlacement').focus();
+    }
     return;
   }
 
@@ -688,7 +828,7 @@ $('selfeval-form').addEventListener('submit', async event => {
   saveState();
   submitBtn.disabled = false;
   submitBtn.textContent = 'Continue to Test Instructions →';
-  showScreen('interstitial1');
+  showScreen('interstitial1', true);
 });
 
 $('interstitial1-begin').addEventListener('click', startPart1);
@@ -746,11 +886,11 @@ function tryRestoreSession() {
   }
 
   if (state.screen === 'selfeval') {
-    showScreen('selfeval');
+    showScreen('selfeval', true);
     return true;
   }
   if (state.screen === 'interstitial1') {
-    showScreen('interstitial1');
+    showScreen('interstitial1', true);
     return true;
   }
   if (state.screen === 'part1') {
@@ -763,7 +903,7 @@ function tryRestoreSession() {
   }
   if (state.screen === 'interstitial2') {
     showTimeRemaining('interstitial2-time');
-    showScreen('interstitial2');
+    showScreen('interstitial2', true);
     return true;
   }
   if (state.screen === 'part2') {
